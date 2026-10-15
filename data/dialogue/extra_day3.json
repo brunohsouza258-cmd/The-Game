@@ -1,0 +1,132 @@
+{
+  "id": "extra_day3",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#e0c9d6",
+  "sprite": "",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "O corredor está quase vazio. A luz do fim de tarde corta os armários em faixas. Perto da escada, a Alice e a Maya estão paradas diante de uma carteira vazia que alguém deixou no corredor.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "tint": "#e0c9d6"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "thinking",
+      "text": "Duas semanas de aula, trinta carteiras na lista, trinta e uma no inventário. Uma carteira sem dono. Eu odeio quando a conta não fecha.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Sobrou de alguma turma. Acontece.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "angry",
+      "text": "Tem iniciais, Maya. K.M. Riscadas com compasso, de baixo pra cima. Quem escreve de baixo pra cima?",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "scared",
+      "text": "Alguém canhoto.",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "surprised",
+      "text": "...Como você sabe que é canhoto?",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A Maya abre a boca. Fecha. Nenhuma das duas percebe {player_name}, parado na curva do corredor.",
+      "next": "n7"
+    },
+    "b1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Perfeito. Segura aqui. Preciso medir o espaçamento das iniciais.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Não mexa nisso. Por favor. ...Deixa. Eu levo embora depois.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Alice, se eu te contasse que tem coisas que a gente não deveria investigar... você me deixaria em paz?",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Não. Mas eu anotaria que você pediu.",
+      "next": "b5"
+    },
+    "b5": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A Alice escreve algo no caderno. Pela primeira vez, a Maya parece com medo de uma caneta.",
+      "next": "end"
+    },
+    "n7": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Porque o risco inclina pra esquerda. Qualquer um vê. Qualquer um com olhos.",
+      "choices": [
+        {
+          "text": "Aparecer: \"Posso ajudar com a carteira?\"",
+          "next": "b1",
+          "effects": {
+            "affinity.alice": 1,
+            "affinity.maya": -1,
+            "trust.alice": 1
+          }
+        },
+        {
+          "text": "Ficar escondido e ouvir mais.",
+          "next": "b3",
+          "effects": {
+            "trust.maya": 1,
+            "dread": 4
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

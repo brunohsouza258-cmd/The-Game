@@ -1,0 +1,119 @@
+{
+  "id": "extra_day9",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/school_decayed.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "corrupted",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "Por um instante, a sala de aula some. No lugar dela, a mesma sala, mas com o forro caído, as janelas estilhaçadas, riscos de contagem por toda a parede. A Alice e a Maya estão ali, sentadas lado a lado, como se nada tivesse mudado.",
+      "effect": "glitch",
+      "next": "n1",
+      "background": "res://assets/backgrounds/school_decayed.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Está acontecendo mais rápido. Antes durava um segundo. Agora eu consigo ler uma frase inteira.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Eu sei. É assim que começa o fim de cada volta. A escola cai antes das pessoas.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "surprised",
+      "text": "Cada volta. Você disse volta. Maya, quantas?",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Eu parei de contar na centésima. Eu recomecei a contar na centésima primeira, e parei de novo.",
+      "next": "n5"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Você diz isso toda vez. E toda vez é verdade, até a meia-noite do dia 12.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Então eu vou escrever com caneta permanente. Em lugar que não dê pra apagar.",
+      "next": "n6"
+    },
+    "b3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Tudo bem. Eu espero. Eu sou muito boa nisso.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Eu anotei. Mas continuo querendo saber.",
+      "next": "n6"
+    },
+    "n5": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "Eu tenho um caderno em branco que um dia teve respostas. Se for por isso, eu devia ter perguntado antes. Eu quero saber, mesmo que eu esqueça de novo.",
+      "choices": [
+        {
+          "text": "Dizer que vai lembrar por ela.",
+          "next": "b1",
+          "effects": {
+            "trust.maya": 2,
+            "trust.alice": 2,
+            "dread": 4
+          }
+        },
+        {
+          "text": "Pedir que ela não conte mais nada hoje.",
+          "next": "b3",
+          "effects": {
+            "trust.maya": -1,
+            "dread": -5
+          }
+        }
+      ]
+    },
+    "n6": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A sala volta ao normal. Ninguém comenta que um quadro-negro acabou de se consertar sozinho.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

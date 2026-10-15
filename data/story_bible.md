@@ -50,4 +50,4 @@ O simulador (5000 partidas aleatórias) confirma que os 8 finais são alcançáv
 
 ## Para expandir
 - Mais cenas por dia (encontros no corredor, almoço, cenas extras por rota) são o caminho para aumentar a duração sem mexer na trama.
-- Faltam cenários próprios para o telhado, a escola à noite e a escola decadente. Hoje eles são simulados com tint sobre os 4 cenários existentes.
+- Cenas extras do hub ("Passear pela escola", `extra_day2..11`): diálogos entre as garotas, com troca de sprite, cenário e tom por fala. Cenários novos: `festival_night`, `school_night`, `school_decayed`, `rooftop_dusk`, `rooftop_rain`.

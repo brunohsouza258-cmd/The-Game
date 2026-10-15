@@ -1,0 +1,126 @@
+{
+  "id": "extra_day4",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#ffe9c9",
+  "sprite": "",
+  "music": "clubroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A sala do clube cheira a chá de cevada. A Yuna arrumou biscoitos em formato de estrela no centro da mesa, e a Alice, sem pedir licença, está contando quantos tem.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/clubroom.png",
+      "tint": "#ffe9c9"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Vinte e três. Você fez vinte e quatro cortes na forma, Yuna.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "surprised",
+      "text": "Eu... fiz? Acho que sim. Eu sempre faço uma a mais. Para...",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Para ninguém. Esquece. Pode comer o último, Alice, ele não vai fazer falta.",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "Não é sobre fome. É sobre o número. Eu tenho um caderno cheio de números que não fecham, e você tem uma forma de biscoito com um lugar sobrando.",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A Alice vira o caderno para a Yuna. Na página, uma lista de datas escritas com a letra do próprio {player_name}, mas ele nunca viu aquele caderno antes.",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "Essa letra é igual à do {player_name}.",
+      "next": "n7"
+    },
+    "b1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "close",
+      "text": "Pode ler. Mas leia as datas de trás pra frente. A última é a do festival. A primeira é amanhã.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "Fecha isso. Por favor. Hoje é dia de biscoito, não dia de... isso.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Obrigada. Sério. Vem cá, {player_name}, o último é seu. A Alice que se vire com os números.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Número vinte e quatro. Registrado.",
+      "next": "end"
+    },
+    "n7": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "thinking",
+      "text": "Eu sei. Ainda não decidi se isso é uma pista ou uma coincidência de mau gosto.",
+      "choices": [
+        {
+          "text": "Pegar o caderno e ler.",
+          "next": "b1",
+          "effects": {
+            "trust.alice": 2,
+            "dread": 5,
+            "flags.read_notebook_clubroom": true
+          }
+        },
+        {
+          "text": "Pedir para a Yuna comer um biscoito e mudar de assunto.",
+          "next": "b3",
+          "effects": {
+            "affinity.yuna": 2,
+            "dread": -3
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

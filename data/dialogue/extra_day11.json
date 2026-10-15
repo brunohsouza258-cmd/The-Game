@@ -1,0 +1,136 @@
+{
+  "id": "extra_day11",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/festival_night.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "As lanternas já estão penduradas em fios, de uma ponta à outra do pátio. Quando alguém acende a primeira, as outras acendem em cascata. É lindo demais. O tipo de lindo que deixa um nó na garganta.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/festival_night.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Olha, olha! Ficou perfeito! Nenhuma queimou, nenhuma ficou torta. Hoje é o dia mais bonito da escola!",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Perfeito demais. Eu contei. Cento e vinte lanternas, nenhuma com defeito. Isso é estatisticamente suspeito.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Alice, pelo amor de tudo, deixa a gente ter um dia bom. Uma noite. Uma só.",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "...Tá. Eu deixo. Mas eu vou deixar anotado que eu deixei.",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Tem uma lanterna apagada, lá no fundo. A branca. Ela nunca acende.",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "A gente pode acender. Tem fósforo, Maya.",
+      "next": "n7"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "Você diz como se soubesse o peso disso. ...Tá bom. Eu te chamo.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Então eu acendo a próxima com o {player_name}. A gente faz uma corrente. Todo mundo acende alguém.",
+      "next": "n8"
+    },
+    "b3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Ele entendeu. Hoje é de comer, rir e perder pra mim em tudo que tiver competição.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Registro: foi uma boa noite. Registro de verdade.",
+      "next": "n8"
+    },
+    "n7": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Não. Essa só se acende no último dia. Por quem fica.",
+      "choices": [
+        {
+          "text": "Dizer que vai acendê-la com a Maya.",
+          "next": "b1",
+          "effects": {
+            "affinity.maya": 3,
+            "trust.maya": 2,
+            "dread": 2
+          }
+        },
+        {
+          "text": "Aproveitar a noite bonita com todas.",
+          "next": "b3",
+          "effects": {
+            "affinity.yuna": 1,
+            "affinity.hikari": 1,
+            "affinity.alice": 1,
+            "dread": -6
+          }
+        }
+      ]
+    },
+    "n8": {
+      "speaker": "",
+      "sprite": "",
+      "text": "Do alto do telhado, alguém ri baixinho. Ninguém no pátio parece ouvir. Mas as lanternas, por um segundo, tremem juntas.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

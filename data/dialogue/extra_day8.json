@@ -1,0 +1,103 @@
+{
+  "id": "extra_day8",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/rooftop_dusk.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A porta do telhado, que sempre esteve trancada, está encostada. Do lado de lá, o vento levanta poeira da laje. A Hikari está parada no limiar, de punhos fechados, sem atravessar.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/rooftop_dusk.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "angry",
+      "text": "Eu juro que arrombei essa porta noite passada. Não estava aberta. Agora está.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "scared",
+      "text": "Eu odeio esse lugar, {player_name}. Meu corpo inteiro odeia. E ainda assim eu fico voltando.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "thinking",
+      "text": "Sabe o que é pior? Eu sei exatamente onde pisar pra não escorregar. Eu nunca vim aqui. Como é que eu sei?",
+      "next": "n4"
+    },
+    "b1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "surprised",
+      "text": "Você é louco. ...Mas é um louco que eu quero do meu lado.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "close",
+      "text": "Olha ali. A grade, na altura do peito. Tem uma marca de corda amarrada, de alguém que segurou forte demais.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "sad",
+      "text": "Você tá certo. Hoje não. Mas eu volto. Eu sempre volto.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Obrigada por não me deixar ser a primeira. Dessa vez.",
+      "next": "end"
+    },
+    "n4": {
+      "speaker": "",
+      "sprite": "",
+      "text": "Do outro lado da grade, o sol se põe sobre a pista de atletismo. Quatro raias. A segunda tem o desenho de um nome que foi lavado pela chuva.",
+      "choices": [
+        {
+          "text": "Atravessar a porta com ela.",
+          "next": "b1",
+          "effects": {
+            "affinity.hikari": 3,
+            "trust.hikari": 2,
+            "dread": 5
+          }
+        },
+        {
+          "text": "Puxar a Hikari de volta e fechar a porta.",
+          "next": "b3",
+          "effects": {
+            "affinity.hikari": 1,
+            "trust.hikari": 1,
+            "dread": -4
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

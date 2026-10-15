@@ -47,7 +47,8 @@ func _on_node_shown(node_data: Dictionary) -> void:
 	var speaker: String = node_data.get("speaker", "")
 	name_label.text = speaker
 	name_plate.visible = speaker != ""
-	name_plate.modulate = _name_color
+	var node_color: String = node_data.get("color", "")
+	name_plate.modulate = Color(node_color) if node_color != "" else _name_color
 	_full_text = node_data.get("text", "")
 	_pending_choices = node_data.get("choices", [])
 	_char_index = 0

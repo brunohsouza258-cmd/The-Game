@@ -1,0 +1,128 @@
+{
+  "id": "extra_day7",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#bdb2c4",
+  "sprite": "",
+  "music": "corrupted",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A foto da turma está pendurada no quadro. A Maya e a Yuna estão paradas diante dela, a uns dez centímetros do vidro.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#bdb2c4"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "Esse rosto aqui, no fundo, atrás do {player_name}. Sempre esteve aí?",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Sempre esteve aí.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "surprised",
+      "text": "Mas ele está sobreposto. É como se tivessem colado o rosto dele em cima do de outra pessoa.",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Sempre esteve aí. Sempre esteve aí. Sempre esteve aí.",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A voz da Maya sai de novo, igual, idêntica, o mesmo tom. Como um disco riscado.",
+      "effect": "glitch",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "Maya? Maya, para. Você tá repetindo. Maya!",
+      "next": "n7"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Obrigada. Está frio aqui, não está? Sempre esteve frio aqui. Eu só nunca falei.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Eu tô aqui, tá? A gente tá aqui. As duas. Os três.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Você já sabe. Só ainda não pode lembrar o nome. Se eu disser, o dia vira e eu volto a ficar sozinha.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "Sozinha? Maya, eu estou aqui do seu lado!",
+      "next": "end"
+    },
+    "n7": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "...Eu disse isso três vezes, não disse? Desculpa. Eu... perco o fio. Às vezes o dia tenta recomeçar no meio.",
+      "choices": [
+        {
+          "text": "Segurar a mão dela.",
+          "next": "b1",
+          "effects": {
+            "trust.maya": 2,
+            "affinity.maya": 1,
+            "dread": -3
+          }
+        },
+        {
+          "text": "Perguntar de quem é o rosto na foto.",
+          "next": "b3",
+          "effects": {
+            "trust.maya": 1,
+            "affinity.yuna": 1,
+            "dread": 6
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

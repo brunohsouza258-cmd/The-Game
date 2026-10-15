@@ -1,0 +1,125 @@
+{
+  "id": "extra_day5",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#fff2e0",
+  "sprite": "",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "Depois do anúncio do festival, a sala virou oficina. Papel colorido, cola e varetas por todo lado. A Yuna e a Maya montam lanternas lado a lado, em silêncio, como duas pessoas que sempre trabalharam juntas.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#fff2e0"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Essa vai ser a mais bonita do festival. Eu desenhei flor de cerejeira. Você vai pintar a sua de quê, Maya?",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Nada. Vai ficar branca.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Branca? Uma lanterna sem nada? Isso parece... luto, Maya.",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "É só uma lanterna. A gente acende uma pra cada pessoa. A minha eu deixo para uma pessoa que não vai estar lá.",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "surprised",
+      "text": "Quem?",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A Maya dobra o papel com muito cuidado. Dentro, em letra miúda, ela escreve uma sigla e cobre com a mão antes que alguém veja.",
+      "next": "n7"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "...Você pintaria? Eu nunca deixei ninguém tocar nela.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "happy",
+      "text": "Só uma risca azul. Embaixo. Como o céu antes de amanhecer. Obrigada, {player_name}.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "scared",
+      "text": "Pergunta de novo no dia 12. Se você ainda quiser saber, eu respondo.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "Maya, você tá me assustando. Isso é uma festa, lembra?",
+      "next": "end"
+    },
+    "n7": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Ninguém que você conheça, Yuna. Ninguém que ninguém conheça.",
+      "choices": [
+        {
+          "text": "Oferecer ajuda para pintar a lanterna branca.",
+          "next": "b1",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 1
+          }
+        },
+        {
+          "text": "Perguntar para quem é a lanterna.",
+          "next": "b3",
+          "effects": {
+            "trust.maya": 2,
+            "dread": 4
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

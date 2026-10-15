@@ -54,12 +54,26 @@ func _on_dialogue_started(meta: Dictionary) -> void:
 	MusicPlayer.play_mood(meta.get("music", "menu"))
 
 func _on_node_shown(node_data: Dictionary) -> void:
+	_apply_node_scene(node_data)
 	if _base_sprite_path == "":
 		return
 	var pose: String = node_data.get("pose", "")
 	if pose == "":
 		pose = "corrupted" if node_data.get("effect", "") == "glitch" else "neutral"
 	_apply_pose(pose)
+
+# Cenas com várias personagens trocam sprite, cenário e tom por fala:
+# "sprite": "res://...png" (ou "" para esconder), "background", "tint".
+func _apply_node_scene(node_data: Dictionary) -> void:
+	if node_data.has("background"):
+		background.texture = load(node_data["background"])
+		var tint := Color(node_data.get("tint", "#ffffff"))
+		background.modulate = tint * Color(1, 1, 1).lerp(DREAD_TINT, GameState.dread / 100.0)
+	if node_data.has("sprite"):
+		_base_sprite_path = node_data["sprite"]
+		character_sprite.visible = _base_sprite_path != ""
+		if _base_sprite_path != "":
+			_set_texture(_base_sprite_path)
 
 func _apply_pose(pose_name: String) -> void:
 	var pose: Dictionary = POSES.get(pose_name, POSES["neutral"])

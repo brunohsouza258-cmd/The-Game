@@ -1,0 +1,132 @@
+{
+  "id": "extra_day2",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "courtyard",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "No pátio, depois da aula, a Hikari faz alongamento na grade enquanto a Yuna, sentada no degrau, balança uma marmita fechada como se fosse um troféu.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Você vai ficar olhando o relógio a tarde toda, ou vai comer um pouquinho? Eu fiz demais. De novo.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "angry",
+      "text": "Eu como depois do treino. Atleta que come antes de correr vomita na raia quatro.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "A raia quatro... Hikari, você sempre fala dela como se fosse de alguém.",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "surprised",
+      "text": "Hã? Como assim? É só a raia. A do meio. A que dá mais sorte pra... ",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A Hikari para no meio da frase, a boca ainda aberta. Ela olha para a pista como quem procura uma palavra que sabia.",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "thinking",
+      "text": "...pra alguém. Esquece. Eu devo ter lido isso em algum lugar.",
+      "next": "n7"
+    },
+    "b1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "Não fala assim. Eu tenho cheiro de casa de alguém na cabeça. Cheiro de bolo. Mas ninguém que eu conheço faz bolo.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "close",
+      "text": "Eu também tenho. Cheiro de suor e de... grama molhada. Isso é ridículo. Vamos mudar de assunto.",
+      "next": "n8"
+    },
+    "b3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Viu? Ele é prático. Gostei dele.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Tá bom, tá bom. Então come um pedaço, {player_name}. Prático também come.",
+      "next": "n8"
+    },
+    "n7": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "neutral",
+      "text": "{player_name}, você também achou estranho, não achou? Ela faz isso. E eu faço isso. A gente começa a falar de uma pessoa e some.",
+      "choices": [
+        {
+          "text": "Talvez vocês estejam lembrando de alguém.",
+          "next": "b1",
+          "effects": {
+            "affinity.yuna": 1,
+            "trust.yuna": 1,
+            "dread": 3
+          }
+        },
+        {
+          "text": "Isso acontece com todo mundo no primeiro dia.",
+          "next": "b3",
+          "effects": {
+            "affinity.hikari": 1,
+            "dread": -2
+          }
+        }
+      ]
+    },
+    "n8": {
+      "speaker": "",
+      "sprite": "",
+      "text": "O sino toca. Nenhuma das duas lembra o que ia dizer.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "extra_day6",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/school_night.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "Já passa das sete. O corredor do segundo andar está às escuras, só a luz azul da janela. A Hikari está sentada no chão, de costas na parede, com as mãos enfaixadas sobre os joelhos. A Alice está agachada na frente dela com uma caixinha de curativos.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/school_night.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Você disse que caiu no treino. Treino não deixa marca de grade.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "angry",
+      "text": "Eu caí em uma grade. No treino. Fim.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "thinking",
+      "text": "A marca é igual à que está na mão do {player_name}. Mesma altura, mesmo ângulo. Duas pessoas diferentes caindo na mesma grade.",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "scared",
+      "text": "...Você viu a mão dele?",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "Vi. Eu vejo tudo. É o problema de ser eu.",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "sad",
+      "text": "Eu não lembro de ter segurado nada. Mas minhas mãos lembram. Elas acordam doendo todo dia no mesmo horário.",
+      "next": "n7"
+    },
+    "b1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Senta, então. Mas se contar pra alguém que eu fiquei mole, eu corro mais rápido que você.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Estatisticamente, ela corre. Ele não. Não conte.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "surprised",
+      "text": "Mesmo lugar. Mesmo corte. Exatamente igual.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "close",
+      "text": "Isso é a prova. Não de um fantasma. De uma coisa que aconteceu com as três pessoas ao mesmo tempo.",
+      "next": "end"
+    },
+    "n7": {
+      "speaker": "",
+      "sprite": "",
+      "text": "Alice terminou o curativo. Por um instante, as duas ficam ali, lado a lado, sem competir por nada.",
+      "choices": [
+        {
+          "text": "Sentar com elas no chão.",
+          "next": "b1",
+          "effects": {
+            "affinity.hikari": 1,
+            "affinity.alice": 1,
+            "trust.hikari": 1,
+            "dread": 2
+          }
+        },
+        {
+          "text": "Mostrar a própria mão enfaixada.",
+          "next": "b3",
+          "effects": {
+            "trust.alice": 1,
+            "trust.hikari": 1,
+            "dread": 5
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

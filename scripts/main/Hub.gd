@@ -11,6 +11,7 @@ const CHARACTER_NAMES := {
 @onready var day_label: Label = $DayLabel
 @onready var status_label: Label = $StatusLabel
 @onready var poem_button: Button = $Panel/VBoxContainer/PoemButton
+@onready var walk_button: Button = $Panel/VBoxContainer/WalkButton
 @onready var next_day_button: Button = $Panel/VBoxContainer/NextDayButton
 @onready var end_button: Button = $Panel/VBoxContainer/EndButton
 @onready var character_buttons := {
@@ -37,6 +38,11 @@ func _refresh() -> void:
 	var poem_done := GameState.visited_today("poem")
 	poem_button.disabled = poem_done
 	poem_button.text = "Poema de hoje já escrito" if poem_done else "Escrever um poema"
+	var walk_path := _walk_path()
+	walk_button.visible = FileAccess.file_exists(walk_path)
+	var walk_done := GameState.visited_today("walk")
+	walk_button.disabled = walk_done
+	walk_button.text = "Você já passeou pela escola hoje" if walk_done else "Passear pela escola"
 	var final_day := GameState.day >= FINAL_DAY
 	next_day_button.visible = not final_day
 	end_button.visible = final_day
@@ -64,6 +70,14 @@ func _on_character_button_pressed(character_id: String) -> void:
 	SfxPlayer.play_click()
 	GameState.mark_visited(character_id)
 	_start_dialogue("res://data/dialogue/%s_day%d.json" % [character_id, GameState.day])
+
+func _walk_path() -> String:
+	return "res://data/dialogue/extra_day%d.json" % GameState.day
+
+func _on_walk_button_pressed() -> void:
+	SfxPlayer.play_click()
+	GameState.mark_visited("walk")
+	_start_dialogue(_walk_path())
 
 func _on_poem_button_pressed() -> void:
 	SfxPlayer.play_click()

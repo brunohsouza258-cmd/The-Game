@@ -1,0 +1,119 @@
+{
+  "id": "extra_day10",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/school_night.png",
+  "tint": "#a99fb4",
+  "sprite": "",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "sprite": "",
+      "text": "As carteiras estão vazias. Os armários estão vazios. Do corredor, ouve-se a Yuna chorando baixinho, no degrau da escada, e a Hikari sentada ao lado dela, sem saber o que fazer com as mãos.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/school_night.png",
+      "tint": "#a99fb4"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Eu fui no refeitório. Não tinha ninguém. Nem a tia da cantina. As panelas estavam quentes, Hikari. Quentes.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "sad",
+      "text": "Eu sei. Eu corri o prédio inteiro. Sem ninguém. Nem o professor Tanaka. Eu gritei meu nome. Sabe o que respondeu? Só o eco.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "E se a gente for a próxima? E se amanhã o {player_name} chegar e não tiver mais ninguém?",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "angry",
+      "text": "Ele não vai chegar sozinho. Eu prometo. Eu corro até aqui, de onde estiver.",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Você promete por mim também, né? Você é boa em prometer. Você sempre cumpre.",
+      "next": "n6"
+    },
+    "b1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Isso. Assim. Agora a gente é três. Eu sempre prefiro três.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Três é um bom número. Dá pra fazer revezamento.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "scared",
+      "text": "Você viu também? Eu achei que era só eu.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "close",
+      "text": "Ele ria desse jeito. Eu lembro agora. Ele ria sempre antes de uma coisa idiota.",
+      "next": "end"
+    },
+    "n6": {
+      "speaker": "",
+      "sprite": "",
+      "text": "A Hikari não responde. Seus olhos ficam em um ponto da parede onde, por um segundo, havia o desenho de uma terceira sombra entre as duas.",
+      "choices": [
+        {
+          "text": "Sentar entre as duas.",
+          "next": "b1",
+          "effects": {
+            "affinity.yuna": 1,
+            "affinity.hikari": 1,
+            "dread": -5
+          }
+        },
+        {
+          "text": "Perguntar quem era a terceira sombra.",
+          "next": "b3",
+          "effects": {
+            "trust.yuna": 1,
+            "trust.hikari": 1,
+            "dread": 6
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

@@ -80,6 +80,10 @@ text = "Falar com Hikari"
 custom_minimum_size = Vector2(0, 42)
 text = "Escrever um poema"
 
+[node name="WalkButton" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 42)
+text = "Passear pela escola"
+
 [node name="NextDayButton" type="Button" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 42)
 text = "Avançar o dia"
@@ -110,6 +114,7 @@ text = "Sair do jogo"
 [connection signal="pressed" from="Panel/VBoxContainer/AliceButton" to="." method="_on_character_button_pressed" binds=["alice"]]
 [connection signal="pressed" from="Panel/VBoxContainer/HikariButton" to="." method="_on_character_button_pressed" binds=["hikari"]]
 [connection signal="pressed" from="Panel/VBoxContainer/PoemButton" to="." method="_on_poem_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/WalkButton" to="." method="_on_walk_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/NextDayButton" to="." method="_on_next_day_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/EndButton" to="." method="_on_end_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/SaveLoadButton" to="." method="_on_save_load_button_pressed"]
