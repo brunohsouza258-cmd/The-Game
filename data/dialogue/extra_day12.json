@@ -1,0 +1,190 @@
+{
+  "id": "extra_day12",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/rooftop_rain.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A chuva fina engrossou. A porta do telhado está aberta, e do outro lado só há céu escuro e as luzes do festival lá embaixo. Ainda são nove horas. Ainda dá tempo.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/rooftop_rain.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Você veio mais cedo. Eu também. Eu venho sempre mais cedo. É o único jeito de ver essa porta sem ninguém olhando.",
+      "next": "n2",
+      "side": "left"
+    },
+    "n2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Eu subi atrás dela. Eu sabia que ela ia vir. Eu sempre soube, só não sabia por que eu sabia.",
+      "next": "n3",
+      "side": "right",
+      "partner": "res://assets/characters/maya.png"
+    },
+    "n3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Yuna, desce. Por favor. Esse lugar não é pra você.",
+      "next": "n4",
+      "side": "left",
+      "partner": "res://assets/characters/yuna.png"
+    },
+    "n4": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "angry",
+      "text": "Não desço. Eu fico aqui na porta. Eu não vou entrar, mas eu não vou deixar a Maya e o {player_name} sozinhos. Já deixaram gente sozinha demais por aqui.",
+      "next": "n5",
+      "side": "right",
+      "partner": "res://assets/characters/maya.png"
+    },
+    "n5": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "...Quem deixou?",
+      "next": "n6",
+      "side": "left",
+      "partner": "res://assets/characters/yuna.png"
+    },
+    "n6": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "thinking",
+      "text": "Eu não sei. Mas a minha mão sabe. Ela fica fria quando eu falo isso.",
+      "next": "n7",
+      "side": "right",
+      "partner": "res://assets/characters/maya.png"
+    },
+    "n7": {
+      "speaker": "",
+      "text": "Do corredor, passos pesados. A Hikari aparece encharcada, com a camisa colada, e atrás dela a Alice, sem guarda-chuva, segurando o relógio de pulso com as duas mãos.",
+      "next": "n8"
+    },
+    "n8": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "angry",
+      "text": "Eu corri a escola inteira. Subi cada escada. A porta tava trancada, aí ficou aberta quando eu cheguei. Alguém fez isso pra mim.",
+      "next": "n9",
+      "side": "right",
+      "partner": "res://assets/characters/maya.png"
+    },
+    "n9": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "close",
+      "text": "21:40. O ponteiro não anda mais. Eu fiz as contas. Passa de uma hora de diferença entre o meu relógio e o do pátio. Isso é o tempo que a gente tem.",
+      "next": "n10",
+      "side": "left",
+      "partner": "res://assets/characters/hikari.png"
+    },
+    "n10": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Tem coisas que não precisam de contas, Alice.",
+      "next": "n11",
+      "side": "left",
+      "partner": "res://assets/characters/hikari.png"
+    },
+    "b1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Para com isso, vai me fazer chorar. Eu já vou chorar de qualquer jeito, mas depois.",
+      "next": "b2",
+      "side": "right",
+      "partner": "res://assets/characters/alice.png"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Você vai lá e volta. A gente espera aqui. Eu seguro a porta, eu seguro até o dia nascer.",
+      "next": "n12",
+      "side": "right",
+      "partner": "res://assets/characters/alice.png"
+    },
+    "b3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Era o que eu ia pedir. Eu não queria te pedir isso sozinha.",
+      "next": "b4",
+      "side": "left",
+      "partner": "res://assets/characters/hikari.png"
+    },
+    "b4": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Anotado. Quem sobe vai ter que contar o resto depois. Eu quero saber o fim.",
+      "next": "n12",
+      "side": "left",
+      "partner": "res://assets/characters/hikari.png"
+    },
+    "n11": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "Eu sei. Mas eu só sei viver assim.",
+      "side": "left",
+      "partner": "res://assets/characters/hikari.png",
+      "choices": [
+        {
+          "text": "Agradecer a todas por terem vindo.",
+          "next": "b1",
+          "effects": {
+            "affinity.maya": 1,
+            "affinity.yuna": 1,
+            "affinity.alice": 1,
+            "affinity.hikari": 1,
+            "dread": -3
+          }
+        },
+        {
+          "text": "Pedir que fiquem na porta, só ele e a Maya sobem.",
+          "next": "b3",
+          "effects": {
+            "trust.maya": 2,
+            "dread": 3
+          }
+        }
+      ]
+    },
+    "n12": {
+      "speaker": "",
+      "text": "A chuva não para. Mas, no escuro, as quatro ficam ali, na porta, uma ao lado da outra, e nenhuma delas dá um passo para trás.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

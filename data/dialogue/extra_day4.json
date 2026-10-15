@@ -9,7 +9,6 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "sprite": "",
       "text": "A sala do clube cheira a chá de cevada. A Yuna arrumou biscoitos em formato de estrela no centro da mesa, e a Alice, sem pedir licença, está contando quantos tem.",
       "next": "n1",
       "background": "res://assets/backgrounds/clubroom.png",
@@ -21,7 +20,9 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "neutral",
       "text": "Vinte e três. Você fez vinte e quatro cortes na forma, Yuna.",
-      "next": "n2"
+      "next": "n2",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png"
     },
     "n2": {
       "speaker": "Yuna",
@@ -29,7 +30,9 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "surprised",
       "text": "Eu... fiz? Acho que sim. Eu sempre faço uma a mais. Para...",
-      "next": "n3"
+      "next": "n3",
+      "side": "left",
+      "partner": "res://assets/characters/alice.png"
     },
     "n3": {
       "speaker": "Yuna",
@@ -37,7 +40,9 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "sad",
       "text": "Para ninguém. Esquece. Pode comer o último, Alice, ele não vai fazer falta.",
-      "next": "n4"
+      "next": "n4",
+      "side": "left",
+      "partner": "res://assets/characters/alice.png"
     },
     "n4": {
       "speaker": "Alice",
@@ -45,11 +50,12 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "sad",
       "text": "Não é sobre fome. É sobre o número. Eu tenho um caderno cheio de números que não fecham, e você tem uma forma de biscoito com um lugar sobrando.",
-      "next": "n5"
+      "next": "n5",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png"
     },
     "n5": {
       "speaker": "",
-      "sprite": "",
       "text": "A Alice vira o caderno para a Yuna. Na página, uma lista de datas escritas com a letra do próprio {player_name}, mas ele nunca viu aquele caderno antes.",
       "next": "n6"
     },
@@ -59,7 +65,9 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "scared",
       "text": "Essa letra é igual à do {player_name}.",
-      "next": "n7"
+      "next": "n7",
+      "side": "left",
+      "partner": "res://assets/characters/alice.png"
     },
     "b1": {
       "speaker": "Alice",
@@ -67,7 +75,9 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "close",
       "text": "Pode ler. Mas leia as datas de trás pra frente. A última é a do festival. A primeira é amanhã.",
-      "next": "b2"
+      "next": "b2",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png"
     },
     "b2": {
       "speaker": "Yuna",
@@ -75,7 +85,9 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "scared",
       "text": "Fecha isso. Por favor. Hoje é dia de biscoito, não dia de... isso.",
-      "next": "end"
+      "next": "end",
+      "side": "left",
+      "partner": "res://assets/characters/alice.png"
     },
     "b3": {
       "speaker": "Yuna",
@@ -83,7 +95,9 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "happy",
       "text": "Obrigada. Sério. Vem cá, {player_name}, o último é seu. A Alice que se vire com os números.",
-      "next": "b4"
+      "next": "b4",
+      "side": "left",
+      "partner": "res://assets/characters/alice.png"
     },
     "b4": {
       "speaker": "Alice",
@@ -91,7 +105,9 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "neutral",
       "text": "Número vinte e quatro. Registrado.",
-      "next": "end"
+      "next": "end",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png"
     },
     "n7": {
       "speaker": "Alice",
@@ -99,6 +115,8 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "thinking",
       "text": "Eu sei. Ainda não decidi se isso é uma pista ou uma coincidência de mau gosto.",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png",
       "choices": [
         {
           "text": "Pegar o caderno e ler.",

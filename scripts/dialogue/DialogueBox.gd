@@ -10,6 +10,13 @@ extends CanvasLayer
 @onready var history_panel: Panel = $HistoryPanel
 @onready var history_list: VBoxContainer = $HistoryPanel/ScrollContainer/HistoryList
 @onready var history_close_button: Button = $HistoryPanel/CloseButton
+@onready var auto_button: Button = $AutoButton
+
+const AUTO_SECONDS_PER_CHAR := 0.02
+const SKIP_INTERVAL := 0.07
+
+var _auto_timer: Timer
+var _skip_cooldown: float = 0.0
 
 var _full_text: String = ""
 var _char_index: int = 0
@@ -21,10 +28,58 @@ func _ready() -> void:
 	type_timer.timeout.connect(_on_type_tick)
 	history_button.pressed.connect(_on_history_pressed)
 	history_close_button.pressed.connect(_on_history_close_pressed)
+	_auto_timer = Timer.new()
+	_auto_timer.one_shot = true
+	_auto_timer.timeout.connect(_on_auto_timeout)
+	add_child(_auto_timer)
+	auto_button.toggle_mode = true
+	auto_button.button_pressed = GameSettings.auto_advance
+	_refresh_auto_button()
+	auto_button.toggled.connect(_on_auto_toggled)
 	EventBus.dialogue_started.connect(_on_dialogue_started)
 	EventBus.dialogue_node_shown.connect(_on_node_shown)
 	EventBus.dialogue_ended.connect(_on_dialogue_closed)
 	EventBus.dialogue_cancelled.connect(_on_dialogue_closed)
+
+# Segurar Ctrl avança o texto rápido (pula falas), sem tocar nas escolhas.
+func _process(delta: float) -> void:
+	if not panel.visible or history_panel.visible or not Input.is_key_pressed(KEY_CTRL):
+		return
+	_skip_cooldown -= delta
+	if _skip_cooldown > 0.0:
+		return
+	_skip_cooldown = SKIP_INTERVAL
+	if _char_index < _full_text.length():
+		_finish_typing()
+	elif _pending_choices.is_empty():
+		_auto_timer.stop()
+		DialogueManager.advance()
+
+func _refresh_auto_button() -> void:
+	auto_button.text = "Auto: Sim" if GameSettings.auto_advance else "Auto: Não"
+
+func _on_auto_toggled(value: bool) -> void:
+	SfxPlayer.play_click()
+	GameSettings.set_auto_advance(value)
+	_refresh_auto_button()
+	if value:
+		_start_auto_wait()
+	else:
+		_auto_timer.stop()
+
+func _start_auto_wait() -> void:
+	if not GameSettings.auto_advance or not panel.visible:
+		return
+	if not _pending_choices.is_empty() or _char_index < _full_text.length():
+		return
+	_auto_timer.start(GameSettings.auto_seconds + _full_text.length() * AUTO_SECONDS_PER_CHAR)
+
+func _on_auto_timeout() -> void:
+	if history_panel.visible:
+		_auto_timer.start(1.0)
+		return
+	if panel.visible and _pending_choices.is_empty():
+		DialogueManager.advance()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not panel.visible or history_panel.visible or not event.is_action_pressed("ui_accept"):
@@ -40,6 +95,9 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_dialogue_started(meta: Dictionary) -> void:
 	panel.visible = true
 	history_button.visible = true
+	auto_button.visible = true
+	auto_button.set_pressed_no_signal(GameSettings.auto_advance)
+	_refresh_auto_button()
 	var color_hex: String = meta.get("character_color", "")
 	_name_color = Color(color_hex) if color_hex != "" else Color(1, 1, 1, 1)
 
@@ -53,6 +111,7 @@ func _on_node_shown(node_data: Dictionary) -> void:
 	_pending_choices = node_data.get("choices", [])
 	_char_index = 0
 	text_label.text = ""
+	_auto_timer.stop()
 	_clear_choices()
 	type_timer.wait_time = max(GameSettings.text_speed, 0.001)
 	type_timer.start()
@@ -68,6 +127,7 @@ func _finish_typing() -> void:
 	text_label.text = _full_text
 	_char_index = _full_text.length()
 	_show_choices()
+	_start_auto_wait()
 
 func _show_choices() -> void:
 	_clear_choices()
@@ -87,10 +147,12 @@ func _show_choices() -> void:
 	choices_container.visible = true
 
 func _advance() -> void:
+	_auto_timer.stop()
 	SfxPlayer.play_click()
 	DialogueManager.advance()
 
 func _choose(index: int) -> void:
+	_auto_timer.stop()
 	SfxPlayer.play_click()
 	DialogueManager.choose(index)
 
@@ -101,6 +163,7 @@ func _clear_choices() -> void:
 
 func _on_dialogue_closed(_arg = null) -> void:
 	type_timer.stop()
+	_auto_timer.stop()
 	_full_text = ""
 	_pending_choices = []
 	_hide_all()
@@ -110,6 +173,7 @@ func _hide_all() -> void:
 	name_plate.visible = false
 	choices_container.visible = false
 	history_button.visible = false
+	auto_button.visible = false
 	history_panel.visible = false
 
 func _on_history_pressed() -> void:

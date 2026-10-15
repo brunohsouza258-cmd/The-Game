@@ -13,9 +13,21 @@ const GALLERY_SCENE := "res://scenes/main/EndingsGallery.tscn"
 @onready var continue_button: Button = $TitleScreen/MenuPanel/VBoxContainer/ContinueButton
 @onready var content_root: Node = $ContentRoot
 
+const FADE_SECONDS := 0.4
+
 var _in_game: bool = false
+var _fade: ColorRect
 
 func _ready() -> void:
+	var fade_layer := CanvasLayer.new()
+	fade_layer.layer = 100
+	add_child(fade_layer)
+	_fade = ColorRect.new()
+	_fade.color = Color.BLACK
+	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_fade.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_fade.modulate.a = 0.0
+	fade_layer.add_child(_fade)
 	name_input.text_submitted.connect(func(_text): _on_name_confirm_pressed())
 	show_title()
 
@@ -33,6 +45,7 @@ func show_title() -> void:
 	DialogueManager.cancel()
 	for child in content_root.get_children():
 		child.queue_free()
+	_fade_in()
 	title_screen.visible = true
 	menu_panel.visible = true
 	name_prompt.visible = false
@@ -122,4 +135,10 @@ func show_screen(scene_path: String) -> Node:
 		child.queue_free()
 	var screen: Node = load(scene_path).instantiate()
 	content_root.add_child(screen)
+	_fade_in()
 	return screen
+
+# Cada troca de tela surge de um preto suave em vez de um corte seco.
+func _fade_in() -> void:
+	_fade.modulate.a = 1.0
+	create_tween().tween_property(_fade, "modulate:a", 0.0, FADE_SECONDS)

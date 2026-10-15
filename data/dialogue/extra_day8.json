@@ -9,7 +9,6 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "sprite": "",
       "text": "A porta do telhado, que sempre esteve trancada, está encostada. Do lado de lá, o vento levanta poeira da laje. A Hikari está parada no limiar, de punhos fechados, sem atravessar.",
       "next": "n1",
       "background": "res://assets/backgrounds/rooftop_dusk.png",
@@ -73,7 +72,6 @@
     },
     "n4": {
       "speaker": "",
-      "sprite": "",
       "text": "Do outro lado da grade, o sol se põe sobre a pista de atletismo. Quatro raias. A segunda tem o desenho de um nome que foi lavado pela chuva.",
       "choices": [
         {

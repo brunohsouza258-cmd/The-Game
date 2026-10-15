@@ -10,6 +10,9 @@ var music_volume: float = 0.7
 var sfx_volume: float = 0.8
 var text_speed: float = 0.03
 var fullscreen: bool = false
+# Avanço automático: espera auto_seconds + um tempo proporcional ao tamanho da fala.
+var auto_advance: bool = true
+var auto_seconds: float = 2.0
 # Persists across new games: how many times the player has started this story.
 var loop_count: int = 0
 # Finais já vistos (persiste entre partidas, como o loop_count).
@@ -45,6 +48,8 @@ func load_settings() -> void:
 		sfx_volume = config.get_value("audio", "sfx", sfx_volume)
 		text_speed = config.get_value("text", "speed", text_speed)
 		fullscreen = config.get_value("display", "fullscreen", fullscreen)
+		auto_advance = config.get_value("text", "auto_advance", auto_advance)
+		auto_seconds = config.get_value("text", "auto_seconds", auto_seconds)
 		loop_count = config.get_value("meta", "loop_count", loop_count)
 		unlocked_endings = config.get_value("meta", "unlocked_endings", unlocked_endings)
 	_apply_all()
@@ -55,6 +60,8 @@ func save_settings() -> void:
 	config.set_value("audio", "music", music_volume)
 	config.set_value("audio", "sfx", sfx_volume)
 	config.set_value("text", "speed", text_speed)
+	config.set_value("text", "auto_advance", auto_advance)
+	config.set_value("text", "auto_seconds", auto_seconds)
 	config.set_value("display", "fullscreen", fullscreen)
 	config.set_value("meta", "loop_count", loop_count)
 	config.set_value("meta", "unlocked_endings", unlocked_endings)
@@ -79,6 +86,14 @@ func set_text_speed(value: float) -> void:
 	text_speed = value
 	save_settings()
 
+func set_auto_advance(value: bool) -> void:
+	auto_advance = value
+	save_settings()
+
+func set_auto_seconds(value: float) -> void:
+	auto_seconds = value
+	save_settings()
+
 func set_fullscreen(value: bool) -> void:
 	fullscreen = value
 	_apply_fullscreen()
@@ -89,6 +104,8 @@ func reset_to_defaults() -> void:
 	music_volume = 0.7
 	sfx_volume = 0.8
 	text_speed = 0.03
+	auto_advance = true
+	auto_seconds = 2.0
 	fullscreen = false
 	_apply_all()
 	save_settings()

@@ -15,6 +15,8 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - Mouse: todos os menus, escolhas e o poema.
 - Enter / Espaço: completam a frase que está sendo digitada e depois avançam o texto.
 - F5 / F9 (durante o jogo): salvar e carregar rápido no slot 1.
+- Ctrl (segurar): pula o texto rapidamente, parando nas escolhas.
+- **Avanço automático:** depois de um tempo o texto passa sozinho (botão "Auto" na caixa de diálogo; tempo ajustável em Configurações). Nunca avança sobre escolhas.
 
 ## Fluxo
 
@@ -32,6 +34,8 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - **Efeitos de diálogo**: `effects` funciona tanto nas escolhas quanto direto nas falas. `"effect": "glitch"` dispara o glitch visual e sonoro.
 - **Saves**: 3 slots, mais save e load rápidos.
 - **Configurações** (`user://settings.cfg`): volume geral, música e efeitos sonoros em canais de áudio separados, velocidade do texto e tela cheia.
+- **Cenas com duas personagens:** as falas podem trazer `"side"` ("left"/"right") e `"partner"` (sprite da outra), e a que não fala fica escurecida ao fundo.
+- **Transições:** cada troca de tela surge de um fade suave.
 - **Histórico de falas**: botão "Histórico" durante o diálogo.
 
 ## Arte e áudio

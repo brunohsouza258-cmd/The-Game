@@ -9,7 +9,6 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "sprite": "",
       "text": "Depois do anúncio do festival, a sala virou oficina. Papel colorido, cola e varetas por todo lado. A Yuna e a Maya montam lanternas lado a lado, em silêncio, como duas pessoas que sempre trabalharam juntas.",
       "next": "n1",
       "background": "res://assets/backgrounds/classroom.png",
@@ -21,7 +20,9 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "happy",
       "text": "Essa vai ser a mais bonita do festival. Eu desenhei flor de cerejeira. Você vai pintar a sua de quê, Maya?",
-      "next": "n2"
+      "next": "n2",
+      "side": "left",
+      "partner": "res://assets/characters/maya.png"
     },
     "n2": {
       "speaker": "Maya",
@@ -29,7 +30,9 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "neutral",
       "text": "Nada. Vai ficar branca.",
-      "next": "n3"
+      "next": "n3",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png"
     },
     "n3": {
       "speaker": "Yuna",
@@ -37,7 +40,9 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "sad",
       "text": "Branca? Uma lanterna sem nada? Isso parece... luto, Maya.",
-      "next": "n4"
+      "next": "n4",
+      "side": "left",
+      "partner": "res://assets/characters/maya.png"
     },
     "n4": {
       "speaker": "Maya",
@@ -45,7 +50,9 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "sad",
       "text": "É só uma lanterna. A gente acende uma pra cada pessoa. A minha eu deixo para uma pessoa que não vai estar lá.",
-      "next": "n5"
+      "next": "n5",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png"
     },
     "n5": {
       "speaker": "Yuna",
@@ -53,11 +60,12 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "surprised",
       "text": "Quem?",
-      "next": "n6"
+      "next": "n6",
+      "side": "left",
+      "partner": "res://assets/characters/maya.png"
     },
     "n6": {
       "speaker": "",
-      "sprite": "",
       "text": "A Maya dobra o papel com muito cuidado. Dentro, em letra miúda, ela escreve uma sigla e cobre com a mão antes que alguém veja.",
       "next": "n7"
     },
@@ -67,7 +75,9 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "surprised",
       "text": "...Você pintaria? Eu nunca deixei ninguém tocar nela.",
-      "next": "b2"
+      "next": "b2",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png"
     },
     "b2": {
       "speaker": "Maya",
@@ -75,7 +85,9 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "happy",
       "text": "Só uma risca azul. Embaixo. Como o céu antes de amanhecer. Obrigada, {player_name}.",
-      "next": "end"
+      "next": "end",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png"
     },
     "b3": {
       "speaker": "Maya",
@@ -83,7 +95,9 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "scared",
       "text": "Pergunta de novo no dia 12. Se você ainda quiser saber, eu respondo.",
-      "next": "b4"
+      "next": "b4",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png"
     },
     "b4": {
       "speaker": "Yuna",
@@ -91,7 +105,9 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "scared",
       "text": "Maya, você tá me assustando. Isso é uma festa, lembra?",
-      "next": "end"
+      "next": "end",
+      "side": "left",
+      "partner": "res://assets/characters/maya.png"
     },
     "n7": {
       "speaker": "Maya",
@@ -99,6 +115,8 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "close",
       "text": "Ninguém que você conheça, Yuna. Ninguém que ninguém conheça.",
+      "side": "right",
+      "partner": "res://assets/characters/yuna.png",
       "choices": [
         {
           "text": "Oferecer ajuda para pintar a lanterna branca.",

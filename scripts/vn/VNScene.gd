@@ -5,6 +5,8 @@ const SCREEN_SIZE := Vector2(1280, 720)
 const SPRITE_HEIGHT := 640.0
 const DREAD_TINT := Color(0.78, 0.6, 0.66)
 const POSE_SECONDS := 0.25
+const SIDE_X := {"left": 0.27, "right": 0.73}
+const PARTNER_TINT := Color(0.5, 0.5, 0.58)
 
 # Each pose moves/tints the sprite. If assets/characters/<name>_<pose>.png exists,
 # that image is used instead of the base sprite (drop new pose art in and it just works).
@@ -33,8 +35,17 @@ var _base_sprite_path: String = ""
 var _base_scale: float = 1.0
 var _time: float = 0.0
 var _pose_tween: Tween
+var _partner_sprite: Sprite2D
+var _stage_x: float = SCREEN_SIZE.x / 2.0
+var _partner_scale: float = 1.0
 
 func _ready() -> void:
+	# A segunda personagem em cena fica atrás da que fala, escurecida.
+	_partner_sprite = Sprite2D.new()
+	_partner_sprite.visible = false
+	_partner_sprite.modulate = PARTNER_TINT
+	add_child(_partner_sprite)
+	move_child(_partner_sprite, character_sprite.get_index())
 	EventBus.dialogue_started.connect(_on_dialogue_started)
 	EventBus.dialogue_node_shown.connect(_on_node_shown)
 	EventBus.dialogue_ended.connect(_on_dialogue_ended)
@@ -74,6 +85,15 @@ func _apply_node_scene(node_data: Dictionary) -> void:
 		character_sprite.visible = _base_sprite_path != ""
 		if _base_sprite_path != "":
 			_set_texture(_base_sprite_path)
+		# "side" põe quem fala à esquerda/direita; sem ele, centralizada.
+		_stage_x = SCREEN_SIZE.x * float(SIDE_X.get(node_data.get("side", ""), 0.5))
+	if node_data.has("sprite") or node_data.has("partner"):
+		var partner_path: String = node_data.get("partner", "")
+		_partner_sprite.visible = partner_path != "" and _base_sprite_path != ""
+		if _partner_sprite.visible:
+			var texture: Texture2D = load(partner_path)
+			_partner_sprite.texture = texture
+			_partner_scale = SPRITE_HEIGHT * 0.94 / texture.get_size().y
 
 func _apply_pose(pose_name: String) -> void:
 	var pose: Dictionary = POSES.get(pose_name, POSES["neutral"])
@@ -108,6 +128,10 @@ func _process(delta: float) -> void:
 		return
 	var breath := 1.0 + sin(_time * 2.0) * 0.006
 	var base_position := Vector2(SCREEN_SIZE.x / 2.0, SCREEN_SIZE.y - SPRITE_HEIGHT / 2.0)
+	base_position.x = _stage_x
+	if _partner_sprite.visible:
+		_partner_sprite.position = Vector2(SCREEN_SIZE.x - _stage_x, SCREEN_SIZE.y - SPRITE_HEIGHT * 0.94 / 2.0)
+		_partner_sprite.scale = Vector2.ONE * _partner_scale * breath
 	character_sprite.position = base_position + pose_offset + Vector2(sin(_time * 70.0) * shake, hop_offset)
 	character_sprite.scale = Vector2.ONE * _base_scale * pose_scale * breath
 	character_sprite.rotation = pose_rotation

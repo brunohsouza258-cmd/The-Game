@@ -19,6 +19,7 @@ func _build_rows() -> void:
 	_add_percent_slider("Música", GameSettings.music_volume, GameSettings.set_music_volume)
 	_add_percent_slider("Efeitos sonoros", GameSettings.sfx_volume, _on_sfx_volume_changed)
 	_add_speed_slider()
+	_add_auto_rows()
 	_add_fullscreen_toggle()
 
 func _add_percent_slider(title: String, value: float, on_change: Callable) -> void:
@@ -52,6 +53,28 @@ func _add_speed_slider() -> void:
 	var on_value := func(v: float) -> void:
 		label.text = "Velocidade do texto: %d/10" % int(v)
 		GameSettings.set_text_speed(SPEED_FACTOR / (v + 1.0))
+	slider.value_changed.connect(on_value)
+	rows.add_child(slider)
+
+func _add_auto_rows() -> void:
+	var toggle := CheckButton.new()
+	toggle.text = "Avanço automático do texto"
+	toggle.button_pressed = GameSettings.auto_advance
+	toggle.toggled.connect(GameSettings.set_auto_advance)
+	rows.add_child(toggle)
+
+	var label := Label.new()
+	rows.add_child(label)
+	var slider := HSlider.new()
+	slider.min_value = 1
+	slider.max_value = 10
+	slider.step = 1
+	slider.custom_minimum_size = Vector2(0, 28)
+	slider.value = clampi(roundi(GameSettings.auto_seconds), 1, 10)
+	label.text = "Tempo de leitura automática: %d s" % int(slider.value)
+	var on_value := func(v: float) -> void:
+		label.text = "Tempo de leitura automática: %d s" % int(v)
+		GameSettings.set_auto_seconds(v)
 	slider.value_changed.connect(on_value)
 	rows.add_child(slider)
 

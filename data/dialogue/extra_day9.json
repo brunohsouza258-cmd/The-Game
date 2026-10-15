@@ -9,10 +9,9 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "sprite": "",
       "text": "Por um instante, a sala de aula some. No lugar dela, a mesma sala, mas com o forro caído, as janelas estilhaçadas, riscos de contagem por toda a parede. A Alice e a Maya estão ali, sentadas lado a lado, como se nada tivesse mudado.",
-      "effect": "glitch",
       "next": "n1",
+      "effect": "glitch",
       "background": "res://assets/backgrounds/school_decayed.png",
       "tint": "#ffffff"
     },
@@ -22,7 +21,9 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "neutral",
       "text": "Está acontecendo mais rápido. Antes durava um segundo. Agora eu consigo ler uma frase inteira.",
-      "next": "n2"
+      "next": "n2",
+      "side": "left",
+      "partner": "res://assets/characters/maya.png"
     },
     "n2": {
       "speaker": "Maya",
@@ -30,7 +31,9 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "sad",
       "text": "Eu sei. É assim que começa o fim de cada volta. A escola cai antes das pessoas.",
-      "next": "n3"
+      "next": "n3",
+      "side": "right",
+      "partner": "res://assets/characters/alice.png"
     },
     "n3": {
       "speaker": "Alice",
@@ -38,7 +41,9 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "surprised",
       "text": "Cada volta. Você disse volta. Maya, quantas?",
-      "next": "n4"
+      "next": "n4",
+      "side": "left",
+      "partner": "res://assets/characters/maya.png"
     },
     "n4": {
       "speaker": "Maya",
@@ -46,7 +51,9 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "close",
       "text": "Eu parei de contar na centésima. Eu recomecei a contar na centésima primeira, e parei de novo.",
-      "next": "n5"
+      "next": "n5",
+      "side": "right",
+      "partner": "res://assets/characters/alice.png"
     },
     "b1": {
       "speaker": "Maya",
@@ -54,7 +61,9 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "sad",
       "text": "Você diz isso toda vez. E toda vez é verdade, até a meia-noite do dia 12.",
-      "next": "b2"
+      "next": "b2",
+      "side": "right",
+      "partner": "res://assets/characters/alice.png"
     },
     "b2": {
       "speaker": "Alice",
@@ -62,7 +71,9 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "happy",
       "text": "Então eu vou escrever com caneta permanente. Em lugar que não dê pra apagar.",
-      "next": "n6"
+      "next": "n6",
+      "side": "left",
+      "partner": "res://assets/characters/maya.png"
     },
     "b3": {
       "speaker": "Maya",
@@ -70,7 +81,9 @@
       "sprite": "res://assets/characters/maya.png",
       "pose": "neutral",
       "text": "Tudo bem. Eu espero. Eu sou muito boa nisso.",
-      "next": "b4"
+      "next": "b4",
+      "side": "right",
+      "partner": "res://assets/characters/alice.png"
     },
     "b4": {
       "speaker": "Alice",
@@ -78,7 +91,9 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "neutral",
       "text": "Eu anotei. Mas continuo querendo saber.",
-      "next": "n6"
+      "next": "n6",
+      "side": "left",
+      "partner": "res://assets/characters/maya.png"
     },
     "n5": {
       "speaker": "Alice",
@@ -86,6 +101,8 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "sad",
       "text": "Eu tenho um caderno em branco que um dia teve respostas. Se for por isso, eu devia ter perguntado antes. Eu quero saber, mesmo que eu esqueça de novo.",
+      "side": "left",
+      "partner": "res://assets/characters/maya.png",
       "choices": [
         {
           "text": "Dizer que vai lembrar por ela.",
@@ -108,7 +125,6 @@
     },
     "n6": {
       "speaker": "",
-      "sprite": "",
       "text": "A sala volta ao normal. Ninguém comenta que um quadro-negro acabou de se consertar sozinho.",
       "next": "end"
     },
