@@ -1,0 +1,119 @@
+{
+  "id": "yuna_day3",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "clubroom",
+  "nodes": {
+    "start": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "{player_name}! Chegou bem na hora. Essa é a sala do clube — chá, livros e zero vontade de estudar.",
+      "choices": [
+        {
+          "text": "Então esse é o tour prometido?",
+          "effects": {
+            "affinity.yuna": 2
+          },
+          "next": "tour",
+          "requires": {
+            "flags.accepted_yuna_tour": 1
+          }
+        },
+        {
+          "text": "Você convida todo mundo pra cá?",
+          "effects": {
+            "affinity.yuna": 1
+          },
+          "next": "tour",
+          "requires": {
+            "flags.accepted_yuna_tour": 0
+          }
+        }
+      ]
+    },
+    "tour": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "E aquele é o mural de fotos do clube! Cada festival a gente tira uma. Olha eu aqui pequenininha, com oito anos.",
+      "next": "photo"
+    },
+    "photo": {
+      "speaker": "",
+      "pose": "neutral",
+      "text": "Na foto antiga, três crianças seguram lanternas de papel. A do meio é a Yuna. A da direita tem o rosto riscado com caneta, com força, até rasgar o papel.",
+      "choices": [
+        {
+          "text": "Quem é essa do lado?",
+          "effects": {
+            "dread": 2,
+            "trust.yuna": 1
+          },
+          "next": "who"
+        },
+        {
+          "text": "Você era muito fofa.",
+          "effects": {
+            "affinity.yuna": 2,
+            "dread": -1
+          },
+          "next": "cute"
+        }
+      ]
+    },
+    "who": {
+      "speaker": "Yuna",
+      "pose": "scared",
+      "text": "Hã? Eu... não sei. Engraçado, né? Alguém deve ter riscado de brincadeira. Haha.",
+      "next": "hands"
+    },
+    "cute": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Para! Era, né? Agora sou só barulhenta.",
+      "next": "hands"
+    },
+    "hands": {
+      "speaker": "",
+      "pose": "scared",
+      "text": "Ela tira a foto do mural e guarda na gaveta, rápido. As mãos dela estão tremendo.",
+      "choices": [
+        {
+          "text": "Você tá bem?",
+          "effects": {
+            "trust.yuna": 2,
+            "dread": 1
+          },
+          "next": "crying",
+          "requires": {
+            "dread": 10
+          }
+        },
+        {
+          "text": "Bom, e o chá?",
+          "effects": {
+            "affinity.yuna": 1
+          },
+          "next": "tea"
+        }
+      ]
+    },
+    "crying": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Às vezes eu acordo com o rosto molhado. Como se tivesse chorado a noite toda por alguém. Mas não tem ninguém. ...Desculpa, isso foi muito pesado pro terceiro dia, né?",
+      "next": "end"
+    },
+    "tea": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "O chá! Claro! Senta aí, {player_name}. Hoje vai ser um dia normal. Eu prometo.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

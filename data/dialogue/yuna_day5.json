@@ -1,0 +1,63 @@
+{
+  "id": "yuna_day5",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#e6dde6",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "O festival! Vai ter lanterna, barraquinha, fogos... Eu adoro festival. Eu sempre ia com—",
+      "next": "stop"
+    },
+    "stop": {
+      "speaker": "",
+      "pose": "surprised",
+      "text": "Ela para no meio da frase, com a boca ainda aberta, como se a palavra seguinte tivesse sido arrancada.",
+      "next": "who"
+    },
+    "who": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "...com alguém. Meu vizinho. A gente morava porta com porta. Ele me ensinou a segurar a lanterna sem queimar o papel. Eu lembro das mãos dele. Não lembro do rosto.",
+      "choices": [
+        {
+          "text": "Kaito Mori.",
+          "effects": {
+            "dread": 3,
+            "trust.yuna": 1
+          },
+          "next": "name"
+        },
+        {
+          "text": "Você não precisa lembrar agora.",
+          "effects": {
+            "affinity.yuna": 2,
+            "dread": -1
+          },
+          "next": "gentle"
+        }
+      ]
+    },
+    "name": {
+      "speaker": "Yuna",
+      "pose": "corrupted",
+      "text": "Kaito... Kai. Eu chamava ele de Kai. Como eu sei disso? {player_name}, como VOCÊ sabe disso?",
+      "effect": "glitch",
+      "next": "end"
+    },
+    "gentle": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Você é estranho, sabia? Todo mundo me diz pra animar. Você é o único que me deixa não lembrar.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

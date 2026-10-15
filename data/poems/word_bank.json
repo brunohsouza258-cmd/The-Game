@@ -1,0 +1,44 @@
+{
+  "words": [
+    { "text": "estrelas", "weights": { "maya": 2, "alice": 1 } },
+    { "text": "silêncio", "weights": { "maya": 2 } },
+    { "text": "risada", "weights": { "yuna": 3 } },
+    { "text": "amizade", "weights": { "yuna": 2, "hikari": 1 } },
+    { "text": "mistério", "weights": { "maya": 3, "alice": 2 } },
+    { "text": "vitória", "weights": { "hikari": 3 } },
+    { "text": "coragem", "weights": { "hikari": 2 } },
+    { "text": "detalhes", "weights": { "alice": 3 } },
+    { "text": "padrões", "weights": { "alice": 2, "maya": 1 } },
+    { "text": "sol", "weights": { "yuna": 2 } },
+    { "text": "sombra", "weights": { "maya": 1, "alice": 1 } },
+    { "text": "desafio", "weights": { "hikari": 2, "yuna": 1 } },
+    { "text": "memória", "weights": { "maya": 3 } },
+    { "text": "calor", "weights": { "yuna": 3 } },
+    { "text": "lógica", "weights": { "alice": 3 } },
+    { "text": "velocidade", "weights": { "hikari": 2 } },
+    { "text": "segredo", "weights": { "maya": 2, "alice": 1 } },
+    { "text": "equipe", "weights": { "yuna": 2, "hikari": 2 } }
+  ],
+  "reactions": {
+    "maya": {
+      "great": "Ela lê devagar, quase sussurrando. \"É como se você tivesse escrito o que eu estava pensando antes de pensar.\"",
+      "good": "\"Interessante\", ela diz, com um meio sorriso. \"Você está prestando atenção em mim mais do que finge.\"",
+      "meh": "Ela dobra o papel sem muita reação. \"Hm. Palavras bonitas. Não chegam perto, mas são bonitas.\""
+    },
+    "yuna": {
+      "great": "Ela lê em voz alta pra si mesma e ri, os olhos brilhando. \"Isso foi a coisa mais fofa que alguém já escreveu pra mim!\"",
+      "good": "Ela sorri de verdade. \"Gostei bastante! Você sabe me alegrar.\"",
+      "meh": "\"Ah, que legal!\", ela diz, educada, mas sem o mesmo brilho de sempre."
+    },
+    "alice": {
+      "great": "Ela analisa cada palavra como se fosse uma pista. \"A estrutura disso não é acidental. Você escolheu bem.\"",
+      "good": "\"Hm. Boa seleção de palavras\", ela anota algo num caderno, satisfeita.",
+      "meh": "\"Faltou coesão\", ela comenta, sem maldade, só constatando."
+    },
+    "hikari": {
+      "great": "Ela lê duas vezes antes de admitir: \"Tá... isso foi bom. Não vou fingir que não foi.\"",
+      "good": "\"Nada mal\", ela diz, competitiva mesmo elogiando. \"Mas eu ainda escreveria melhor.\"",
+      "meh": "Ela dá de ombros. \"Fraco. Tenta de novo quando quiser perder de verdade.\""
+    }
+  }
+}

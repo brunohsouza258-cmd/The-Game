@@ -1,0 +1,69 @@
+{
+  "id": "maya_day10",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#a99fb4",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "Maya",
+      "pose": "thinking",
+      "text": "Faltam dois dias. Você já decidiu o que vai fazer às 21:47, não decidiu? Dá pra ver no jeito que você segura a mão direita.",
+      "choices": [
+        {
+          "text": "Eu vou deixar ele ir. Hoje o relógio andou um minuto quando eu disse isso.",
+          "effects": {
+            "trust.maya": 3,
+            "dread": 1
+          },
+          "next": "letgo",
+          "requires": {
+            "flags.accept_loss": 1
+          }
+        },
+        {
+          "text": "Eu decidi segurar ele dessa vez.",
+          "effects": {
+            "trust.maya": 1,
+            "dread": 2
+          },
+          "next": "hold",
+          "requires": {
+            "flags.try_save": 1
+          }
+        },
+        {
+          "text": "Eu ainda não sei o que fazer.",
+          "effects": {
+            "affinity.maya": 1
+          },
+          "next": "unsure"
+        }
+      ]
+    },
+    "letgo": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Então eu tenho que decidir também. Não dá pra soltar sozinho uma coisa que duas pessoas seguram. ...Me dá até o festival. Eu vou tentar.",
+      "next": "end"
+    },
+    "hold": {
+      "speaker": "Maya",
+      "pose": "angry",
+      "text": "Você já tentou isso. Muitas vezes. Os riscos na parede são isso. Eu não vou te impedir. Mas eu queria que, pelo menos uma vez, você tentasse outra coisa.",
+      "next": "end"
+    },
+    "unsure": {
+      "speaker": "Maya",
+      "pose": "thinking",
+      "text": "Tudo bem não saber. Só não deixa o \"não sei\" decidir por você. Ele já decidiu vezes demais.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

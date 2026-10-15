@@ -1,0 +1,131 @@
+{
+  "id": "maya_day9",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#b8aec4",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "Maya está encostada na janela do corredor, olhando a luz cinza lá fora.",
+      "choices": [
+        {
+          "text": "Maya. Sobre o que você me contou...",
+          "next": "untold",
+          "requires": {
+            "flags.maya_truth_asked": 1
+          }
+        },
+        {
+          "text": "Oi, Maya.",
+          "next": "fake",
+          "requires": {
+            "flags.chose_forget": 1
+          }
+        }
+      ]
+    },
+    "untold": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Você sabe a parte que eu não contei, né? Por que eu lembro de tudo e os outros não.",
+      "choices": [
+        {
+          "text": "Por quê?",
+          "effects": {
+            "dread": 2,
+            "trust.maya": 1
+          },
+          "next": "why"
+        },
+        {
+          "text": "Você não precisa contar.",
+          "effects": {
+            "affinity.maya": 1
+          },
+          "next": "why"
+        }
+      ]
+    },
+    "fake": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Oi, {player_name}! Tá um dia bonito, né? Normal. Bem normal. Animado pro festival?",
+      "choices": [
+        {
+          "text": "Você tá mentindo pra mim.",
+          "effects": {
+            "dread": 3,
+            "trust.maya": 2
+          },
+          "next": "fake_break"
+        },
+        {
+          "text": "É. Tá bonito.",
+          "effects": {
+            "affinity.maya": 1,
+            "dread": -1
+          },
+          "next": "end"
+        }
+      ]
+    },
+    "fake_break": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Você pediu pra esquecer. Eu tô tentando te dar isso. É o único presente que eu sei dar. ...Não me pede pra parar no meio. Por favor.",
+      "next": "end"
+    },
+    "why": {
+      "speaker": "Maya",
+      "pose": "corrupted",
+      "text": "Porque eu também não aceitei. Eu gostava dele. Do Kaito. Nunca disse. Quando ele caiu, eu pensei: só mais uma chance. Só mais uma volta. Acho que o loop é feito de duas pessoas que não conseguem soltar.",
+      "effect": "glitch",
+      "effects": {
+        "dread": 2
+      },
+      "next": "intimacy"
+    },
+    "intimacy": {
+      "speaker": "Maya",
+      "pose": "close",
+      "text": "E você... eu sei tudo sobre você. A caneta azul, a mão direita, o jeito de mentir olhando pra esquerda. Mas eu não sei se isso é te conhecer, ou só ter assistido você repetir.",
+      "choices": [
+        {
+          "text": "Então você conhece o que eu repito. Não quem eu sou ainda.",
+          "effects": {
+            "trust.maya": 3,
+            "dread": 1
+          },
+          "next": "honest"
+        },
+        {
+          "text": "Fica comigo nessa última vez, então.",
+          "effects": {
+            "affinity.maya": 3
+          },
+          "next": "stay"
+        }
+      ]
+    },
+    "honest": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Isso doeu. E foi a coisa mais verdadeira que alguém me disse em... muitas voltas. Obrigada.",
+      "next": "end"
+    },
+    "stay": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "\"Última vez\". Você diz isso como se tivesse certeza. Eu queria ter essa certeza.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

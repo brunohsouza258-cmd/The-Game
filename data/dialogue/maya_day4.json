@@ -1,0 +1,102 @@
+{
+  "id": "maya_day4",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "Maya",
+      "pose": "close",
+      "text": "Você achou o caderno. Dá pra ver na sua cara.",
+      "choices": [
+        {
+          "text": "Mostrar o caderno pra ela.",
+          "effects": {
+            "trust.maya": 2,
+            "dread": 3
+          },
+          "next": "show"
+        },
+        {
+          "text": "Que caderno?",
+          "effects": {
+            "affinity.maya": 1,
+            "trust.maya": -1
+          },
+          "next": "hide"
+        }
+      ]
+    },
+    "show": {
+      "speaker": "",
+      "pose": "thinking",
+      "text": "Maya folheia sem surpresa nenhuma. Para numa página. Na margem tem um desenho pequeno: uma porta de metal com uma placa. O mesmo desenho que ela fez ontem.",
+      "next": "her_drawing"
+    },
+    "her_drawing": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Eu desenhei isso. No seu caderno. Numa vez que você não lembra. ...Você me emprestou a caneta. Você sempre empresta a azul.",
+      "choices": [
+        {
+          "text": "Quem é Kaito Mori?",
+          "effects": {
+            "dread": 3,
+            "trust.maya": 1
+          },
+          "next": "kaito"
+        },
+        {
+          "text": "Eu escrevi isso da última vez também?",
+          "effects": {
+            "dread": 3,
+            "trust.maya": 2
+          },
+          "next": "loop",
+          "requires": {
+            "loop": 2
+          }
+        },
+        {
+          "text": "Eu não quero saber agora.",
+          "effects": {
+            "dread": -1,
+            "affinity.maya": 1
+          },
+          "next": "not_now"
+        }
+      ]
+    },
+    "kaito": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Ninguém. Ele virou ninguém. ...Me dá mais uns dias, {player_name}. Se eu falar tudo agora, você não acredita. Eu sei porque já tentei.",
+      "next": "end"
+    },
+    "loop": {
+      "speaker": "Maya",
+      "pose": "corrupted",
+      "text": "Escreveu. A letra fica um pouco mais fraca a cada vez. Como se você estivesse ficando sem tinta por dentro.",
+      "effect": "glitch",
+      "next": "end"
+    },
+    "not_now": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Tudo bem. Não saber também é uma escolha. Eu só queria que você soubesse que pode me perguntar.",
+      "next": "end"
+    },
+    "hide": {
+      "speaker": "Maya",
+      "pose": "angry",
+      "text": "Tá bom. Mas não deixa ele no armário. Ele sempre volta pro armário quando você não quer ver.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

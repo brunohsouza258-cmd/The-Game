@@ -1,0 +1,17 @@
+# Godot 4
+.godot/
+*.translation
+export_presets.cfg
+.mono/
+data_*/
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.claude/
+
+# Python
+__pycache__/
+*.pyc

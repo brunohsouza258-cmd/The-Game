@@ -1,0 +1,56 @@
+{
+  "id": "alice_day11",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#fff2e0",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "Alice",
+      "pose": "neutral",
+      "text": "Toma. É o meu relógio. Sincronizado com o relógio parado da sala: 21:47 vai bater exatamente igual. Eu fico com o da minha mãe.",
+      "next": "watch"
+    },
+    "watch": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "Hoje está tudo perfeito. Perfeito demais. Eu medi: nenhum aluno faltando, nenhuma página em branco, nenhum relógio parado. Estatisticamente, isso nunca acontece. É uma armadilha bem-feita.",
+      "choices": [
+        {
+          "text": "Aceitar o relógio.",
+          "effects": {
+            "trust.alice": 2,
+            "affinity.alice": 1,
+            "flags.alice_watch": true
+          },
+          "next": "accept"
+        },
+        {
+          "text": "Fica com ele. Você vai precisar mais que eu.",
+          "effects": {
+            "affinity.alice": 2
+          },
+          "next": "refuse"
+        }
+      ]
+    },
+    "accept": {
+      "speaker": "Alice",
+      "pose": "close",
+      "text": "Quando ele marcar 21:48, pela primeira vez, eu quero que você olhe pra ele e lembre que alguém confiou em você sem prova nenhuma.",
+      "next": "end"
+    },
+    "refuse": {
+      "speaker": "Alice",
+      "pose": "happy",
+      "text": "Tá. Então amanhã eu fico do seu lado e a gente olha pro mesmo relógio. Dá no mesmo. Talvez dê até mais.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

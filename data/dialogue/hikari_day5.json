@@ -1,0 +1,68 @@
+{
+  "id": "hikari_day5",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#e6dde6",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Saí do revezamento do festival. Antes que você pergunte: não, não é porque tô com medo de perder.",
+      "next": "why"
+    },
+    "why": {
+      "speaker": "Hikari",
+      "pose": "sad",
+      "text": "É que em revezamento alguém sempre fica pra trás. Sempre. E aí o nome dele some da planilha. Kaito Mori. Era a quarta raia. Era o cara que me passava na reta final, rindo.",
+      "choices": [
+        {
+          "text": "Você lembra dele.",
+          "effects": {
+            "dread": 2,
+            "trust.hikari": 1
+          },
+          "next": "remember"
+        },
+        {
+          "text": "Corre por ele, então.",
+          "effects": {
+            "affinity.hikari": 2
+          },
+          "next": "for_him"
+        },
+        {
+          "text": "Você não precisa correr se não quiser.",
+          "effects": {
+            "trust.hikari": 2
+          },
+          "next": "no_need"
+        }
+      ]
+    },
+    "remember": {
+      "speaker": "Hikari",
+      "pose": "sad",
+      "text": "Eu lembro do tempo dele. 12 segundos e 8. Eu nunca bati esse tempo. Agora não tem nem com quem comparar. Isso é perder pior do que perder.",
+      "next": "end"
+    },
+    "for_him": {
+      "speaker": "Hikari",
+      "pose": "thinking",
+      "text": "Correr por alguém que nem existe? ...Talvez. Talvez seja o único jeito de ele existir um pouco.",
+      "next": "end"
+    },
+    "no_need": {
+      "speaker": "Hikari",
+      "pose": "surprised",
+      "text": "Todo mundo diz que eu preciso. Que eu sou a melhor, que o time depende de mim. Você é o primeiro a dizer que não. Isso é... estranho de ouvir.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

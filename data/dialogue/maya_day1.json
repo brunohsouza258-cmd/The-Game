@@ -1,0 +1,100 @@
+{
+  "id": "maya_day1",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "Maya",
+      "pose": "neutral",
+      "text": "Você é o {player_name}, não é? O aluno novo.",
+      "choices": [
+        {
+          "text": "Como você sabe meu nome?",
+          "effects": {
+            "affinity.maya": 1,
+            "trust.maya": 1,
+            "dread": 2
+          },
+          "next": "curious"
+        },
+        {
+          "text": "Sou. E você é...?",
+          "effects": {
+            "affinity.maya": 1
+          },
+          "next": "intro"
+        }
+      ]
+    },
+    "curious": {
+      "speaker": "Maya",
+      "pose": "thinking",
+      "text": "Hm. Boa pergunta. Acho que alguém comentou na sala. Ou... não sei. Simplesmente sabia.",
+      "next": "intro"
+    },
+    "intro": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Maya. Eu costumo ficar por aqui depois da aula. O corredor fica bonito nesse horário — quase dá pra esquecer que é uma escola.",
+      "next": "name_moment"
+    },
+    "name_moment": {
+      "speaker": "Maya",
+      "pose": "thinking",
+      "text": "{player_name}... Engraçado. Parece um nome que eu já falei muitas vezes.",
+      "choices": [
+        {
+          "text": "Talvez porque eu já estive aqui antes.",
+          "effects": {
+            "trust.maya": 2,
+            "dread": 3
+          },
+          "next": "returned",
+          "requires": {
+            "loop": 2
+          }
+        },
+        {
+          "text": "Do que você está falando?",
+          "effects": {
+            "trust.maya": 1,
+            "dread": 3
+          },
+          "next": "deflect",
+          "requires": {
+            "dread": 2
+          }
+        },
+        {
+          "text": "Deve ser um nome comum.",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "returned": {
+      "speaker": "Maya",
+      "pose": "close",
+      "text": "...Você também sente isso? Então não sou só eu. Não fala pra ninguém, tá? Ainda não.",
+      "next": "end"
+    },
+    "deflect": {
+      "speaker": "Maya",
+      "pose": "scared",
+      "text": "Nada. Esquece. Às vezes eu falo coisas sem pensar — eu já te disse isso, não disse? Ou só pensei que disse.",
+      "next": "end"
+    },
+    "goodbye": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Deve ser. Até amanhã, {player_name}.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

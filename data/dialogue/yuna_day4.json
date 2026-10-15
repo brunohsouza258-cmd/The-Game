@@ -1,0 +1,104 @@
+{
+  "id": "yuna_day4",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "clubroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "A sala do clube está vazia, menos pela Yuna, sentada perto da janela. Os olhos dela estão vermelhos. Quando vê {player_name}, o sorriso aparece rápido demais.",
+      "next": "smile"
+    },
+    "smile": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "{player_name}! Alergia. Pólen. Essa época do ano é horrível, né? Haha.",
+      "choices": [
+        {
+          "text": "Sentar do lado dela, sem dizer nada.",
+          "effects": {
+            "trust.yuna": 2,
+            "affinity.yuna": 1,
+            "dread": -1
+          },
+          "next": "silence"
+        },
+        {
+          "text": "Não é alergia. O que aconteceu?",
+          "effects": {
+            "trust.yuna": 1,
+            "dread": 1
+          },
+          "next": "ask"
+        },
+        {
+          "text": "Contar uma piada pra animar.",
+          "effects": {
+            "affinity.yuna": 1,
+            "trust.yuna": -1
+          },
+          "next": "joke"
+        }
+      ]
+    },
+    "silence": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "Ficam assim alguns minutos. Lá fora, alguém do time de atletismo grita um nome que o vento leva antes de dar para ouvir. Yuna encosta a cabeça no ombro dele, só um pouco.",
+      "next": "thanks"
+    },
+    "thanks": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Obrigada por não perguntar. Eu não saberia responder. Eu encontrei a foto de novo na gaveta... e chorei olhando pro rosto riscado. Como se eu soubesse quem era.",
+      "next": "end"
+    },
+    "ask": {
+      "speaker": "Yuna",
+      "pose": "angry",
+      "text": "Eu não sei! Esse é o problema. Eu tô triste e não sei de quê. Você já sentiu falta de alguém que não lembra?",
+      "choices": [
+        {
+          "text": "Já. Desde que cheguei aqui.",
+          "effects": {
+            "trust.yuna": 2,
+            "dread": 2
+          },
+          "next": "same"
+        },
+        {
+          "text": "Deve ser cansaço.",
+          "effects": {
+            "trust.yuna": -1
+          },
+          "next": "tired"
+        }
+      ]
+    },
+    "same": {
+      "speaker": "Yuna",
+      "pose": "surprised",
+      "text": "Então não sou só eu. Isso é bom ou é muito, muito ruim?",
+      "next": "end"
+    },
+    "tired": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "É. Deve ser. Vou lavar o rosto. Você não viu nada, tá?",
+      "next": "end"
+    },
+    "joke": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Haha! Boa. ...Você também acha que eu tenho que estar sempre bem, né? Tudo bem. Todo mundo acha.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "main_day4",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#d8d4e8",
+  "sprite": "",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Quarto dia. Antes da primeira aula, {player_name} abre o armário do corredor para guardar o casaco. Tem um caderno lá dentro. Capa preta, sem nome.",
+      "next": "open"
+    },
+    "open": {
+      "speaker": "",
+      "text": "A letra é dele. Não parecida com a dele — é a dele, com o mesmo jeito torto de fazer o \"a\". As entradas têm datas. Dia 5. Dia 6. Dia 7. Dias que ainda não aconteceram.",
+      "choices": [
+        { "text": "Ler as entradas.", "effects": {"dread": 3}, "next": "read" },
+        { "text": "Fechar o caderno e jogar no lixo.", "effects": {"dread": -2}, "next": "trash" }
+      ]
+    },
+    "read": {
+      "speaker": "Caderno",
+      "text": "\"Dia 6: acordei com as mãos machucadas de novo. Dia 8: a porta do telhado estava aberta. Dia 11: não confia no dia bonito. Dia 12: não deixa ele subir sozinho.\"",
+      "next": "torn"
+    },
+    "trash": {
+      "speaker": "",
+      "text": "Ele joga o caderno no lixo do corredor e vai para a aula. No intervalo, quando abre a mochila, o caderno está lá dentro. Ele não colocou ali.",
+      "effect": "glitch",
+      "effects": {"dread": 2},
+      "next": "torn"
+    },
+    "torn": {
+      "speaker": "",
+      "text": "As páginas depois do Dia 12 foram arrancadas. Na última que sobrou, um nome escrito várias vezes, cada vez mais apagado, como se a caneta estivesse falhando — ou a memória: Kaito. Kaito. Kaito. Kaito Mori.",
+      "effect": "glitch",
+      "effects": {"dread": 3, "flags.found_notebook": true},
+      "next": "end"
+    },
+    "end": { "end": true }
+  }
+}

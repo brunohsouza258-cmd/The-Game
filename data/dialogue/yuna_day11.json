@@ -1,0 +1,56 @@
+{
+  "id": "yuna_day11",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#fff2e0",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "happy",
+      "text": "Yuna está montando a barraca do clube, cheia de lanternas de papel. Ela ri de alguma coisa que uma colega disse. Não é o sorriso de sempre. É menor, e de verdade.",
+      "next": "real"
+    },
+    "real": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "{player_name}! Olha, eu acertei a lanterna sem queimar o papel. Do jeito que o Kai me ensinou. Eu lembrei como ele segurava.",
+      "choices": [
+        {
+          "text": "Esse sorriso é diferente. É seu de verdade.",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 2
+          },
+          "next": "noticed"
+        },
+        {
+          "text": "Cuidado. Hoje é o dia bonito.",
+          "effects": {
+            "dread": 2,
+            "trust.yuna": 1
+          },
+          "next": "careful"
+        }
+      ]
+    },
+    "noticed": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Você reparou! É que hoje eu tô triste e feliz ao mesmo tempo, e não tô escondendo nenhum dos dois. Não sabia que dava pra fazer isso.",
+      "next": "end"
+    },
+    "careful": {
+      "speaker": "Yuna",
+      "pose": "thinking",
+      "text": "Eu sei. Eu também sinto que tem alguma coisa errada nessa perfeição toda. Mas eu quero aproveitar mesmo assim. Saber que pode acabar não é motivo pra não acender a lanterna.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

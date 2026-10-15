@@ -1,0 +1,86 @@
+{
+  "id": "hikari_day3",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "courtyard",
+  "nodes": {
+    "start": {
+      "speaker": "Hikari",
+      "pose": "thinking",
+      "text": "{player_name}, me ajuda numa conta. O revezamento tem quatro raias. Eu, Sato, Kimura... e quem mais?",
+      "choices": [
+        {
+          "text": "Eu não conheço o time.",
+          "next": "count"
+        },
+        {
+          "text": "Você esqueceu um nome?",
+          "effects": {
+            "dread": 1
+          },
+          "next": "count"
+        }
+      ]
+    },
+    "count": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Na planilha do treinador tem quatro raias. Na quarta não tem nome. Só um tempo: o melhor tempo do time. Melhor que o meu.",
+      "next": "angry"
+    },
+    "angry": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "E eu não perco. Pra ninguém. Então quem diabos correu isso?",
+      "choices": [
+        {
+          "text": "Eu corro a quarta raia, se precisar.",
+          "effects": {
+            "affinity.hikari": 2
+          },
+          "next": "volunteer"
+        },
+        {
+          "text": "Talvez alguém que saiu da escola.",
+          "effects": {
+            "trust.hikari": 1,
+            "dread": 2
+          },
+          "next": "left"
+        },
+        {
+          "text": "Você realmente não aceita perder, né?",
+          "effects": {
+            "trust.hikari": 1,
+            "affinity.hikari": -1
+          },
+          "next": "lose"
+        }
+      ]
+    },
+    "volunteer": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Você? Hah. Você nem sabe passar o bastão. ...Mas valeu. Ninguém nunca se oferece.",
+      "next": "end"
+    },
+    "left": {
+      "speaker": "Hikari",
+      "pose": "sad",
+      "text": "Saiu e levou o próprio nome junto? Não faz sentido. Mas tem dias que eu entro no vestiário e espero ouvir alguém rindo. Uma risada específica.",
+      "next": "end"
+    },
+    "lose": {
+      "speaker": "Hikari",
+      "pose": "sad",
+      "text": "Perder é ficar pra trás. E quem fica pra trás some. Pelo menos foi isso que eu aprendi.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

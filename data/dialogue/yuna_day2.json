@@ -1,0 +1,48 @@
+{
+  "id": "yuna_day2",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "clubroom",
+  "nodes": {
+    "start": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Ei, {player_name}! Hoje eu trouxe um lanche extra, quer dividir comigo?",
+      "choices": [
+        {
+          "text": "Claro, obrigado!",
+          "effects": {
+            "affinity.yuna": 2,
+            "dread": -1
+          },
+          "next": "share"
+        },
+        {
+          "text": "Eu já comi, mas valeu.",
+          "effects": {
+            "trust.yuna": 1
+          },
+          "next": "decline"
+        }
+      ]
+    },
+    "share": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Isso! Sabia que ia topar.",
+      "next": "end"
+    },
+    "decline": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Sem problema! Guardo pra amanhã então.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

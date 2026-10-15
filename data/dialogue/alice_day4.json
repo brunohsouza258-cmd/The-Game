@@ -1,0 +1,92 @@
+{
+  "id": "alice_day4",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "Alice",
+      "pose": "surprised",
+      "text": "Achei. Na secretaria. Eu tinha tirado uma cópia da lista de matrícula mês passado, pra um trabalho. Compara as duas.",
+      "next": "lists"
+    },
+    "lists": {
+      "speaker": "",
+      "pose": "thinking",
+      "text": "Na cópia de um mês atrás, turma 2-B, linha 14: \"Kaito Mori\". Na lista oficial de hoje, linha 14 não existe. A numeração pula do 13 para o 15.",
+      "choices": [
+        {
+          "text": "Eu vi esse nome. No meu caderno.",
+          "effects": {
+            "trust.alice": 2,
+            "dread": 3
+          },
+          "next": "notebook",
+          "requires": {
+            "flags.found_notebook": 1
+          }
+        },
+        {
+          "text": "Kaito Mori... K.M.",
+          "effects": {
+            "dread": 2,
+            "affinity.alice": 1
+          },
+          "next": "initials"
+        }
+      ]
+    },
+    "notebook": {
+      "speaker": "Alice",
+      "pose": "scared",
+      "text": "No seu caderno. Escrito por você. Antes de você ver essa lista. ...{player_name}, isso não é uma escola esquecendo um aluno. Isso é a escola apagando um aluno, e você lembrando dele.",
+      "next": "theory"
+    },
+    "initials": {
+      "speaker": "Alice",
+      "pose": "sad",
+      "text": "As iniciais da carteira. E do meu caderno. Ele estava na minha turma. Eu sei que estava. Mas não consigo lembrar a voz dele. Nem o rosto.",
+      "next": "theory"
+    },
+    "theory": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "Eu vou anotar tudo daqui pra frente com horário. Se a escola está mudando, eu quero saber quando.",
+      "choices": [
+        {
+          "text": "Anota também o que eu te contar.",
+          "effects": {
+            "trust.alice": 2,
+            "affinity.alice": 1
+          },
+          "next": "deal"
+        },
+        {
+          "text": "Cuidado. Isso pode te fazer mal.",
+          "effects": {
+            "affinity.alice": 2
+          },
+          "next": "careful"
+        }
+      ]
+    },
+    "deal": {
+      "speaker": "Alice",
+      "pose": "happy",
+      "text": "Combinado. Duas testemunhas são melhores que uma. Mesmo que nenhuma das duas consiga provar nada.",
+      "next": "end"
+    },
+    "careful": {
+      "speaker": "Alice",
+      "pose": "sad",
+      "text": "Saber nunca me fez mal. Não saber é que me faz. ...Mas obrigada por se preocupar.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

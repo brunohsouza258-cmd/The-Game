@@ -1,0 +1,69 @@
+{
+  "id": "maya_day11",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#fff2e0",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "O último dia antes do festival é sempre o mais bonito. É assim que ele te convence a ficar. Eu caí nisso muitas vezes.",
+      "next": "tomorrow"
+    },
+    "tomorrow": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Posso te perguntar uma coisa boba? Se existisse um dia 13... o que você faria?",
+      "choices": [
+        {
+          "text": "Te ouviria tocar piano. A música inteira.",
+          "effects": {
+            "affinity.maya": 3,
+            "trust.maya": 1
+          },
+          "next": "piano"
+        },
+        {
+          "text": "Levaria uma flor pra carteira do Kaito.",
+          "effects": {
+            "trust.maya": 2,
+            "dread": -1
+          },
+          "next": "flower"
+        },
+        {
+          "text": "Não sei se vai existir dia 13.",
+          "effects": {
+            "dread": 2
+          },
+          "next": "doubt"
+        }
+      ]
+    },
+    "piano": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "A música inteira. Até o fim. ...Faz tanto tempo que eu não penso num \"depois\" que eu esqueci que ele podia ser bom.",
+      "next": "end"
+    },
+    "flower": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Ele ia rir de você. \"Flor, sério?\" ...Eu vou junto. Se existir dia 13, eu vou junto.",
+      "next": "end"
+    },
+    "doubt": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Eu também não. Mas é a primeira vez em muito tempo que eu quero que exista.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

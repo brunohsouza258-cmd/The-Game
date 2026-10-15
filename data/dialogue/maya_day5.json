@@ -1,0 +1,93 @@
+{
+  "id": "maya_day5",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#e6dde6",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "Maya",
+      "pose": "thinking",
+      "text": "Você ouviu a voz dele hoje. Na sua cabeça. Eu vi quando aconteceu — você sempre leva a mão à direita, como se ainda estivesse segurando alguma coisa.",
+      "choices": [
+        {
+          "text": "Você estava lá. No telhado.",
+          "effects": {
+            "dread": 3,
+            "trust.maya": 1
+          },
+          "next": "there"
+        },
+        {
+          "text": "Não quero falar disso.",
+          "effects": {
+            "affinity.maya": 1,
+            "dread": -1
+          },
+          "next": "space"
+        }
+      ]
+    },
+    "there": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Na escada. Eu estava na escada. Eu vi a porta bater com o vento. É tudo que eu vou dizer hoje.",
+      "choices": [
+        {
+          "text": "Me conta o resto. Agora.",
+          "effects": {
+            "dread": 3,
+            "trust.maya": -1
+          },
+          "next": "push"
+        },
+        {
+          "text": "Tudo bem. No seu tempo.",
+          "effects": {
+            "trust.maya": 2
+          },
+          "next": "time"
+        },
+        {
+          "text": "Segurar a mão dela.",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 1
+          },
+          "next": "hand"
+        }
+      ]
+    },
+    "push": {
+      "speaker": "Maya",
+      "pose": "corrupted",
+      "text": "Da última vez que eu contei tudo no quinto dia, você subiu no telhado no sexto. Sozinho. Não. Não dessa vez.",
+      "effect": "glitch",
+      "next": "end"
+    },
+    "time": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Obrigada. Você é gentil em todas as voltas. Isso é o pior.",
+      "next": "end"
+    },
+    "hand": {
+      "speaker": "",
+      "pose": "close",
+      "text": "A mão dela está fria. Ela não solta. Fica olhando para os dedos dele como quem confere se ainda estão todos ali.",
+      "next": "end"
+    },
+    "space": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Tudo bem. Eu espero. Eu sou boa em esperar. Já tive muita prática.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

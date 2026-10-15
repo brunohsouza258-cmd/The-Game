@@ -1,0 +1,60 @@
+{
+  "id": "hikari_day7",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#bdb2c4",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "Hikari",
+      "pose": "close",
+      "text": "Não conta pra ninguém. Eu tenho vindo pra escola de noite. Tentando arrombar a porta do telhado com uma barra de ferro do depósito.",
+      "next": "why"
+    },
+    "why": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Se tem alguma coisa lá em cima, eu quero ver antes do dia 12. Eu quero chegar primeiro. É isso que eu faço: eu chego primeiro.",
+      "choices": [
+        {
+          "text": "Para com isso. Você vai se machucar.",
+          "effects": {
+            "trust.hikari": 2,
+            "affinity.hikari": -1
+          },
+          "next": "stop"
+        },
+        {
+          "text": "Hoje à noite eu vou com você.",
+          "effects": {
+            "affinity.hikari": 2,
+            "dread": 3
+          },
+          "next": "join"
+        }
+      ]
+    },
+    "stop": {
+      "speaker": "Hikari",
+      "pose": "sad",
+      "text": "Me machucar é o de menos. ...Mas tá. Você é a segunda pessoa que me pede pra parar. A primeira me passava na reta final rindo, dizendo que eu me esforçava demais.",
+      "next": "end"
+    },
+    "join": {
+      "speaker": "",
+      "pose": "corrupted",
+      "text": "Naquela noite, a barra de ferro não move a porta um milímetro. Mas do outro lado, bem baixinho, alguém bate de volta. Três batidas. Os dois saem correndo sem dizer uma palavra.",
+      "effect": "glitch",
+      "effects": {
+        "dread": 2
+      },
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

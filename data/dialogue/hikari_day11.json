@@ -1,0 +1,55 @@
+{
+  "id": "hikari_day11",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#fff2e0",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "Hikari está sentada sozinha na arquibancada, longe do movimento do festival. Pela primeira vez, ela não está treinando.",
+      "next": "scared"
+    },
+    "scared": {
+      "speaker": "Hikari",
+      "pose": "scared",
+      "text": "Vou falar uma coisa e se você rir eu te derrubo. Eu tô com medo. De amanhã. De subir e não conseguir. De subir e conseguir e tudo dar errado mesmo assim.",
+      "choices": [
+        {
+          "text": "Ter medo não te faz fraca.",
+          "effects": {
+            "trust.hikari": 3
+          },
+          "next": "not_weak"
+        },
+        {
+          "text": "Sentar do lado dela em silêncio.",
+          "effects": {
+            "affinity.hikari": 2,
+            "trust.hikari": 1
+          },
+          "next": "silence"
+        }
+      ]
+    },
+    "not_weak": {
+      "speaker": "Hikari",
+      "pose": "thinking",
+      "text": "Faz eu me sentir fraca. Mas talvez... talvez sentir fraca e continuar seja um tipo de força que eu ainda não treinei.",
+      "next": "end"
+    },
+    "silence": {
+      "speaker": "",
+      "pose": "close",
+      "text": "Ficam assim até o sol ir embora. Hikari, sem perceber, encosta o ombro no dele. Ela não pede desculpas. Ela não se afasta.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

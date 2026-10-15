@@ -1,0 +1,65 @@
+{
+  "id": "hikari_day12",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#7d72a8",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "Hikari",
+      "pose": "thinking",
+      "text": "Pé da escada. Cheguei primeiro, como sempre. ...Mas eu fiquei pensando em tudo que a gente conversou essas semanas. Em quem cai e em quem fica.",
+      "choices": [
+        {
+          "text": "Sobe comigo, mas sem tentar salvar ninguém sozinha.",
+          "effects": {
+            "affinity.hikari": 2,
+            "trust.hikari": 2
+          },
+          "next": "together",
+          "requires": {
+            "flags.hikari_together": 1
+          }
+        },
+        {
+          "text": "Fica aqui embaixo, Hikari. Por mim.",
+          "effects": {
+            "trust.hikari": 3
+          },
+          "next": "stay"
+        },
+        {
+          "text": "Você vai querer bater na gravidade de novo?",
+          "effects": {
+            "affinity.hikari": 2
+          },
+          "next": "joke"
+        }
+      ]
+    },
+    "together": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Sem salvar sozinha. Tá. Vai ser a primeira corrida da minha vida em que eu não tento ganhar.",
+      "next": "end"
+    },
+    "stay": {
+      "speaker": "Hikari",
+      "pose": "sad",
+      "text": "Ficar parada é a coisa mais difícil que você podia me pedir. ...Tá bom. Mas se você não descer até as 22h, eu subo. Isso não é negociável.",
+      "next": "end"
+    },
+    "joke": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Hah. Talvez. A gravidade ganhou da última vez. Mas ela nunca me enfrentou com alguém do meu lado.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "sections": [
+    { "title": "Lanternas de Papel", "lines": ["um jogo de Bruno"] },
+    { "title": "Criação, roteiro e direção", "lines": ["Bruno"] },
+    { "title": "Design de personagens e direção de arte", "lines": ["Bruno"] },
+    { "title": "Programação", "lines": ["Bruno", "com assistência do Claude (Anthropic)"] },
+    { "title": "Personagens", "lines": ["Maya", "Yuna", "Alice", "Hikari", "e Kaito Mori, que ninguém lembra"] },
+    { "title": "Arte de cenários e personagens", "lines": ["Gerada por IA (Krea 2 e Nano Banana 2) sob direção de Bruno"] },
+    { "title": "Trilha sonora (CC0, OpenGameArt)", "lines": [
+      "Yoiyami Core Theme, Starfield Romance e First Light Particles — Yoiyami",
+      "Calm Relax 1 — cynicmusic",
+      "Happy Clappy Loop — OwlishMedia",
+      "Insistent — yd",
+      "Abandoned Passages — congusbongus"
+    ] },
+    { "title": "Feito com", "lines": ["Godot Engine 4.3"] },
+    { "title": "Agradecimento especial", "lines": ["a você, {player_name}, por ter subido até o telhado"] },
+    { "title": "", "lines": ["Obrigado por jogar.", "", "© 2026 Bruno"] }
+  ]
+}

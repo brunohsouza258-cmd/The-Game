@@ -1,0 +1,64 @@
+{
+  "id": "hikari_day8",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#bdb2c4",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Decidi. Na noite do festival, eu vou estar no telhado. Com ou sem você. Se for pra alguém cair de novo, que seja eu. Eu pelo menos aguento.",
+      "choices": [
+        {
+          "text": "Você não vai. Eu não deixo.",
+          "effects": {
+            "trust.hikari": 1,
+            "affinity.hikari": -1
+          },
+          "next": "forbid"
+        },
+        {
+          "text": "Então a gente sobe junto.",
+          "effects": {
+            "affinity.hikari": 2,
+            "trust.hikari": 2,
+            "flags.hikari_together": true
+          },
+          "next": "together"
+        },
+        {
+          "text": "Ninguém precisa cair. Nem você.",
+          "effects": {
+            "trust.hikari": 3
+          },
+          "next": "nobody"
+        }
+      ]
+    },
+    "forbid": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Ninguém manda em mim. ...Mas é bom saber que alguém tentaria.",
+      "next": "end"
+    },
+    "together": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Junto. Tá. Mas eu chego primeiro na escada. Isso não é negociável.",
+      "next": "end"
+    },
+    "nobody": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "Hikari abre a boca para responder e não responde. Ela olha para as próprias mãos machucadas por um tempo longo. \"Ninguém nunca me disse que eu não precisava aguentar\", ela fala, por fim.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

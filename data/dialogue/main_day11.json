@@ -1,0 +1,47 @@
+{
+  "id": "main_day11",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#fff2e0",
+  "sprite": "",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Décimo primeiro dia. Tudo está perfeito. Todas as carteiras ocupadas. O sol no lugar certo. O pátio cheio de lanternas sendo montadas para amanhã, gente rindo, música tocando.",
+      "next": "too_perfect"
+    },
+    "too_perfect": {
+      "speaker": "",
+      "text": "Ninguém falta. Ninguém lembra de nada estranho. A escola parece recém-pintada, sem um arranhão. Como um cenário montado para convencer alguém a ficar.",
+      "next": "notebook"
+    },
+    "notebook": {
+      "speaker": "Caderno",
+      "text": "\"Dia 11: não confia no dia bonito.\"",
+      "next": "laugh"
+    },
+    "laugh": {
+      "speaker": "",
+      "text": "No corredor, uma risada. Alta, despreocupada, inconfundível. {player_name} conhece essa risada desde os seis anos de idade. Ela vem da direção da escada do telhado.",
+      "choices": [
+        { "text": "Seguir a risada.", "effects": {"dread": 3}, "next": "follow" },
+        { "text": "Ficar no pátio, com as pessoas que ainda estão aqui.", "effects": {"dread": -2}, "next": "stay" }
+      ]
+    },
+    "follow": {
+      "speaker": "",
+      "text": "No pé da escada não tem ninguém. Só a porta lá em cima, fechada. E escrito na poeira do corrimão, com o dedo, numa letra que não é a dele: \"amanhã você vem, né?\"",
+      "effect": "glitch",
+      "effects": {"dread": 2},
+      "next": "end"
+    },
+    "stay": {
+      "speaker": "",
+      "text": "Ele fica. Ajuda a pendurar uma lanterna. A risada para. Por algum motivo, isso dói mais do que se ela continuasse.",
+      "next": "end"
+    },
+    "end": { "end": true }
+  }
+}

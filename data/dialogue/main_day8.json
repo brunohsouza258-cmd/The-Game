@@ -1,0 +1,68 @@
+{
+  "id": "main_day8",
+  "display_name": "",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#8a6a78",
+  "sprite": "",
+  "music": "corrupted",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Oitavo dia, três da manhã. {player_name} não lembra de ter decidido vir. Está no corredor da escola às escuras, de uniforme, com a mão enfaixada latejando.",
+      "next": "chain"
+    },
+    "chain": {
+      "speaker": "",
+      "text": "A corrente da escada do telhado está no chão, cortada. A porta de metal lá em cima está aberta. Vento frio desce pelos degraus. \"Ela nunca abre antes do dia 8\", dizia o caderno.",
+      "choices": [
+        { "text": "Subir.", "effects": {"dread": 3}, "next": "climb" },
+        { "text": "Tentar voltar pra casa.", "next": "cant_leave" }
+      ]
+    },
+    "cant_leave": {
+      "speaker": "",
+      "text": "Ele vira e anda até a saída. O corredor é mais comprido do que deveria. No fim dele, a mesma escada, a mesma porta aberta. Não existe outro caminho hoje.",
+      "effect": "glitch",
+      "effects": {"dread": 2},
+      "next": "climb"
+    },
+    "climb": {
+      "speaker": "",
+      "text": "Do outro lado da porta não tem telhado. Tem a escola — outra escola. Janelas quebradas, carteiras empilhadas e apodrecidas, água preta cobrindo o pátio. Como se este lugar tivesse sido repetido tantas vezes que gastou.",
+      "next": "wall"
+    },
+    "wall": {
+      "speaker": "",
+      "text": "Na parede, riscos de contagem. Dezenas. Centenas. Os mais antigos quase sumidos, os últimos fundos e recentes. Embaixo, na letra dele: \"ELE NÃO PULOU. VOCÊ NÃO EMPURROU. VOCÊ SÓ NÃO CONSEGUIU SEGURAR.\"",
+      "effect": "glitch",
+      "effects": {"dread": 4},
+      "next": "maya"
+    },
+    "maya": {
+      "speaker": "Maya",
+      "text": "Você achou o lugar. ...Não olha pra mim, olha pra parede. Cada risco é uma vez que você chegou aqui e escolheu voltar ao primeiro dia.",
+      "next": "question"
+    },
+    "question": {
+      "speaker": "Maya",
+      "text": "Eu vou te perguntar uma vez só, {player_name}. Você quer saber o que aconteceu de verdade? Ou quer que eu te deixe esquecer? Se você escolher esquecer, eu prometo que vou fazer parecer um dia normal.",
+      "choices": [
+        { "text": "Eu quero saber.", "effects": {"dread": 4, "trust.maya": 3, "flags.maya_truth_asked": true}, "next": "know" },
+        { "text": "Me deixa esquecer.", "effects": {"dread": -6, "affinity.maya": 1, "flags.chose_forget": true}, "next": "forget" }
+      ]
+    },
+    "know": {
+      "speaker": "Maya",
+      "text": "Então amanhã eu conto tudo. Hoje, só uma coisa: ele era seu melhor amigo. E você foi a última pessoa que ele viu.",
+      "effect": "glitch",
+      "next": "end"
+    },
+    "forget": {
+      "speaker": "Maya",
+      "text": "Tudo bem. Fecha os olhos. Quando abrir, vai ser só uma escada, só uma porta trancada, só um dia normal.",
+      "next": "end"
+    },
+    "end": { "end": true }
+  }
+}

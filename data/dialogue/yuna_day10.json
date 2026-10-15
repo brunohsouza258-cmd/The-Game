@@ -1,0 +1,57 @@
+{
+  "id": "yuna_day10",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#a99fb4",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "Yuna",
+      "pose": "scared",
+      "text": "Metade do clube não veio hoje. Gripe, disseram. Eu fui na sala deles e nem as mochilas estavam lá. {player_name}, a gente tá sumindo, né?",
+      "next": "note"
+    },
+    "note": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Se tudo voltar ao começo, eu queria pelo menos lembrar de uma coisa: que eu não estava sozinha. Me ajuda a escrever um bilhete pra mim mesma? Pra eu achar na próxima volta?",
+      "choices": [
+        {
+          "text": "Escrever o bilhete com ela.",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 2,
+            "flags.yuna_note": true
+          },
+          "next": "write"
+        },
+        {
+          "text": "Não vai ter próxima volta, Yuna.",
+          "effects": {
+            "trust.yuna": 1,
+            "dread": 1
+          },
+          "next": "no_next"
+        }
+      ]
+    },
+    "write": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "\"Querida Yuna: você pode chorar. Tem alguém que fica. O nome dele é {player_name}. E o Kai odiava ovo.\" ...Pronto. Vou guardar dentro da foto.",
+      "next": "end"
+    },
+    "no_next": {
+      "speaker": "Yuna",
+      "pose": "thinking",
+      "text": "Você fala igual o Kai falava antes de fazer uma besteira corajosa. ...Mas eu acredito. Eu escolho acreditar.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "alice_day1",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "{player_name}, certo? Você notou que o relógio do corredor estava marcando uma hora diferente ontem?",
+      "choices": [
+        {
+          "text": "Não notei nada estranho.",
+          "effects": {
+            "trust.alice": -1
+          },
+          "next": "end"
+        },
+        {
+          "text": "Agora que você falou... sim.",
+          "effects": {
+            "affinity.alice": 1,
+            "trust.alice": 2,
+            "dread": 2
+          },
+          "next": "notice"
+        }
+      ]
+    },
+    "notice": {
+      "speaker": "Alice",
+      "pose": "happy",
+      "text": "Eu sabia que você ia reparar, {player_name}. Você presta atenção nas coisas.",
+      "choices": [
+        {
+          "text": "Você já notou mais alguma coisa?",
+          "effects": {
+            "affinity.alice": 1,
+            "dread": 3
+          },
+          "next": "more_notes",
+          "requires": {
+            "dread": 4
+          }
+        },
+        {
+          "text": "Foi só uma coincidência, provavelmente.",
+          "next": "end"
+        }
+      ]
+    },
+    "more_notes": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "Algumas coisas pequenas. Um aluno que eu tenho certeza que estava na minha turma do ano passado, mas que ninguém mais parece lembrar. Pode ser só eu esquecendo errado. Ou pode não ser.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

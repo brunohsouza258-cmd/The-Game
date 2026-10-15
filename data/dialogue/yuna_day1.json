@@ -1,0 +1,70 @@
+{
+  "id": "yuna_day1",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "clubroom",
+  "nodes": {
+    "start": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Oi! Você é o {player_name}, certo? Bem-vindo! Posso te mostrar a escola depois da aula.",
+      "choices": [
+        {
+          "text": "Seria ótimo, obrigado!",
+          "effects": {
+            "affinity.yuna": 2,
+            "flags.accepted_yuna_tour": true,
+            "dread": -1
+          },
+          "next": "happy"
+        },
+        {
+          "text": "Talvez outro dia.",
+          "effects": {
+            "affinity.yuna": -1
+          },
+          "next": "sad"
+        }
+      ]
+    },
+    "happy": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Combinado, {player_name}! Vai ser divertido, prometo!",
+      "choices": [
+        {
+          "text": "Você parece sempre tão animada. Nunca cansa?",
+          "effects": {
+            "affinity.yuna": 1
+          },
+          "next": "tired",
+          "requires": {
+            "dread": 4
+          }
+        },
+        {
+          "text": "Mal posso esperar.",
+          "next": "end"
+        }
+      ]
+    },
+    "tired": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Ah... às vezes. Mas é melhor sorrir, sabe? Todo mundo fica mais leve perto de quem sorri. ...Desculpa, isso ficou estranho. Esquece que eu disse isso.",
+      "next": "end"
+    },
+    "sad": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Ah... tudo bem! Sem pressa.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

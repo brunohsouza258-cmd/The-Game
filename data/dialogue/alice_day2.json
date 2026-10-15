@@ -1,0 +1,43 @@
+{
+  "id": "alice_day2",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "{player_name}, eu andei anotando os horários em que as coisas estranhas acontecem. Tem um padrão: sempre que alguém fala demais sobre o passado.",
+      "choices": [
+        {
+          "text": "Isso é só coincidência.",
+          "effects": {
+            "trust.alice": -1
+          },
+          "next": "end"
+        },
+        {
+          "text": "Me mostra essas anotações.",
+          "effects": {
+            "affinity.alice": 2,
+            "trust.alice": 2,
+            "dread": 3
+          },
+          "next": "notes"
+        }
+      ]
+    },
+    "notes": {
+      "speaker": "Alice",
+      "pose": "neutral",
+      "text": "Aqui. Eu não sei o que significa ainda, mas vou continuar observando.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

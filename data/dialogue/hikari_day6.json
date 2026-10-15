@@ -1,0 +1,63 @@
+{
+  "id": "hikari_day6",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#c9bfd2",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "Hikari está sentada na arquibancada, com a mão direita enrolada num lenço manchado. Ela vê o curativo de {player_name} e ri, sem graça nenhuma.",
+      "next": "mirror"
+    },
+    "mirror": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Combinando, olha. Eu soquei o armário do vestiário. Sonhei que tava num telhado puxando alguém pela mão e a mão escorregava. Acordei com raiva de mim mesma.",
+      "next": "gravity"
+    },
+    "gravity": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Eu não perco, {player_name}. Nem pra gravidade. Se eu estivesse lá, eu não ia soltar.",
+      "choices": [
+        {
+          "text": "Ninguém ia conseguir segurar. Não é culpa sua.",
+          "effects": {
+            "trust.hikari": 2,
+            "dread": -1
+          },
+          "next": "not_fault"
+        },
+        {
+          "text": "Então a gente não solta dessa vez.",
+          "effects": {
+            "affinity.hikari": 2,
+            "dread": 2,
+            "flags.hikari_fight": true
+          },
+          "next": "fight"
+        }
+      ]
+    },
+    "not_fault": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Fala isso pra você mesmo, primeiro. Tá na sua cara que você acha que foi culpa sua.",
+      "next": "end"
+    },
+    "fight": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "\"A gente\". Gostei disso. Ninguém nunca entra numa briga do meu lado.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

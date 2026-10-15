@@ -1,0 +1,87 @@
+{
+  "id": "maya_day6",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#c9bfd2",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "Maya vê a mão enfaixada e não pergunta nada. Pega o pulso dele e leva para a enfermaria vazia, como quem já fez esse caminho muitas vezes.",
+      "next": "nurse"
+    },
+    "nurse": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Sexto dia. Você sempre vai à escola de madrugada, sempre bate na porta do telhado até abrir a mão, e nunca lembra. Eu limpo, você agradece, e amanhã você esquece que eu limpei.",
+      "choices": [
+        {
+          "text": "Por que você sempre cuida de mim?",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 1
+          },
+          "next": "why"
+        },
+        {
+          "text": "Por que eu bato na porta?",
+          "effects": {
+            "dread": 3,
+            "trust.maya": 1
+          },
+          "next": "door"
+        }
+      ]
+    },
+    "why": {
+      "speaker": "Maya",
+      "pose": "close",
+      "text": "Porque eu sou a única que lembra que você já sangrou aqui. Se eu não cuidar, ninguém cuida de uma coisa que nunca aconteceu.",
+      "next": "tired"
+    },
+    "door": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Porque do outro lado está o lugar onde você perdeu ele. E uma parte de você acha que, se abrir a porta cedo o bastante, chega a tempo.",
+      "next": "tired"
+    },
+    "tired": {
+      "speaker": "Maya",
+      "pose": "neutral",
+      "text": "Pronto. Tá limpo.",
+      "choices": [
+        {
+          "text": "Você parece cansada, Maya.",
+          "effects": {
+            "trust.maya": 2,
+            "dread": 1
+          },
+          "next": "confess",
+          "requires": {
+            "trust.maya": 6
+          }
+        },
+        {
+          "text": "Obrigado.",
+          "effects": {
+            "affinity.maya": 1
+          },
+          "next": "end"
+        }
+      ]
+    },
+    "confess": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Eu tô cansada de saber o final. Você conhece alguém de verdade quando já sabe tudo que a pessoa vai dizer? Ou só decorou?",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

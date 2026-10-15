@@ -1,0 +1,50 @@
+{
+  "id": "maya_day8",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#bdb2c4",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Depois de hoje de madrugada, eu queria conversar com você como se fosse um dia comum. Só um pouco. Posso?",
+      "choices": [
+        {
+          "text": "Pode. Me fala de você, não do loop.",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 1
+          },
+          "next": "herself"
+        },
+        {
+          "text": "Aquele lugar do outro lado da porta... é real?",
+          "effects": {
+            "dread": 2,
+            "trust.maya": 1
+          },
+          "next": "place"
+        }
+      ]
+    },
+    "herself": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "De mim... Eu gostava de piano. Parei porque nunca dava tempo de terminar uma música antes de tudo voltar. Faz tanto tempo que alguém me pergunta de mim que eu precisei pensar.",
+      "next": "end"
+    },
+    "place": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "É o que sobra da escola depois de tantas voltas. Um rascunho apagado demais. Se ninguém parar isso, um dia esse lado da porta vai ficar igual ao outro.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

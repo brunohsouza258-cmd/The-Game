@@ -1,0 +1,87 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/poem/PoemGame.gd" id="1"]
+
+[node name="PoemGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.08, 0.14, 1)
+mouse_filter = 2
+
+[node name="GirlSelect" type="VBoxContainer" parent="."]
+offset_left = 490.0
+offset_top = 200.0
+offset_right = 790.0
+offset_bottom = 520.0
+
+[node name="TitleLabel" type="Label" parent="GirlSelect"]
+text = "Para quem você quer escrever o poema?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MayaButton" type="Button" parent="GirlSelect"]
+custom_minimum_size = Vector2(0, 44)
+text = "Maya"
+
+[node name="YunaButton" type="Button" parent="GirlSelect"]
+custom_minimum_size = Vector2(0, 44)
+text = "Yuna"
+
+[node name="AliceButton" type="Button" parent="GirlSelect"]
+custom_minimum_size = Vector2(0, 44)
+text = "Alice"
+
+[node name="HikariButton" type="Button" parent="GirlSelect"]
+custom_minimum_size = Vector2(0, 44)
+text = "Hikari"
+
+[node name="CancelButton" type="Button" parent="GirlSelect"]
+custom_minimum_size = Vector2(0, 44)
+text = "Voltar"
+
+[node name="WordSelect" type="VBoxContainer" parent="."]
+offset_left = 240.0
+offset_top = 90.0
+offset_right = 1040.0
+offset_bottom = 620.0
+
+[node name="TitleLabel" type="Label" parent="WordSelect"]
+text = "Escolha 5 palavras para o seu poema"
+horizontal_alignment = 1
+
+[node name="WordGrid" type="GridContainer" parent="WordSelect"]
+columns = 4
+
+[node name="CounterLabel" type="Label" parent="WordSelect"]
+text = "0/5 palavras escolhidas"
+horizontal_alignment = 1
+
+[node name="FinishButton" type="Button" parent="WordSelect"]
+disabled = true
+text = "Finalizar poema"
+
+[node name="ResultPanel" type="VBoxContainer" parent="."]
+offset_left = 390.0
+offset_top = 260.0
+offset_right = 890.0
+offset_bottom = 460.0
+
+[node name="ResultLabel" type="Label" parent="ResultPanel"]
+autowrap_mode = 2
+horizontal_alignment = 1
+text = "Resultado"
+
+[node name="BackButton" type="Button" parent="ResultPanel"]
+custom_minimum_size = Vector2(0, 44)
+text = "Voltar"
+
+[connection signal="pressed" from="GirlSelect/MayaButton" to="." method="_on_girl_button_pressed" binds=["maya"]]
+[connection signal="pressed" from="GirlSelect/YunaButton" to="." method="_on_girl_button_pressed" binds=["yuna"]]
+[connection signal="pressed" from="GirlSelect/AliceButton" to="." method="_on_girl_button_pressed" binds=["alice"]]
+[connection signal="pressed" from="GirlSelect/HikariButton" to="." method="_on_girl_button_pressed" binds=["hikari"]]
+[connection signal="pressed" from="GirlSelect/CancelButton" to="." method="_on_back_pressed"]

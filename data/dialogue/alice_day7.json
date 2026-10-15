@@ -1,0 +1,62 @@
+{
+  "id": "alice_day7",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#bdb2c4",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "corrupted",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "scared",
+      "text": "Alice está folheando o próprio caderno, cada vez mais rápido. As páginas sobre o Kaito estão em branco. Não apagadas — em branco, como se nunca tivessem sido escritas. Só as datas sobraram.",
+      "next": "blank"
+    },
+    "blank": {
+      "speaker": "Alice",
+      "pose": "scared",
+      "text": "Eu escrevi aqui. Eu sei que escrevi. Eu reconheço o lugar onde a caneta afundou o papel. Mas não tem nada. {player_name}, eu tô ficando louca?",
+      "choices": [
+        {
+          "text": "Não. Eu lembro do que você anotou.",
+          "effects": {
+            "trust.alice": 2,
+            "affinity.alice": 1
+          },
+          "next": "remember"
+        },
+        {
+          "text": "Talvez seja melhor parar de investigar.",
+          "effects": {
+            "trust.alice": -1,
+            "dread": -2
+          },
+          "next": "quit"
+        }
+      ]
+    },
+    "remember": {
+      "speaker": "Alice",
+      "pose": "angry",
+      "text": "Então me conta. Vou escrever de novo. Se a escola apaga, a gente reescreve. Até ela cansar.",
+      "next": "truth_line"
+    },
+    "quit": {
+      "speaker": "Alice",
+      "pose": "sad",
+      "text": "Parar não faz a coisa parar. Só faz eu não ver ela vindo.",
+      "next": "truth_line"
+    },
+    "truth_line": {
+      "speaker": "Alice",
+      "pose": "sad",
+      "text": "Sabe o que mais me assusta? Eu achava que conhecer a verdade resolvia as coisas. Eu tô cada vez mais perto dela, e nada está resolvido. Só ficou mais pesado.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

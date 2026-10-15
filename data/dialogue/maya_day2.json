@@ -1,0 +1,62 @@
+{
+  "id": "maya_day2",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "Maya",
+      "pose": "neutral",
+      "text": "Você voltou. Eu sabia que voltaria — isso não é um elogio, é só... um padrão que eu reconheço.",
+      "choices": [
+        {
+          "text": "Que tipo de padrão?",
+          "effects": {
+            "trust.maya": 1,
+            "dread": 2
+          },
+          "next": "pattern",
+          "requires": {
+            "trust.maya": 1
+          }
+        },
+        {
+          "text": "Você fala como se tivesse certeza do que eu vou fazer.",
+          "effects": {
+            "affinity.maya": 1,
+            "dread": 1
+          },
+          "next": "certainty"
+        }
+      ]
+    },
+    "pattern": {
+      "speaker": "Maya",
+      "pose": "thinking",
+      "text": "Eu não sei explicar direito. É como se eu já tivesse visto essa conversa antes de ela acontecer.",
+      "next": "glitch_moment"
+    },
+    "certainty": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Não é certeza. É mais... memória de algo que ainda não aconteceu pra você.",
+      "next": "glitch_moment"
+    },
+    "glitch_moment": {
+      "speaker": "Maya",
+      "pose": "corrupted",
+      "text": "{player_name}, posso te perguntar uma coisa estranha? Quantas vezes você já apertou 'continuar' hoje?",
+      "effect": "glitch",
+      "effects": {
+        "dread": 3
+      },
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "alice_day10",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#a99fb4",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "corrupted",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "O caderno da Alice está quase todo em branco agora. Ela segura ele com as duas mãos, como quem segura algo que pode sair voando.",
+      "next": "last"
+    },
+    "last": {
+      "speaker": "Alice",
+      "pose": "sad",
+      "text": "Sobrou uma linha. Uma só. Eu não consigo ler — as letras ficam se mexendo quando eu olho. Você lê pra mim, {player_name}?",
+      "choices": [
+        {
+          "text": "Ler a linha em voz alta.",
+          "effects": {
+            "trust.alice": 3,
+            "affinity.alice": 1
+          },
+          "next": "read"
+        },
+        {
+          "text": "Dizer que está em branco também.",
+          "effects": {
+            "trust.alice": -2,
+            "dread": 1
+          },
+          "next": "lie"
+        }
+      ]
+    },
+    "read": {
+      "speaker": "",
+      "pose": "surprised",
+      "text": "Na letra caprichada da Alice, a última linha diz: \"Confie no {player_name}.\" Embaixo, uma data. É de uma volta que nenhum dos dois lembra.",
+      "next": "trust"
+    },
+    "trust": {
+      "speaker": "Alice",
+      "pose": "happy",
+      "text": "Eu escrevi isso pra mim. Numa volta que eu esqueci. Então... eu confio. Mesmo sem prova. Isso é muito difícil pra mim, você sabe.",
+      "next": "end"
+    },
+    "lie": {
+      "speaker": "Alice",
+      "pose": "sad",
+      "text": "Está em branco. Então eu perdi tudo. ...Você hesitou antes de responder. Eu anotaria isso, se ainda tivesse onde.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

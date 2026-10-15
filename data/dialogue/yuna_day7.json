@@ -1,0 +1,84 @@
+{
+  "id": "yuna_day7",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#bdb2c4",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "Yuna está diante de duas marmitas abertas na mesa do clube. Uma com o arroz em formato de coelho. Outra sem ovo, porque alguém odiava ovo.",
+      "next": "two"
+    },
+    "two": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Eu fiz duas. Por hábito. Eu faço duas toda sexta-feira desde que eu tinha dez anos. Hoje eu percebi que não sei pra quem é a segunda.",
+      "next": "break"
+    },
+    "break": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "O sorriso dela não aparece. Ela tenta, e o rosto não obedece. A voz sai pequena:",
+      "next": "ask_help"
+    },
+    "ask_help": {
+      "speaker": "Yuna",
+      "pose": "close",
+      "text": "{player_name}... eu não tô bem. Eu nunca falei isso pra ninguém. Você me ajuda?",
+      "choices": [
+        {
+          "text": "Ajudo. Fica aqui comigo.",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 3,
+            "flags.yuna_asked_help": true
+          },
+          "next": "stay"
+        },
+        {
+          "text": "Foi só um engano, Yuna. Acontece.",
+          "effects": {
+            "trust.yuna": -1,
+            "dread": -1
+          },
+          "next": "mistake"
+        },
+        {
+          "text": "A segunda era do Kai.",
+          "effects": {
+            "dread": 3,
+            "trust.yuna": 1
+          },
+          "next": "kai"
+        }
+      ]
+    },
+    "stay": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Não precisa fazer nada. Só come a marmita sem ovo comigo. ...É bom não estar bem do lado de alguém. É menos pesado.",
+      "next": "end"
+    },
+    "mistake": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "É. Engano. ...Desculpa ter pedido. Eu fico bem. Eu sempre fico.",
+      "next": "end"
+    },
+    "kai": {
+      "speaker": "Yuna",
+      "pose": "corrupted",
+      "text": "Do Kai. Ele odiava ovo. Ele ria alto. Ele... ele não está mais aqui, né? Não é que ele foi embora. Ele não está mais em lugar nenhum.",
+      "effect": "glitch",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "hikari_day4",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "courtyard",
+  "nodes": {
+    "start": {
+      "speaker": "Hikari",
+      "pose": "surprised",
+      "text": "{player_name}. Olha esse cronômetro. Eu corri sozinha na pista hoje cedo. Sozinha.",
+      "next": "timer"
+    },
+    "timer": {
+      "speaker": "",
+      "pose": "scared",
+      "text": "O cronômetro digital marca dois tempos. O dela, 13 segundos e 2. E outro, logo acima: 12 segundos e 8. Alguém chegou antes dela.",
+      "next": "heard"
+    },
+    "heard": {
+      "speaker": "Hikari",
+      "pose": "scared",
+      "text": "E eu ouvi passos do meu lado. Juro. Ouvi alguém rindo, do jeito que... do jeito que alguém ria quando me passava na reta final.",
+      "choices": [
+        {
+          "text": "Eu acredito em você.",
+          "effects": {
+            "trust.hikari": 2,
+            "dread": 2
+          },
+          "next": "believe"
+        },
+        {
+          "text": "Deve ser defeito no cronômetro.",
+          "effects": {
+            "trust.hikari": -1,
+            "dread": -1
+          },
+          "next": "broken"
+        },
+        {
+          "text": "Então corre de novo. Comigo.",
+          "effects": {
+            "affinity.hikari": 2
+          },
+          "next": "race"
+        }
+      ]
+    },
+    "believe": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "...Sério? Ninguém nunca acredita quando eu falo uma coisa que não é sobre ganhar. Valeu, {player_name}. De verdade.",
+      "next": "end"
+    },
+    "broken": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Defeito. Claro. E eu sou defeituosa também, né? Esquece.",
+      "next": "end"
+    },
+    "race": {
+      "speaker": "",
+      "pose": "corrupted",
+      "text": "Vocês correm. Ela ganha com folga. O cronômetro marca três tempos. Ninguém fala nada sobre o terceiro.",
+      "effect": "glitch",
+      "effects": {
+        "dread": 2
+      },
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

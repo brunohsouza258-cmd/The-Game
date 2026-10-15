@@ -1,0 +1,28 @@
+{
+  "id": "main_day2",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "sprite": "",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Segundo dia. O sistema de som da escola toca o aviso de sempre antes da primeira aula — e então, por meio segundo, a voz muda.",
+      "next": "glitch_announcement"
+    },
+    "glitch_announcement": {
+      "speaker": "Alto-falante",
+      "text": "— {player_name}, bem-vindo de volta. Dessa vez, tente —",
+      "effect": "glitch",
+      "effects": {"dread": 4},
+      "next": "aftermath"
+    },
+    "aftermath": {
+      "speaker": "",
+      "text": "A voz normal retoma, como se nada tivesse acontecido, terminando o aviso sobre o horário de aulas. Ninguém ao redor parece ter notado. {player_name} olha em volta — todo mundo continua sua manhã, exatamente como se a frase nunca tivesse sido dita.",
+      "next": "end"
+    },
+    "end": { "end": true }
+  }
+}

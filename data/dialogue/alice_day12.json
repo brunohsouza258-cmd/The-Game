@@ -1,0 +1,59 @@
+{
+  "id": "alice_day12",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#7d72a8",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "20:58. Quarenta e nove minutos. Eu fiz uma lista do que pode acontecer lá em cima. Doze cenários. Em onze deles eu não sei o que você deve fazer.",
+      "next": "twelfth"
+    },
+    "twelfth": {
+      "speaker": "Alice",
+      "pose": "close",
+      "text": "O décimo segundo é você fazendo uma coisa que nenhuma das outras voltas fez. Eu não sei qual. Só sei que não dá pra calcular. É a única variável que é sua.",
+      "choices": [
+        {
+          "text": "Sobe comigo às 21:40, como a gente combinou.",
+          "effects": {
+            "trust.alice": 2,
+            "affinity.alice": 2
+          },
+          "next": "plan",
+          "requires": {
+            "flags.alice_plan": 1
+          }
+        },
+        {
+          "text": "Obrigado por tudo que você anotou, Alice.",
+          "effects": {
+            "trust.alice": 2,
+            "affinity.alice": 1
+          },
+          "next": "thanks"
+        }
+      ]
+    },
+    "plan": {
+      "speaker": "Alice",
+      "pose": "happy",
+      "text": "Como combinado. Eu fico na porta, cronometrando. Se o relógio passar das 21:47, eu grito. Vai ser o grito mais feliz da minha vida.",
+      "next": "end"
+    },
+    "thanks": {
+      "speaker": "Alice",
+      "pose": "happy",
+      "text": "Eu esqueci quase tudo que anotei. Mas lembro que valeu a pena anotar. Acho que é isso que importa no fim: não a resposta, mas ter procurado junto.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

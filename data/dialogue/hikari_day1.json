@@ -1,0 +1,62 @@
+{
+  "id": "hikari_day1",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "courtyard",
+  "nodes": {
+    "start": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Então você é o {player_name} de quem todo mundo tá falando. Vamos ver se consegue acompanhar o ritmo por aqui.",
+      "choices": [
+        {
+          "text": "Topo o desafio.",
+          "effects": {
+            "affinity.hikari": 1
+          },
+          "next": "accept"
+        },
+        {
+          "text": "Não é sobre competir.",
+          "effects": {
+            "trust.hikari": 1
+          },
+          "next": "end"
+        }
+      ]
+    },
+    "accept": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Gostei de você, {player_name}. A maioria desiste antes de eu terminar a frase.",
+      "choices": [
+        {
+          "text": "A maioria? Tipo quem?",
+          "effects": {
+            "dread": 2
+          },
+          "next": "roster",
+          "requires": {
+            "dread": 4
+          }
+        },
+        {
+          "text": "Então combinado.",
+          "next": "end"
+        }
+      ]
+    },
+    "roster": {
+      "speaker": "Hikari",
+      "pose": "thinking",
+      "text": "Tipo... hm. Tinha um cara no time ano passado. Não lembro o nome agora, engraçado. Deixa pra lá, não é importante.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

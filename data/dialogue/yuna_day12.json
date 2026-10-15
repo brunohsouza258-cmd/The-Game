@@ -1,0 +1,55 @@
+{
+  "id": "yuna_day12",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#7d72a8",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "Yuna desce do palco depois da abertura. A voz tremeu no meio do discurso. Ela parou, respirou, e continuou sem sorrir. Ninguém achou ruim.",
+      "next": "talk"
+    },
+    "talk": {
+      "speaker": "Yuna",
+      "pose": "close",
+      "text": "Você viu? Eu tremi e continuei. {player_name}... promete uma coisa? Aconteça o que acontecer lá em cima, não finge que tá tudo bem. Nem pra mim.",
+      "choices": [
+        {
+          "text": "Prometo. E você também não.",
+          "effects": {
+            "trust.yuna": 3,
+            "affinity.yuna": 1
+          },
+          "next": "promise"
+        },
+        {
+          "text": "Vem comigo até a escada.",
+          "effects": {
+            "affinity.yuna": 3
+          },
+          "next": "come"
+        }
+      ]
+    },
+    "promise": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Combinado. Nada de fingir. Se eu chorar amanhã, vai ser chorando de verdade, e por alguém que tem nome.",
+      "next": "end"
+    },
+    "come": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Até a escada eu vou. Mas eu não subo. Eu acho que o Kai ia querer que alguém ficasse aqui embaixo segurando uma lanterna acesa. Pra ele saber o caminho.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

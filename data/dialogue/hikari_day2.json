@@ -1,0 +1,47 @@
+{
+  "id": "hikari_day2",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "courtyard",
+  "nodes": {
+    "start": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "{player_name}! Aposto que você não aguenta correr uma volta na quadra comigo.",
+      "choices": [
+        {
+          "text": "Topo.",
+          "effects": {
+            "affinity.hikari": 2
+          },
+          "next": "race"
+        },
+        {
+          "text": "Prefiro só assistir.",
+          "effects": {
+            "trust.hikari": 1
+          },
+          "next": "watch"
+        }
+      ]
+    },
+    "race": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Vamos ver do que você é feito, então!",
+      "next": "end"
+    },
+    "watch": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Covarde. Mas tudo bem, fica aí na sombra.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

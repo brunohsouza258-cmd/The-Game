@@ -1,0 +1,41 @@
+{
+  "id": "main_day3",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "sprite": "",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Terceiro dia. A professora faz a chamada em voz alta, nome por nome. {player_name} percebe que ela pula uma linha da lista — os olhos dela param ali por meio segundo e seguem em frente.",
+      "next": "desk"
+    },
+    "desk": {
+      "speaker": "",
+      "text": "Na fileira da janela tem uma carteira vazia. Ninguém senta nela. Na madeira, alguém entalhou duas letras: K.M.",
+      "choices": [
+        { "text": "Perguntar de quem é a carteira.", "effects": {"dread": 2}, "next": "ask" },
+        { "text": "Deixar pra lá e prestar atenção na aula.", "effects": {"dread": -1}, "next": "ignore" }
+      ]
+    },
+    "ask": {
+      "speaker": "Professora",
+      "text": "Essa? Sempre ficou vazia, desde o começo do ano. Sobrou carteira na sala, só isso.",
+      "next": "flash"
+    },
+    "ignore": {
+      "speaker": "",
+      "text": "{player_name} abre o caderno e tenta copiar a lousa. A caneta escorrega. Ele escreveu \"K.M.\" na margem sem perceber.",
+      "next": "flash"
+    },
+    "flash": {
+      "speaker": "",
+      "text": "Por um instante, a sala some: vento frio, cheiro de chuva, uma grade de metal molhada sob a mão. Depois o barulho da sala volta, normal. A dor de cabeça fica.",
+      "effect": "glitch",
+      "effects": {"dread": 3},
+      "next": "end"
+    },
+    "end": { "end": true }
+  }
+}

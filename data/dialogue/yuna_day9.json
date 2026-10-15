@@ -1,0 +1,56 @@
+{
+  "id": "yuna_day9",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#b8aec4",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "Yuna",
+      "pose": "surprised",
+      "text": "Eu lembrei da risada dele. Do Kai. Hoje de manhã, escovando os dentes. Do nada. E aí lembrei da foto — a criança riscada era ele. E a outra, do lado...",
+      "next": "photo"
+    },
+    "photo": {
+      "speaker": "Yuna",
+      "pose": "surprised",
+      "text": "...era você, {player_name}. Nós três. Antes de você ir embora. Como eu esqueci de você também?",
+      "choices": [
+        {
+          "text": "Porque a escola apaga tudo em volta dele.",
+          "effects": {
+            "dread": 2,
+            "trust.yuna": 1
+          },
+          "next": "erase"
+        },
+        {
+          "text": "Eu também tinha esquecido. Agora a gente lembra junto.",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 2
+          },
+          "next": "together"
+        }
+      ]
+    },
+    "erase": {
+      "speaker": "Yuna",
+      "pose": "angry",
+      "text": "Então daqui a pouco eu esqueço de você de novo. E da Maya. E de mim. ...Não. Eu não quero. Pela primeira vez na vida eu quero ficar triste e lembrar, em vez de sorrir e esquecer.",
+      "next": "end"
+    },
+    "together": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Junto. Tá. Se eu começar a esquecer, você me lembra. Promete? Eu não tenho vergonha de pedir. Não mais.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

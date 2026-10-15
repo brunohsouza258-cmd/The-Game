@@ -1,0 +1,56 @@
+{
+  "id": "alice_day9",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#b8aec4",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "corrupted",
+  "nodes": {
+    "start": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "Eu terminei a teoria. Quer ouvir? É curta. O loop começa no primeiro dia e termina às 21:47 do dia 12. O que reinicia ele não é o tempo. É alguém se recusando a aceitar o que acontece às 21:47.",
+      "next": "proof"
+    },
+    "proof": {
+      "speaker": "Alice",
+      "pose": "sad",
+      "text": "Eu sei o mecanismo. Sei o horário. Sei o lugar. E não consigo fazer nada com isso. Saber não é a mesma coisa que conseguir.",
+      "choices": [
+        {
+          "text": "Mas sem você eu nem saberia o que enfrentar.",
+          "effects": {
+            "trust.alice": 2,
+            "affinity.alice": 2
+          },
+          "next": "worth"
+        },
+        {
+          "text": "Talvez a resposta não seja fazer, e sim aceitar.",
+          "effects": {
+            "trust.alice": 1,
+            "dread": -1
+          },
+          "next": "accept"
+        }
+      ]
+    },
+    "worth": {
+      "speaker": "Alice",
+      "pose": "happy",
+      "text": "...Isso é uma coisa boa de ouvir quando a gente tá perdendo. Obrigada, {player_name}.",
+      "next": "end"
+    },
+    "accept": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "Aceitar. É a única variável que eu não sei medir. Acho que por isso eu nunca pensei nela.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

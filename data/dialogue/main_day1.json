@@ -1,0 +1,21 @@
+{
+  "id": "main_day1",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "sprite": "",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Primeiro dia. {player_name} atravessa o portão da escola carregando mais expectativa do que faz sentido admitir — um recomeço, talvez. Uma chance de ser outra versão de si mesmo, nem que seja só um pouco.",
+      "next": "hallway"
+    },
+    "hallway": {
+      "speaker": "",
+      "text": "O corredor principal está cheio do barulho normal de um primeiro dia: risadas, passos apressados, alguém gritando o nome de outra pessoa do outro lado do pátio. Nada fora do comum. Ainda.",
+      "next": "end"
+    },
+    "end": { "end": true }
+  }
+}

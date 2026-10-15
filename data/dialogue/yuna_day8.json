@@ -1,0 +1,56 @@
+{
+  "id": "yuna_day8",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#bdb2c4",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Eu fui escolhida pra apresentar a abertura do festival! Microfone, palco, tudo. Vou sorrir o tempo todo, prometo. É o que eu faço melhor.",
+      "next": "crack"
+    },
+    "crack": {
+      "speaker": "Yuna",
+      "pose": "sad",
+      "text": "Porque se eu parar de sorrir no meio do palco, eu acho que não levanto mais. Entendeu? É mais fácil sorrir.",
+      "choices": [
+        {
+          "text": "Você não precisa sorrir o tempo todo. Nem no palco.",
+          "effects": {
+            "trust.yuna": 2,
+            "affinity.yuna": 2
+          },
+          "next": "dont_have_to"
+        },
+        {
+          "text": "Vai ser incrível, Yuna.",
+          "effects": {
+            "affinity.yuna": 1,
+            "dread": -1
+          },
+          "next": "great"
+        }
+      ]
+    },
+    "dont_have_to": {
+      "speaker": "Yuna",
+      "pose": "close",
+      "text": "Se eu errar, você fica na primeira fila? Não pra aplaudir. Só pra eu ter pra onde olhar.",
+      "next": "end"
+    },
+    "great": {
+      "speaker": "Yuna",
+      "pose": "happy",
+      "text": "Vai sim! Vai ser perfeito. ...Tudo nessa escola tem que ser perfeito, né?",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

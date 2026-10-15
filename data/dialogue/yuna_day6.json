@@ -1,0 +1,63 @@
+{
+  "id": "yuna_day6",
+  "character_id": "yuna",
+  "display_name": "Yuna",
+  "character_color": "#FFB347",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#c9bfd2",
+  "sprite": "res://assets/characters/yuna.png",
+  "music": "menu",
+  "nodes": {
+    "start": {
+      "speaker": "Yuna",
+      "pose": "surprised",
+      "text": "{player_name}, o que aconteceu com a sua mão?! Isso tá horrível!",
+      "choices": [
+        {
+          "text": "Caí de bicicleta.",
+          "effects": {
+            "trust.yuna": -2
+          },
+          "next": "lie"
+        },
+        {
+          "text": "Eu não sei. Acordei assim.",
+          "effects": {
+            "trust.yuna": 2,
+            "dread": 2
+          },
+          "next": "truth"
+        },
+        {
+          "text": "Deixar ela refazer o curativo.",
+          "effects": {
+            "affinity.yuna": 2,
+            "dread": -1
+          },
+          "next": "bandage"
+        }
+      ]
+    },
+    "lie": {
+      "speaker": "Yuna",
+      "pose": "angry",
+      "text": "Você nem tem bicicleta. Eu... eu odeio quando as pessoas mentem pra me proteger. A última pessoa que fez isso sumiu. Eu acho. Eu não sei. Eu não sei mais o que eu acho.",
+      "next": "end"
+    },
+    "truth": {
+      "speaker": "Yuna",
+      "pose": "scared",
+      "text": "Acordou assim. Igual eu acordo chorando. ...{player_name}, tem alguma coisa errada com essa escola. Com a gente. Eu tô com medo. Pronto, falei.",
+      "next": "end"
+    },
+    "bandage": {
+      "speaker": "",
+      "pose": "happy",
+      "text": "Ela refaz o curativo devagar, concentrada, o sorriso esquecido no rosto. \"O Kai também vivia se machucando\", ela diz, sem perceber que disse o nome. \"Eu era a enfermeira oficial.\"",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

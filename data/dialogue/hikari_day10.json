@@ -1,0 +1,56 @@
+{
+  "id": "hikari_day10",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#a99fb4",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Última corrida antes do festival. Eu contra você, cem metros. Se eu ganhar, você me deixa subir no telhado primeiro no dia 12.",
+      "next": "race"
+    },
+    "race": {
+      "speaker": "",
+      "pose": "scared",
+      "text": "Vocês largam. Na metade da pista, Hikari tropeça — as mãos machucadas não seguram a queda e ela bate no chão com força. Ela tenta levantar e continuar correndo.",
+      "choices": [
+        {
+          "text": "Continuar correndo e ganhar.",
+          "effects": {
+            "affinity.hikari": -1,
+            "dread": 1
+          },
+          "next": "win"
+        },
+        {
+          "text": "Parar no meio da pista e voltar até ela.",
+          "effects": {
+            "trust.hikari": 3,
+            "affinity.hikari": 2
+          },
+          "next": "stop"
+        }
+      ]
+    },
+    "win": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Ganhou. Parabéns. ...Viu? É isso que acontece. Quem cai fica pra trás. Sempre.",
+      "next": "end"
+    },
+    "stop": {
+      "speaker": "Hikari",
+      "pose": "sad",
+      "text": "Você... parou? Você ia ganhar. Por que você parou? ...O Kaito também teria parado. Ele fingia que não, mas teria. Droga. Ninguém ganha essa, né?",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

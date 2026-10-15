@@ -1,0 +1,72 @@
+{
+  "id": "maya_day7",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#bdb2c4",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "corrupted",
+  "nodes": {
+    "start": {
+      "speaker": "Maya",
+      "pose": "scared",
+      "text": "{player_name}. Eu preciso te dizer uma coisa antes que eu esqueça de novo.",
+      "next": "skip1"
+    },
+    "skip1": {
+      "speaker": "Maya",
+      "pose": "corrupted",
+      "text": "{player_name}. Eu preciso te dizer uma coisa antes que eu esqueça de novo.",
+      "effect": "glitch",
+      "next": "skip2"
+    },
+    "skip2": {
+      "speaker": "Maya",
+      "pose": "corrupted",
+      "text": "{player_name}. Eu preciso te— ...Eu disse isso três vezes, né? Eu vi na sua cara.",
+      "effects": {
+        "dread": 3
+      },
+      "next": "losing"
+    },
+    "losing": {
+      "speaker": "Maya",
+      "pose": "scared",
+      "text": "Cada volta leva um pedaço. Do Kaito primeiro. Depois das coisas em volta dele. Agora começou a levar de mim. Hoje eu esqueci o caminho da minha casa por dez minutos.",
+      "choices": [
+        {
+          "text": "Então a gente tem que parar isso.",
+          "effects": {
+            "trust.maya": 2,
+            "dread": 2
+          },
+          "next": "stop"
+        },
+        {
+          "text": "Eu tô aqui. Não vou deixar você esquecer.",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 1
+          },
+          "next": "here"
+        }
+      ]
+    },
+    "stop": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Parar significa chegar no dia 12 e não voltar. Significa ele ficar perdido de verdade. Eu não sei se eu consigo. Eu não sei se você consegue.",
+      "next": "end"
+    },
+    "here": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Você sempre diz isso. E sempre esquece primeiro. ...Mas eu gosto quando você diz.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

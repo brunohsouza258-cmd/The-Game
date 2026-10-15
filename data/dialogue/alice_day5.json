@@ -1,0 +1,63 @@
+{
+  "id": "alice_day5",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#e6dde6",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "O alto-falante chamou ele pelo nome. Depois disse que ele não existe. Eu anotei: 7h52. É a primeira vez que a escola erra pra trás.",
+      "next": "theory"
+    },
+    "theory": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "Minha teoria: não é a escola que esquece. É o tempo que volta. E cada vez que volta, alguma coisa não volta junto. Ele foi o primeiro a sumir. Não vai ser o último.",
+      "choices": [
+        {
+          "text": "Mostrar o caderno com a minha letra pra ela.",
+          "effects": {
+            "trust.alice": 3,
+            "affinity.alice": 2,
+            "dread": 3,
+            "flags.shared_notebook_alice": true
+          },
+          "next": "notebook"
+        },
+        {
+          "text": "Isso parece impossível.",
+          "effects": {
+            "trust.alice": -1
+          },
+          "next": "impossible"
+        }
+      ]
+    },
+    "notebook": {
+      "speaker": "",
+      "pose": "thinking",
+      "text": "Alice lê cada página duas vezes, comparando datas com as anotações dela. Os lábios se mexem enquanto ela conta.",
+      "next": "match"
+    },
+    "match": {
+      "speaker": "Alice",
+      "pose": "scared",
+      "text": "Dia 6: \"mãos machucadas\". É amanhã. {player_name}... se isso acontecer amanhã, o caderno não é diário. É aviso. Você está escrevendo pra você mesmo, de uma volta pra outra.",
+      "next": "end"
+    },
+    "impossible": {
+      "speaker": "Alice",
+      "pose": "angry",
+      "text": "Impossível é uma palavra pra coisas que ainda não aconteceram com você. Eu vou continuar anotando. Você vai acabar precisando das minhas anotações.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

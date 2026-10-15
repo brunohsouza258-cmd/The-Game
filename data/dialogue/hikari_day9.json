@@ -1,0 +1,55 @@
+{
+  "id": "hikari_day9",
+  "character_id": "hikari",
+  "display_name": "Hikari",
+  "character_color": "#E05A5A",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#b8aec4",
+  "sprite": "res://assets/characters/hikari.png",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "pose": "angry",
+      "text": "Hikari está fazendo flexões na pista, contando em voz alta. Cento e doze. Cento e treze. As mãos ainda enfaixadas sangram de novo no asfalto.",
+      "next": "train"
+    },
+    "train": {
+      "speaker": "Hikari",
+      "pose": "angry",
+      "text": "Treinando pegada. Se for pra segurar alguém pendurado num telhado, eu preciso de força nos braços. Simples assim.",
+      "choices": [
+        {
+          "text": "Hikari, para. Você tá se machucando.",
+          "effects": {
+            "trust.hikari": 2
+          },
+          "next": "stop"
+        },
+        {
+          "text": "Eu treino com você.",
+          "effects": {
+            "affinity.hikari": 2,
+            "dread": 1
+          },
+          "next": "train_together"
+        }
+      ]
+    },
+    "stop": {
+      "speaker": "Hikari",
+      "pose": "sad",
+      "text": "Se eu parar, eu penso. E se eu pensar, eu entendo que tem coisa que não se vence com força. E eu não sei ser outra coisa além de forte.",
+      "next": "end"
+    },
+    "train_together": {
+      "speaker": "Hikari",
+      "pose": "happy",
+      "text": "Hah. Você não aguenta vinte. ...Mas fica. É menos solitário contar com alguém do lado.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

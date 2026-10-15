@@ -1,0 +1,119 @@
+{
+  "id": "alice_day3",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "Alice",
+      "pose": "surprised",
+      "text": "{player_name}. Eu fui na biblioteca ontem e peguei o anuário do ano passado. Olha isso.",
+      "next": "yearbook"
+    },
+    "yearbook": {
+      "speaker": "",
+      "pose": "thinking",
+      "text": "Ela abre o anuário. A página da turma 2-B foi arrancada. Não rasgada — cortada rente à costura, com cuidado.",
+      "choices": [
+        {
+          "text": "Alguém quis esconder alguma coisa.",
+          "effects": {
+            "dread": 2,
+            "trust.alice": 2
+          },
+          "next": "hide"
+        },
+        {
+          "text": "Pode ter sido só vandalismo.",
+          "effects": {
+            "trust.alice": -1,
+            "dread": -1
+          },
+          "next": "vandal"
+        }
+      ]
+    },
+    "hide": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "Ou alguém quis apagar. Esconder é guardar em outro lugar. Isso aqui é diferente. Isso é fazer não ter existido.",
+      "next": "help"
+    },
+    "vandal": {
+      "speaker": "Alice",
+      "pose": "angry",
+      "text": "Vândalo nenhum corta uma página com régua. Mas tudo bem. Eu entendo se você não quiser se envolver.",
+      "next": "help"
+    },
+    "help": {
+      "speaker": "Alice",
+      "pose": "neutral",
+      "text": "Eu vou continuar procurando. Você... quer ajudar?",
+      "choices": [
+        {
+          "text": "Quero. Me conta tudo que você achar.",
+          "effects": {
+            "affinity.alice": 1,
+            "trust.alice": 2,
+            "dread": 2
+          },
+          "next": "partner"
+        },
+        {
+          "text": "Acho melhor você deixar isso pra lá.",
+          "effects": {
+            "trust.alice": -1,
+            "dread": -1
+          },
+          "next": "alone"
+        }
+      ]
+    },
+    "partner": {
+      "speaker": "Alice",
+      "pose": "happy",
+      "text": "Ótimo. Primeira anotação conjunta, então.",
+      "choices": [
+        {
+          "text": "Tem uma carteira na minha sala com as letras K.M.",
+          "effects": {
+            "trust.alice": 1,
+            "dread": 2
+          },
+          "next": "initials",
+          "requires": {
+            "dread": 8
+          }
+        },
+        {
+          "text": "Por onde a gente começa?",
+          "next": "start_where"
+        }
+      ]
+    },
+    "initials": {
+      "speaker": "Alice",
+      "pose": "scared",
+      "text": "K.M.? ...Eu escrevi essas mesmas letras no meu caderno semana passada. E não lembro por quê.",
+      "next": "end"
+    },
+    "start_where": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "Pelos registros da secretaria. Papel mente menos que gente.",
+      "next": "end"
+    },
+    "alone": {
+      "speaker": "Alice",
+      "pose": "sad",
+      "text": "Talvez. Mas eu sou péssima em deixar coisas pra lá.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

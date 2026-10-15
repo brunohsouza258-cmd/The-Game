@@ -1,0 +1,69 @@
+{
+  "id": "alice_day6",
+  "character_id": "alice",
+  "display_name": "Alice",
+  "character_color": "#4DB6AC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#c9bfd2",
+  "sprite": "res://assets/characters/alice.png",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "Eu fotografei o \"NÃO SUBA\" antes de a zeladoria pintar por cima. Comparei com a letra do seu caderno. É idêntica. E você chegou com a mão machucada, exatamente como estava escrito.",
+      "next": "question"
+    },
+    "question": {
+      "speaker": "Alice",
+      "pose": "close",
+      "text": "Então eu vou te fazer uma pergunta direta, e você pode não responder. Você estava no telhado quando ele caiu?",
+      "choices": [
+        {
+          "text": "Eu não sei.",
+          "effects": {
+            "dread": 2,
+            "trust.alice": 1
+          },
+          "next": "dont_know"
+        },
+        {
+          "text": "Acho que sim. Acho que eu segurei a mão dele.",
+          "effects": {
+            "dread": 3,
+            "trust.alice": 3
+          },
+          "next": "yes"
+        },
+        {
+          "text": "Ir embora sem responder.",
+          "effects": {
+            "trust.alice": -2
+          },
+          "next": "leave"
+        }
+      ]
+    },
+    "dont_know": {
+      "speaker": "Alice",
+      "pose": "thinking",
+      "text": "\"Não sei\" é um dado também. Eu vou anotar. Quem não sabe ainda pode descobrir. Quem mente fica preso.",
+      "next": "end"
+    },
+    "yes": {
+      "speaker": "Alice",
+      "pose": "sad",
+      "text": "Segurou. E não conseguiu. ...Obrigada por me falar. Eu não vou anotar isso. Tem coisa que não é dado, é ferida.",
+      "next": "end"
+    },
+    "leave": {
+      "speaker": "",
+      "pose": "sad",
+      "text": "Ele sai da sala. Quando olha para trás, Alice está escrevendo, rápido, sem levantar os olhos.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "maya_day12",
+  "character_id": "maya",
+  "display_name": "Maya",
+  "character_color": "#9966CC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#7d72a8",
+  "sprite": "res://assets/characters/maya.png",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Debaixo da lanterna apagada. Foi aqui que eu fiquei da primeira vez, antes de subir atrás de vocês. Eu nunca mudei de lugar. Em nenhuma volta.",
+      "next": "ask"
+    },
+    "ask": {
+      "speaker": "Maya",
+      "pose": "close",
+      "text": "Quando você subir, eu vou estar na escada. Como sempre. Você quer que eu suba dessa vez?",
+      "choices": [
+        {
+          "text": "Sobe comigo. A gente solta junto.",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 2,
+            "flags.maya_with_you": true
+          },
+          "next": "together"
+        },
+        {
+          "text": "Fica longe dessa vez. Se protege.",
+          "effects": {
+            "trust.maya": 2
+          },
+          "next": "away"
+        },
+        {
+          "text": "Faz o que você precisar fazer, Maya.",
+          "effects": {
+            "trust.maya": 3,
+            "dread": -1
+          },
+          "next": "her_choice"
+        }
+      ]
+    },
+    "together": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "Junto. Tá. Se der errado, pelo menos dessa vez eu não assisto da escada.",
+      "next": "end"
+    },
+    "away": {
+      "speaker": "Maya",
+      "pose": "sad",
+      "text": "Você sempre tenta me proteger. Talvez seja por isso que eu nunca consegui soltar: você nunca me deixou segurar nada.",
+      "next": "end"
+    },
+    "her_choice": {
+      "speaker": "Maya",
+      "pose": "happy",
+      "text": "...Ninguém nunca me deixou escolher. Nem eu mesma. Obrigada, {player_name}. Eu vou estar lá. Do jeito que eu decidir.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

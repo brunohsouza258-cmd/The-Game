@@ -1,0 +1,49 @@
+{
+  "id": "main_day5",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#e6dde6",
+  "sprite": "",
+  "music": "courtyard",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Quinto dia. Assembleia no pátio. O diretor anuncia, animado, que o festival cultural acontece daqui a uma semana — no dia 12, à noite, com lanternas no pátio inteiro.",
+      "next": "festival"
+    },
+    "festival": {
+      "speaker": "",
+      "text": "Todo mundo comemora. {player_name} sente o estômago afundar. Dia 12. A última data do caderno.",
+      "next": "announcement"
+    },
+    "announcement": {
+      "speaker": "Alto-falante",
+      "text": "Aviso da secretaria: o aluno Kaito Mori, da turma 2-B, favor comparecer para entregar os documentos de—",
+      "effect": "glitch",
+      "effects": {"dread": 2},
+      "next": "correction"
+    },
+    "correction": {
+      "speaker": "Alto-falante",
+      "text": "...Desculpem. Erro no sistema. Não há nenhum aluno com esse nome.",
+      "next": "laugh"
+    },
+    "laugh": {
+      "speaker": "",
+      "text": "Algumas pessoas riem. Do outro lado do pátio, {player_name} vê a Maya, a Alice, a Hikari e a Yuna. Nenhuma das quatro está rindo.",
+      "choices": [
+        { "text": "Sustentar o olhar da Maya.", "effects": {"trust.maya": 1, "dread": 1}, "next": "rain" },
+        { "text": "Olhar para o chão.", "effects": {"dread": -1}, "next": "rain" }
+      ]
+    },
+    "rain": {
+      "speaker": "",
+      "text": "Uma imagem atravessa a cabeça dele, nítida demais para ser imaginação: chuva, um telhado, uma mão escorregando da dele. Uma voz rindo: \"Ainda sou mais corajoso que você.\"",
+      "effect": "glitch",
+      "effects": {"dread": 2},
+      "next": "end"
+    },
+    "end": { "end": true }
+  }
+}

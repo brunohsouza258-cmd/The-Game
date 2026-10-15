@@ -1,0 +1,34 @@
+{
+  "id": "main_day12",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#7d72a8",
+  "sprite": "",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Décimo segundo dia. Noite do festival. O pátio está iluminado por centenas de lanternas de papel. Começa a chover fino, como da primeira vez.",
+      "next": "clock"
+    },
+    "clock": {
+      "speaker": "",
+      "text": "O relógio do pátio marca 19:30. Às 21:47, tudo termina — de um jeito ou de outro. {player_name} tem duas horas.",
+      "next": "girls"
+    },
+    "girls": {
+      "speaker": "",
+      "text": "Ele vê as quatro no meio da multidão: Yuna no palco, segurando o microfone com as duas mãos. Alice olhando o relógio de pulso a cada minuto. Hikari perto da escada, de braços cruzados. E Maya, debaixo da única lanterna apagada, olhando para o telhado.",
+      "next": "choice"
+    },
+    "choice": {
+      "speaker": "",
+      "text": "Ainda dá tempo de falar com quem ele quiser antes de subir.",
+      "choices": [
+        { "text": "Respirar fundo e começar a noite.", "next": "end" }
+      ]
+    },
+    "end": { "end": true }
+  }
+}

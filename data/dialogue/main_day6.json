@@ -1,0 +1,44 @@
+{
+  "id": "main_day6",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#c9bfd2",
+  "sprite": "",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Sexto dia. {player_name} acorda com o despertador e uma dor que não deveria estar ali. Os nós dos dedos da mão direita estão em carne viva. Tem sangue seco na manga do pijama.",
+      "next": "memory"
+    },
+    "memory": {
+      "speaker": "",
+      "text": "Ele não lembra da noite. Lembra de deitar. Depois, nada. O sapato está molhado na porta do quarto, e não choveu.",
+      "choices": [
+        { "text": "Enfaixar a mão e ir pra escola como se nada fosse.", "effects": {"dread": -1}, "next": "school" },
+        { "text": "Abrir o caderno no Dia 6.", "effects": {"dread": 2}, "next": "notebook" }
+      ]
+    },
+    "notebook": {
+      "speaker": "Caderno",
+      "text": "\"Dia 6: acordei com as mãos machucadas de novo.\" Embaixo, numa letra mais nova, mais tremida, que não estava ali ontem: \"Você bateu na porta até sangrar. Ela não abriu. Ela nunca abre antes do dia 8.\"",
+      "effect": "glitch",
+      "effects": {"dread": 2},
+      "next": "school"
+    },
+    "school": {
+      "speaker": "",
+      "text": "Na escola, no fim do corredor, a escada que leva ao telhado está isolada com uma corrente. Na parede ao lado, riscado fundo no reboco, como se tivesse sido feito com as unhas:",
+      "next": "wall"
+    },
+    "wall": {
+      "speaker": "",
+      "text": "NÃO SUBA.\n\nA letra é dele. Tem pó de reboco embaixo das unhas da mão machucada.",
+      "effect": "glitch",
+      "effects": {"dread": 4},
+      "next": "end"
+    },
+    "end": { "end": true }
+  }
+}
