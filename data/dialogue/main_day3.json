@@ -48,12 +48,16 @@
     },
     "flash": {
       "speaker": "",
-      "text": "Por um instante, a sala some: vento frio, cheiro de chuva, uma grade de metal molhada sob a mão. Depois o barulho da sala volta, normal. A dor de cabeça fica.",
+      "text": "Vento frio. Cheiro de chuva. Uma grade de metal, molhada, sob a palma da mão.\n\nAlguém ri.\n\nDepois a sala volta. Giz no quadro. A dor de cabeça fica.",
       "effect": "glitch",
       "effects": {
         "dread": 3
       },
-      "next": "outro1"
+      "next": "outro1",
+      "fx": "glitch",
+      "pause": 0.5,
+      "pace": "slow",
+      "noauto": true
     },
     "end": {
       "end": true

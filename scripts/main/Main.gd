@@ -30,6 +30,7 @@ func _ready() -> void:
 		if node:
 			node.process_mode = Node.PROCESS_MODE_PAUSABLE
 	_build_pause_menu()
+	add_child(load("res://scripts/effects/HorrorFX.gd").new())
 	var fade_layer := CanvasLayer.new()
 	fade_layer.layer = 100
 	add_child(fade_layer)

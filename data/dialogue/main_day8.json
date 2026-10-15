@@ -36,31 +36,54 @@
     },
     "cant_leave": {
       "speaker": "",
-      "text": "Ele vira e anda até a saída. O corredor é mais comprido do que deveria. No fim dele, a mesma escada, a mesma porta aberta. Não existe outro caminho hoje.",
+      "text": "Ele vira e anda até a saída. O corredor é mais comprido do que deveria.\n\nNo fim dele, a mesma escada. A mesma porta aberta.\n\nNão existe outro caminho hoje.",
       "effect": "glitch",
       "effects": {
         "dread": 2
       },
-      "next": "climb"
+      "next": "climb",
+      "fx": "thud",
+      "pace": "slow"
     },
     "climb": {
       "speaker": "",
-      "text": "Do outro lado da porta não tem telhado. Tem a escola — outra escola. Janelas quebradas, carteiras empilhadas e apodrecidas, água preta cobrindo o pátio. Como se este lugar tivesse sido repetido tantas vezes que gastou.",
-      "next": "wall"
+      "text": "Do outro lado da porta não tem telhado.\n\nTem a escola. Outra escola. Janelas quebradas. Carteiras empilhadas, podres. Água preta cobrindo o pátio, como se este lugar tivesse sido esquecido por muito mais tempo do que existe.",
+      "next": "wall",
+      "fx": "crash",
+      "noauto": true,
+      "pause": 0.3,
+      "crash_lines": [
+        "> carregando escola.sav ... falhou",
+        "> carregando escola_antiga.sav ... falhou",
+        "> volta nº 101",
+        "> volta nº 102",
+        "> volta nº 103",
+        "> ERRO: personagem 'Kaito Mori' não encontrado",
+        "> ERRO: personagem 'Kaito Mori' não encontrado",
+        "> ERRO: personagem 'Kaito Mori' não encontrado",
+        "> {player_name}, você ainda está aí?"
+      ]
     },
     "wall": {
       "speaker": "",
-      "text": "Na parede, riscos de contagem. Dezenas. Centenas. Os mais antigos quase sumidos, os últimos fundos e recentes. Embaixo, na letra dele: \"ELE NÃO PULOU. VOCÊ NÃO EMPURROU. VOCÊ SÓ NÃO CONSEGUIU SEGURAR.\"",
+      "text": "Riscos de contagem na parede. Dezenas. Centenas. Os mais antigos, quase sumidos. Os últimos, fundos, recentes.\n\nEmbaixo, na letra dele:\n\n\"ELE NÃO PULOU. VOCÊ NÃO EMPURROU. VOCÊ SÓ NÃO CONSEGUIU SEGURAR.\"",
       "effect": "glitch",
       "effects": {
         "dread": 4
       },
-      "next": "maya"
+      "next": "maya",
+      "fx": "flash_red",
+      "pause": 0.6,
+      "pace": "slow",
+      "noauto": true
     },
     "maya": {
       "speaker": "Maya",
-      "text": "Você achou o lugar. ...Não olha pra mim, olha pra parede. Cada risco é uma vez que você chegou aqui e escolheu voltar ao primeiro dia.",
-      "next": "question"
+      "text": "Você achou o lugar.\n\n...Não olha pra mim. Olha pra parede.\n\nCada risco é uma vez que você chegou aqui e escolheu voltar ao primeiro dia.",
+      "next": "question",
+      "pause": 0.8,
+      "pace": "slow",
+      "noauto": true
     },
     "question": {
       "speaker": "Maya",

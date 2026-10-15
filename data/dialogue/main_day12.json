@@ -19,8 +19,10 @@
     },
     "clock": {
       "speaker": "",
-      "text": "O relógio do pátio marca 19:30. Às 21:47, tudo termina — de um jeito ou de outro. {player_name} tem duas horas.",
-      "next": "girls"
+      "text": "O relógio do pátio marca 19:30.\n\nÀs 21:47, tudo termina. De um jeito ou de outro.\n\n{player_name} tem duas horas.",
+      "next": "girls",
+      "fx": "thud",
+      "pace": "slow"
     },
     "girls": {
       "speaker": "",

@@ -51,7 +51,10 @@
       "speaker": "",
       "text": "Quando o relógio marca 21:47, tudo fica branco por um instante. Um som de aula, de chuva e de risada ao mesmo tempo.",
       "next": "n3",
-      "effect": "glitch"
+      "effect": "glitch",
+      "fx": "blackout",
+      "pace": "slow",
+      "noauto": true
     },
     "n3": {
       "speaker": "",

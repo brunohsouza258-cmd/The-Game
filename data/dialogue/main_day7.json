@@ -19,12 +19,14 @@
     },
     "clock": {
       "speaker": "",
-      "text": "O relógio da parede está parado em 21:47. A professora dá aula normalmente, olhando para ele de vez em quando, sem estranhar que seja de noite às dez da manhã.",
+      "text": "O relógio da parede está parado em 21:47.\n\nA professora dá aula olhando para ele, de vez em quando. Não estranha que seja noite às dez da manhã.",
       "effect": "glitch",
       "effects": {
         "dread": 2
       },
-      "next": "photo"
+      "next": "photo",
+      "fx": "static",
+      "pace": "slow"
     },
     "photo": {
       "speaker": "",
@@ -48,12 +50,15 @@
     },
     "closer": {
       "speaker": "",
-      "text": "De perto, o borrão não é um borrão. São várias versões do mesmo rosto, sobrepostas, cada uma um pouco mais apagada que a anterior. Uma para cada vez que tudo voltou ao começo.",
+      "text": "De perto, o borrão não é um borrão.\n\nSão vários rostos, um sobre o outro. Cada um mais apagado que o anterior.\n\nUm para cada volta. Cada vez que tudo recomeçou.",
       "effect": "glitch",
       "effects": {
         "dread": 2
       },
-      "next": "hallway"
+      "next": "hallway",
+      "fx": "glitch",
+      "pace": "slow",
+      "noauto": true
     },
     "hallway": {
       "speaker": "",

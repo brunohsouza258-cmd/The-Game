@@ -36,6 +36,8 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - **Efeitos de diálogo**: `effects` funciona tanto nas escolhas quanto direto nas falas. `"effect": "glitch"` dispara o glitch visual e sonoro.
 - **Saves**: 3 slots, mais save e load rápidos.
 - **Configurações** (`user://settings.cfg`): volume geral, música e efeitos sonoros em canais de áudio separados, velocidade do texto e tela cheia.
+- **Efeitos de terror** (`scripts/effects/HorrorFX.gd`): o campo `"fx"` de um nó dispara `glitch` (tela rasgada), `static` (chuvisco), `flash_red`, `blackout`, `thud` ou `crash` (falsa queda do jogo, com janela de erro e terminal, no estilo Doki Doki; aceita `crash_lines`). Com pavor >= 60 a escola falha sozinha de vez em quando.
+- **Ritmo e interface por fala:** `pace` (`slow`/`crawl`/`fast`/`instant`), `pause` (segundos antes do texto), `noauto` (não avança sozinho) e `corrupt` (segundos de texto embaralhado). Com pavor alto surgem batimentos cardíacos, a caixa treme e o nome da personagem falha.
 - **Cenas com duas personagens:** as falas podem trazer `"side"` ("left"/"right") e `"partner"` (sprite da outra), e a que não fala fica escurecida ao fundo.
 - **Transições:** cada troca de tela surge de um fade suave.
 - **Histórico de falas**: botão "Histórico" durante o diálogo.

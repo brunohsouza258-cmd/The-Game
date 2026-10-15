@@ -28,12 +28,15 @@
     },
     "understand": {
       "speaker": "",
-      "text": "{player_name} entende de uma vez: se tudo voltar de novo, a próxima volta não vai ter a Alice anotando, nem a Hikari correndo, nem a Yuna rindo. Vai ter só um corredor, uma porta, e ele. Cada tentativa de salvar o Kaito está apagando todo mundo que sobrou.",
-      "next": "decision"
+      "text": "{player_name} entende de uma vez.\n\nSe tudo voltar de novo, a próxima volta não vai ter a Alice anotando. Nem a Hikari correndo. Nem a Yuna rindo.\n\nVai ter só um corredor. Uma porta. E ele, sozinho, sem saber por quê.",
+      "next": "decision",
+      "fx": "static",
+      "pace": "slow",
+      "noauto": true
     },
     "decision": {
       "speaker": "",
-      "text": "Faltam dois dias. Ele precisa decidir o que vai fazer quando o relógio marcar 21:47.",
+      "text": "Faltam dois dias.\n\nO relógio marca 21:47.",
       "choices": [
         {
           "text": "\"Dessa vez eu seguro ele. Custe o que custar.\"",
@@ -58,7 +61,10 @@
           },
           "next": "unsure"
         }
-      ]
+      ],
+      "fx": "blackout",
+      "pace": "crawl",
+      "noauto": true
     },
     "save": {
       "speaker": "",
@@ -73,8 +79,11 @@
     },
     "unsure": {
       "speaker": "",
-      "text": "Ele não decide. O relógio continua parado. Talvez seja assim que todas as outras voltas começaram: com um \"eu não sei\".",
-      "next": "outro1"
+      "text": "Ele não decide. O relógio continua parado.\n\nTalvez seja assim que todas as outras voltas começaram. Com um \"eu não sei\".",
+      "next": "outro1",
+      "fx": "thud",
+      "pace": "slow",
+      "noauto": true
     },
     "end": {
       "end": true

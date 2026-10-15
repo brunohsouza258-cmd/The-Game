@@ -58,7 +58,10 @@
       "speaker": "",
       "text": "A voz da Maya sai de novo, igual, idêntica, o mesmo tom. Como um disco riscado.",
       "next": "n6",
-      "effect": "glitch"
+      "effect": "glitch",
+      "fx": "glitch",
+      "pace": "slow",
+      "noauto": true
     },
     "n6": {
       "speaker": "Yuna",

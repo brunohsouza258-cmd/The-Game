@@ -39,8 +39,11 @@
     },
     "truth4": {
       "speaker": "Maya",
-      "text": "Desde então, sempre que chega aquela noite, tudo volta ao primeiro dia. Eu não sei se é você que não deixa ele ir, ou se somos nós que não deixamos você ir. Só sei que cada volta apaga um pouco mais dele — e um pouco mais da gente.",
-      "next": "outro1"
+      "text": "Desde então, toda vez que chega aquela noite, tudo volta ao primeiro dia.\n\nEu não sei se é você que não deixa ele ir. Ou se somos nós que não deixamos você ir.\n\nSó sei que cada volta apaga um pouco dele. E depois, um pouco da gente.",
+      "next": "outro1",
+      "fx": "thud",
+      "pace": "slow",
+      "noauto": true
     },
     "normal": {
       "speaker": "",
@@ -49,12 +52,15 @@
     },
     "normal2": {
       "speaker": "",
-      "text": "Mas na hora do almoço, a mão direita de {player_name} se fecha sozinha, com força, como se segurasse outra mão. Por um segundo ele sente a chuva, a grade cortando a palma, um peso escorregando. Esquecer não funciona por inteiro.",
+      "text": "Mas na hora do almoço, a mão direita de {player_name} se fecha sozinha. Com força. Como se segurasse outra mão.\n\nPor um segundo ele sente a chuva. A grade cortando a palma.\n\nDepois a mão abre. E ele não lembra o que estava fazendo.",
       "effect": "glitch",
       "effects": {
         "dread": 3
       },
-      "next": "outro1"
+      "next": "outro1",
+      "fx": "glitch",
+      "pace": "slow",
+      "noauto": true
     },
     "end": {
       "end": true

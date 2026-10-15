@@ -29,7 +29,7 @@
     },
     "laugh": {
       "speaker": "",
-      "text": "No corredor, uma risada. Alta, despreocupada, inconfundível. {player_name} conhece essa risada desde os seis anos de idade. Ela vem da direção da escada do telhado.",
+      "text": "No corredor, uma risada. Alta. Despreocupada. Inconfundível.\n\n{player_name} conhece essa risada desde os seis anos de idade.\n\nEla vem da escada do telhado.",
       "choices": [
         {
           "text": "Seguir a risada.",
@@ -45,21 +45,29 @@
           },
           "next": "stay"
         }
-      ]
+      ],
+      "fx": "glitch",
+      "pause": 0.8,
+      "pace": "slow",
+      "noauto": true
     },
     "follow": {
       "speaker": "",
-      "text": "No pé da escada não tem ninguém. Só a porta lá em cima, fechada. E escrito na poeira do corrimão, com o dedo, numa letra que não é a dele: \"amanhã você vem, né?\"",
+      "text": "No pé da escada não tem ninguém. Só a porta, lá em cima, fechada.\n\nE, escrito na poeira do corrimão, com o dedo, numa letra que não é a dele:\n\n\"amanhã você vem, né?\"",
       "effect": "glitch",
       "effects": {
         "dread": 2
       },
-      "next": "outro1"
+      "next": "outro1",
+      "fx": "static",
+      "pace": "slow",
+      "noauto": true
     },
     "stay": {
       "speaker": "",
-      "text": "Ele fica. Ajuda a pendurar uma lanterna. A risada para. Por algum motivo, isso dói mais do que se ela continuasse.",
-      "next": "outro1"
+      "text": "Ele fica. Ajuda a pendurar uma lanterna.\n\nA risada para.\n\nPor algum motivo, isso dói mais do que se ela continuasse.",
+      "next": "outro1",
+      "pace": "slow"
     },
     "end": {
       "end": true

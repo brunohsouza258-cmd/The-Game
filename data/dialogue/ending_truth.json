@@ -69,7 +69,10 @@
     "n6": {
       "speaker": "",
       "text": "O ponteiro do relógio do pátio marca 21:47. Pela primeira vez, a chuva não se repete. Ela cai, e fica no chão, e escorre. Como chuva de verdade.",
-      "next": "end"
+      "next": "end",
+      "fx": "thud",
+      "pace": "slow",
+      "noauto": true
     },
     "end": {
       "end": true

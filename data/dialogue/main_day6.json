@@ -58,7 +58,11 @@
       "effects": {
         "dread": 4
       },
-      "next": "outro1"
+      "next": "outro1",
+      "fx": "flash_red",
+      "pause": 1.0,
+      "pace": "slow",
+      "noauto": true
     },
     "end": {
       "end": true

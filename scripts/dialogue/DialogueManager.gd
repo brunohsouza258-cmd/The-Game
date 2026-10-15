@@ -67,8 +67,12 @@ func _show_current_node() -> void:
 	display_node["text"] = _interpolate(node.get("text", ""))
 	display_node["choices"] = _available_choices(node.get("choices", []))
 	EventBus.dialogue_node_shown.emit(display_node)
-	if node.get("effect", "") == "glitch":
-		EventBus.glitch_requested.emit()
+	# "fx": glitch | static | flash_red | blackout | thud | shake | crash (ver HorrorFX.gd)
+	var fx: String = str(node.get("fx", ""))
+	if node.get("effect", "") == "glitch" and fx == "":
+		fx = "glitch"
+	if fx != "":
+		EventBus.horror_requested.emit(fx, display_node)
 
 func _available_choices(choices: Array) -> Array:
 	var available := []

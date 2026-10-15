@@ -15,7 +15,18 @@ extends CanvasLayer
 const AUTO_SECONDS_PER_CHAR := 0.02
 const SKIP_INTERVAL := 0.07
 
+const PACES := {"slow": 2.5, "crawl": 5.0, "fast": 0.4}
+const CORRUPT_GLYPHS := "█▓▒░#@%&§¤¿?¡"
+const PANEL_HOME := Vector2(40, 520)
+
 var _auto_timer: Timer
+var _noauto: bool = false
+var _pace: float = 1.0
+var _node_serial: int = 0
+var _corrupt_left: float = 0.0
+var _corrupt_tick: float = 0.0
+var _real_name: String = ""
+var _name_garble_left: float = 0.0
 var _skip_cooldown: float = 0.0
 
 var _full_text: String = ""
@@ -42,7 +53,43 @@ func _ready() -> void:
 	EventBus.dialogue_cancelled.connect(_on_dialogue_closed)
 
 # Segurar Ctrl avança o texto rápido (pula falas), sem tocar nas escolhas.
+func _corrupt(text: String, chance: float = 0.22) -> String:
+	var out := ""
+	for ch in text:
+		if ch != " " and ch != "
+" and randf() < chance:
+			out += CORRUPT_GLYPHS[randi() % CORRUPT_GLYPHS.length()]
+		else:
+			out += ch
+	return out
+
+# Com o pavor alto a própria interface "adoece": a caixa treme e o nome falha.
+func _dread_interface(delta: float) -> void:
+	var dread := GameState.dread
+	if dread >= 70:
+		var power := (dread - 60) / 40.0 * 2.5
+		panel.position = PANEL_HOME + Vector2(randf_range(-power, power), randf_range(-power, power))
+	else:
+		panel.position = PANEL_HOME
+	if _name_garble_left > 0.0:
+		_name_garble_left -= delta
+		if _name_garble_left <= 0.0:
+			name_label.text = _real_name
+	elif dread >= 75 and name_plate.visible and _real_name != "" and randf() < 0.01:
+		name_label.text = _corrupt(_real_name, 0.6)
+		_name_garble_left = 0.12
+
 func _process(delta: float) -> void:
+	if panel.visible:
+		_dread_interface(delta)
+	if _corrupt_left > 0.0:
+		_corrupt_left -= delta
+		_corrupt_tick -= delta
+		if _corrupt_tick <= 0.0:
+			_corrupt_tick = 0.07
+			text_label.text = _corrupt(_full_text.substr(0, _char_index))
+		if _corrupt_left <= 0.0:
+			text_label.text = _full_text.substr(0, _char_index)
 	if not panel.visible or history_panel.visible or not Input.is_key_pressed(KEY_CTRL):
 		return
 	_skip_cooldown -= delta
@@ -70,7 +117,7 @@ func _on_auto_toggled(value: bool) -> void:
 func _start_auto_wait() -> void:
 	if not GameSettings.auto_advance or not panel.visible:
 		return
-	if not _pending_choices.is_empty() or _char_index < _full_text.length():
+	if _noauto or not _pending_choices.is_empty() or _char_index < _full_text.length():
 		return
 	_auto_timer.start(GameSettings.auto_seconds + _full_text.length() * AUTO_SECONDS_PER_CHAR)
 
@@ -120,6 +167,7 @@ func _on_dialogue_started(meta: Dictionary) -> void:
 
 func _on_node_shown(node_data: Dictionary) -> void:
 	var speaker: String = node_data.get("speaker", "")
+	_real_name = speaker
 	name_label.text = speaker
 	name_plate.visible = speaker != ""
 	var node_color: String = node_data.get("color", "")
@@ -130,7 +178,27 @@ func _on_node_shown(node_data: Dictionary) -> void:
 	text_label.text = ""
 	_auto_timer.stop()
 	_clear_choices()
-	type_timer.wait_time = max(GameSettings.text_speed, 0.001)
+	# Controle de ritmo por fala: "pace" (slow/crawl/fast/instant), "pause" (s antes do texto),
+	# "noauto" (não avança sozinho) e "corrupt" (s de texto embaralhado).
+	_noauto = bool(node_data.get("noauto", false))
+	var pace_key: String = str(node_data.get("pace", ""))
+	_pace = 0.0 if pace_key == "instant" else float(PACES.get(pace_key, 1.0))
+	_corrupt_left = float(node_data.get("corrupt", 0.0))
+	_corrupt_tick = 0.0
+	_node_serial += 1
+	var pause := float(node_data.get("pause", 0.0))
+	if pause > 0.0:
+		get_tree().create_timer(pause).timeout.connect(_begin_typing.bind(_node_serial))
+	else:
+		_begin_typing(_node_serial)
+
+func _begin_typing(serial: int) -> void:
+	if serial != _node_serial or _full_text == "":
+		return
+	if _pace <= 0.0:
+		_finish_typing()
+		return
+	type_timer.wait_time = max(GameSettings.text_speed * _pace, 0.001)
 	type_timer.start()
 
 func _on_type_tick() -> void:
@@ -141,7 +209,7 @@ func _on_type_tick() -> void:
 
 func _finish_typing() -> void:
 	type_timer.stop()
-	text_label.text = _full_text
+	text_label.text = _full_text if _corrupt_left <= 0.0 else _corrupt(_full_text)
 	_char_index = _full_text.length()
 	_show_choices()
 	_start_auto_wait()

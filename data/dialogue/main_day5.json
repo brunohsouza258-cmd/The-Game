@@ -59,12 +59,16 @@
     },
     "rain": {
       "speaker": "",
-      "text": "Uma imagem atravessa a cabeça dele, nítida demais para ser imaginação: chuva, um telhado, uma mão escorregando da dele. Uma voz rindo: \"Ainda sou mais corajoso que você.\"",
+      "text": "Chuva. Um telhado. Uma mão escorregando da dele.\n\nUma voz, rindo:\n\n\"Ainda sou mais corajoso que você.\"",
       "effect": "glitch",
       "effects": {
         "dread": 2
       },
-      "next": "outro1"
+      "next": "outro1",
+      "fx": "flash_red",
+      "pause": 0.7,
+      "pace": "slow",
+      "noauto": true
     },
     "end": {
       "end": true

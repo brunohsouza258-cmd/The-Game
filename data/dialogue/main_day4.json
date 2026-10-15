@@ -53,13 +53,16 @@
     },
     "torn": {
       "speaker": "",
-      "text": "As páginas depois do Dia 12 foram arrancadas. Na última que sobrou, um nome escrito várias vezes, cada vez mais apagado, como se a caneta estivesse falhando — ou a memória: Kaito. Kaito. Kaito. Kaito Mori.",
+      "text": "As páginas depois do Dia 12 foram arrancadas.\n\nNa última que sobrou, um nome, escrito várias vezes. Cada vez mais fraco. Como se a caneta estivesse falhando.\n\nOu a memória.",
       "effect": "glitch",
       "effects": {
         "dread": 3,
         "flags.found_notebook": true
       },
-      "next": "outro1"
+      "next": "outro1",
+      "fx": "static",
+      "pace": "slow",
+      "noauto": true
     },
     "end": {
       "end": true

@@ -13,7 +13,10 @@
       "next": "n1",
       "effect": "glitch",
       "background": "res://assets/backgrounds/school_decayed.png",
-      "tint": "#ffffff"
+      "tint": "#ffffff",
+      "fx": "glitch",
+      "pace": "slow",
+      "noauto": true
     },
     "n1": {
       "speaker": "Maya",

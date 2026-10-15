@@ -18,17 +18,22 @@
     },
     "glitch_announcement": {
       "speaker": "Alto-falante",
-      "text": "— {player_name}, bem-vindo de volta. Dessa vez, tente —",
+      "text": "\"...{player_name}, bem-vindo de volta. Dessa vez, tente—\"",
       "effect": "glitch",
       "effects": {
         "dread": 4
       },
-      "next": "aftermath"
+      "next": "aftermath",
+      "fx": "static",
+      "corrupt": 0.9,
+      "pause": 0.4,
+      "noauto": true
     },
     "aftermath": {
       "speaker": "",
-      "text": "A voz normal retoma, como se nada tivesse acontecido, terminando o aviso sobre o horário de aulas. Ninguém ao redor parece ter notado. {player_name} olha em volta — todo mundo continua sua manhã, exatamente como se a frase nunca tivesse sido dita.",
-      "next": "outro1"
+      "text": "A voz normal volta. Termina o aviso sobre o horário das aulas.\n\nNinguém levantou a cabeça. Ninguém ouviu.\n\n{player_name} olha em volta e conta: trinta alunos, trinta rostos tranquilos. Ele é o único que parou de respirar.",
+      "next": "outro1",
+      "pace": "slow"
     },
     "end": {
       "end": true
