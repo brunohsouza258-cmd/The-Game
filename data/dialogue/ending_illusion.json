@@ -1,0 +1,66 @@
+{
+  "id": "ending_illusion",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "{player_name} sobe a escada, olha para a porta do telhado e dá meia-volta. É mais fácil assim. Lá embaixo, o festival está bonito, a Yuna está rindo, o dia está perfeito.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "tint": "#ffffff"
+    },
+    "b1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Isso! Vem comer. Vem rir comigo. Amanhã tem aula, mas hoje só festa.",
+      "next": "n2"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "surprised",
+      "text": "Estranho? Estranho o quê? Está tudo perfeito. Para de pensar tanto. Vem.",
+      "next": "n2"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Aí está você! Eu estava te procurando! O festival está lindo, né? Nenhuma lanterna queimou. Hoje é um dia perfeito!",
+      "choices": [
+        {
+          "text": "Sorrir de volta e aceitar o dia perfeito.",
+          "next": "b1"
+        },
+        {
+          "text": "Hesitar. Perguntar se ela não acha estranho.",
+          "next": "b2"
+        }
+      ]
+    },
+    "n2": {
+      "speaker": "",
+      "text": "Quando o relógio marca 21:47, tudo fica branco por um instante. Um som de aula, de chuva e de risada ao mesmo tempo.",
+      "next": "n3",
+      "effect": "glitch"
+    },
+    "n3": {
+      "speaker": "",
+      "text": "Primeiro dia. {player_name} atravessa o portão da escola carregando mais expectativa do que faz sentido admitir. Alguém, no corredor ao entardecer, sorri como quem já viu essa cena muitas vezes.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  },
+  "next_screen": "res://scenes/ending/EndingScene.tscn"
+}

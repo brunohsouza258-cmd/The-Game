@@ -38,6 +38,7 @@ var _pose_tween: Tween
 var _partner_sprite: Sprite2D
 var _stage_x: float = SCREEN_SIZE.x / 2.0
 var _partner_scale: float = 1.0
+var _next_screen: String = "res://scenes/main/Hub.tscn"
 
 func _ready() -> void:
 	# A segunda personagem em cena fica atrás da que fala, escurecida.
@@ -54,6 +55,7 @@ func start(dialogue_path: String) -> void:
 	DialogueManager.start_dialogue(dialogue_path)
 
 func _on_dialogue_started(meta: Dictionary) -> void:
+	_next_screen = meta.get("next_screen", "res://scenes/main/Hub.tscn")
 	background.texture = load(meta.get("background", DEFAULT_BACKGROUND))
 	# The scene's own tint (night, decay...) combined with a drift toward red as dread rises.
 	var dread_tint := Color(1, 1, 1).lerp(DREAD_TINT, GameState.dread / 100.0)
@@ -137,4 +139,4 @@ func _process(delta: float) -> void:
 	character_sprite.rotation = pose_rotation
 
 func _on_dialogue_ended(_dialogue_id: String) -> void:
-	get_tree().current_scene.show_screen("res://scenes/main/Hub.tscn")
+	get_tree().current_scene.show_screen(_next_screen)

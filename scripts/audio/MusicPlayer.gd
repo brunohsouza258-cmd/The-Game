@@ -25,6 +25,7 @@ var _time: float = 0.0
 var _glitch_time: float = -1.0
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	for i in 2:
 		var player := AudioStreamPlayer.new()
 		player.bus = GameSettings.BUS_MUSIC

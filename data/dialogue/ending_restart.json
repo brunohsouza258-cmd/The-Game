@@ -1,0 +1,54 @@
+{
+  "id": "ending_restart",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#d8d8e8",
+  "sprite": "",
+  "music": "ending",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "No telhado, {player_name} estende a mão — e percebe que não sabe mais por que está fazendo isso. Ele não lembra direito do rosto do Kaito. Só da sensação de ter perdido alguém.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#d8d8e8"
+    },
+    "n1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Você não precisa lembrar. Eu lembro por nós dois. Eu lembro, e isso é o suficiente.",
+      "next": "n2"
+    },
+    "b1": {
+      "speaker": "",
+      "text": "No dia seguinte o loop não volta. Fica um buraco onde antes havia um nome. {player_name} não entende tudo. Mas decide seguir devagar, sem pressa de ter todas as respostas.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "",
+      "text": "A carteira com as iniciais K.M. continua lá. Ele não sabe por que olha. Mas olha todos os dias, até um dia notar que a carteira sumiu e a janela ficou só uma janela.",
+      "next": "end"
+    },
+    "n2": {
+      "speaker": "",
+      "text": "Ele desce a escada devagar. Não consegue salvar ninguém dessa vez, e não consegue mais lembrar o suficiente para continuar tentando.",
+      "choices": [
+        {
+          "text": "Aceitar o pouco que sobrou e seguir em frente.",
+          "next": "b1"
+        },
+        {
+          "text": "Ficar parado no pátio, olhando a carteira vazia pela janela.",
+          "next": "b2"
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  },
+  "next_screen": "res://scenes/ending/EndingScene.tscn"
+}

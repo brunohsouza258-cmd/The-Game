@@ -1,0 +1,92 @@
+{
+  "id": "late_day6",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#e8c8c0",
+  "sprite": "",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A sala está vazia, só o ventilador de teto girando. A Yuna sentou numa carteira e puxou outra para o lado. Na mesa, uma caixa de primeiros socorros aberta.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#e8c8c0"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "neutral",
+      "text": "Dá a mão. Não, a esquerda. A que você escondeu a semana inteira.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "",
+      "text": "Ela desenrola a atadura devagar. A palma tem uma linha vermelha, fina, de um lado a outro, como a marca de uma corda ou de uma grade.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Dói? Eu sei que dói. Eu faço isso com minha mãe quando ela se corta cozinhando. Eu sou boa em cuidar de mão.",
+      "next": "n4"
+    },
+    "b1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Eu sei! Ele sempre dizia que não doía e chorava sem fazer barulho. Depois pedia pra eu não contar pra ninguém.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Eu nunca contei. Nem agora. Só que agora eu não lembro pra quem eu devia contar.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "...Era alguém. Eu quase disse o nome. Estava aqui, na ponta da língua. Fui eu quem puxou a atadura mais forte. Desculpa.",
+      "next": "end"
+    },
+    "n4": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "thinking",
+      "text": "Engraçado. Eu tenho uma lembrança de cuidar de uma mão assim. Era menor. Era de um menino de joelho ralado, que insistia que não doía.",
+      "choices": [
+        {
+          "text": "Dizer que doía, sim.",
+          "next": "b1",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 2,
+            "dread": 2
+          }
+        },
+        {
+          "text": "Perguntar quem era o menino.",
+          "next": "b3",
+          "effects": {
+            "trust.yuna": 1,
+            "dread": 5
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

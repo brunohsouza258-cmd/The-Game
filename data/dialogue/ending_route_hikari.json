@@ -1,0 +1,68 @@
+{
+  "id": "ending_route_hikari",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "ending",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A pista de atletismo está molhada da chuva da noite. A Hikari chega ao telhado antes do amanhecer e desce de lá com os nós dos dedos ainda machucados. {player_name} a espera na curva.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "angry",
+      "text": "Eu subi pra brigar com a gravidade. Eu perdi. Eu sempre perco pra ela. Mas dessa vez eu fui lá em cima e voltei. Isso conta?",
+      "next": "n2"
+    },
+    "b1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "surprised",
+      "text": "...Tá. Tá bom. Eu não vou fingir que eu não queria. Fica aqui. Fica uma volta inteira. Eu cronometro pra você.",
+      "next": "n3"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "sad",
+      "text": "Eu vou deixar vazia. Ninguém vai preencher. A gente corre com três e uma raia vazia. Eu aprendi a perder sem desaparecer.",
+      "next": "n3"
+    },
+    "n2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "neutral",
+      "text": "Tem coisa que não se vence, né? Você falou isso pra mim. Eu fiquei com raiva. Depois com menos raiva. Hoje eu acho que é só... verdade.",
+      "choices": [
+        {
+          "text": "Segurar a mão dela, não a da raia vazia.",
+          "next": "b1"
+        },
+        {
+          "text": "Perguntar o que ela vai fazer com a quarta raia.",
+          "next": "b2"
+        }
+      ]
+    },
+    "n3": {
+      "speaker": "",
+      "text": "O sol aparece por cima do prédio da escola. Pela primeira vez, a quarta raia brilha sem ninguém nela.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  },
+  "next_screen": "res://scenes/ending/EndingScene.tscn"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "late_day3",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#6a6a9a",
+  "sprite": "",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "O pátio está vazio e a pista de atletismo parece maior no escuro. A Hikari, sozinha, alonga na linha de largada com um cronômetro na mão. Ela não finge surpresa quando vê {player_name}.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#6a6a9a"
+    },
+    "n1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "neutral",
+      "text": "Cronometra pra mim. Só aperta aqui quando eu passar da linha. Eu não confio no relógio do celular.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "",
+      "text": "Ela corre. O vento do início da noite faz o cabelo dela virar uma bandeira. Quando cruza a linha, ele aperta o botão.",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "surprised",
+      "text": "Doze e oito. Doze e oito de novo. Sempre doze e oito. Como se existisse um número que eu não consigo passar.",
+      "next": "n4"
+    },
+    "b1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Tá. Só que se eu bater o tempo, você grita. Alto. Eu quero ouvir alguém gritando meu nome nessa pista.",
+      "next": "n5"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "close",
+      "text": "...Como assim? Não era pra bater o tempo dele? Então é pra quê? Pra correr até o fim da raia sem ninguém do lado?",
+      "next": "n5"
+    },
+    "n4": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "thinking",
+      "text": "Esse era o tempo do reserva. Do cara que... que corria a quarta raia. Eu sei o tempo de cor e não sei o nome dele.",
+      "choices": [
+        {
+          "text": "Tentar de novo. Eu cronometro quantas vezes precisar.",
+          "next": "b1",
+          "effects": {
+            "affinity.hikari": 2,
+            "trust.hikari": 1
+          }
+        },
+        {
+          "text": "Perguntar: \"E se não fosse para passar?\"",
+          "next": "b2",
+          "effects": {
+            "trust.hikari": 2,
+            "dread": 3
+          }
+        }
+      ]
+    },
+    "n5": {
+      "speaker": "",
+      "text": "Ela corre mais uma vez. Dessa vez, ele grita. O eco volta do outro lado do pátio como se alguém tivesse respondido.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

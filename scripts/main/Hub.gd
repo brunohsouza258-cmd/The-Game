@@ -12,6 +12,7 @@ const CHARACTER_NAMES := {
 @onready var status_label: Label = $StatusLabel
 @onready var poem_button: Button = $Panel/VBoxContainer/PoemButton
 @onready var walk_button: Button = $Panel/VBoxContainer/WalkButton
+@onready var late_button: Button = $Panel/VBoxContainer/LateButton
 @onready var next_day_button: Button = $Panel/VBoxContainer/NextDayButton
 @onready var end_button: Button = $Panel/VBoxContainer/EndButton
 @onready var character_buttons := {
@@ -43,6 +44,10 @@ func _refresh() -> void:
 	var walk_done := GameState.visited_today("walk")
 	walk_button.disabled = walk_done
 	walk_button.text = "Você já passeou pela escola hoje" if walk_done else "Passear pela escola"
+	late_button.visible = FileAccess.file_exists(_late_path())
+	var late_done := GameState.visited_today("late")
+	late_button.disabled = late_done
+	late_button.text = "Você já ficou até tarde hoje" if late_done else "Ficar até mais tarde"
 	var final_day := GameState.day >= FINAL_DAY
 	next_day_button.visible = not final_day
 	end_button.visible = final_day
@@ -53,7 +58,7 @@ func _status_text(final_day: bool) -> String:
 	for char_id in character_buttons:
 		if not GameState.visited_today(char_id):
 			pending.append(CHARACTER_NAMES[char_id])
-	var text := "Você já falou com todas hoje." if pending.is_empty() else "Ainda dá tempo de falar com: %s." % ", ".join(pending)
+	var text := "Você já falou com todas hoje." if pending.is_empty() else "Ainda dá tempo de falar com: %s.\nQuem ficar sem conversa perde 1 de afinidade ao virar o dia." % ", ".join(pending)
 	if final_day:
 		text += "\n\nÉ a noite do festival. Quando estiver pronto, suba ao telhado. Depois disso, não tem volta."
 	return text
@@ -74,6 +79,14 @@ func _on_character_button_pressed(character_id: String) -> void:
 func _walk_path() -> String:
 	return "res://data/dialogue/extra_day%d.json" % GameState.day
 
+func _late_path() -> String:
+	return "res://data/dialogue/late_day%d.json" % GameState.day
+
+func _on_late_button_pressed() -> void:
+	SfxPlayer.play_click()
+	GameState.mark_visited("late")
+	_start_dialogue(_late_path())
+
 func _on_walk_button_pressed() -> void:
 	SfxPlayer.play_click()
 	GameState.mark_visited("walk")
@@ -87,6 +100,10 @@ func _on_next_day_button_pressed() -> void:
 	SfxPlayer.play_click()
 	if GameState.day >= FINAL_DAY:
 		return
+	# Quem foi ignorada hoje sente a falta.
+	for char_id in character_buttons:
+		if not GameState.visited_today(char_id):
+			GameState.change_affinity(char_id, -1)
 	GameState.day += 1
 	SaveManager.autosave()
 	_play_main_event()
@@ -101,6 +118,7 @@ func _on_settings_button_pressed() -> void:
 
 func _on_end_button_pressed() -> void:
 	SfxPlayer.play_click()
+	GameState.ending_scene_played = false
 	get_tree().current_scene.show_screen("res://scenes/ending/EndingScene.tscn")
 
 func _on_title_button_pressed() -> void:

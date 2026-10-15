@@ -13,6 +13,8 @@ var player_name: String = "Jogador"
 var day: int = 1
 var dread: int = 0
 var last_seen_main_event_day: int = 0
+# Só em memória: o final já tocou a cena interativa e agora mostra o cartão.
+var ending_scene_played: bool = false
 
 func _ready() -> void:
 	reset_for_new_game(player_name)
@@ -22,6 +24,7 @@ func reset_for_new_game(new_name: String) -> void:
 	day = 1
 	dread = 0
 	last_seen_main_event_day = 0
+	ending_scene_played = false
 	flags.clear()
 	choice_history.clear()
 	visited.clear()

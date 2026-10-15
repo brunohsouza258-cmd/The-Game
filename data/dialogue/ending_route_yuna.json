@@ -1,0 +1,76 @@
+{
+  "id": "ending_route_yuna",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#fff2e0",
+  "sprite": "",
+  "music": "ending",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Dia 13. A Yuna chega à escola carregando duas marmitas, uma em cada mão, o rosto vermelho de quem chorou na rua. {player_name} espera no portão.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#fff2e0"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Eu chorei no ônibus. Chorei na fila da padaria. Chorei no elevador de ontem à noite. Eu acho que eu passei mil dias sem chorar e hoje eu paguei tudo de uma vez.",
+      "next": "n2"
+    },
+    "b1": {
+      "speaker": "",
+      "text": "A carteira vazia, com as iniciais K.M., continua no fundo da sala. A Yuna coloca a marmita ali e arruma os hashis com cuidado.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Pronto. Ele sempre reclamava que eu fazia comida demais. Dessa vez eu fiz de propósito.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "surprised",
+      "text": "...Eu não preciso? Todo mundo sempre diz \"fica bem\", \"sorri\". Você é a primeira pessoa que diz que eu não preciso.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Eu não preciso estar bem. Mas eu também não quero estar sozinha. E eu não estou.",
+      "next": "end"
+    },
+    "n2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "neutral",
+      "text": "Eu fiz duas marmitas. Uma é sua. A outra é... eu vou deixar na carteira que tem as iniciais. Tá bom?",
+      "choices": [
+        {
+          "text": "Ir com ela até a carteira.",
+          "next": "b1"
+        },
+        {
+          "text": "Dizer que ela não precisa estar bem.",
+          "next": "b3"
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  },
+  "next_screen": "res://scenes/ending/EndingScene.tscn"
+}

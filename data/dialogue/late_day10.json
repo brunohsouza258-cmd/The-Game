@@ -1,0 +1,90 @@
+{
+  "id": "late_day10",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/school_decayed.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "corrupted",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "As luzes do corredor piscam três vezes e se apagam. Quando voltam, as paredes têm riscos de contagem, e a Maya está sentada no chão, de costas na parede, contando em voz baixa.",
+      "next": "n1",
+      "effect": "glitch",
+      "background": "res://assets/backgrounds/school_decayed.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Cento e quatro. Cento e cinco. Eu conto desde que acordei hoje. Não sei por que. Contar é o que fica quando o resto acaba.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Os alunos sumiram porque eu soltei um pouco. Você percebe? Toda vez que eu penso em deixar ele ir, alguém desaparece. Como se o mundo cobrasse a conta.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "...Soltar e lembrar. As duas coisas. Eu nunca tentei as duas ao mesmo tempo.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "happy",
+      "text": "Obrigada. Eu não vou conseguir hoje. Mas eu vou lembrar que alguém me disse isso.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Cento e seis. Cento e sete. ...Cento e oito. Obrigada por contar comigo.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "O que eu faço, {player_name}? Se eu soltar, as pessoas somem. Se eu segurar, o dia não acaba. Eu estou presa entre duas coisas que doem.",
+      "choices": [
+        {
+          "text": "Dizer que soltar não é o mesmo que esquecer.",
+          "next": "b1",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 3,
+            "dread": 3,
+            "flags.maya_heard_let_go": true
+          }
+        },
+        {
+          "text": "Dizer que vai ficar com ela, contando.",
+          "next": "b3",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 1,
+            "dread": 1
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

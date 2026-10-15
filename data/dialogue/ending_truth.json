@@ -1,0 +1,79 @@
+{
+  "id": "ending_truth",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/rooftop_rain.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "21:46. A chuva cai fina sobre o telhado. A grade é a mesma de todas as voltas. Do outro lado, Kaito está de pé na beirada, rindo, com a camisa colada no corpo.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/rooftop_rain.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Kaito",
+      "color": "#7FA8D9",
+      "text": "Ainda sou mais corajoso que você. Vai, tenta me alcançar.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "",
+      "text": "{player_name} não corre. Pela primeira vez em muitas voltas, ele não estende a mão. Atrás dele, na porta da escada, a Maya prende a respiração.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Kaito",
+      "color": "#7FA8D9",
+      "text": "...Eu sei. Eu sempre soube. Eu só queria que alguém dissesse em voz alta.",
+      "next": "n4"
+    },
+    "b2": {
+      "speaker": "Kaito",
+      "color": "#7FA8D9",
+      "text": "Você voltou. Vinte vezes, cem vezes, sempre voltou. Não era isso que importava. Importava que você estivesse aqui quando eu caí. E você estava.",
+      "next": "n4"
+    },
+    "n3": {
+      "speaker": "Kaito",
+      "color": "#7FA8D9",
+      "text": "Não vai me segurar? Você sempre me segura. Quanto mais você segura, mais eu escorrego.",
+      "choices": [
+        {
+          "text": "\"Desculpa. Não foi culpa minha. E também não foi sua.\"",
+          "next": "b1"
+        },
+        {
+          "text": "\"Eu demorei demais para voltar. É isso que eu nunca disse.\"",
+          "next": "b2"
+        }
+      ]
+    },
+    "n4": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Eu estava na escada. Eu vi tudo. Eu nunca disse que eu estava lá. Eu nunca disse o que eu sentia, e eu fiquei segurando esse dia porque não tinha coragem de dizer: eu também gostava de você, Kaito.",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "Kaito",
+      "color": "#7FA8D9",
+      "text": "Eu sei, Maya. Eu lia seus poemas no meu armário. Não era segredo. Era só... timidez nossa.",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "",
+      "text": "O ponteiro do relógio do pátio marca 21:47. Pela primeira vez, a chuva não se repete. Ela cai, e fica no chão, e escorre. Como chuva de verdade.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  },
+  "next_screen": "res://scenes/ending/EndingScene.tscn"
+}

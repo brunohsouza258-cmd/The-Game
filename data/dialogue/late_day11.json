@@ -1,0 +1,99 @@
+{
+  "id": "late_day11",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/festival_night.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "As lanternas balançam devagar com o vento. A Yuna está sentada no degrau do palco com duas lanternas apagadas no colo, uma branca e uma vermelha, e uma caneta preta.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/festival_night.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Eu preciso de uma ajuda. Estou fazendo uma lanterna extra, daquelas que a gente acende pra quem não pode vir. Tem que escrever o nome.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Eu comecei a escrever e minha mão parou. Eu sabia o nome. Eu sempre soube, e a minha mão sabia ainda melhor que eu.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "",
+      "text": "A caneta desliza. Quatro letras. A tinta seca em segundos.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "Kaito. Kaito. É isso. É exatamente isso. Meu Deus, é a coisa mais pesada e mais leve do mundo. Kaito.",
+      "next": "b3"
+    },
+    "b3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Obrigada por escrever. Eu acho que, se alguém acender essa lanterna por mim, eu consigo não chorar. Mentira. Eu vou chorar. Mas junto.",
+      "next": "end"
+    },
+    "b4": {
+      "speaker": "",
+      "text": "A caneta desliza, e a lanterna branca ganha uma frase curta, na vertical, como as lanternas de verdade.",
+      "next": "b5"
+    },
+    "b5": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Para quem ficou. Isso é bonito. Isso inclui a gente, né? Todo mundo que ficou. A gente fica junto.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "neutral",
+      "text": "Escreve você. Você tem uma letra bonita. Eu vou segurar a lanterna parada. Eu só preciso que o nome fique escrito por alguém.",
+      "choices": [
+        {
+          "text": "Escrever \"Kaito\".",
+          "next": "b1",
+          "effects": {
+            "affinity.yuna": 3,
+            "trust.yuna": 3,
+            "dread": 4,
+            "flags.wrote_kaito_name": true
+          }
+        },
+        {
+          "text": "Escrever \"Para quem ficou\".",
+          "next": "b4",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 1,
+            "dread": -2
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

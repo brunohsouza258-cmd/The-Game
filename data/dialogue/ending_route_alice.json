@@ -1,0 +1,63 @@
+{
+  "id": "ending_route_alice",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#e0e8f0",
+  "sprite": "",
+  "music": "ending",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "O relógio de pulso da Alice marca 21:47 e para. Ela observa o ponteiro por um minuto inteiro, e depois o desafivela e coloca na mesa.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#e0e8f0"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Eu li a última anotação do caderno em voz alta ontem. Estava escrito: \"Confie em {player_name}\". Não era uma pista. Era um recado que eu mandei para mim mesma.",
+      "next": "n2"
+    },
+    "b1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Agora a gente confere junto. Acordar de madrugada, olhar no relógio, ver que o dia andou. Só que agora com alguém do outro lado da linha.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "surprised",
+      "text": "Está em branco. Mas se você pedir, eu invento. É um caderno novo. Eu escrevo a primeira linha agora: \"Hoje o dia avançou\".",
+      "next": "end"
+    },
+    "n2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "O dia avançou. Eu conferi três vezes. O ponteiro anda. A sala está viva. Os colegas voltaram. Eu estou aqui.",
+      "choices": [
+        {
+          "text": "Oferecer ajuda para conferir o dia junto com ela.",
+          "next": "b1"
+        },
+        {
+          "text": "Pedir que ela leia o caderno em branco.",
+          "next": "b2"
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  },
+  "next_screen": "res://scenes/ending/EndingScene.tscn"
+}

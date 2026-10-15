@@ -1,0 +1,68 @@
+{
+  "id": "ending_route_maya",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/rooftop_dusk.png",
+  "tint": "#ffeedd",
+  "sprite": "",
+  "music": "ending",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "O sol nasce depois da noite mais longa do ano. No telhado, ninguém mais. A grade está úmida de orvalho, e a Maya está sentada ao lado de {player_name}, com os joelhos junto ao peito.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/rooftop_dusk.png",
+      "tint": "#ffeedd"
+    },
+    "n1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Eu soltei. Eu soltei de verdade. Não senti o mundo acabar. Só senti um espaço onde antes tinha uma coisa pesada.",
+      "next": "n2"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "happy",
+      "text": "Eu quero. Eu quero muito. Começa de novo. Oi. Eu sou a Maya. Prazer. Quase não te conheço.",
+      "next": "n3"
+    },
+    "b2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "...Quente. A sua mão está quente. A última vez que alguém me tocou assim eu ainda achava que o tempo ia voltar.",
+      "next": "n3"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Eu não sei mais o que você vai dizer antes de você dizer. É estranho. É bem mais assustador do que eu imaginava.",
+      "choices": [
+        {
+          "text": "\"Então me conhece de novo.\"",
+          "next": "b1"
+        },
+        {
+          "text": "Ficar em silêncio e segurar a mão dela.",
+          "next": "b2"
+        }
+      ]
+    },
+    "n3": {
+      "speaker": "",
+      "text": "Lá embaixo, o sino da escola toca pela primeira vez no dia 13. Os dois não se mexem. Dessa vez, não é uma repetição.",
+      "next": "end"
+    },
+    "end": {
+      "end": true
+    }
+  },
+  "next_screen": "res://scenes/ending/EndingScene.tscn"
+}

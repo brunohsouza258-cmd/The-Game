@@ -13,7 +13,7 @@ func _build_slots() -> void:
 	for slot in range(SaveManager.AUTOSAVE_SLOT, SaveManager.SLOT_COUNT + 1):
 		var row := HBoxContainer.new()
 		var label := Label.new()
-		label.custom_minimum_size = Vector2(360, 0)
+		label.custom_minimum_size = Vector2(560, 0)
 		label.text = _slot_description(slot)
 		row.add_child(label)
 
@@ -38,7 +38,9 @@ func _slot_description(slot: int) -> String:
 		return "%s — vazio" % label
 	var player_name: String = data.get("player_name", "Jogador")
 	var day: int = data.get("day", 1)
-	return "%s — %s, dia %d" % [label, player_name, day]
+	var stamp: String = data.get("saved_at", "")
+	var base := "%s — %s, dia %d" % [label, player_name, day]
+	return base if stamp == "" else "%s (%s)" % [base, stamp]
 
 func _on_save_pressed(slot: int) -> void:
 	SfxPlayer.play_click()

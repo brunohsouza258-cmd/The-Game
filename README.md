@@ -16,16 +16,18 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - Enter / Espaço: completam a frase que está sendo digitada e depois avançam o texto.
 - F5 / F9 (durante o jogo): salvar e carregar rápido no slot 1.
 - Ctrl (segurar): pula o texto rapidamente, parando nas escolhas.
+- Esc: menu de pausa (salvar/carregar, configurações, voltar ao hub ou ao título).
+- H ou botão direito: esconde a caixa de texto para ver o cenário.
 - **Avanço automático:** depois de um tempo o texto passa sozinho (botão "Auto" na caixa de diálogo; tempo ajustável em Configurações). Nunca avança sobre escolhas.
 
 ## Fluxo
 
 1. **Título** (`scenes/main/Main.tscn`): as 4 garotas e os botões Novo Jogo, Continuar, Configurações e Sair. O Novo Jogo pede o nome do protagonista, e as garotas passam a chamá-lo por esse nome.
 2. **Evento principal do dia** (`data/dialogue/main_dayN.json`): toca automaticamente ao começar cada dia. É a espinha dorsal linear da história, igual para todo mundo.
-3. **Hub** (`scenes/main/Hub.tscn`): conversa com cada garota (uma vez por dia), um poema por dia, um passeio pela escola (cena extra com várias personagens, dias 2 a 11, `data/dialogue/extra_dayN.json`), avançar o dia, salvar/carregar, configurações e voltar ao título.
+3. **Hub** (`scenes/main/Hub.tscn`): conversa com cada garota (uma vez por dia), um poema por dia, um passeio pela escola (cena extra com várias personagens, dias 2 a 12, `extra_dayN.json`), "ficar até mais tarde" (cena a sós com uma garota, dias 3, 5, 6, 8, 10 e 11, `late_dayN.json`), avançar o dia, salvar/carregar, configurações e voltar ao título.
 4. **Cena de diálogo** (`scenes/vn/VNScene.tscn`): a personagem fica centralizada e com a mesma altura para todas, com a base na borda inferior da tela e o cenário atrás.
 5. **Poema** (`scenes/poem/PoemGame.tscn`), estilo Doki Doki: 5 de 18 palavras sorteadas (de um banco de 37). Cada palavra pontua as garotas a que combina e a bonequinha dela (topo do sprite) pula e mostra "+N ♥" quando ela gosta, e treme se não gosta. Cada uma tem barra de pontos e a líder ganha ★. Quem somar mais lê o poema e reage (afinidade/confiança); as outras com 6+ pontos também ganham +1 de afinidade.
-6. **Final** (`scenes/ending/EndingScene.tscn`): 8 finais, depois da noite do festival (dia 12). Ao terminar, o jogo volta ao título.
+6. **Final** (`scenes/ending/EndingScene.tscn`): 8 finais, depois da noite do festival (dia 12). Cada um tem uma cena interativa curta (`data/dialogue/ending_<id>.json`) seguida do cartão final e dos créditos.
 
 ## Sistemas
 
@@ -52,5 +54,7 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 
 ## Ferramentas
 
+- `Godot --headless --path . --script tools/smoke_test.gd`: toca todos os diálogos até o fim e abre as telas principais (sai com erro se algo falhar).
+- `export_presets.cfg`: preset de exportação para Windows (precisam estar instalados os export templates do Godot; saída em `build/`).
 - `python tools/make_backgrounds.py`: regenera os cenários derivados (requer Pillow).
 - `python tools/validate_data.py`: valida os JSONs de diálogo e finais (referências `next`, nó `start`, backgrounds e sprites). Rode antes de cada commit.

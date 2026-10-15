@@ -11,11 +11,22 @@ func _ready() -> void:
 	back_button.pressed.connect(_on_back_pressed)
 	var ending_id := _determine_ending()
 	GameSettings.unlock_ending(ending_id)
+	# Primeiro a cena interativa do final (se existir); ela volta para esta tela com o cartão.
+	var scene_path := "res://data/dialogue/ending_%s.json" % ending_id
+	if not GameState.ending_scene_played and FileAccess.file_exists(scene_path):
+		GameState.ending_scene_played = true
+		_play_scene.call_deferred(scene_path)
+		return
+	GameState.ending_scene_played = false
 	var data := _load_ending(ending_id)
 	title_label.text = data.get("title", "")
 	text_label.text = _interpolate(data.get("text", ""))
 	background.texture = load(data.get("background", "res://assets/backgrounds/hallway_dusk.png"))
 	MusicPlayer.play_mood("ending")
+
+func _play_scene(path: String) -> void:
+	var vn = get_tree().current_scene.show_screen("res://scenes/vn/VNScene.tscn")
+	vn.start(path)
 
 func _determine_ending() -> String:
 	var trust_maya: int = int(GameState.trust.get("maya", 0))

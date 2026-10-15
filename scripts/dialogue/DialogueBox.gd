@@ -75,13 +75,30 @@ func _start_auto_wait() -> void:
 	_auto_timer.start(GameSettings.auto_seconds + _full_text.length() * AUTO_SECONDS_PER_CHAR)
 
 func _on_auto_timeout() -> void:
-	if history_panel.visible:
+	if history_panel.visible or not visible:
 		_auto_timer.start(1.0)
 		return
 	if panel.visible and _pending_choices.is_empty():
 		DialogueManager.advance()
 
+func _toggle_hidden() -> void:
+	visible = not visible
+
 func _unhandled_input(event: InputEvent) -> void:
+	# H ou botão direito esconde a caixa para ver o cenário; qualquer clique volta.
+	if panel.visible:
+		var key := event as InputEventKey
+		var click := event as InputEventMouseButton
+		var hide_key := key != null and key.pressed and not key.echo and key.keycode == KEY_H
+		var hide_click := click != null and click.pressed and click.button_index == MOUSE_BUTTON_RIGHT
+		if hide_key or hide_click:
+			_toggle_hidden()
+			get_viewport().set_input_as_handled()
+			return
+		if not visible and (event.is_action_pressed("ui_accept") or (click != null and click.pressed)):
+			visible = true
+			get_viewport().set_input_as_handled()
+			return
 	if not panel.visible or history_panel.visible or not event.is_action_pressed("ui_accept"):
 		return
 	if event is InputEventWithModifiers and event.alt_pressed:

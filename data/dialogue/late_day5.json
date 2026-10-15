@@ -1,0 +1,96 @@
+{
+  "id": "late_day5",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#c9b8d8",
+  "sprite": "",
+  "music": "clubroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Já passou do horário. A sala do clube cheira a papel e tinta. A Maya está sozinha na mesa do fundo, com um caderno aberto e uma caneta que ela não para de girar entre os dedos.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/clubroom.png",
+      "tint": "#c9b8d8"
+    },
+    "n1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Você sabe escrever poemas? Quer dizer, escrever de verdade. Não aquele de cinco palavras.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "thinking",
+      "text": "Eu escrevo todo dia. O mesmo poema. Nunca termina. Todo dia eu apago a última linha e escrevo outra.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "É curto. Tem quatro versos. O terceiro é sobre uma pessoa que ri antes de dizer uma coisa idiota. O quarto é sobre a mão dela escorregando.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "scared",
+      "text": "...Não quis dizer isso em voz alta. Esquece a gente. Esquece o terceiro verso.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "Parar de apagar. Eu nunca pensei nisso. Eu sempre achei que se eu terminasse, ia ter que... ir embora.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "happy",
+      "text": "Mas deixa. Deixa assim. Hoje eu guardo a última linha. Só hoje.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Hoje eu acho que a última linha é essa: \"eu segurei por tanto tempo que esqueci como se solta\".",
+      "choices": [
+        {
+          "text": "Pedir para ler o poema inteiro.",
+          "next": "b1",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 2,
+            "dread": 3
+          }
+        },
+        {
+          "text": "Dizer que a última linha ficou boa e que ela devia parar de apagar.",
+          "next": "b3",
+          "effects": {
+            "affinity.maya": 1,
+            "trust.maya": 1,
+            "dread": -3
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

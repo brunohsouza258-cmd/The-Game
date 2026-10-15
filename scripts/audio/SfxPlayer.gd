@@ -11,6 +11,7 @@ var _glitch_left: int = 0
 var _time: float = 0.0
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	_player = AudioStreamPlayer.new()
 	var generator := AudioStreamGenerator.new()
 	generator.mix_rate = SAMPLE_RATE

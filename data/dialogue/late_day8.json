@@ -1,0 +1,87 @@
+{
+  "id": "late_day8",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/rooftop_dusk.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A porta do telhado está entreaberta, e a Alice está parada exatamente no ponto onde a luz entra. Ela tem uma trena na mão e o caderno aberto no chão.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/rooftop_dusk.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Não chegue mais perto. Eu estou medindo. A grade tem um metro e dez de altura. Alta o bastante para ninguém passar por cima sem querer.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "thinking",
+      "text": "Querer, então. Alguém que pulou por cima de propósito. Ou subiu pra provar alguma coisa. Pessoas sobem por motivos tolos.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "surprised",
+      "text": "...Eu escrevi isso hoje, nessas palavras. Antes de você chegar. \"Tolo, mas não culpado.\" Como você sabia?",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "close",
+      "text": "Eu não sei se isso me conforta ou me assusta. Por via das dúvidas, vou anotar os dois.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Uma refeição. Como se isso consertasse qualquer coisa. ...Mas tá. Eu não comi desde ontem. Isso é estatisticamente relevante.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "Eu odeio quando a explicação é tola. Eu queria que fosse uma teoria bonita, uma conspiração, qualquer coisa. Mas a verdade quase nunca é bonita.",
+      "choices": [
+        {
+          "text": "Dizer que tolo não é o mesmo que culpado.",
+          "next": "b1",
+          "effects": {
+            "affinity.alice": 2,
+            "trust.alice": 2,
+            "dread": 1
+          }
+        },
+        {
+          "text": "Pedir que ela desça da laje e almoce algo.",
+          "next": "b3",
+          "effects": {
+            "affinity.alice": 1,
+            "dread": -3
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

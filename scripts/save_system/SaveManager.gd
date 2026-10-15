@@ -12,7 +12,9 @@ func save_game(slot: int = 1) -> void:
 	if file == null:
 		push_error("Não foi possível salvar o jogo: %s" % FileAccess.get_open_error())
 		return
-	file.store_string(JSON.stringify(GameState.to_dict(), "\t"))
+	var data := GameState.to_dict()
+	data["saved_at"] = Time.get_datetime_string_from_system(false, true).substr(0, 16)
+	file.store_string(JSON.stringify(data, "\t"))
 	file.close()
 
 func load_game(slot: int = 1) -> bool:
