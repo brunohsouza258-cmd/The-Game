@@ -22,6 +22,9 @@ var _pause_layer: CanvasLayer
 var _pause_menu: Control
 var _overlay: Node = null
 var _warning_panel: Control
+var _warning_ok: Button
+var _boot_layer: CanvasLayer
+var _boot_active: bool = true
 var _sick_timer: Timer
 
 func _ready() -> void:
@@ -47,48 +50,84 @@ func _ready() -> void:
 	name_input.text_submitted.connect(func(_text): _on_name_confirm_pressed())
 	show_title()
 
+# Aviso de saúde e bem-estar: aparece SEMPRE que o jogo abre, antes do título e da música.
+const WARNING_SECTIONS := [
+	["Luzes e sons", "O jogo tem luzes piscantes, tremores de tela, falsas \"quedas\" do jogo e sons repentinos. Se você tem epilepsia ou sensibilidade à luz, ative a redução abaixo. Ajuste o volume antes de começar."],
+	["Conteúdo", "Terror psicológico. Fala de luto, culpa, perda de um amigo, sugestão de morte e de autolesão, ansiedade e a sensação de estar preso. Não há cenas explícitas, mas pode ser pesado."],
+	["Cuide de você", "Jogue em um lugar confortável e iluminado. Faça pausas a cada 30 a 60 minutos. Se algo ficar pesado, aperte Esc para pausar, ou feche o jogo. Você pode parar a qualquer momento."],
+	["Se precisar de ajuda", "Se você está passando por um momento difícil ou pensando em se machucar, procure alguém. No Brasil, o CVV atende 24 horas, de graça, pelo telefone 188 ou em cvv.org.br. Em emergência, ligue 192 (SAMU)."],
+	["Sobre o seu computador", "Em um dos finais o jogo mostra o nome de usuário do seu computador, só na tela. Nada é enviado para fora."],
+]
+
 func _build_content_warning() -> void:
+	_boot_layer = CanvasLayer.new()
+	_boot_layer.layer = 85
+	add_child(_boot_layer)
 	_warning_panel = Control.new()
 	_warning_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
-	_warning_panel.visible = false
-	title_screen.add_child(_warning_panel)
-	var panel := Panel.new()
-	panel.position = Vector2(290, 150)
-	panel.size = Vector2(700, 440)
-	_warning_panel.add_child(panel)
+	_boot_layer.add_child(_warning_panel)
+	var bg := ColorRect.new()
+	bg.color = Color(0.05, 0.04, 0.08, 1.0)
+	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_warning_panel.add_child(bg)
 	var box := VBoxContainer.new()
-	box.position = Vector2(30, 24)
-	box.size = Vector2(640, 390)
-	box.add_theme_constant_override("separation", 14)
-	panel.add_child(box)
+	box.position = Vector2(170, 24)
+	box.size = Vector2(940, 672)
+	box.add_theme_constant_override("separation", 7)
+	_warning_panel.add_child(box)
 	var title := Label.new()
-	title.text = "Aviso de conteúdo"
+	title.text = "Antes de começar"
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	title.add_theme_font_size_override("font_size", 28)
+	title.add_theme_font_size_override("font_size", 30)
 	box.add_child(title)
-	var text := Label.new()
-	text.autowrap_mode = TextServer.AUTOWRAP_WORD
-	text.custom_minimum_size = Vector2(640, 0)
-	text.text = "Lanternas de Papel é uma história de terror psicológico.\n\nTrata de luto, culpa, perda de um amigo e sugere violência (sem cenas explícitas). Contém luzes piscantes, tremores de tela, sons repentinos e falsas \"quedas\" do jogo.\n\nSe quiser, ative agora a redução de luzes e tremores. Você pode mudar isso depois em Configurações."
-	box.add_child(text)
-	var ok := Button.new()
-	ok.text = "Entendi, continuar"
-	ok.custom_minimum_size = Vector2(0, 46)
-	ok.pressed.connect(_accept_warning.bind(false))
-	box.add_child(ok)
+	for section in WARNING_SECTIONS:
+		var head := Label.new()
+		head.text = section[0]
+		head.add_theme_font_size_override("font_size", 19)
+		head.add_theme_color_override("font_color", Color(1.0, 0.82, 0.9))
+		box.add_child(head)
+		var body := Label.new()
+		body.text = section[1]
+		body.autowrap_mode = TextServer.AUTOWRAP_WORD
+		body.custom_minimum_size = Vector2(940, 0)
+		body.add_theme_font_size_override("font_size", 17)
+		box.add_child(body)
+	var spacer := Control.new()
+	spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	box.add_child(spacer)
+	_warning_ok = Button.new()
+	_warning_ok.custom_minimum_size = Vector2(0, 42)
+	_warning_ok.disabled = true
+	_warning_ok.pressed.connect(_accept_warning.bind(false))
+	box.add_child(_warning_ok)
 	var calm := Button.new()
-	calm.text = "Ativar redução de luzes e continuar"
-	calm.custom_minimum_size = Vector2(0, 46)
+	calm.text = "Ativar redução de luzes e tremores e continuar"
+	calm.custom_minimum_size = Vector2(0, 42)
 	calm.pressed.connect(_accept_warning.bind(true))
 	box.add_child(calm)
+	var quit_button := Button.new()
+	quit_button.text = "Sair do jogo"
+	quit_button.custom_minimum_size = Vector2(0, 38)
+	quit_button.pressed.connect(func(): get_tree().quit())
+	box.add_child(quit_button)
+	_boot_countdown()
+
+# O botão de continuar libera depois de alguns segundos, para dar tempo de ler.
+func _boot_countdown() -> void:
+	for remaining in range(4, 0, -1):
+		_warning_ok.text = "Li e quero continuar (%d)" % remaining
+		await get_tree().create_timer(1.0).timeout
+	_warning_ok.text = "Li e quero continuar"
+	_warning_ok.disabled = false
 
 func _accept_warning(reduce: bool) -> void:
 	SfxPlayer.play_click()
 	if reduce:
 		GameSettings.set_reduce_flashing(true)
 	GameSettings.mark_content_warning_seen()
-	_warning_panel.visible = false
-	_open_name_prompt()
+	_boot_layer.visible = false
+	_boot_active = false
+	MusicPlayer.play_mood("title")
 
 # Depois dos finais, a tela de título "adoece": o nome falha e as garotas somem por instantes.
 func _build_sick_title() -> void:
@@ -218,7 +257,8 @@ func show_title() -> void:
 	menu_panel.visible = true
 	name_prompt.visible = false
 	_refresh_continue_button()
-	MusicPlayer.play_mood("title")
+	if not _boot_active:
+		MusicPlayer.play_mood("title")
 
 func enter_game() -> void:
 	_in_game = true
@@ -257,10 +297,6 @@ func _refresh_continue_button() -> void:
 
 func _on_new_game_pressed() -> void:
 	SfxPlayer.play_click()
-	if not GameSettings.content_warning_seen:
-		menu_panel.visible = false
-		_warning_panel.visible = true
-		return
 	_open_name_prompt()
 
 func _open_name_prompt() -> void:

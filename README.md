@@ -51,7 +51,7 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 
 ## Novidades de acessibilidade e extras
 
-- **Aviso de conteúdo** na primeira vez em "Novo Jogo", com opção de ativar já a redução de luzes e tremores (também em Configurações). Tamanho do texto ajustável.
+- **Aviso de saúde e bem-estar** sempre que o jogo abre, antes do título e da música (luzes e sons, conteúdo, pausas, contato do CVV 188 e o que o jogo faz com o nome de usuário). O botão de continuar libera após 4 s, e há atalho para ativar a redução de luzes e tremores (também em Configurações). Tamanho do texto ajustável.
 - **Diário** do protagonista (`data/diary.json`): entradas que se desbloqueiam por dia, flags, confiança, pavor e loop.
 - **Cenas de rota** (`route_<garota>_day9..12.json`): quem tem a maior afinidade (>= 8, sem empate) ganha um "momento a sós" por dia nos dias 9 a 12.
 - **Eco do poema:** nos dias seguintes a garota que leu o poema cita a palavra que mais combinou com ela (`{poem_word}`, requisito `poem.<id>`).
