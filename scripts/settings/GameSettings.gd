@@ -12,6 +12,10 @@ var text_speed: float = 0.03
 var fullscreen: bool = false
 # Avanço automático: espera auto_seconds + um tempo proporcional ao tamanho da fala.
 var auto_advance: bool = true
+# Acessibilidade: tira flashes fortes e tremores; escala do texto da caixa de diálogo.
+var reduce_flashing: bool = false
+var font_scale: float = 1.0
+var content_warning_seen: bool = false
 var auto_seconds: float = 2.0
 # Persists across new games: how many times the player has started this story.
 var loop_count: int = 0
@@ -50,6 +54,9 @@ func load_settings() -> void:
 		fullscreen = config.get_value("display", "fullscreen", fullscreen)
 		auto_advance = config.get_value("text", "auto_advance", auto_advance)
 		auto_seconds = config.get_value("text", "auto_seconds", auto_seconds)
+		reduce_flashing = config.get_value("access", "reduce_flashing", reduce_flashing)
+		font_scale = config.get_value("access", "font_scale", font_scale)
+		content_warning_seen = config.get_value("access", "content_warning_seen", content_warning_seen)
 		loop_count = config.get_value("meta", "loop_count", loop_count)
 		unlocked_endings = config.get_value("meta", "unlocked_endings", unlocked_endings)
 	_apply_all()
@@ -62,6 +69,9 @@ func save_settings() -> void:
 	config.set_value("text", "speed", text_speed)
 	config.set_value("text", "auto_advance", auto_advance)
 	config.set_value("text", "auto_seconds", auto_seconds)
+	config.set_value("access", "reduce_flashing", reduce_flashing)
+	config.set_value("access", "font_scale", font_scale)
+	config.set_value("access", "content_warning_seen", content_warning_seen)
 	config.set_value("display", "fullscreen", fullscreen)
 	config.set_value("meta", "loop_count", loop_count)
 	config.set_value("meta", "unlocked_endings", unlocked_endings)
@@ -90,6 +100,18 @@ func set_auto_advance(value: bool) -> void:
 	auto_advance = value
 	save_settings()
 
+func set_reduce_flashing(value: bool) -> void:
+	reduce_flashing = value
+	save_settings()
+
+func set_font_scale(value: float) -> void:
+	font_scale = value
+	save_settings()
+
+func mark_content_warning_seen() -> void:
+	content_warning_seen = true
+	save_settings()
+
 func set_auto_seconds(value: float) -> void:
 	auto_seconds = value
 	save_settings()
@@ -106,6 +128,8 @@ func reset_to_defaults() -> void:
 	text_speed = 0.03
 	auto_advance = true
 	auto_seconds = 2.0
+	reduce_flashing = false
+	font_scale = 1.0
 	fullscreen = false
 	_apply_all()
 	save_settings()

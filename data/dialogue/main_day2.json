@@ -14,7 +14,7 @@
     "intro2": {
       "speaker": "",
       "text": "No caminho para a escola, o semáforo da esquina fica vermelho três vezes seguidas, sem carro nenhum passando. {player_name} espera as três, porque algo nele acha que é importante esperar.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "glitch_announcement": {
       "speaker": "Alto-falante",
@@ -37,6 +37,15 @@
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "O aviso vai falhar às 8h02. Ele sabe. Fica olhando o relógio, esperando, e não sente medo. Sente cansaço.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

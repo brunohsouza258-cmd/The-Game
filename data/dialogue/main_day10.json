@@ -15,7 +15,7 @@
     "intro2": {
       "speaker": "",
       "text": "{player_name} atravessa o refeitório vazio escutando o próprio coração. De algum lugar vem o som de um rádio mal sintonizado, soltando uma música antiga que ele sabe a letra e não sabe de onde.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "window": {
       "speaker": "",
@@ -24,7 +24,10 @@
       "effects": {
         "dread": 2
       },
-      "next": "understand"
+      "next": "understand",
+      "fx": "delete",
+      "noauto": true,
+      "pace": "slow"
     },
     "understand": {
       "speaker": "",
@@ -87,6 +90,15 @@
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "Os alunos vão sumir hoje. Ele conta quantos ainda estão. Treze. Na volta passada eram quinze. Alguma coisa está acelerando.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

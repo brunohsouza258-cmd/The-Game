@@ -10,12 +10,13 @@
     "start": {
       "speaker": "",
       "text": "Ninguém dormiu direito. O café da manhã foi engolido sem gosto, os livros ficaram na mochila sem abrir. Em algum momento, entre uma xícara e outra, {player_name} percebeu que escreveu seu nome na embalagem do pão, repetidamente, para ter certeza de que ainda era ele.",
-      "next": "intro2"
+      "next": "intro2",
+      "amb": "rain"
     },
     "intro2": {
       "speaker": "",
       "text": "O dia passou devagar e rápido ao mesmo tempo, como acontece nos últimos dias de qualquer coisa. Nas aulas, ninguém tirou nota nenhuma. Os professores só falaram, falaram, e olharam o relógio.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "clock": {
       "speaker": "",
@@ -41,6 +42,15 @@
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "É a noite do festival. Outra vez. Ele pensa em quantas vezes subiu essa escada, e percebe que, nesta, está pensando em quantas vezes desceu.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

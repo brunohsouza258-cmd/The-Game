@@ -1,0 +1,87 @@
+{
+  "id": "route_maya_day12",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/rooftop_dusk.png",
+  "tint": "#ffe8d8",
+  "sprite": "",
+  "music": "hallway",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "O sol está quase se pondo. A Maya espera no pé da escada do telhado, de uniforme, com a lanterna branca nas duas mãos, apagada.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/rooftop_dusk.png",
+      "tint": "#ffe8d8"
+    },
+    "n1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Quando a gente subir, eu vou te falar a última coisa. Antes, eu queria te agradecer, aqui, onde ninguém olha.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "happy",
+      "text": "Você apareceu no primeiro dia como se fosse a primeira vez, e foi a primeira vez que alguém olhou para mim sem querer que eu estivesse bem.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Não. Subir primeiro é o que eu sempre fiz. Dessa vez a gente sobe junto. Um degrau de cada vez.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "...O tempo que precisar. Você sabe que eu posso precisar de um minuto ou de cem voltas?",
+      "next": "b3"
+    },
+    "b3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "happy",
+      "text": "Então é um minuto. Só um. Eu já sei o que fazer com ele.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Eu estou com medo. Eu estou com muito medo. Mas eu estou com medo do jeito certo: do jeito de quem vai fazer uma coisa que importa.",
+      "choices": [
+        {
+          "text": "\"Eu subo primeiro. Você vem quando estiver pronta.\"",
+          "next": "b1",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 2
+          }
+        },
+        {
+          "text": "\"Eu fico aqui com você o tempo que precisar.\"",
+          "next": "b2",
+          "effects": {
+            "affinity.maya": 3,
+            "trust.maya": 3,
+            "dread": -2
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

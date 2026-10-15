@@ -13,6 +13,8 @@ const CHARACTER_NAMES := {
 @onready var poem_button: Button = $Panel/VBoxContainer/PoemButton
 @onready var walk_button: Button = $Panel/VBoxContainer/WalkButton
 @onready var late_button: Button = $Panel/VBoxContainer/LateButton
+@onready var route_button: Button = $Panel/VBoxContainer/RouteButton
+@onready var diary_button: Button = $Panel/VBoxContainer/DiaryButton
 @onready var next_day_button: Button = $Panel/VBoxContainer/NextDayButton
 @onready var end_button: Button = $Panel/VBoxContainer/EndButton
 @onready var character_buttons := {
@@ -23,6 +25,9 @@ const CHARACTER_NAMES := {
 }
 
 func _ready() -> void:
+	for child in $Panel/VBoxContainer.get_children():
+		if child is Button:
+			child.custom_minimum_size.y = 36
 	if GameState.last_seen_main_event_day < GameState.day:
 		_play_main_event()
 		return
@@ -48,6 +53,12 @@ func _refresh() -> void:
 	var late_done := GameState.visited_today("late")
 	late_button.disabled = late_done
 	late_button.text = "Você já ficou até tarde hoje" if late_done else "Ficar até mais tarde"
+	var route_id := _route_character()
+	route_button.visible = route_id != ""
+	var route_done := GameState.visited_today("route")
+	route_button.disabled = route_done
+	if route_id != "":
+		route_button.text = ("Momento a sós com %s (feito)" if route_done else "Momento a sós com %s") % CHARACTER_NAMES[route_id]
 	var final_day := GameState.day >= FINAL_DAY
 	next_day_button.visible = not final_day
 	end_button.visible = final_day
@@ -78,6 +89,38 @@ func _on_character_button_pressed(character_id: String) -> void:
 
 func _walk_path() -> String:
 	return "res://data/dialogue/extra_day%d.json" % GameState.day
+
+# Nos dias 9 a 12, quem tem mais afinidade (>= 8, sem empate) ganha uma cena exclusiva por dia.
+func _route_character() -> String:
+	if GameState.day < 9 or GameState.day > 12:
+		return ""
+	var best := ""
+	var best_value := -999
+	var tied := false
+	for char_id in character_buttons:
+		var value := int(GameState.affinity.get(char_id, 0))
+		if value > best_value:
+			best = char_id
+			best_value = value
+			tied = false
+		elif value == best_value:
+			tied = true
+	if tied or best_value < 8:
+		return ""
+	var path := "res://data/dialogue/route_%s_day%d.json" % [best, GameState.day]
+	return best if FileAccess.file_exists(path) else ""
+
+func _on_route_button_pressed() -> void:
+	SfxPlayer.play_click()
+	var char_id := _route_character()
+	if char_id == "":
+		return
+	GameState.mark_visited("route")
+	_start_dialogue("res://data/dialogue/route_%s_day%d.json" % [char_id, GameState.day])
+
+func _on_diary_button_pressed() -> void:
+	SfxPlayer.play_click()
+	get_tree().current_scene.show_screen("res://scenes/main/Diary.tscn")
 
 func _late_path() -> String:
 	return "res://data/dialogue/late_day%d.json" % GameState.day

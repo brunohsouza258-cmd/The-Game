@@ -40,12 +40,20 @@
       "speaker": "Hikari",
       "pose": "thinking",
       "text": "Faz eu me sentir fraca. Mas talvez... talvez sentir fraca e continuar seja um tipo de força que eu ainda não treinei.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "silence": {
       "speaker": "",
       "pose": "close",
       "text": "Ficam assim até o sol ir embora. Hikari, sem perceber, encosta o ombro no dele. Ela não pede desculpas. Ela não se afasta.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"Aquela palavra, {poem_word}\", ela diz, desviando o olhar. \"Fiquei pensando nela na corrida.\"",
+      "if": {
+        "poem.hikari": 1
+      },
       "next": "closing"
     },
     "closing": {

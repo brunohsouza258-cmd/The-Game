@@ -1,0 +1,79 @@
+{
+  "id": "route_maya_day11",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/festival_night.png",
+  "tint": "#ffffff",
+  "sprite": "",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A lanterna branca está pendurada no último fio do pátio, sozinha, apagada. A Maya a encara com um fósforo apagado entre os dedos.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/festival_night.png",
+      "tint": "#ffffff"
+    },
+    "n1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Eu a fiz no dia 5. Escrevi o nome dele por dentro, com a ponta da caneta, para não ficar visível. Um nome que ninguém conhece.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "thinking",
+      "text": "Amanhã eu a acendo. Eu queria que fosse você a escolher a hora. Eu não sei escolher horas. Eu só sei contar até elas.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Antes dos fogos. Combinado. Escreve isso na mão para eu não esquecer, que eu sou boa em contar e péssima em lembrar.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "Na hora. Você me devolve a escolha. Ninguém nunca devolveu. Obrigada. Eu vou saber, quando chegar.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "happy",
+      "text": "Pode ser antes da primeira estrela. Ou depois dos fogos. Ou nunca, e a gente deixa ela assim, bonita, apagada.",
+      "choices": [
+        {
+          "text": "Escolher acender antes dos fogos.",
+          "next": "b1",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 2
+          }
+        },
+        {
+          "text": "Escolher deixar a decisão para ela, na hora.",
+          "next": "b2",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 3,
+            "dread": -1
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

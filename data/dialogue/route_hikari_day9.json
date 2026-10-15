@@ -1,0 +1,80 @@
+{
+  "id": "route_hikari_day9",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#d8c8d8",
+  "sprite": "",
+  "music": "courtyard",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A pista de atletismo está vazia e úmida. A Hikari corre sozinha, volta após volta, os passos batendo como uma contagem. Quando vê {player_name} na arquibancada, para, com as mãos nos joelhos, respirando alto.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#d8c8d8"
+    },
+    "n1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "angry",
+      "text": "Eu corri quarenta voltas e não bati meu tempo. Eu nunca preciso de quarenta voltas para isso. Alguma coisa está me segurando.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "sad",
+      "text": "Eu acho que sou eu. Eu estou segurando. Um pedaço de mim está esperando alguém cruzar a linha ao meu lado e esse alguém nunca vem.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Você é horrível! Você é horrível e eu adorei. Mais uma. Só mais uma. Eu perdi a conta de quando foi a última vez que eu ri correndo.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "surprised",
+      "text": "Você vai ficar aí? ...Tá. Mas grita quando eu passar. Alto. Eu tenho sido eu mesma por tempo demais em silêncio.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "neutral",
+      "text": "Corre comigo. Uma volta. Eu não vou te deixar ganhar, mas eu quero saber como é correr ao lado de alguém.",
+      "choices": [
+        {
+          "text": "Correr uma volta com ela.",
+          "next": "b1",
+          "effects": {
+            "affinity.hikari": 3,
+            "trust.hikari": 2,
+            "dread": 1
+          }
+        },
+        {
+          "text": "Ficar na arquibancada e contar o tempo para ela.",
+          "next": "b2",
+          "effects": {
+            "affinity.hikari": 2,
+            "trust.hikari": 3,
+            "dread": -2
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

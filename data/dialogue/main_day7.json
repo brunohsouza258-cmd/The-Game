@@ -15,7 +15,7 @@
     "intro2": {
       "speaker": "",
       "text": "No ônibus, ninguém fala. O motorista dirige com os olhos fixos no retrovisor, não na rua, e vai fazendo as curvas de memória. Quando ele passa pela escola, desacelera e murmura: \"Desce aqui, filho. Hoje é aqui.\"",
-      "next": "core"
+      "next": "loop_echo"
     },
     "clock": {
       "speaker": "",
@@ -70,6 +70,15 @@
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "A professora vai olhar para o relógio parado. Ele já está olhando também. Dois olhares no mesmo ponteiro, e nenhum deles surpreso.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

@@ -70,7 +70,7 @@
             "affinity.maya": 1,
             "dread": -1
           },
-          "next": "closing"
+          "next": "poem_echo"
         }
       ]
     },
@@ -78,7 +78,7 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Você pediu pra esquecer. Eu tô tentando te dar isso. É o único presente que eu sei dar. ...Não me pede pra parar no meio. Por favor.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "why": {
       "speaker": "Maya",
@@ -116,12 +116,20 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Isso doeu. E foi a coisa mais verdadeira que alguém me disse em... muitas voltas. Obrigada.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "stay": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "\"Última vez\". Você diz isso como se tivesse certeza. Eu queria ter essa certeza.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Maya o olha por um instante a mais. \"{poem_word}\", repete baixinho, e some pelo corredor levando a palavra.",
+      "if": {
+        "poem.maya": 1
+      },
       "next": "closing"
     },
     "closing": {

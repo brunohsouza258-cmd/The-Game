@@ -41,7 +41,7 @@
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Me machucar é o de menos. ...Mas tá. Você é a segunda pessoa que me pede pra parar. A primeira me passava na reta final rindo, dizendo que eu me esforçava demais.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "join": {
       "speaker": "",
@@ -50,6 +50,14 @@
       "effect": "glitch",
       "effects": {
         "dread": 2
+      },
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"Aquela palavra, {poem_word}\", ela diz, desviando o olhar. \"Fiquei pensando nela na corrida.\"",
+      "if": {
+        "poem.hikari": 1
       },
       "next": "closing"
     },

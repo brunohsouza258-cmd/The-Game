@@ -1,0 +1,130 @@
+{
+  "entries": [
+    {
+      "title": "Dia 1 — Volta",
+      "text": "Cheguei. Tem um bilhete no meu bolso que não lembro de ter escrito: \"Volta. A escola é chata sem você.\"",
+      "requires": {
+        "day": 1
+      }
+    },
+    {
+      "title": "Dia 2 — A voz",
+      "text": "O alto-falante disse o meu nome antes de eu me apresentar a alguém. \"Dessa vez, tente—\". Ninguém mais ouviu.",
+      "requires": {
+        "day": 2
+      }
+    },
+    {
+      "title": "Dia 3 — K.M.",
+      "text": "Uma carteira vazia com as iniciais K.M. Eu escrevi as mesmas letras na margem do caderno e não percebi.",
+      "requires": {
+        "day": 3
+      }
+    },
+    {
+      "title": "Dia 4 — O caderno",
+      "text": "Um caderno preto no meu armário, na minha letra, com datas que ainda não aconteceram. As páginas depois do dia 12 foram arrancadas.",
+      "requires": {
+        "day": 4
+      }
+    },
+    {
+      "title": "Dia 5 — O festival",
+      "text": "Festival no dia 12, à noite, com lanternas. A última data do caderno. Alguém chamou um aluno chamado Kaito Mori e depois disse que ele não existe.",
+      "requires": {
+        "day": 5
+      }
+    },
+    {
+      "title": "Dia 6 — As mãos",
+      "text": "Os nós dos dedos em carne viva. Na parede: NÃO SUBA. A letra é minha. Tem reboco debaixo das minhas unhas.",
+      "requires": {
+        "day": 6
+      }
+    },
+    {
+      "title": "Dia 7 — A foto",
+      "text": "A carteira sumiu. O relógio parou em 21:47. Na foto da turma tem um rosto sobreposto, várias vezes. Um para cada volta.",
+      "requires": {
+        "day": 7
+      }
+    },
+    {
+      "title": "Dia 8 — A escada",
+      "text": "Subi sem lembrar de ter decidido. Do outro lado da porta, outra escola. Riscos de contagem. A Maya sabe de tudo.",
+      "requires": {
+        "day": 8
+      }
+    },
+    {
+      "title": "A verdade",
+      "text": "Kaito Mori. Meu melhor amigo. Eu estava com a mão dele quando a chuva escorregou. Foi um acidente. Eu só não consegui segurar.",
+      "requires": {
+        "flags.maya_truth_asked": 1
+      }
+    },
+    {
+      "title": "Esquecer",
+      "text": "Eu pedi para esquecer. Dá certo por um dia. Mas minha mão ainda fecha sozinha, como se segurasse alguém.",
+      "requires": {
+        "flags.chose_forget": 1
+      }
+    },
+    {
+      "title": "Soltar",
+      "text": "Eu disse em voz baixa que ia deixar ele ir. Doeu mais que qualquer ferida. Por um segundo o relógio andou.",
+      "requires": {
+        "flags.accept_loss": 1
+      }
+    },
+    {
+      "title": "O nome na lanterna",
+      "text": "Escrevi o nome dele numa lanterna branca, com a letra mais firme que eu tive. Eu quase consegui respirar.",
+      "requires": {
+        "flags.wrote_kaito_name": 1
+      }
+    },
+    {
+      "title": "Maya",
+      "text": "Ela sabe de mais coisa do que fala. Eu acho que ela segura o peso de todos nós, sozinha, há muito tempo.",
+      "requires": {
+        "trust.maya": 6
+      }
+    },
+    {
+      "title": "Yuna",
+      "text": "O sorriso dela é uma coisa que ela faz por todo mundo. Quando ela ri de verdade, é uma risada diferente: mais baixa.",
+      "requires": {
+        "trust.yuna": 6
+      }
+    },
+    {
+      "title": "Alice",
+      "text": "Ela anota tudo para não esquecer, e eu acho que já esqueceu o quanto lembra. Eu confio nela mais que no meu próprio caderno.",
+      "requires": {
+        "trust.alice": 6
+      }
+    },
+    {
+      "title": "Hikari",
+      "text": "Ela corre para não ficar parada. Eu acho que, quando parar, ela vai ter que sentir tudo de uma vez.",
+      "requires": {
+        "trust.hikari": 6
+      }
+    },
+    {
+      "title": "Medo",
+      "text": "Eu tenho medo de que o medo seja o que me mantém aqui.",
+      "requires": {
+        "dread": 60
+      }
+    },
+    {
+      "title": "De novo",
+      "text": "Eu já escrevi estas palavras antes. A letra é a mesma. A tinta está mais velha.",
+      "requires": {
+        "loop": 2
+      }
+    }
+  ]
+}

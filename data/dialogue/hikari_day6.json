@@ -48,12 +48,20 @@
       "speaker": "Hikari",
       "pose": "angry",
       "text": "Fala isso pra você mesmo, primeiro. Tá na sua cara que você acha que foi culpa sua.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "fight": {
       "speaker": "Hikari",
       "pose": "happy",
       "text": "\"A gente\". Gostei disso. Ninguém nunca entra numa briga do meu lado.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Hikari bate no ombro dele. \"{poem_word}.\" Para, coça a nuca. \"Boa palavra. Não vou dizer de novo.\"",
+      "if": {
+        "poem.hikari": 1
+      },
       "next": "closing"
     },
     "closing": {

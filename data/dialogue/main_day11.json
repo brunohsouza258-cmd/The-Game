@@ -15,7 +15,7 @@
     "intro2": {
       "speaker": "",
       "text": "Na rua, os vizinhos cumprimentam com a mesma frase: \"Que dia lindo, não é?\" Ele respondeu ontem com um sorriso. Hoje responde com um aceno, e sente que todos repararam na diferença.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "too_perfect": {
       "speaker": "",
@@ -71,6 +71,15 @@
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "Ele reconhece o dia bonito. O cheiro do pão. A mesma melodia dos pássaros. Dessa vez não sorri para os vizinhos. Eles estranham, e ele gosta.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

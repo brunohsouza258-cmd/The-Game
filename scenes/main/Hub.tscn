@@ -88,6 +88,14 @@ text = "Passear pela escola"
 custom_minimum_size = Vector2(0, 42)
 text = "Ficar até mais tarde"
 
+[node name="RouteButton" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 42)
+text = "Momento a sós"
+
+[node name="DiaryButton" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 42)
+text = "Diário"
+
 [node name="NextDayButton" type="Button" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 42)
 text = "Avançar o dia"
@@ -120,6 +128,8 @@ text = "Sair do jogo"
 [connection signal="pressed" from="Panel/VBoxContainer/PoemButton" to="." method="_on_poem_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/WalkButton" to="." method="_on_walk_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/LateButton" to="." method="_on_late_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/RouteButton" to="." method="_on_route_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/DiaryButton" to="." method="_on_diary_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/NextDayButton" to="." method="_on_next_day_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/EndButton" to="." method="_on_end_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/SaveLoadButton" to="." method="_on_save_load_button_pressed"]

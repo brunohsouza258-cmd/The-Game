@@ -1,0 +1,79 @@
+{
+  "id": "route_alice_day11",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#fff0e0",
+  "sprite": "",
+  "music": "courtyard",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "O pátio está cheio de luz demais. A Alice está sentada sob a árvore, sozinha, com o relógio de pulso aberto na mão, desmontando a tampa traseira com uma chave minúscula.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#fff0e0"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Quero te dar uma coisa. Não é o relógio. É o que tem dentro dele. Uma engrenagem que eu mesma coloquei no dia 3, de volta, e que nunca soube para quê.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Descobri hoje. Ela faz o ponteiro andar quando alguém, perto, quer muito que o tempo ande.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "close",
+      "text": "Guarda no bolso de dentro. Se amanhã o ponteiro andar quando você segurar, eu vou saber que a engrenagem é sua desde sempre.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "Eu queria que o tempo não passasse hoje. Por algumas horas. Pode ser? Só até o sol sair da árvore.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "thinking",
+      "text": "Ela nunca funcionou comigo. Funcionou sempre que você estava na sala. Não é ciência. Eu sei. Eu escrevi isso na margem com um ponto de interrogação enorme.",
+      "choices": [
+        {
+          "text": "Aceitar a engrenagem e guardar com cuidado.",
+          "next": "b1",
+          "effects": {
+            "affinity.alice": 3,
+            "trust.alice": 2
+          }
+        },
+        {
+          "text": "Perguntar o que ela quer que o tempo faça.",
+          "next": "b2",
+          "effects": {
+            "affinity.alice": 2,
+            "trust.alice": 3,
+            "dread": 1
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

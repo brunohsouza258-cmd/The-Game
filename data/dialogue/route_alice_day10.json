@@ -1,0 +1,79 @@
+{
+  "id": "route_alice_day10",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/school_night.png",
+  "tint": "#98a8b8",
+  "sprite": "",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A Alice está sentada no corredor, no chão, com o caderno aberto na vertical, contra os joelhos. Ela escreve algo e, com a borracha, apaga, e escreve de novo.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/school_night.png",
+      "tint": "#98a8b8"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Probabilidade de a próxima volta preservar a minha memória: dois por cento. Probabilidade de eu continuar sendo eu: noventa e um.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "É curioso. Eu aceito perder a memória. O que me assusta é parar de querer saber.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Anotado: ele prometeu. E anotado também: eu acreditei. As duas coisas, com a mesma letra.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "surprised",
+      "text": "...Merecer. Eu nunca usei essa palavra com a minha curiosidade. Eu vou testar. Uma hora. Cronometrada.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "close",
+      "text": "Se eu esquecer, me conta a verdade de novo. De novo e de novo. Mesmo que eu diga que já sei. Principalmente se eu disser que já sei.",
+      "choices": [
+        {
+          "text": "Prometer contar quantas vezes forem necessárias.",
+          "next": "b1",
+          "effects": {
+            "affinity.alice": 3,
+            "trust.alice": 2
+          }
+        },
+        {
+          "text": "Dizer que ela merece parar de querer saber, só um pouco.",
+          "next": "b2",
+          "effects": {
+            "affinity.alice": 2,
+            "trust.alice": 2,
+            "dread": -3
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

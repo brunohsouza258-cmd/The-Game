@@ -42,12 +42,20 @@
       "speaker": "Yuna",
       "pose": "happy",
       "text": "\"Querida Yuna: você pode chorar. Tem alguém que fica. O nome dele é {player_name}. E o Kai odiava ovo.\" ...Pronto. Vou guardar dentro da foto.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "no_next": {
       "speaker": "Yuna",
       "pose": "thinking",
       "text": "Você fala igual o Kai falava antes de fazer uma besteira corajosa. ...Mas eu acredito. Eu escolho acreditar.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"{poem_word}\", a Yuna diz, rindo, e leva a mão ao peito. \"Eu li o seu poema de novo antes de dormir. Quatro vezes.\"",
+      "if": {
+        "poem.yuna": 1
+      },
       "next": "closing"
     },
     "closing": {

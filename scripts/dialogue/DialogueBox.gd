@@ -181,6 +181,7 @@ func _on_node_shown(node_data: Dictionary) -> void:
 	# Controle de ritmo por fala: "pace" (slow/crawl/fast/instant), "pause" (s antes do texto),
 	# "noauto" (não avança sozinho) e "corrupt" (s de texto embaralhado).
 	_noauto = bool(node_data.get("noauto", false))
+	text_label.add_theme_font_size_override("font_size", roundi(22.0 * GameSettings.font_scale))
 	var pace_key: String = str(node_data.get("pace", ""))
 	_pace = 0.0 if pace_key == "instant" else float(PACES.get(pace_key, 1.0))
 	_corrupt_left = float(node_data.get("corrupt", 0.0))

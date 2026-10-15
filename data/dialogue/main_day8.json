@@ -15,7 +15,7 @@
     "intro2": {
       "speaker": "",
       "text": "A escola está às escuras. Nenhuma luz de emergência, nenhum zumbido de geladeira. Só a luz azul de uma lua que não deveria estar ali, já que lá fora, pela janela, o céu está nublado e sem estrelas.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "chain": {
       "speaker": "",
@@ -32,7 +32,8 @@
           "text": "Tentar voltar pra casa.",
           "next": "cant_leave"
         }
-      ]
+      ],
+      "sfx": "door_open"
     },
     "cant_leave": {
       "speaker": "",
@@ -62,7 +63,8 @@
         "> ERRO: personagem 'Kaito Mori' não encontrado",
         "> ERRO: personagem 'Kaito Mori' não encontrado",
         "> {player_name}, você ainda está aí?"
-      ]
+      ],
+      "sfx": "door_hinge"
     },
     "wall": {
       "speaker": "",
@@ -122,6 +124,15 @@
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "A porta do telhado vai estar aberta. Ele dormiu vestido, para não perder tempo. Talvez seja assim que ele sempre chega: pronto.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

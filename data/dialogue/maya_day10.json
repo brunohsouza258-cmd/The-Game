@@ -48,18 +48,26 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Então eu tenho que decidir também. Não dá pra soltar sozinho uma coisa que duas pessoas seguram. ...Me dá até o festival. Eu vou tentar.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "hold": {
       "speaker": "Maya",
       "pose": "angry",
       "text": "Você já tentou isso. Muitas vezes. Os riscos na parede são isso. Eu não vou te impedir. Mas eu queria que, pelo menos uma vez, você tentasse outra coisa.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "unsure": {
       "speaker": "Maya",
       "pose": "thinking",
       "text": "Tudo bem não saber. Só não deixa o \"não sei\" decidir por você. Ele já decidiu vezes demais.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "Antes de ir, a Maya cita uma palavra do poema que ele escreveu: \"{poem_word}\". Diz que ela ficou no ouvido o dia inteiro.",
+      "if": {
+        "poem.maya": 1
+      },
       "next": "closing"
     },
     "closing": {

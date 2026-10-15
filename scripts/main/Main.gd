@@ -21,6 +21,8 @@ var _paused: bool = false
 var _pause_layer: CanvasLayer
 var _pause_menu: Control
 var _overlay: Node = null
+var _warning_panel: Control
+var _sick_timer: Timer
 
 func _ready() -> void:
 	# Main continua recebendo input com o jogo pausado; o conteúdo do jogo pausa.
@@ -30,6 +32,8 @@ func _ready() -> void:
 		if node:
 			node.process_mode = Node.PROCESS_MODE_PAUSABLE
 	_build_pause_menu()
+	_build_content_warning()
+	_build_sick_title()
 	add_child(load("res://scripts/effects/HorrorFX.gd").new())
 	var fade_layer := CanvasLayer.new()
 	fade_layer.layer = 100
@@ -42,6 +46,85 @@ func _ready() -> void:
 	fade_layer.add_child(_fade)
 	name_input.text_submitted.connect(func(_text): _on_name_confirm_pressed())
 	show_title()
+
+func _build_content_warning() -> void:
+	_warning_panel = Control.new()
+	_warning_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_warning_panel.visible = false
+	title_screen.add_child(_warning_panel)
+	var panel := Panel.new()
+	panel.position = Vector2(290, 150)
+	panel.size = Vector2(700, 440)
+	_warning_panel.add_child(panel)
+	var box := VBoxContainer.new()
+	box.position = Vector2(30, 24)
+	box.size = Vector2(640, 390)
+	box.add_theme_constant_override("separation", 14)
+	panel.add_child(box)
+	var title := Label.new()
+	title.text = "Aviso de conteúdo"
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.add_theme_font_size_override("font_size", 28)
+	box.add_child(title)
+	var text := Label.new()
+	text.autowrap_mode = TextServer.AUTOWRAP_WORD
+	text.custom_minimum_size = Vector2(640, 0)
+	text.text = "Lanternas de Papel é uma história de terror psicológico.\n\nTrata de luto, culpa, perda de um amigo e sugere violência (sem cenas explícitas). Contém luzes piscantes, tremores de tela, sons repentinos e falsas \"quedas\" do jogo.\n\nSe quiser, ative agora a redução de luzes e tremores. Você pode mudar isso depois em Configurações."
+	box.add_child(text)
+	var ok := Button.new()
+	ok.text = "Entendi, continuar"
+	ok.custom_minimum_size = Vector2(0, 46)
+	ok.pressed.connect(_accept_warning.bind(false))
+	box.add_child(ok)
+	var calm := Button.new()
+	calm.text = "Ativar redução de luzes e continuar"
+	calm.custom_minimum_size = Vector2(0, 46)
+	calm.pressed.connect(_accept_warning.bind(true))
+	box.add_child(calm)
+
+func _accept_warning(reduce: bool) -> void:
+	SfxPlayer.play_click()
+	if reduce:
+		GameSettings.set_reduce_flashing(true)
+	GameSettings.mark_content_warning_seen()
+	_warning_panel.visible = false
+	_open_name_prompt()
+
+# Depois dos finais, a tela de título "adoece": o nome falha e as garotas somem por instantes.
+func _build_sick_title() -> void:
+	_sick_timer = Timer.new()
+	_sick_timer.wait_time = 7.0
+	_sick_timer.autostart = true
+	_sick_timer.timeout.connect(_title_glitch)
+	add_child(_sick_timer)
+
+func _title_glitch() -> void:
+	var endings := GameSettings.unlocked_endings.size()
+	if endings == 0 or not title_screen.visible or not menu_panel.visible or randf() < 0.35:
+		return
+	var title: Label = $TitleScreen/TitleLabel
+	var author: Label = $TitleScreen/AuthorLabel
+	var original_title := "Lanternas de Papel"
+	var original_author := "um jogo de Bruno"
+	var glyphs := "█▓▒░#@%&"
+	var broken := ""
+	for ch in original_title:
+		broken += glyphs[randi() % glyphs.length()] if (ch != " " and randf() < 0.3) else ch
+	title.text = broken
+	if endings >= 8:
+		author.text = "obrigado por soltar"
+	elif endings >= 3:
+		author.text = ["ele ainda está aqui", "volta", "segura a minha mão", "21:47"].pick_random()
+	var cast := [$TitleScreen/CastMaya, $TitleScreen/CastYuna, $TitleScreen/CastAlice, $TitleScreen/CastHikari]
+	var victim: Control = null
+	if endings >= 3 and not GameSettings.reduce_flashing:
+		victim = cast.pick_random()
+		victim.modulate = Color(0, 0, 0, 0.95)
+	await get_tree().create_timer(0.3).timeout
+	title.text = original_title
+	author.text = original_author
+	if victim:
+		victim.modulate = Color.WHITE
 
 func _build_pause_menu() -> void:
 	_pause_layer = CanvasLayer.new()
@@ -108,6 +191,10 @@ func _resume() -> void:
 		_overlay = null
 
 func _unhandled_input(event: InputEvent) -> void:
+	var joy := event as InputEventJoypadButton
+	if joy != null and joy.pressed and joy.button_index == JOY_BUTTON_START and _in_game:
+		_toggle_pause()
+		return
 	var key_event := event as InputEventKey
 	if not _in_game or key_event == null or not key_event.pressed or key_event.echo:
 		return
@@ -170,6 +257,13 @@ func _refresh_continue_button() -> void:
 
 func _on_new_game_pressed() -> void:
 	SfxPlayer.play_click()
+	if not GameSettings.content_warning_seen:
+		menu_panel.visible = false
+		_warning_panel.visible = true
+		return
+	_open_name_prompt()
+
+func _open_name_prompt() -> void:
 	menu_panel.visible = false
 	name_prompt.visible = true
 	name_input.text = ""

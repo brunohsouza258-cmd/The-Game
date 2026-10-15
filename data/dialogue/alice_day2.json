@@ -17,7 +17,7 @@
           "effects": {
             "trust.alice": -1
           },
-          "next": "closing"
+          "next": "poem_echo"
         },
         {
           "text": "Me mostra essas anotações.",
@@ -34,6 +34,14 @@
       "speaker": "Alice",
       "pose": "neutral",
       "text": "Aqui. Eu não sei o que significa ainda, mas vou continuar observando.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Alice anota algo e comenta, sem levantar os olhos: \"A palavra '{poem_word}' tem uma frequência estranha nos seus textos. Gostei.\"",
+      "if": {
+        "poem.alice": 1
+      },
       "next": "closing"
     },
     "closing": {

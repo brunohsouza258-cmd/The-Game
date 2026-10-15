@@ -1,0 +1,71 @@
+{
+  "id": "route_yuna_day12",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#c8b8e0",
+  "sprite": "",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "O pátio está lotado de gente, mas a Yuna o puxa pela manga para trás do palco, onde ninguém vê. Ela segura duas marmitas. A mão dela está gelada.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#c8b8e0"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "neutral",
+      "text": "Eu preparei a sua, e a dele. Eu sei que eu não devia, mas eu queria deixar uma na carteira no dia 13, só para ter certeza de que tem dia 13.",
+      "next": "n2"
+    },
+    "b1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Tá. Eu guardo sua marmita quente. Eu sou boa nisso. Eu sei guardar comida e esperanças em pano de prato.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "surprised",
+      "text": "...Obrigada por não mentir. Todo mundo mente para mim, para eu não chorar. Você é o primeiro que me respeita o suficiente para me deixar chorar.",
+      "next": "end"
+    },
+    "n2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Promete que volta? Não é pra mim. É pra eu ter alguém voltando. Eu cuido de todo mundo, mas eu nunca tive um alguém que voltasse.",
+      "choices": [
+        {
+          "text": "\"Eu volto. Eu prometo, e eu cumpro.\"",
+          "next": "b1",
+          "effects": {
+            "affinity.yuna": 3,
+            "trust.yuna": 3
+          }
+        },
+        {
+          "text": "\"Eu não sei se vou voltar. Mas eu vou tentar.\"",
+          "next": "b2",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 3,
+            "dread": 3
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

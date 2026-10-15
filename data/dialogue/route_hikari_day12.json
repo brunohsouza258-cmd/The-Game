@@ -1,0 +1,87 @@
+{
+  "id": "route_hikari_day12",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/courtyard.png",
+  "tint": "#d0c0d8",
+  "sprite": "",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "As lanternas estão se acendendo uma a uma. Na curva da escada, a Hikari está parada com um dos braços apoiado na parede, o outro estendido, como quem segura uma porta que ainda não abriu.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#d0c0d8"
+    },
+    "n1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "neutral",
+      "text": "Eu vou ficar aqui. Na porta. Eu seguro. Eu falei que seguro, e eu sou boa em aguentar peso.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "angry",
+      "text": "Mas se você voltar e eu não estiver aqui, é porque eu corri atrás de você lá em cima. Aí você me espera. Eu corro mais que você, mas hoje eu aceito perder.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Equipe. Isso. Eu nunca tive uma de verdade. Só tive raia. Vai, capitão.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "surprised",
+      "text": "...A Alice está no corredor. A Yuna, na escada. A Maya, no fim. Eu estou segurando a porta. Todo mundo está segurando alguma coisa.",
+      "next": "b3"
+    },
+    "b3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Tá. Então eu seguro com todo mundo. Vai.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "sad",
+      "text": "Vai. Vai antes que eu mude de ideia e vá junto, e a porta caia.",
+      "choices": [
+        {
+          "text": "Encostar o punho no dela, como num cumprimento de equipe.",
+          "next": "b1",
+          "effects": {
+            "affinity.hikari": 3,
+            "trust.hikari": 3
+          }
+        },
+        {
+          "text": "Dizer que ela não precisa segurar sozinha.",
+          "next": "b2",
+          "effects": {
+            "affinity.hikari": 3,
+            "trust.hikari": 2,
+            "dread": -3
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

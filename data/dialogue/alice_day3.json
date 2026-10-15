@@ -98,18 +98,26 @@
       "speaker": "Alice",
       "pose": "scared",
       "text": "K.M.? ...Eu escrevi essas mesmas letras no meu caderno semana passada. E não lembro por quê.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "start_where": {
       "speaker": "Alice",
       "pose": "thinking",
       "text": "Pelos registros da secretaria. Papel mente menos que gente.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "alone": {
       "speaker": "Alice",
       "pose": "sad",
       "text": "Talvez. Mas eu sou péssima em deixar coisas pra lá.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"{poem_word}\", ela lê em voz alta, do caderno onde copiou o poema inteiro. \"Eu guardo o que me impressiona.\"",
+      "if": {
+        "poem.alice": 1
+      },
       "next": "closing"
     },
     "closing": {

@@ -1,0 +1,79 @@
+{
+  "id": "route_alice_day12",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#c8d0e8",
+  "sprite": "",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A sala de aula tem uma lanterna só, em cima da mesa da Alice, acesa, de papel branco. Ela está de pé ao lado, de uniforme impecável, com o caderno fechado.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#c8d0e8"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Eu escrevi a última linha. Não vou dizer qual é. Vou entregar fechado, para você abrir depois do telhado, ou nunca.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "sad",
+      "text": "Eu odeio finais abertos. Mas eu aprendi, neste mês, que a lógica não resolve tudo. Que às vezes só o gesto vale.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "surprised",
+      "text": "...Prometer. Sem barganha. Sem estatística. Obrigada. Registro: foi uma boa promessa.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Então vai ter alguém para ler comigo. Pela primeira vez, eu vou ter plateia. Eu vou ficar nervosa. Isso é novo.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Então o gesto: toma. Fechado. E se você voltar, eu vou ter a confirmação. E se não voltar, eu vou ter a certeza de que eu confiei.",
+      "choices": [
+        {
+          "text": "Aceitar o caderno e prometer não abrir antes.",
+          "next": "b1",
+          "effects": {
+            "affinity.alice": 3,
+            "trust.alice": 3
+          }
+        },
+        {
+          "text": "Dizer que vai abrir assim que descer, para ler com ela.",
+          "next": "b2",
+          "effects": {
+            "affinity.alice": 3,
+            "trust.alice": 2,
+            "dread": -2
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

@@ -15,7 +15,7 @@
     "intro2": {
       "speaker": "",
       "text": "Ele guarda o casaco na mochila sem olhar direito. Se tivesse olhado, teria visto que o casaco ainda estava úmido, como se tivesse passado a noite na chuva.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "open": {
       "speaker": "",
@@ -35,7 +35,8 @@
           },
           "next": "trash"
         }
-      ]
+      ],
+      "sfx": "page"
     },
     "read": {
       "speaker": "Caderno",
@@ -66,6 +67,15 @@
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "O caderno vai estar no armário. Ele deixa lá, sem abrir. Mas amanhã, e depois, e depois, ele vai abrir. Sempre abre.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

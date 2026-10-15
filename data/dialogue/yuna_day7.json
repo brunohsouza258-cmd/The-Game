@@ -62,19 +62,27 @@
       "speaker": "Yuna",
       "pose": "sad",
       "text": "Não precisa fazer nada. Só come a marmita sem ovo comigo. ...É bom não estar bem do lado de alguém. É menos pesado.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "mistake": {
       "speaker": "Yuna",
       "pose": "sad",
       "text": "É. Engano. ...Desculpa ter pedido. Eu fico bem. Eu sempre fico.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "kai": {
       "speaker": "Yuna",
       "pose": "corrupted",
       "text": "Do Kai. Ele odiava ovo. Ele ria alto. Ele... ele não está mais aqui, né? Não é que ele foi embora. Ele não está mais em lugar nenhum.",
       "effect": "glitch",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Yuna tira do bolso um papel dobrado: o poema, com a palavra \"{poem_word}\" grifada de caneta rosa.",
+      "if": {
+        "poem.yuna": 1
+      },
       "next": "closing"
     },
     "closing": {

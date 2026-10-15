@@ -20,7 +20,8 @@
       "sprite": "res://assets/characters/hikari.png",
       "pose": "angry",
       "text": "Eu juro que arrombei essa porta noite passada. Não estava aberta. Agora está.",
-      "next": "n2"
+      "next": "n2",
+      "sfx": "floor_creak"
     },
     "n2": {
       "speaker": "Hikari",

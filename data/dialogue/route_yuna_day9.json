@@ -1,0 +1,88 @@
+{
+  "id": "route_yuna_day9",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#ffe3c0",
+  "sprite": "",
+  "music": "clubroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A Yuna está de avental, sozinha na cozinha do clube, com farinha até no cabelo. Há três formas de biscoito sobre a mesa, todas com uma estrela a mais cortada.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/clubroom.png",
+      "tint": "#ffe3c0"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Eu sei, eu sei! Eu faço demais. Mas hoje é de propósito. Hoje eu sei para quem é.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "É do vizinho que ria antes de falar besteira. Não lembro do nome. Lembro do jeito de partir o biscoito ao meio e me dar a parte maior.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "surprised",
+      "text": "...Está? Está de verdade? Eu faço de memória, sem receita. Você consegue sentir o gosto dele nisso?",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Eu consigo. É o gosto de verão. De casa dele. De uma tarde que nunca acabou.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Ah, para! Você vai me fazer chorar em cima da massa. Come mais um. Sempre sobra um.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "neutral",
+      "text": "Eu pensei que se eu fizesse a receita certa, ele aparecia. Que nem encantamento. Bobo, né?",
+      "choices": [
+        {
+          "text": "Provar o biscoito e dizer que está igual ao que ele fazia.",
+          "next": "b1",
+          "effects": {
+            "affinity.yuna": 3,
+            "trust.yuna": 2,
+            "dread": 2
+          }
+        },
+        {
+          "text": "Dizer que não é bobo e comer o biscoito junto.",
+          "next": "b3",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 1,
+            "dread": -3
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

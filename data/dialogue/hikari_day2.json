@@ -32,12 +32,20 @@
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Vamos ver do que você é feito, então!",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "watch": {
       "speaker": "Hikari",
       "pose": "angry",
       "text": "Covarde. Mas tudo bem, fica aí na sombra.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Hikari bate no ombro dele. \"{poem_word}.\" Para, coça a nuca. \"Boa palavra. Não vou dizer de novo.\"",
+      "if": {
+        "poem.hikari": 1
+      },
       "next": "closing"
     },
     "closing": {

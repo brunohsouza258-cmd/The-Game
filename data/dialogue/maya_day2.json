@@ -53,6 +53,14 @@
       "effects": {
         "dread": 3
       },
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "Antes de ir, a Maya cita uma palavra do poema que ele escreveu: \"{poem_word}\". Diz que ela ficou no ouvido o dia inteiro.",
+      "if": {
+        "poem.maya": 1
+      },
       "next": "closing"
     },
     "closing": {

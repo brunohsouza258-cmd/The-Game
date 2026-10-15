@@ -15,6 +15,12 @@ var _thud_left: int = 0
 var _beat_clock: float = 0.0
 var _in_dialogue: bool = false
 const THUD_SECONDS := 0.5
+const SAMPLE_DIR := "res://assets/sfx/"
+const AMBIENCE := {"rain": "rain.ogg"}
+
+var _amb_player: AudioStreamPlayer
+var _amb_name: String = ""
+var _sample_players: Array[AudioStreamPlayer] = []
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -29,14 +35,54 @@ func _ready() -> void:
 	_playback = _player.get_stream_playback()
 	EventBus.glitch_requested.connect(play_glitch)
 	EventBus.dialogue_started.connect(func(_m): _in_dialogue = true)
-	EventBus.dialogue_ended.connect(func(_id): _in_dialogue = false)
-	EventBus.dialogue_cancelled.connect(func(): _in_dialogue = false)
+	EventBus.dialogue_ended.connect(func(_id): _in_dialogue = false; set_ambience(""))
+	EventBus.dialogue_cancelled.connect(func(): _in_dialogue = false; set_ambience(""))
 
 func play_click() -> void:
 	_click_left = int(SAMPLE_RATE * CLICK_SECONDS)
 
 func play_glitch() -> void:
 	_glitch_left = int(SAMPLE_RATE * GLITCH_SECONDS)
+
+func _sample_stream(file: String) -> AudioStream:
+	var stream = load(SAMPLE_DIR + file)
+	if stream is AudioStreamOggVorbis:
+		stream.loop = true
+	return stream
+
+# Efeito pontual (porta, passos...): play_sample("door_open") toca assets/sfx/door_open.wav.
+func play_sample(sample_name: String) -> void:
+	var path := SAMPLE_DIR + sample_name + ".wav"
+	if not ResourceLoader.exists(path):
+		return
+	var player: AudioStreamPlayer = null
+	for p in _sample_players:
+		if not p.playing:
+			player = p
+			break
+	if player == null:
+		player = AudioStreamPlayer.new()
+		player.bus = GameSettings.BUS_SFX
+		add_child(player)
+		_sample_players.append(player)
+	player.stream = load(path)
+	player.play()
+
+# Ambiência em loop (chuva...). set_ambience("") para parar.
+func set_ambience(amb_name: String) -> void:
+	if amb_name == _amb_name:
+		return
+	_amb_name = amb_name
+	if _amb_player == null:
+		_amb_player = AudioStreamPlayer.new()
+		_amb_player.bus = GameSettings.BUS_SFX
+		_amb_player.volume_db = -6.0
+		add_child(_amb_player)
+	if amb_name == "" or not AMBIENCE.has(amb_name):
+		_amb_player.stop()
+		return
+	_amb_player.stream = _sample_stream(AMBIENCE[amb_name])
+	_amb_player.play()
 
 func play_static(seconds: float = 0.6) -> void:
 	_static_total = maxi(1, int(SAMPLE_RATE * seconds))

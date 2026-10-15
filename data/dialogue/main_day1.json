@@ -14,15 +14,25 @@
     "intro2": {
       "speaker": "",
       "text": "Não tem assinatura. Ele não lembra quem escreveu, nem por que guardou. Só sabe que, quando leu pela primeira vez, o peito apertou como se tivesse esquecido de avisar alguém que estava saindo.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "hallway": {
       "speaker": "",
       "text": "O corredor principal está cheio do barulho normal de um primeiro dia: risadas, passos apressados, alguém gritando o nome de outra pessoa do outro lado do pátio. Nada fora do comum. Ainda.",
-      "next": "outro1"
+      "next": "outro1",
+      "sfx": "bell"
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "Na entrada, ele sente que já passou por esse portão. Os degraus têm o desgaste exato do seu passo. A moça da secretaria vai dizer \"bem-vindo de volta\" daqui a dois minutos, e ele já sabe com qual sorriso.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

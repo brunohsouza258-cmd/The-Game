@@ -40,12 +40,20 @@
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Se eu parar, eu penso. E se eu pensar, eu entendo que tem coisa que não se vence com força. E eu não sei ser outra coisa além de forte.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "train_together": {
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Hah. Você não aguenta vinte. ...Mas fica. É menos solitário contar com alguém do lado.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"Aquela palavra, {poem_word}\", ela diz, desviando o olhar. \"Fiquei pensando nela na corrida.\"",
+      "if": {
+        "poem.hikari": 1
+      },
       "next": "closing"
     },
     "closing": {

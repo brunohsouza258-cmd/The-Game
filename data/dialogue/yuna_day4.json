@@ -55,7 +55,7 @@
       "speaker": "Yuna",
       "pose": "sad",
       "text": "Obrigada por não perguntar. Eu não saberia responder. Eu encontrei a foto de novo na gaveta... e chorei olhando pro rosto riscado. Como se eu soubesse quem era.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "ask": {
       "speaker": "Yuna",
@@ -83,18 +83,26 @@
       "speaker": "Yuna",
       "pose": "surprised",
       "text": "Então não sou só eu. Isso é bom ou é muito, muito ruim?",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "tired": {
       "speaker": "Yuna",
       "pose": "sad",
       "text": "É. Deve ser. Vou lavar o rosto. Você não viu nada, tá?",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "joke": {
       "speaker": "Yuna",
       "pose": "sad",
       "text": "Haha! Boa. ...Você também acha que eu tenho que estar sempre bem, né? Tudo bem. Todo mundo acha.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"{poem_word}\", a Yuna diz, rindo, e leva a mão ao peito. \"Eu li o seu poema de novo antes de dormir. Quatro vezes.\"",
+      "if": {
+        "poem.yuna": 1
+      },
       "next": "closing"
     },
     "closing": {

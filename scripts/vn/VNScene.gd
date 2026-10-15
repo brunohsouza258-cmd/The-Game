@@ -39,6 +39,9 @@ var _partner_sprite: Sprite2D
 var _stage_x: float = SCREEN_SIZE.x / 2.0
 var _partner_scale: float = 1.0
 var _next_screen: String = "res://scenes/main/Hub.tscn"
+var _glitch_pulse: float = 0.0
+var _sprite_material: ShaderMaterial
+var _partner_material: ShaderMaterial
 
 func _ready() -> void:
 	# A segunda personagem em cena fica atrás da que fala, escurecida.
@@ -47,6 +50,14 @@ func _ready() -> void:
 	_partner_sprite.modulate = PARTNER_TINT
 	add_child(_partner_sprite)
 	move_child(_partner_sprite, character_sprite.get_index())
+	var shader: Shader = load("res://assets/shaders/sprite_glitch.gdshader")
+	_sprite_material = ShaderMaterial.new()
+	_sprite_material.shader = shader
+	character_sprite.material = _sprite_material
+	_partner_material = ShaderMaterial.new()
+	_partner_material.shader = shader
+	_partner_sprite.material = _partner_material
+	EventBus.glitch_requested.connect(func(): _glitch_pulse = 1.0)
 	EventBus.dialogue_started.connect(_on_dialogue_started)
 	EventBus.dialogue_node_shown.connect(_on_node_shown)
 	EventBus.dialogue_ended.connect(_on_dialogue_ended)
@@ -54,7 +65,11 @@ func _ready() -> void:
 func start(dialogue_path: String) -> void:
 	DialogueManager.start_dialogue(dialogue_path)
 
+func _ambience_for(background_path: String) -> String:
+	return "rain" if background_path.contains("rooftop_rain") else ""
+
 func _on_dialogue_started(meta: Dictionary) -> void:
+	SfxPlayer.set_ambience(_ambience_for(meta.get("background", DEFAULT_BACKGROUND)))
 	_next_screen = meta.get("next_screen", "res://scenes/main/Hub.tscn")
 	background.texture = load(meta.get("background", DEFAULT_BACKGROUND))
 	# The scene's own tint (night, decay...) combined with a drift toward red as dread rises.
@@ -79,6 +94,7 @@ func _on_node_shown(node_data: Dictionary) -> void:
 # "sprite": "res://...png" (ou "" para esconder), "background", "tint".
 func _apply_node_scene(node_data: Dictionary) -> void:
 	if node_data.has("background"):
+		SfxPlayer.set_ambience(_ambience_for(node_data["background"]))
 		background.texture = load(node_data["background"])
 		var tint := Color(node_data.get("tint", "#ffffff"))
 		background.modulate = tint * Color(1, 1, 1).lerp(DREAD_TINT, GameState.dread / 100.0)
@@ -124,6 +140,24 @@ func _set_texture(path: String) -> void:
 	_base_scale = SPRITE_HEIGHT / texture.get_size().y
 
 # Composes base placement + pose + hop + shake + a slow breathing motion every frame.
+# Rosto "errado": fatias deslocadas conforme o pavor, a pose corrompida e os glitches.
+func _update_glitch_shader(delta: float) -> void:
+	_glitch_pulse = maxf(0.0, _glitch_pulse - delta * 2.0)
+	var calm := GameSettings.reduce_flashing
+	var dread_amount := clampf((GameState.dread - 60) / 40.0, 0.0, 1.0)
+	var flicker := 1.0 if fmod(_time * 0.7, 5.0) < 0.35 else 0.0
+	var intensity := dread_amount * 0.3 * flicker + _glitch_pulse * 0.9
+	if _base_sprite_path != "" and character_sprite.modulate.g < 0.7:
+		intensity = maxf(intensity, 0.5)
+	if calm:
+		intensity = minf(intensity, 0.12)
+	var invert := 1.0 if (not calm and _glitch_pulse > 0.6 and fmod(_time * 20.0, 2.0) < 1.0) else 0.0
+	var seed_value := floorf(_time * 12.0)
+	for material in [_sprite_material, _partner_material]:
+		material.set_shader_parameter("intensity", intensity)
+		material.set_shader_parameter("invert", invert)
+		material.set_shader_parameter("seed", seed_value)
+
 func _process(delta: float) -> void:
 	_time += delta
 	if not character_sprite.visible:
@@ -131,6 +165,7 @@ func _process(delta: float) -> void:
 	var breath := 1.0 + sin(_time * 2.0) * 0.006
 	var base_position := Vector2(SCREEN_SIZE.x / 2.0, SCREEN_SIZE.y - SPRITE_HEIGHT / 2.0)
 	base_position.x = _stage_x
+	_update_glitch_shader(delta)
 	if _partner_sprite.visible:
 		_partner_sprite.position = Vector2(SCREEN_SIZE.x - _stage_x, SCREEN_SIZE.y - SPRITE_HEIGHT * 0.94 / 2.0)
 		_partner_sprite.scale = Vector2.ONE * _partner_scale * breath

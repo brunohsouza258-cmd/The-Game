@@ -48,18 +48,26 @@
       "speaker": "Maya",
       "pose": "happy",
       "text": "A música inteira. Até o fim. ...Faz tanto tempo que eu não penso num \"depois\" que eu esqueci que ele podia ser bom.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "flower": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "Ele ia rir de você. \"Flor, sério?\" ...Eu vou junto. Se existir dia 13, eu vou junto.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "doubt": {
       "speaker": "Maya",
       "pose": "sad",
       "text": "Eu também não. Mas é a primeira vez em muito tempo que eu quero que exista.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Maya o olha por um instante a mais. \"{poem_word}\", repete baixinho, e some pelo corredor levando a palavra.",
+      "if": {
+        "poem.maya": 1
+      },
       "next": "closing"
     },
     "closing": {

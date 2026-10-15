@@ -41,12 +41,20 @@
       "speaker": "Yuna",
       "pose": "close",
       "text": "Se eu errar, você fica na primeira fila? Não pra aplaudir. Só pra eu ter pra onde olhar.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "great": {
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Vai sim! Vai ser perfeito. ...Tudo nessa escola tem que ser perfeito, né?",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"{poem_word}\", a Yuna diz, rindo, e leva a mão ao peito. \"Eu li o seu poema de novo antes de dormir. Quatro vezes.\"",
+      "if": {
+        "poem.yuna": 1
+      },
       "next": "closing"
     },
     "closing": {

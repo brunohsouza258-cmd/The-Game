@@ -1,0 +1,87 @@
+{
+  "id": "route_hikari_day11",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/festival_night.png",
+  "tint": "#ffeed8",
+  "sprite": "",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Na entrada do festival, a Hikari espera de braços cruzados, de moletom, ao lado de uma mesa onde um bastão de revezamento descansa em cima de uma toalha de papel.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/festival_night.png",
+      "tint": "#ffeed8"
+    },
+    "n1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "neutral",
+      "text": "Era dele. O bastão. A gente nunca usou na final. Ele disse que eu devia segurar até ele voltar do banheiro. Nunca voltou.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Eu quero que você segure amanhã. Não por ele. Por mim. Porque eu quero confiar em alguém com a coisa que mais pesa.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "surprised",
+      "text": "...Duas mãos. Você segurou como se fosse de vidro. Ninguém nunca segurou. Era só um bastão.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Não era só um bastão. Eu sei. Pode ficar.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "close",
+      "text": "Correr junto. A gente tem um bastão e duas pessoas. Isso é um problema de matemática. A Alice resolve. Eu só sei que eu quero.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "angry",
+      "text": "Se você derrubar, eu mato você. Eu falo sério. Com carinho, mas sério.",
+      "choices": [
+        {
+          "text": "Segurar o bastão com as duas mãos.",
+          "next": "b1",
+          "effects": {
+            "affinity.hikari": 3,
+            "trust.hikari": 3
+          }
+        },
+        {
+          "text": "Dizer que prefere correr junto com ela, em vez de só guardar.",
+          "next": "b3",
+          "effects": {
+            "affinity.hikari": 3,
+            "trust.hikari": 2,
+            "dread": 1
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

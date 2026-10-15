@@ -15,6 +15,10 @@ var dread: int = 0
 var last_seen_main_event_day: int = 0
 # Só em memória: o final já tocou a cena interativa e agora mostra o cartão.
 var ending_scene_played: bool = false
+# Último poema: para quem foi, qual palavra e em que dia (as garotas citam depois).
+var poem_winner: String = ""
+var poem_word: String = ""
+var poem_day: int = -99
 
 func _ready() -> void:
 	reset_for_new_game(player_name)
@@ -25,6 +29,9 @@ func reset_for_new_game(new_name: String) -> void:
 	dread = 0
 	last_seen_main_event_day = 0
 	ending_scene_played = false
+	poem_winner = ""
+	poem_word = ""
+	poem_day = -99
 	flags.clear()
 	choice_history.clear()
 	visited.clear()
@@ -59,6 +66,8 @@ func meets_requirement(key: String, min_value: int) -> bool:
 			return dread >= min_value
 		"loop":
 			return GameSettings.loop_count >= min_value
+		"day":
+			return day >= min_value
 	var parts := key.split(".")
 	if parts.size() != 2:
 		return true
@@ -72,6 +81,9 @@ func meets_requirement(key: String, min_value: int) -> bool:
 		"flags":
 			# "flags.x": 1 requires the flag set; "flags.x": 0 requires it unset.
 			return has_flag(char_id) == (min_value > 0)
+		"poem":
+			# "poem.maya": 1 -> o ultimo poema foi para ela, hoje ou ontem.
+			return (poem_winner == char_id and day - poem_day <= 1) == (min_value > 0)
 		_:
 			return true
 
@@ -104,6 +116,9 @@ func to_dict() -> Dictionary:
 		"day": day,
 		"dread": dread,
 		"last_seen_main_event_day": last_seen_main_event_day,
+		"poem_winner": poem_winner,
+		"poem_word": poem_word,
+		"poem_day": poem_day,
 	}
 
 func from_dict(data: Dictionary) -> void:
@@ -116,3 +131,6 @@ func from_dict(data: Dictionary) -> void:
 	day = int(data.get("day", 1))
 	dread = int(data.get("dread", 0))
 	last_seen_main_event_day = int(data.get("last_seen_main_event_day", 0))
+	poem_winner = str(data.get("poem_winner", ""))
+	poem_word = str(data.get("poem_word", ""))
+	poem_day = int(data.get("poem_day", -99))

@@ -1,0 +1,92 @@
+{
+  "id": "route_hikari_day10",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/school_night.png",
+  "tint": "#a0a0b8",
+  "sprite": "",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "O ginásio está às escuras. A Hikari bate num saco de pancada preso ao teto, devagar, sem força, como alguém que bate para ter o que fazer com as mãos.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/school_night.png",
+      "tint": "#a0a0b8"
+    },
+    "n1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "neutral",
+      "text": "Eu sei que eu falei que ia correr até a escola ficar cheia. Aí eu corri. E ela não ficou. Eu estou com a perna mole e a cabeça pior.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "sad",
+      "text": "Eu odeio quando o inimigo não tem rosto. Eu posso bater em uma pessoa. Não posso bater numa lacuna.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "surprised",
+      "text": "...Deixar ajudar. É só isso? Eu achei que era ficar no chão e esperar parar de doer.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "happy",
+      "text": "Tá bom. Me ajuda a levantar do chão, então. Faz de conta que eu caí.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "",
+      "text": "Ela bate. Uma, duas, dez vezes, cada vez mais forte, até o som virar uma respiração rouca. No fim, encosta a testa no saco e fica ali.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "sad",
+      "text": "...Obrigada. Eu precisava gritar com alguma coisa que não fosse eu.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Hikari",
+      "color": "#E05A5A",
+      "sprite": "res://assets/characters/hikari.png",
+      "pose": "close",
+      "text": "Me ensina a perder. Eu sei ganhar, eu sei empatar, eu nunca perdi direito. Eu acho que ele sabia perder e eu nunca perguntei como.",
+      "choices": [
+        {
+          "text": "Dizer que perder é deixar alguém ajudar.",
+          "next": "b1",
+          "effects": {
+            "affinity.hikari": 3,
+            "trust.hikari": 2
+          }
+        },
+        {
+          "text": "Segurar o saco de pancada para ela bater de verdade.",
+          "next": "b3",
+          "effects": {
+            "affinity.hikari": 3,
+            "trust.hikari": 1,
+            "dread": 2
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

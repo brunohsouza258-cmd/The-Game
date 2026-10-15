@@ -42,18 +42,26 @@
       "speaker": "Yuna",
       "pose": "angry",
       "text": "Você nem tem bicicleta. Eu... eu odeio quando as pessoas mentem pra me proteger. A última pessoa que fez isso sumiu. Eu acho. Eu não sei. Eu não sei mais o que eu acho.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "truth": {
       "speaker": "Yuna",
       "pose": "scared",
       "text": "Acordou assim. Igual eu acordo chorando. ...{player_name}, tem alguma coisa errada com essa escola. Com a gente. Eu tô com medo. Pronto, falei.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "bandage": {
       "speaker": "",
       "pose": "happy",
       "text": "Ela refaz o curativo devagar, concentrada, o sorriso esquecido no rosto. \"O Kai também vivia se machucando\", ela diz, sem perceber que disse o nome. \"Eu era a enfermeira oficial.\"",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"{poem_word}\", a Yuna diz, rindo, e leva a mão ao peito. \"Eu li o seu poema de novo antes de dormir. Quatro vezes.\"",
+      "if": {
+        "poem.yuna": 1
+      },
       "next": "closing"
     },
     "closing": {

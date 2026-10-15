@@ -53,13 +53,13 @@
       "speaker": "Hikari",
       "pose": "happy",
       "text": "...Sério? Ninguém nunca acredita quando eu falo uma coisa que não é sobre ganhar. Valeu, {player_name}. De verdade.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "broken": {
       "speaker": "Hikari",
       "pose": "angry",
       "text": "Defeito. Claro. E eu sou defeituosa também, né? Esquece.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "race": {
       "speaker": "",
@@ -68,6 +68,14 @@
       "effect": "glitch",
       "effects": {
         "dread": 2
+      },
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Hikari bate no ombro dele. \"{poem_word}.\" Para, coça a nuca. \"Boa palavra. Não vou dizer de novo.\"",
+      "if": {
+        "poem.hikari": 1
       },
       "next": "closing"
     },

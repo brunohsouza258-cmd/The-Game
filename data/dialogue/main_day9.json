@@ -15,7 +15,7 @@
     "intro2": {
       "speaker": "",
       "text": "A mochila está ao lado da cama, já pronta. Dentro, o caderno preto. As páginas depois do dia 12 continuam arrancadas, mas ele agora percebe uma marca de pressão no papel de trás: alguém escreveu e apagou várias vezes, tentando acertar uma única palavra.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "truth": {
       "speaker": "Maya",
@@ -64,6 +64,15 @@
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "Ele já sabe o que a Maya vai contar. Ouve de novo, como quem relê um livro. A diferença é que, desta vez, ele nota a pausa antes de \"eu estava na escada\".",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

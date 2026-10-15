@@ -60,6 +60,13 @@ func _show_current_node() -> void:
 		_active = false
 		EventBus.dialogue_ended.emit(_dialogue_data.get("id", ""))
 		return
+	# "if": o nó só aparece se todos os requisitos forem atendidos; senão, segue para o "next".
+	var condition: Dictionary = node.get("if", {})
+	for key in condition.keys():
+		if not GameState.meets_requirement(key, int(condition[key])):
+			_current_node_id = node.get("next", "end")
+			_show_current_node()
+			return
 	var node_effects: Dictionary = node.get("effects", {})
 	for key in node_effects.keys():
 		GameState.apply_effect(key, node_effects[key])
@@ -68,6 +75,10 @@ func _show_current_node() -> void:
 	display_node["choices"] = _available_choices(node.get("choices", []))
 	EventBus.dialogue_node_shown.emit(display_node)
 	# "fx": glitch | static | flash_red | blackout | thud | shake | crash (ver HorrorFX.gd)
+	if node.has("sfx"):
+		SfxPlayer.play_sample(str(node["sfx"]))
+	if node.has("amb"):
+		SfxPlayer.set_ambience(str(node["amb"]))
 	var fx: String = str(node.get("fx", ""))
 	if node.get("effect", "") == "glitch" and fx == "":
 		fx = "glitch"
@@ -94,4 +105,5 @@ func _interpolate(text: String) -> String:
 		"player_name": GameState.player_name,
 		"loop_count": GameSettings.loop_count,
 		"day": GameState.day,
+		"poem_word": GameState.poem_word,
 	})

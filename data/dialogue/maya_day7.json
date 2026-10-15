@@ -57,12 +57,20 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Parar significa chegar no dia 12 e não voltar. Significa ele ficar perdido de verdade. Eu não sei se eu consigo. Eu não sei se você consegue.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "here": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "Você sempre diz isso. E sempre esquece primeiro. ...Mas eu gosto quando você diz.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Maya o olha por um instante a mais. \"{poem_word}\", repete baixinho, e some pelo corredor levando a palavra.",
+      "if": {
+        "poem.maya": 1
+      },
       "next": "closing"
     },
     "closing": {

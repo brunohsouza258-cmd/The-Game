@@ -43,18 +43,26 @@
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Ninguém manda em mim. ...Mas é bom saber que alguém tentaria.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "together": {
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Junto. Tá. Mas eu chego primeiro na escada. Isso não é negociável.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "nobody": {
       "speaker": "",
       "pose": "sad",
       "text": "Hikari abre a boca para responder e não responde. Ela olha para as próprias mãos machucadas por um tempo longo. \"Ninguém nunca me disse que eu não precisava aguentar\", ela fala, por fim.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Hikari bate no ombro dele. \"{poem_word}.\" Para, coça a nuca. \"Boa palavra. Não vou dizer de novo.\"",
+      "if": {
+        "poem.hikari": 1
+      },
       "next": "closing"
     },
     "closing": {

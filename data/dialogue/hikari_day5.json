@@ -47,18 +47,26 @@
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Eu lembro do tempo dele. 12 segundos e 8. Eu nunca bati esse tempo. Agora não tem nem com quem comparar. Isso é perder pior do que perder.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "for_him": {
       "speaker": "Hikari",
       "pose": "thinking",
       "text": "Correr por alguém que nem existe? ...Talvez. Talvez seja o único jeito de ele existir um pouco.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "no_need": {
       "speaker": "Hikari",
       "pose": "surprised",
       "text": "Todo mundo diz que eu preciso. Que eu sou a melhor, que o time depende de mim. Você é o primeiro a dizer que não. Isso é... estranho de ouvir.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"Aquela palavra, {poem_word}\", ela diz, desviando o olhar. \"Fiquei pensando nela na corrida.\"",
+      "if": {
+        "poem.hikari": 1
+      },
       "next": "closing"
     },
     "closing": {

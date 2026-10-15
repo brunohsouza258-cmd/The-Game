@@ -48,12 +48,20 @@
       "pose": "corrupted",
       "text": "Kaito... Kai. Eu chamava ele de Kai. Como eu sei disso? {player_name}, como VOCÊ sabe disso?",
       "effect": "glitch",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "gentle": {
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Você é estranho, sabia? Todo mundo me diz pra animar. Você é o único que me deixa não lembrar.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Yuna tira do bolso um papel dobrado: o poema, com a palavra \"{poem_word}\" grifada de caneta rosa.",
+      "if": {
+        "poem.yuna": 1
+      },
       "next": "closing"
     },
     "closing": {

@@ -41,12 +41,20 @@
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Você reparou! É que hoje eu tô triste e feliz ao mesmo tempo, e não tô escondendo nenhum dos dois. Não sabia que dava pra fazer isso.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "careful": {
       "speaker": "Yuna",
       "pose": "thinking",
       "text": "Eu sei. Eu também sinto que tem alguma coisa errada nessa perfeição toda. Mas eu quero aproveitar mesmo assim. Saber que pode acabar não é motivo pra não acender a lanterna.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Yuna tira do bolso um papel dobrado: o poema, com a palavra \"{poem_word}\" grifada de caneta rosa.",
+      "if": {
+        "poem.yuna": 1
+      },
       "next": "closing"
     },
     "closing": {

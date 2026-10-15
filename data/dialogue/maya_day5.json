@@ -66,24 +66,32 @@
       "pose": "corrupted",
       "text": "Da última vez que eu contei tudo no quinto dia, você subiu no telhado no sexto. Sozinho. Não. Não dessa vez.",
       "effect": "glitch",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "time": {
       "speaker": "Maya",
       "pose": "sad",
       "text": "Obrigada. Você é gentil em todas as voltas. Isso é o pior.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "hand": {
       "speaker": "",
       "pose": "close",
       "text": "A mão dela está fria. Ela não solta. Fica olhando para os dedos dele como quem confere se ainda estão todos ali.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "space": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "Tudo bem. Eu espero. Eu sou boa em esperar. Já tive muita prática.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Maya o olha por um instante a mais. \"{poem_word}\", repete baixinho, e some pelo corredor levando a palavra.",
+      "if": {
+        "poem.maya": 1
+      },
       "next": "closing"
     },
     "closing": {

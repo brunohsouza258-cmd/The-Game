@@ -74,25 +74,33 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Ninguém. Ele virou ninguém. ...Me dá mais uns dias, {player_name}. Se eu falar tudo agora, você não acredita. Eu sei porque já tentei.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "loop": {
       "speaker": "Maya",
       "pose": "corrupted",
       "text": "Escreveu. A letra fica um pouco mais fraca a cada vez. Como se você estivesse ficando sem tinta por dentro.",
       "effect": "glitch",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "not_now": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "Tudo bem. Não saber também é uma escolha. Eu só queria que você soubesse que pode me perguntar.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "hide": {
       "speaker": "Maya",
       "pose": "angry",
       "text": "Tá bom. Mas não deixa ele no armário. Ele sempre volta pro armário quando você não quer ver.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "Antes de ir, a Maya cita uma palavra do poema que ele escreveu: \"{poem_word}\". Diz que ela ficou no ouvido o dia inteiro.",
+      "if": {
+        "poem.maya": 1
+      },
       "next": "closing"
     },
     "closing": {

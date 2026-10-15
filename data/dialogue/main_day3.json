@@ -14,7 +14,7 @@
     "intro2": {
       "speaker": "",
       "text": "Na entrada, a poça diante do portão tem o reflexo de um prédio mais alto do que o da escola. Ele pisa dentro dela de propósito, e o reflexo some.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "desk": {
       "speaker": "",
@@ -61,6 +61,15 @@
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "A carteira com as iniciais K.M. está onde sempre esteve. Dessa vez ele nem precisa olhar para ela. Já sabe a posição de cada arranhão.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

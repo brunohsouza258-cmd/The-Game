@@ -1,0 +1,96 @@
+{
+  "id": "route_maya_day9",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/clubroom.png",
+  "tint": "#8a7aa8",
+  "sprite": "",
+  "music": "clubroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A sala do clube está apagada. A Maya sentou no chão, de costas na estante, com o caderno de poemas aberto no colo. Ela não levanta os olhos quando {player_name} entra.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/clubroom.png",
+      "tint": "#8a7aa8"
+    },
+    "n1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Eu li o último verso para você ontem, não li? Eu leio muito para as paredes, às vezes confundo.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Você sabe o que é pior? Hoje de manhã eu acordei sem lembrar o que sonhei, pela primeira vez em cem voltas. E eu senti falta.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "happy",
+      "text": "Tinha uma cicatriz no queixo. De bicicleta. Ele dizia que era de luta com um tubarão. Eu ria toda vez, mesmo sabendo que era mentira.",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Obrigada. Eu nunca contei isso para ninguém. Agora tem alguém que sabe da cicatriz.",
+      "next": "end"
+    },
+    "b3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "...Amá-lo. Você disse isso na frente de mim como se fosse uma coisa possível de dizer. Ninguém nunca disse.",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "happy",
+      "text": "Tá. Eu vou tentar não lembrar do rosto hoje. Só do amor. Parece que é a parte mais leve.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Eu senti falta do pesadelo. Ele era a única coisa que me deixava ver o rosto dele.",
+      "choices": [
+        {
+          "text": "Sentar ao lado dela e pedir que descreva o rosto.",
+          "next": "b1",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 3,
+            "dread": 3
+          }
+        },
+        {
+          "text": "Dizer que não precisa lembrar do rosto para amá-lo.",
+          "next": "b3",
+          "effects": {
+            "affinity.maya": 3,
+            "trust.maya": 1,
+            "dread": -2
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

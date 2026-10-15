@@ -260,6 +260,16 @@ func _on_finish_pressed() -> void:
 			GameState.change_affinity(char_id, 1)
 			bystanders.append(CHARACTER_NAMES[char_id])
 	GameState.mark_visited("poem")
+	GameState.poem_winner = winner
+	GameState.poem_day = GameState.day
+	var best_word := ""
+	var best_points := -99
+	for word_data in _selected:
+		var points := int(word_data.get("weights", {}).get(winner, 0))
+		if points > best_points:
+			best_points = points
+			best_word = String(word_data.get("text", ""))
+	GameState.poem_word = best_word
 	SfxPlayer.play_click()
 
 	var texts: PackedStringArray = []

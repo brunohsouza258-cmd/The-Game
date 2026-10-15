@@ -41,12 +41,20 @@
       "speaker": "Hikari",
       "pose": "angry",
       "text": "Ganhou. Parabéns. ...Viu? É isso que acontece. Quem cai fica pra trás. Sempre.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "stop": {
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Você... parou? Você ia ganhar. Por que você parou? ...O Kaito também teria parado. Ele fingia que não, mas teria. Droga. Ninguém ganha essa, né?",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Hikari bate no ombro dele. \"{poem_word}.\" Para, coça a nuca. \"Boa palavra. Não vou dizer de novo.\"",
+      "if": {
+        "poem.hikari": 1
+      },
       "next": "closing"
     },
     "closing": {

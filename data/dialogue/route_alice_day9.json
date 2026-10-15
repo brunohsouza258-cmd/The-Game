@@ -1,0 +1,80 @@
+{
+  "id": "route_alice_day9",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#d0d8e0",
+  "sprite": "",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A Alice espalhou o caderno, o relógio, o anuário cortado e a lista de matrícula na carteira, formando uma espécie de mapa. Ela está de pé, os braços cruzados, olhando tudo de cima.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#d0d8e0"
+    },
+    "n1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "neutral",
+      "text": "Eu montei a linha do tempo. Três semanas aparentes. Doze dias reais. Cinquenta e sete voltas anteriores, pelos meus cálculos, com margem de erro de quarenta.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "thinking",
+      "text": "A única constante em todas as voltas é você. A segunda constante sou eu, que anoto sem lembrar de ter anotado.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "happy",
+      "text": "Aqui. Página quatorze: \"Ele chega sempre com a mesma expressão de quem esqueceu algo importante\". Eu escrevi isso quarenta vezes.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "surprised",
+      "text": "...Se eu estou bem. Ninguém nunca perguntou em nenhuma das cinquenta e sete. Eu estou. Quase. Obrigada por perguntar.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Alice",
+      "color": "#4DB6AC",
+      "sprite": "res://assets/characters/alice.png",
+      "pose": "close",
+      "text": "Isso significa que, mesmo esquecendo, eu sempre confiei em você. É a única coisa que não precisa de prova.",
+      "choices": [
+        {
+          "text": "Agradecer, e pedir para ver o caderno inteiro.",
+          "next": "b1",
+          "effects": {
+            "affinity.alice": 2,
+            "trust.alice": 3,
+            "dread": 3
+          }
+        },
+        {
+          "text": "Perguntar se ela está bem em ser a mente do loop.",
+          "next": "b2",
+          "effects": {
+            "affinity.alice": 3,
+            "trust.alice": 1,
+            "dread": -2
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

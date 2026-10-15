@@ -1,0 +1,80 @@
+{
+  "id": "route_yuna_day10",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/classroom.png",
+  "tint": "#d8c8c8",
+  "sprite": "",
+  "music": "classroom",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "A sala de aula está vazia. A Yuna sentou numa carteira do fundo com um caderno de receitas aberto, e está desenhando, bem de leve, rostos em cima de cada receita.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#d8c8c8"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "neutral",
+      "text": "A tia da cantina sumiu. A Mei sumiu. O seu Takeda, que ficava na entrada. Eu estou desenhando eles para não esquecer.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Eu desenho mal. Mas é melhor um rosto torto do que nenhum rosto. Eu sou boa em fazer bonito o que sobrou.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Tá. Fica parado. Eu vou desenhar o seu nariz estranho e o seu cabelo que nunca assenta. Eu vou desenhar certinho.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "close",
+      "text": "Você faria isso? Vir atrás de mim? Em cada volta? ...Então eu não vou sumir. Eu vou deixar uma migalha de biscoito, que nem Hansel e Gretel.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "Eu tenho medo de que eu seja a próxima. Que eu acorde e ninguém lembre que eu existi. Que nem o... o menino da bicicleta.",
+      "choices": [
+        {
+          "text": "Pedir que desenhe você também, para ela lembrar.",
+          "next": "b1",
+          "effects": {
+            "affinity.yuna": 3,
+            "trust.yuna": 2,
+            "dread": 1
+          }
+        },
+        {
+          "text": "Dizer que se ela sumir, ele vai procurá-la em cada volta.",
+          "next": "b2",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 3,
+            "dread": 3
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

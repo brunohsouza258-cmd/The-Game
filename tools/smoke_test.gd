@@ -43,7 +43,7 @@ func _initialize() -> void:
 	for scene_path in [
 		"res://scenes/main/Hub.tscn", "res://scenes/main/Settings.tscn",
 		"res://scenes/main/SaveSlots.tscn", "res://scenes/main/EndingsGallery.tscn",
-		"res://scenes/main/Credits.tscn", "res://scenes/poem/PoemGame.tscn",
+		"res://scenes/main/Credits.tscn", "res://scenes/main/Diary.tscn", "res://scenes/poem/PoemGame.tscn",
 		"res://scenes/ending/EndingScene.tscn", "res://scenes/vn/VNScene.tscn",
 	]:
 		if load(scene_path) == null:

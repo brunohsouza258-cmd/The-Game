@@ -65,18 +65,26 @@
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Você? Hah. Você nem sabe passar o bastão. ...Mas valeu. Ninguém nunca se oferece.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "left": {
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Saiu e levou o próprio nome junto? Não faz sentido. Mas tem dias que eu entro no vestiário e espero ouvir alguém rindo. Uma risada específica.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "lose": {
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Perder é ficar pra trás. E quem fica pra trás some. Pelo menos foi isso que eu aprendi.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "\"Aquela palavra, {poem_word}\", ela diz, desviando o olhar. \"Fiquei pensando nela na corrida.\"",
+      "if": {
+        "poem.hikari": 1
+      },
       "next": "closing"
     },
     "closing": {

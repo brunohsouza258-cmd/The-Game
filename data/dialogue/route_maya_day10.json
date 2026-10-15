@@ -1,0 +1,80 @@
+{
+  "id": "route_maya_day10",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/school_night.png",
+  "tint": "#a99fb4",
+  "sprite": "",
+  "music": "night",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "Os corredores estão vazios. Ao final do segundo andar, uma única luz acesa. A Maya está lá, apoiada na janela, contando as lâmpadas do pátio como quem reza.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/school_night.png",
+      "tint": "#a99fb4"
+    },
+    "n1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "neutral",
+      "text": "Quatro delas já apagaram sozinhas desde ontem. Eu as conheço. Eram dos alunos da 2-C.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "scared",
+      "text": "Eu fiz isso, não fiz? Quando eu penso em soltar, o mundo cobra. Eu soltei meio centímetro e um terço da sala desapareceu.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "close",
+      "text": "Promessa de verdade? Daquelas que doem? Então me dá a mão. Pelo menos para eu saber que a mão existe.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "surprised",
+      "text": "Não sou? Eu levei tanto tempo sendo. Eu não sei mais ser outra coisa. Mas eu posso tentar ficar uns minutos sem ser.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Maya",
+      "color": "#9966CC",
+      "sprite": "res://assets/characters/maya.png",
+      "pose": "sad",
+      "text": "Eu não quero que você me perdoe. Eu quero que você me impeça de fazer de novo, se eu tentar segurar mais um dia.",
+      "choices": [
+        {
+          "text": "Prometer que vai impedir.",
+          "next": "b1",
+          "effects": {
+            "affinity.maya": 2,
+            "trust.maya": 2,
+            "dread": 2
+          }
+        },
+        {
+          "text": "Dizer que ela não é culpada por nada disso.",
+          "next": "b2",
+          "effects": {
+            "affinity.maya": 1,
+            "trust.maya": 3,
+            "dread": -3
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

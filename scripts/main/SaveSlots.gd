@@ -12,6 +12,12 @@ func _build_slots() -> void:
 		child.queue_free()
 	for slot in range(SaveManager.AUTOSAVE_SLOT, SaveManager.SLOT_COUNT + 1):
 		var row := HBoxContainer.new()
+		var thumb := TextureRect.new()
+		thumb.custom_minimum_size = Vector2(128, 72)
+		thumb.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		thumb.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		thumb.texture = SaveManager.thumbnail(slot)
+		row.add_child(thumb)
 		var label := Label.new()
 		label.custom_minimum_size = Vector2(560, 0)
 		label.text = _slot_description(slot)

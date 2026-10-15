@@ -15,7 +15,7 @@
     "intro2": {
       "speaker": "",
       "text": "{player_name} sente a mão direita formigar, como se tivesse dormido sobre ela. Abre e fecha os dedos. A cicatriz na palma, uma linha fina e clara, parece mais funda do que ontem.",
-      "next": "core"
+      "next": "loop_echo"
     },
     "festival": {
       "speaker": "",
@@ -68,10 +68,20 @@
       "fx": "flash_red",
       "pause": 0.7,
       "pace": "slow",
-      "noauto": true
+      "noauto": true,
+      "amb": "rain"
     },
     "end": {
       "end": true
+    },
+    "loop_echo": {
+      "speaker": "",
+      "text": "O diretor vai anunciar o festival. Ele mexe os lábios junto com o discurso, as mesmas pausas, as mesmas piadas ruins.",
+      "if": {
+        "loop": 2
+      },
+      "pace": "slow",
+      "next": "core"
     },
     "core": {
       "speaker": "",

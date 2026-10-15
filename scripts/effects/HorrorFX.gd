@@ -113,7 +113,7 @@ func _process(delta: float) -> void:
 		if _shake_time <= 0.0:
 			get_tree().root.canvas_transform = Transform2D.IDENTITY
 	# Com o pavor alto, a escola "falha" sozinha de vez em quando.
-	if _in_dialogue and not _busy and GameState.dread >= AMBIENT_DREAD and not get_tree().paused:
+	if _in_dialogue and not _busy and not GameSettings.reduce_flashing and GameState.dread >= AMBIENT_DREAD and not get_tree().paused:
 		_ambient_left -= delta
 		if _ambient_left <= 0.0:
 			_ambient_left = randf_range(AMBIENT_MIN, AMBIENT_MAX) * (1.5 - GameState.dread / 100.0)
@@ -121,6 +121,17 @@ func _process(delta: float) -> void:
 
 func play(kind: String, data: Dictionary = {}) -> void:
 	match kind:
+		"delete":
+			var lines := [
+				"> excluindo kaito.chr ... ok",
+				"> excluindo kaito_memoria.dat ... ok",
+				"> excluindo kaito_voz.ogg ... ok",
+				"> excluindo maya.chr ... ACESSO NEGADO",
+				"> maya.chr está em uso por outro processo",
+				"> tentando de novo ... ACESSO NEGADO",
+			]
+			_run_crash({"crash_lines": lines, "show_window": false})
+			return
 		"glitch":
 			_run_glitch(0.55)
 		"static":
@@ -138,6 +149,8 @@ func play(kind: String, data: Dictionary = {}) -> void:
 			_run_crash(data)
 
 func _shake(power: float, seconds: float) -> void:
+	if GameSettings.reduce_flashing:
+		return
 	_shake_power = power
 	_shake_time = seconds
 
@@ -151,6 +164,12 @@ func _duck_music(seconds: float) -> void:
 	AudioServer.set_bus_mute(idx, was_muted or GameSettings.music_volume <= 0.001)
 
 func _run_glitch(seconds: float) -> void:
+	if GameSettings.reduce_flashing:
+		# Versão calma: só um escurecimento suave, sem tiras coloridas.
+		_black.color.a = 0.55
+		create_tween().tween_property(_black, "color:a", 0.0, seconds)
+		await get_tree().create_timer(seconds, true).timeout
+		return
 	EventBus.glitch_requested.emit()
 	_shake(12.0, seconds)
 	var end := Time.get_ticks_msec() + int(seconds * 1000.0)
@@ -167,6 +186,10 @@ func _run_glitch(seconds: float) -> void:
 
 func _run_static(seconds: float, alpha: float) -> void:
 	SfxPlayer.play_static(seconds)
+	if GameSettings.reduce_flashing:
+		_black.color.a = 0.4
+		create_tween().tween_property(_black, "color:a", 0.0, seconds)
+		return
 	var end := Time.get_ticks_msec() + int(seconds * 1000.0)
 	_noise.modulate.a = alpha
 	_noise.visible = true
@@ -185,7 +208,7 @@ func _noise_texture() -> ImageTexture:
 func _run_flash_red() -> void:
 	SfxPlayer.play_thud()
 	_shake(16.0, 0.6)
-	_flash.color = Color(0.85, 0.0, 0.05, 0.75)
+	_flash.color = Color(0.85, 0.0, 0.05, 0.25 if GameSettings.reduce_flashing else 0.75)
 	create_tween().tween_property(_flash, "color:a", 0.0, 0.7)
 
 func _run_blackout(seconds: float) -> void:
@@ -213,9 +236,10 @@ func _run_crash(data: Dictionary) -> void:
 	await _run_glitch(0.6)
 	_crash_label.text = ""
 	_crash_root.visible = true
-	_error_window.visible = true
-	_crash_label.visible = false
-	await get_tree().create_timer(1.3, true).timeout
+	_error_window.visible = bool(data.get("show_window", true))
+	_crash_label.visible = not _error_window.visible
+	if _error_window.visible:
+		await get_tree().create_timer(1.3, true).timeout
 
 	# 2) a janela de erro some e o "terminal" aparece
 	_error_window.visible = false

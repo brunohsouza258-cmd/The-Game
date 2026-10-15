@@ -49,6 +49,17 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - **Poses**: cada fala das garotas tem uma pose (`"pose"` no JSON): `neutral`, `happy`, `sad`, `surprised`, `scared`, `angry`, `thinking`, `close` ou `corrupted`. Hoje a pose é animada sobre o sprite base (pulo, tremor, aproximação, inclinação, cor e glitch). Se existir `assets/characters/<nome>_<pose>.png` (ex.: `yuna_sad.png`), o jogo usa essa imagem automaticamente naquela pose.
 - **Trilha sonora** (`assets/music/`, créditos em `assets/music/CREDITS.md`): 10 faixas CC0 do OpenGameArt, com transição suave entre cenas (`scripts/audio/MusicPlayer.gd`). O glitch distorce o tom da música por um instante. Efeitos sonoros: `scripts/audio/SfxPlayer.gd`.
 
+## Novidades de acessibilidade e extras
+
+- **Aviso de conteúdo** na primeira vez em "Novo Jogo", com opção de ativar já a redução de luzes e tremores (também em Configurações). Tamanho do texto ajustável.
+- **Diário** do protagonista (`data/diary.json`): entradas que se desbloqueiam por dia, flags, confiança, pavor e loop.
+- **Cenas de rota** (`route_<garota>_day9..12.json`): quem tem a maior afinidade (>= 8, sem empate) ganha um "momento a sós" por dia nos dias 9 a 12.
+- **Eco do poema:** nos dias seguintes a garota que leu o poema cita a palavra que mais combinou com ela (`{poem_word}`, requisito `poem.<id>`).
+- **Memória do loop:** a partir da 2ª partida, os eventos principais ganham um trecho extra (`"if": {"loop": 2}`).
+- **Título que adoece** depois dos finais; **rosto que se quebra** (shader) com pavor alto; **ambiência** de chuva e efeitos de porta, sino e página.
+- **Saves com miniatura** e data. Controle: Start abre a pausa.
+- Nós de diálogo aceitam `"if": {requisitos}` (só aparecem se atendidos), `"sfx"` e `"amb"`.
+
 ## Estado atual
 
 - **A história está completa:** 12 dias em 3 atos, com um evento principal por dia, 4 conversas por dia (60 arquivos de diálogo) e 8 finais. Ao fim do dia 12, "Subir ao telhado às 21:40" leva ao final.
@@ -58,6 +69,6 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 
 - `Godot --headless --path . --script tools/smoke_test.gd`: toca todos os diálogos até o fim e abre as telas principais (sai com erro se algo falhar).
 - `powershell -File tools/build_exe.ps1 -Godot <caminho do Godot.exe>`: gera `build/LanternasDePapel.exe` + `.pck` sem precisar dos export templates (o `.exe` é o Godot com o `.pck` de mesmo nome; mantenha os dois na mesma pasta). Para um `.exe` independente, instale os export templates e use o preset abaixo.
-- `export_presets.cfg`: preset de exportação para Windows (precisam estar instalados os export templates do Godot; saída em `build/`).
+- `export_presets.cfg`: preset de exportação para Windows (precisa dos export templates do Godot). Exporte com `Godot --headless --path . --export-release "Windows Desktop" build/release/LanternasDePapel.exe`: gera um `.exe` único, sem o "(DEBUG)" no título.
 - `python tools/make_backgrounds.py`: regenera os cenários derivados (requer Pillow).
 - `python tools/validate_data.py`: valida os JSONs de diálogo e finais (referências `next`, nó `start`, backgrounds e sprites). Rode antes de cada commit.

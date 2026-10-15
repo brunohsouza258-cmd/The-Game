@@ -1,0 +1,84 @@
+{
+  "id": "route_yuna_day11",
+  "display_name": "",
+  "character_color": "#CCCCCC",
+  "background": "res://assets/backgrounds/festival_night.png",
+  "tint": "#fff0d0",
+  "sprite": "",
+  "music": "festival",
+  "nodes": {
+    "start": {
+      "speaker": "",
+      "text": "O palco do festival está montado, com microfone e cabo e holofotes de papel celofane. A Yuna ensaia sozinha, de costas para a plateia vazia, cantando baixinho.",
+      "next": "n1",
+      "background": "res://assets/backgrounds/festival_night.png",
+      "tint": "#fff0d0"
+    },
+    "n1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "neutral",
+      "text": "Eu cantei essa música na minha formatura da primária. Tinha um menino na plateia, na fila de trás, que aplaudiu sozinho depois que todo mundo parou.",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Eu achei vergonhoso e lindo. Eu quero cantar para esse menino amanhã. Mesmo que ele não esteja lá.",
+      "next": "n3"
+    },
+    "b1": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "happy",
+      "text": "Combinado! E se você chorar, eu finjo que não vi. Se eu chorar, você finge também, ok? É o trato.",
+      "next": "end"
+    },
+    "b2": {
+      "speaker": "",
+      "text": "A voz da Yuna enche o palco vazio, pequena e firme. No fim da estrofe, em algum lugar atrás da cortina, alguém bate uma única palma, devagar.",
+      "next": "b3"
+    },
+    "b3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "scared",
+      "text": "...Você ouviu isso? Eu ouvi. Não era você. Você estava na frente. Meu Deus.",
+      "next": "end"
+    },
+    "n3": {
+      "speaker": "Yuna",
+      "color": "#FFB347",
+      "sprite": "res://assets/characters/yuna.png",
+      "pose": "sad",
+      "text": "Você aplaude quando eu terminar? Só você, no fundo, depois de todo mundo parar?",
+      "choices": [
+        {
+          "text": "Prometer aplaudir sozinho, depois de todo mundo.",
+          "next": "b1",
+          "effects": {
+            "affinity.yuna": 3,
+            "trust.yuna": 2
+          }
+        },
+        {
+          "text": "Pedir que ela cante para ele agora, só uma estrofe.",
+          "next": "b2",
+          "effects": {
+            "affinity.yuna": 2,
+            "trust.yuna": 2,
+            "dread": 2
+          }
+        }
+      ]
+    },
+    "end": {
+      "end": true
+    }
+  }
+}

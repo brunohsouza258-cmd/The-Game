@@ -41,12 +41,20 @@
       "speaker": "Yuna",
       "pose": "angry",
       "text": "Então daqui a pouco eu esqueço de você de novo. E da Maya. E de mim. ...Não. Eu não quero. Pela primeira vez na vida eu quero ficar triste e lembrar, em vez de sorrir e esquecer.",
-      "next": "closing"
+      "next": "poem_echo"
     },
     "together": {
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Junto. Tá. Se eu começar a esquecer, você me lembra. Promete? Eu não tenho vergonha de pedir. Não mais.",
+      "next": "poem_echo"
+    },
+    "poem_echo": {
+      "speaker": "",
+      "text": "A Yuna tira do bolso um papel dobrado: o poema, com a palavra \"{poem_word}\" grifada de caneta rosa.",
+      "if": {
+        "poem.yuna": 1
+      },
       "next": "closing"
     },
     "closing": {
