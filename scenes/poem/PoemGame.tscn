@@ -37,7 +37,7 @@ layout_mode = 2
 
 [node name="WordGrid" type="GridContainer" parent="WordSelect"]
 layout_mode = 2
-columns = 4
+columns = 6
 
 [node name="CounterLabel" type="Label" parent="WordSelect"]
 layout_mode = 2

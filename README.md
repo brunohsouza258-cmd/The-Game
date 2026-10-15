@@ -22,7 +22,7 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 2. **Evento principal do dia** (`data/dialogue/main_dayN.json`): toca automaticamente ao começar cada dia. É a espinha dorsal linear da história, igual para todo mundo.
 3. **Hub** (`scenes/main/Hub.tscn`): conversa com cada garota (uma vez por dia), um poema por dia, avançar o dia, salvar/carregar, configurações e voltar ao título.
 4. **Cena de diálogo** (`scenes/vn/VNScene.tscn`): a personagem fica centralizada e com a mesma altura para todas, com a base na borda inferior da tela e o cenário atrás.
-5. **Poema** (`scenes/poem/PoemGame.tscn`), estilo Doki Doki: 5 de 18 palavras sorteadas (de um banco de 37). Cada palavra pontua as garotas a que combina e o placar pisca quando alguém gosta dela. Quem somar mais lê o poema e reage (afinidade/confiança); as outras com 6+ pontos também ganham +1 de afinidade.
+5. **Poema** (`scenes/poem/PoemGame.tscn`), estilo Doki Doki: 5 de 18 palavras sorteadas (de um banco de 37). Cada palavra pontua as garotas a que combina e a bonequinha dela (topo do sprite) pula e mostra "+N ♥" quando ela gosta, e treme se não gosta. Cada uma tem barra de pontos e a líder ganha ★. Quem somar mais lê o poema e reage (afinidade/confiança); as outras com 6+ pontos também ganham +1 de afinidade.
 6. **Final** (`scenes/ending/EndingScene.tscn`): 8 finais, depois da noite do festival (dia 12). Ao terminar, o jogo volta ao título.
 
 ## Sistemas
