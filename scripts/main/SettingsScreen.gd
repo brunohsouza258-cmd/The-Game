@@ -102,6 +102,13 @@ func _add_access_rows() -> void:
 	slider.value_changed.connect(on_value)
 	rows.add_child(slider)
 
+	var review := Button.new()
+	review.text = "Rever aviso de saúde e bem-estar"
+	review.pressed.connect(func():
+		SfxPlayer.play_click()
+		get_tree().current_scene.show_health_warning())
+	rows.add_child(review)
+
 func _add_fullscreen_toggle() -> void:
 	var toggle := CheckButton.new()
 	toggle.text = "Tela cheia"

@@ -16,6 +16,9 @@ var auto_advance: bool = true
 var reduce_flashing: bool = false
 var font_scale: float = 1.0
 var content_warning_seen: bool = false
+# Aviso de saúde: reaparece quando passam WARNING_DAYS desde a última confirmação.
+const WARNING_DAYS := 7
+var warning_ack_time: int = 0
 var auto_seconds: float = 2.0
 # Persists across new games: how many times the player has started this story.
 var loop_count: int = 0
@@ -57,6 +60,7 @@ func load_settings() -> void:
 		reduce_flashing = config.get_value("access", "reduce_flashing", reduce_flashing)
 		font_scale = config.get_value("access", "font_scale", font_scale)
 		content_warning_seen = config.get_value("access", "content_warning_seen", content_warning_seen)
+		warning_ack_time = int(config.get_value("access", "warning_ack_time", warning_ack_time))
 		loop_count = config.get_value("meta", "loop_count", loop_count)
 		unlocked_endings = config.get_value("meta", "unlocked_endings", unlocked_endings)
 	_apply_all()
@@ -72,6 +76,7 @@ func save_settings() -> void:
 	config.set_value("access", "reduce_flashing", reduce_flashing)
 	config.set_value("access", "font_scale", font_scale)
 	config.set_value("access", "content_warning_seen", content_warning_seen)
+	config.set_value("access", "warning_ack_time", warning_ack_time)
 	config.set_value("display", "fullscreen", fullscreen)
 	config.set_value("meta", "loop_count", loop_count)
 	config.set_value("meta", "unlocked_endings", unlocked_endings)
@@ -108,8 +113,14 @@ func set_font_scale(value: float) -> void:
 	font_scale = value
 	save_settings()
 
+func health_warning_due() -> bool:
+	if warning_ack_time <= 0:
+		return true
+	return int(Time.get_unix_time_from_system()) - warning_ack_time >= WARNING_DAYS * 86400
+
 func mark_content_warning_seen() -> void:
 	content_warning_seen = true
+	warning_ack_time = int(Time.get_unix_time_from_system())
 	save_settings()
 
 func set_auto_seconds(value: float) -> void:

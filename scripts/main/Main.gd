@@ -36,6 +36,10 @@ func _ready() -> void:
 			node.process_mode = Node.PROCESS_MODE_PAUSABLE
 	_build_pause_menu()
 	_build_content_warning()
+	# O aviso reaparece a cada 7 dias (ou quando o jogador pede em Configurações).
+	if not GameSettings.health_warning_due():
+		_boot_layer.visible = false
+		_boot_active = false
 	_build_sick_title()
 	add_child(load("res://scripts/effects/HorrorFX.gd").new())
 	var fade_layer := CanvasLayer.new()
@@ -120,14 +124,24 @@ func _boot_countdown() -> void:
 	_warning_ok.text = "Li e quero continuar"
 	_warning_ok.disabled = false
 
+# Chamado por Configurações > "Rever aviso de saúde e bem-estar".
+func show_health_warning() -> void:
+	_boot_layer.layer = 150
+	_boot_layer.visible = true
+	_warning_ok.disabled = true
+	_boot_countdown()
+
 func _accept_warning(reduce: bool) -> void:
 	SfxPlayer.play_click()
 	if reduce:
 		GameSettings.set_reduce_flashing(true)
 	GameSettings.mark_content_warning_seen()
 	_boot_layer.visible = false
+	_boot_layer.layer = 85
+	var first_boot := _boot_active
 	_boot_active = false
-	MusicPlayer.play_mood("title")
+	if first_boot:
+		MusicPlayer.play_mood("title")
 
 # Depois dos finais, a tela de título "adoece": o nome falha e as garotas somem por instantes.
 func _build_sick_title() -> void:

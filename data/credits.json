@@ -1,24 +1,127 @@
 {
   "sections": [
-    { "title": "Lanternas de Papel", "lines": ["um jogo de Bruno"] },
-    { "title": "Criação, roteiro e direção", "lines": ["Bruno"] },
-    { "title": "Design de personagens e direção de arte", "lines": ["Bruno"] },
-    { "title": "Programação", "lines": ["Bruno", "com assistência do Claude (Anthropic)"] },
-    { "title": "Personagens", "lines": ["Maya", "Yuna", "Alice", "Hikari", "e Kaito Mori, que ninguém lembra"] },
-    { "title": "Arte de cenários e personagens", "lines": ["Gerada por IA (Krea 2 e Nano Banana 2) sob direção de Bruno", "Cenários extras derivados por script (festival, noite, decadente, telhado)"] },
-    { "title": "Trilha sonora (CC0, OpenGameArt)", "lines": [
-      "Yoiyami Core Theme, Starfield Romance e First Light Particles — Yoiyami",
-      "Calm Relax 1 — cynicmusic",
-      "Happy Clappy Loop — OwlishMedia",
-      "Insistent — yd",
-      "Contemplation — Joth",
-      "Emerald Tower — Kistol",
-      "Menu Music Loop — wipics",
-      "Efeitos: Ylmir, w.forster.1 e laleksic (chuva, portas, sino, página)",
-      "Abandoned Passages — congusbongus"
-    ] },
-    { "title": "Feito com", "lines": ["Godot Engine 4.3"] },
-    { "title": "Agradecimento especial", "lines": ["a você, {player_name}, por ter subido até o telhado"] },
-    { "title": "", "lines": ["Obrigado por jogar.", "", "Se este jogo pesou, converse com alguém.", "No Brasil: CVV, 188 (24 h, gratuito) — cvv.org.br", "", "© 2026 Bruno"] }
+    {
+      "title": "Lanternas de Papel",
+      "lines": [
+        "um jogo de Bruno"
+      ]
+    },
+    {
+      "title": "Criação, roteiro e direção",
+      "lines": [
+        "Bruno"
+      ]
+    },
+    {
+      "title": "Design de personagens e direção de arte",
+      "lines": [
+        "Bruno"
+      ]
+    },
+    {
+      "title": "Programação",
+      "lines": [
+        "Bruno",
+        "com assistência do Claude (Anthropic)"
+      ]
+    },
+    {
+      "title": "Direção de terror e de efeitos",
+      "lines": [
+        "Bruno",
+        "conceito da falsa queda do jogo (crash), do glitch, do batimento",
+        "e do rosto que se quebra, inspirados em Doki Doki Literature Club"
+      ]
+    },
+    {
+      "title": "Direção das novas cenas e dos finais",
+      "lines": [
+        "Bruno",
+        "cenas extras, \"ficar até mais tarde\", momentos de rota (dias 9 a 12),",
+        "finais interativos, ecos do loop e do poema, e o Diário"
+      ]
+    },
+    {
+      "title": "Sistema do poema e das bonequinhas",
+      "lines": [
+        "Bruno",
+        "pontuação por afinidade, no estilo do Doki Doki"
+      ]
+    },
+    {
+      "title": "Direção de áudio e ambiência",
+      "lines": [
+        "Bruno",
+        "escolha das trilhas, chuva, portas, sino e silêncios"
+      ]
+    },
+    {
+      "title": "Acessibilidade e bem-estar",
+      "lines": [
+        "Bruno",
+        "aviso de saúde antes do jogo, redução de luzes e tremores,",
+        "tamanho do texto, pausa e avanço automático"
+      ]
+    },
+    {
+      "title": "Produção, testes e revisão",
+      "lines": [
+        "Bruno"
+      ]
+    },
+    {
+      "title": "Personagens",
+      "lines": [
+        "Maya",
+        "Yuna",
+        "Alice",
+        "Hikari",
+        "e Kaito Mori, que ninguém lembra"
+      ]
+    },
+    {
+      "title": "Arte de cenários e personagens",
+      "lines": [
+        "Gerada por IA (Krea 2 e Nano Banana 2) sob direção de Bruno",
+        "Cenários extras derivados por script (festival, noite, decadente, telhado)"
+      ]
+    },
+    {
+      "title": "Trilha sonora (CC0, OpenGameArt)",
+      "lines": [
+        "Yoiyami Core Theme, Starfield Romance e First Light Particles — Yoiyami",
+        "Calm Relax 1 — cynicmusic",
+        "Happy Clappy Loop — OwlishMedia",
+        "Insistent — yd",
+        "Contemplation — Joth",
+        "Emerald Tower — Kistol",
+        "Menu Music Loop — wipics",
+        "Efeitos: Ylmir, w.forster.1 e laleksic (chuva, portas, sino, página)",
+        "Abandoned Passages — congusbongus"
+      ]
+    },
+    {
+      "title": "Feito com",
+      "lines": [
+        "Godot Engine 4.3"
+      ]
+    },
+    {
+      "title": "Agradecimento especial",
+      "lines": [
+        "a você, {player_name}, por ter subido até o telhado"
+      ]
+    },
+    {
+      "title": "",
+      "lines": [
+        "Obrigado por jogar.",
+        "",
+        "Se este jogo pesou, converse com alguém.",
+        "No Brasil: CVV, 188 (24 h, gratuito) — cvv.org.br",
+        "",
+        "© 2026 Bruno"
+      ]
+    }
   ]
 }
