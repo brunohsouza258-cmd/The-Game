@@ -12,7 +12,6 @@ const LIKED_WEIGHT := 2
 const BYSTANDER_MIN := 6
 const MAX_SCORE := 15  # 5 palavras × 3 pontos
 const DOLL_SIZE := 110.0
-const DOLL_CROP := 0.5  # fração do topo do sprite usada na bonequinha
 const HUB_SCENE := "res://scenes/main/Hub.tscn"
 const CHARACTER_NAMES := {"maya": "Maya", "yuna": "Yuna", "alice": "Alice", "hikari": "Hikari"}
 const TIER_DELTAS := {
@@ -32,11 +31,13 @@ const TIER_DELTAS := {
 @onready var result_label: Label = $ResultPanel/ResultLabel
 @onready var summary_label: Label = $ResultPanel/SummaryLabel
 @onready var back_button: Button = $ResultPanel/BackButton
+@onready var winner_doll: TextureRect = $ResultPanel/WinnerDoll
 
 var _words: Array = []
 var _reactions: Dictionary = {}
 var _selected: Array = []
 var _cells: Dictionary = {}
+var _pop_count: int = 0
 
 func _ready() -> void:
 	var file := FileAccess.open(WORD_BANK_PATH, FileAccess.READ)
@@ -119,7 +120,8 @@ func _doll_texture(char_id: String) -> Texture2D:
 	var atlas := AtlasTexture.new()
 	atlas.atlas = texture
 	var size := texture.get_size()
-	atlas.region = Rect2(0, 0, size.x, size.y * DOLL_CROP)
+	# Quadrado do topo (rosto e ombros), do mesmo tamanho para todas.
+	atlas.region = Rect2(0, 0, size.x, minf(size.x, size.y))
 	return atlas
 
 func _build_word_grid(words: Array) -> void:
@@ -182,10 +184,13 @@ func _react(char_id: String, points: int) -> void:
 	pop.add_theme_color_override("font_color", Color(1.0, 0.55, 0.75) if points > 0 else Color(0.6, 0.7, 1.0))
 	pop.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	holder.add_child(pop)
-	pop.position = Vector2(holder.size.x / 2.0 + DOLL_SIZE / 4.0, 24)
+	# Escalona os "+N" para não se sobreporem quando várias aparecem juntas.
+	var slot := _pop_count % 3
+	_pop_count += 1
+	pop.position = Vector2(holder.size.x / 2.0 + DOLL_SIZE / 2.0 - 10.0 + slot * 6.0, 40 + slot * 14)
 	var float_tween := create_tween().set_parallel(true)
-	float_tween.tween_property(pop, "position:y", -10.0, 0.9)
-	float_tween.tween_property(pop, "modulate:a", 0.0, 0.9)
+	float_tween.tween_property(pop, "position:y", -14.0, 1.0)
+	float_tween.tween_property(pop, "modulate:a", 0.0, 1.0)
 	float_tween.chain().tween_callback(pop.queue_free)
 
 func _totals() -> Dictionary:
@@ -269,6 +274,7 @@ func _on_finish_pressed() -> void:
 	if not bystanders.is_empty():
 		summary += "\nO poema também tocou: %s." % ", ".join(bystanders)
 	summary_label.text = summary
+	winner_doll.texture = load("res://assets/characters/%s.png" % winner)
 	word_select.visible = false
 	result_panel.visible = true
 

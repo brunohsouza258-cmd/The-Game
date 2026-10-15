@@ -28,7 +28,7 @@ horizontal_alignment = 1
 
 [node name="HintLabel" type="Label" parent="WordSelect"]
 layout_mode = 2
-text = "Escolha 5 palavras. Cada garota pontua com o que combina com ela; as palavras que ela ama fazem o placar piscar."
+text = "Escolha 5 palavras. Cada garota pontua com o que combina com ela: ela pula quando acerta."
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -62,10 +62,16 @@ text = "Voltar"
 [node name="ResultPanel" type="VBoxContainer" parent="."]
 visible = false
 offset_left = 290.0
-offset_top = 130.0
+offset_top = 40.0
 offset_right = 990.0
-offset_bottom = 600.0
-theme_override_constants/separation = 18
+offset_bottom = 680.0
+theme_override_constants/separation = 14
+
+[node name="WinnerDoll" type="TextureRect" parent="ResultPanel"]
+custom_minimum_size = Vector2(0, 230)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="PoemLabel" type="Label" parent="ResultPanel"]
 layout_mode = 2
