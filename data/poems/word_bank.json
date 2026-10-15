@@ -1,23 +1,258 @@
 {
   "words": [
-    { "text": "estrelas", "weights": { "maya": 2, "alice": 1 } },
-    { "text": "silêncio", "weights": { "maya": 2 } },
-    { "text": "risada", "weights": { "yuna": 3 } },
-    { "text": "amizade", "weights": { "yuna": 2, "hikari": 1 } },
-    { "text": "mistério", "weights": { "maya": 3, "alice": 2 } },
-    { "text": "vitória", "weights": { "hikari": 3 } },
-    { "text": "coragem", "weights": { "hikari": 2 } },
-    { "text": "detalhes", "weights": { "alice": 3 } },
-    { "text": "padrões", "weights": { "alice": 2, "maya": 1 } },
-    { "text": "sol", "weights": { "yuna": 2 } },
-    { "text": "sombra", "weights": { "maya": 1, "alice": 1 } },
-    { "text": "desafio", "weights": { "hikari": 2, "yuna": 1 } },
-    { "text": "memória", "weights": { "maya": 3 } },
-    { "text": "calor", "weights": { "yuna": 3 } },
-    { "text": "lógica", "weights": { "alice": 3 } },
-    { "text": "velocidade", "weights": { "hikari": 2 } },
-    { "text": "segredo", "weights": { "maya": 2, "alice": 1 } },
-    { "text": "equipe", "weights": { "yuna": 2, "hikari": 2 } }
+    {
+      "text": "estrelas",
+      "weights": {
+        "maya": 2,
+        "alice": 1
+      }
+    },
+    {
+      "text": "silêncio",
+      "weights": {
+        "maya": 2,
+        "hikari": -1
+      }
+    },
+    {
+      "text": "mistério",
+      "weights": {
+        "maya": 3,
+        "alice": 2
+      }
+    },
+    {
+      "text": "memória",
+      "weights": {
+        "maya": 3
+      }
+    },
+    {
+      "text": "segredo",
+      "weights": {
+        "maya": 2,
+        "alice": 1
+      }
+    },
+    {
+      "text": "sombra",
+      "weights": {
+        "maya": 1,
+        "alice": 1,
+        "yuna": -1
+      }
+    },
+    {
+      "text": "lua",
+      "weights": {
+        "maya": 3,
+        "yuna": -1
+      }
+    },
+    {
+      "text": "livros",
+      "weights": {
+        "maya": 2,
+        "alice": 1
+      }
+    },
+    {
+      "text": "saudade",
+      "weights": {
+        "maya": 3,
+        "hikari": -1
+      }
+    },
+    {
+      "text": "risada",
+      "weights": {
+        "yuna": 3,
+        "alice": -1
+      }
+    },
+    {
+      "text": "amizade",
+      "weights": {
+        "yuna": 2,
+        "hikari": 1
+      }
+    },
+    {
+      "text": "sol",
+      "weights": {
+        "yuna": 2
+      }
+    },
+    {
+      "text": "calor",
+      "weights": {
+        "yuna": 3
+      }
+    },
+    {
+      "text": "equipe",
+      "weights": {
+        "yuna": 2,
+        "hikari": 2
+      }
+    },
+    {
+      "text": "abraço",
+      "weights": {
+        "yuna": 3,
+        "maya": 1
+      }
+    },
+    {
+      "text": "festa",
+      "weights": {
+        "yuna": 3,
+        "alice": -1
+      }
+    },
+    {
+      "text": "flores",
+      "weights": {
+        "yuna": 2,
+        "maya": 1
+      }
+    },
+    {
+      "text": "doce",
+      "weights": {
+        "yuna": 3
+      }
+    },
+    {
+      "text": "detalhes",
+      "weights": {
+        "alice": 3
+      }
+    },
+    {
+      "text": "padrões",
+      "weights": {
+        "alice": 2,
+        "maya": 1
+      }
+    },
+    {
+      "text": "lógica",
+      "weights": {
+        "alice": 3
+      }
+    },
+    {
+      "text": "relógio",
+      "weights": {
+        "alice": 3,
+        "hikari": 1
+      }
+    },
+    {
+      "text": "caderno",
+      "weights": {
+        "alice": 3,
+        "maya": 1
+      }
+    },
+    {
+      "text": "pista",
+      "weights": {
+        "alice": 2,
+        "maya": 1
+      }
+    },
+    {
+      "text": "ordem",
+      "weights": {
+        "alice": 3,
+        "yuna": -1
+      }
+    },
+    {
+      "text": "números",
+      "weights": {
+        "alice": 2,
+        "hikari": 1
+      }
+    },
+    {
+      "text": "vitória",
+      "weights": {
+        "hikari": 3
+      }
+    },
+    {
+      "text": "coragem",
+      "weights": {
+        "hikari": 2,
+        "yuna": 1
+      }
+    },
+    {
+      "text": "desafio",
+      "weights": {
+        "hikari": 2,
+        "yuna": 1
+      }
+    },
+    {
+      "text": "velocidade",
+      "weights": {
+        "hikari": 2
+      }
+    },
+    {
+      "text": "corrida",
+      "weights": {
+        "hikari": 3
+      }
+    },
+    {
+      "text": "suor",
+      "weights": {
+        "hikari": 3,
+        "maya": -1
+      }
+    },
+    {
+      "text": "força",
+      "weights": {
+        "hikari": 3
+      }
+    },
+    {
+      "text": "meta",
+      "weights": {
+        "hikari": 2,
+        "alice": 1
+      }
+    },
+    {
+      "text": "chuva",
+      "weights": {
+        "maya": 1,
+        "yuna": -1
+      }
+    },
+    {
+      "text": "tédio",
+      "weights": {
+        "maya": -1,
+        "yuna": -2,
+        "alice": -1,
+        "hikari": -2
+      }
+    },
+    {
+      "text": "vazio",
+      "weights": {
+        "maya": 1,
+        "yuna": -2,
+        "hikari": -1
+      }
+    }
   ],
   "reactions": {
     "maya": {
