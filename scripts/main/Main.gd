@@ -21,6 +21,7 @@ var _paused: bool = false
 var _pause_layer: CanvasLayer
 var _pause_menu: Control
 var _overlay: Node = null
+var _hub_button: Button
 var _warning_panel: Control
 var _warning_ok: Button
 var _boot_layer: CanvasLayer
@@ -214,6 +215,8 @@ func _build_pause_menu() -> void:
 		button.custom_minimum_size = Vector2(300, 46)
 		button.pressed.connect(func(): SfxPlayer.play_click())
 		button.pressed.connect(entry[1])
+		if entry[0] == "Voltar ao hub":
+			_hub_button = button
 		box.add_child(button)
 
 func _toggle_pause() -> void:
@@ -223,6 +226,10 @@ func _toggle_pause() -> void:
 	_paused = not _paused
 	get_tree().paused = _paused
 	_pause_menu.visible = _paused
+	if _paused and _hub_button != null:
+		var in_main_event: bool = DialogueManager._active and str(DialogueManager._dialogue_data.get("id", "")).begins_with("main_day")
+		_hub_button.disabled = in_main_event
+		_hub_button.tooltip_text = "Termine o evento do dia antes de voltar ao hub." if in_main_event else ""
 
 func _open_overlay(path: String) -> void:
 	_pause_menu.visible = false

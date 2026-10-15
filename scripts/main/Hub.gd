@@ -75,7 +75,6 @@ func _status_text(final_day: bool) -> String:
 	return text
 
 func _play_main_event() -> void:
-	GameState.last_seen_main_event_day = GameState.day
 	_start_dialogue("res://data/dialogue/main_day%d.json" % GameState.day)
 
 func _start_dialogue(path: String) -> void:

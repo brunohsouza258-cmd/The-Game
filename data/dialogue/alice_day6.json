@@ -23,7 +23,8 @@
           "text": "Eu não sei.",
           "effects": {
             "dread": 2,
-            "trust.alice": 1
+            "trust.alice": 1,
+            "affinity.alice": 1
           },
           "next": "dont_know"
         },
@@ -31,7 +32,8 @@
           "text": "Acho que sim. Acho que eu segurei a mão dele.",
           "effects": {
             "dread": 3,
-            "trust.alice": 3
+            "trust.alice": 3,
+            "affinity.alice": 1
           },
           "next": "yes"
         },

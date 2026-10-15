@@ -22,7 +22,8 @@
           "text": "Eu vi esse nome. No meu caderno.",
           "effects": {
             "trust.alice": 2,
-            "dread": 3
+            "dread": 3,
+            "affinity.alice": 1
           },
           "next": "notebook",
           "requires": {

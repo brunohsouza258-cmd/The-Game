@@ -22,6 +22,17 @@ var poem_day: int = -99
 
 func _ready() -> void:
 	reset_for_new_game(player_name)
+	# EventBus é outro autoload, criado depois deste: conecta no próximo frame.
+	_connect_events.call_deferred()
+
+func _connect_events() -> void:
+	EventBus.dialogue_ended.connect(_on_dialogue_ended)
+
+# Salvar no meio de um evento principal não pode pular o resto dele ao carregar:
+# o dia só é marcado como visto quando o evento chega ao fim.
+func _on_dialogue_ended(dialogue_id: String) -> void:
+	if dialogue_id.begins_with("main_day"):
+		last_seen_main_event_day = maxi(last_seen_main_event_day, int(dialogue_id.substr(8)))
 
 func reset_for_new_game(new_name: String) -> void:
 	player_name = new_name

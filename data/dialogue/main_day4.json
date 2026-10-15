@@ -84,7 +84,7 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "À tarde, na biblioteca, a bibliotecária lhe entrega uma lista de empréstimos antigos que ele nunca pediu. Seu nome aparece em todas as linhas, com datas de anos diferentes, sempre o mesmo livro: um volume de contos sem autor.",
+      "text": "À tarde, na biblioteca, a bibliotecária lhe entrega uma lista de empréstimos antigos que ele nunca pediu. Seu nome aparece em todas as linhas, com datas que ele não lembra de ter vivido, sempre o mesmo livro: um volume de contos sem autor.",
       "next": "outro2"
     },
     "outro2": {

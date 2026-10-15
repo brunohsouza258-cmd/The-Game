@@ -58,10 +58,26 @@
     "n3": {
       "speaker": "",
       "text": "Lá embaixo, o sino da escola toca pela primeira vez no dia 13. Os dois não se mexem. Dessa vez, não é uma repetição.",
-      "next": "end"
+      "next": "echo1"
     },
     "end": {
       "end": true
+    },
+    "echo1": {
+      "speaker": "",
+      "text": "A Maya repete baixinho, como quem reza, o que ele lhe disse no corredor às escuras: soltar não é o mesmo que esquecer.",
+      "if": {
+        "flags.maya_heard_let_go": 1
+      },
+      "next": "echo2"
+    },
+    "echo2": {
+      "speaker": "",
+      "text": "Ela não esquece que ele ficou com ela na última noite. Isso, ela decide guardar.",
+      "if": {
+        "flags.maya_with_you": 1
+      },
+      "next": "end"
     }
   },
   "next_screen": "res://scenes/ending/EndingScene.tscn"

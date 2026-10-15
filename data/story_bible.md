@@ -40,6 +40,7 @@ Desde então, tudo volta ao dia 1 quando chega aquela noite. O loop é sustentad
 12. A noite do festival. Últimas conversas, depois "Subir ao telhado às 21:40" leva ao final.
 
 ## Finais (`EndingScene.gd`, nesta ordem de prioridade)
+(Atualização: `try_save` — escolher segurar o Kaito no dia 10 — leva sempre ao **Recomeço**, depois de Secreto, Verdade e Ilusão. As flags de cenas extras e de rota agora aparecem como ecos no fim dos finais.)
 1. **Secreto:** 2ª partida + `maya_truth_asked` + `shared_notebook_alice` + `accept_loss` + pavor ≥ 60. Quebra a quarta parede: quem segura o loop é quem aperta "Novo Jogo".
 2. **Verdade:** `accept_loss` + confiança da Maya ≥ 12 + pavor ≥ 50.
 3. **Ilusão:** `chose_forget` ou pavor < 30. O loop recomeça.

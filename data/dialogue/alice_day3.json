@@ -22,7 +22,8 @@
           "text": "Alguém quis esconder alguma coisa.",
           "effects": {
             "dread": 2,
-            "trust.alice": 2
+            "trust.alice": 2,
+            "affinity.alice": 1
           },
           "next": "hide"
         },
@@ -81,7 +82,8 @@
           "text": "Tem uma carteira na minha sala com as letras K.M.",
           "effects": {
             "trust.alice": 1,
-            "dread": 2
+            "dread": 2,
+            "affinity.alice": 1
           },
           "next": "initials",
           "requires": {

@@ -39,7 +39,8 @@
         {
           "text": "Eu corro a quarta raia, se precisar.",
           "effects": {
-            "affinity.hikari": 2
+            "affinity.hikari": 2,
+            "trust.hikari": 1
           },
           "next": "volunteer"
         },
@@ -47,7 +48,8 @@
           "text": "Talvez alguém que saiu da escola.",
           "effects": {
             "trust.hikari": 1,
-            "dread": 2
+            "dread": 2,
+            "affinity.hikari": 1
           },
           "next": "left"
         },

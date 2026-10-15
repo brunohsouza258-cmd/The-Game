@@ -31,7 +31,8 @@
           "text": "Hoje à noite eu vou com você.",
           "effects": {
             "affinity.hikari": 2,
-            "dread": 3
+            "dread": 3,
+            "trust.hikari": 1
           },
           "next": "join"
         }

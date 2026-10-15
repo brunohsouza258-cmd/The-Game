@@ -30,7 +30,8 @@
           "text": "Eu treino com você.",
           "effects": {
             "affinity.hikari": 2,
-            "dread": 1
+            "dread": 1,
+            "trust.hikari": 1
           },
           "next": "train_together"
         }

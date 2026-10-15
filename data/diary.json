@@ -57,6 +57,13 @@
       }
     },
     {
+      "title": "O caderno da Alice",
+      "text": "Datas escritas de trás para frente. A última é a do festival. A primeira é amanhã. Ela me deixou ler, e eu não consegui parar.",
+      "requires": {
+        "flags.read_notebook_clubroom": 1
+      }
+    },
+    {
       "title": "A verdade",
       "text": "Kaito Mori. Meu melhor amigo. Eu estava com a mão dele quando a chuva escorregou. Foi um acidente. Eu só não consegui segurar.",
       "requires": {

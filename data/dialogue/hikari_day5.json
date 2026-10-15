@@ -23,14 +23,16 @@
           "text": "Você lembra dele.",
           "effects": {
             "dread": 2,
-            "trust.hikari": 1
+            "trust.hikari": 1,
+            "affinity.hikari": 1
           },
           "next": "remember"
         },
         {
           "text": "Corre por ele, então.",
           "effects": {
-            "affinity.hikari": 2
+            "affinity.hikari": 2,
+            "trust.hikari": 1
           },
           "next": "for_him"
         },

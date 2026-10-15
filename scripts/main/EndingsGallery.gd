@@ -41,7 +41,10 @@ func _on_ending_pressed(data: Dictionary, open: bool) -> void:
 	if open:
 		detail.text = String(data.get("text", "")).format({"player_name": GameState.player_name})
 	else:
-		detail.text = "Dica: %s" % data.get("hint", "")
+		var hint: String = data.get("hint", "")
+		if data.has("hint_full") and GameSettings.unlocked_endings.size() >= ORDER.size() - 1:
+			hint = data["hint_full"]
+		detail.text = "Dica: %s" % hint
 
 func _on_back_pressed() -> void:
 	SfxPlayer.play_click()

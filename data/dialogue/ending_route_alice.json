@@ -28,7 +28,7 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "happy",
       "text": "Agora a gente confere junto. Acordar de madrugada, olhar no relógio, ver que o dia andou. Só que agora com alguém do outro lado da linha.",
-      "next": "end"
+      "next": "echo1"
     },
     "b2": {
       "speaker": "Alice",
@@ -36,7 +36,7 @@
       "sprite": "res://assets/characters/alice.png",
       "pose": "surprised",
       "text": "Está em branco. Mas se você pedir, eu invento. É um caderno novo. Eu escrevo a primeira linha agora: \"Hoje o dia avançou\".",
-      "next": "end"
+      "next": "echo1"
     },
     "n2": {
       "speaker": "Alice",
@@ -57,6 +57,22 @@
     },
     "end": {
       "end": true
+    },
+    "echo1": {
+      "speaker": "",
+      "text": "Na mesa, o relógio que os dois vigiaram juntos no dia 11 continua parado em 21:47. Ela decide deixar parar.",
+      "if": {
+        "flags.alice_watch": 1
+      },
+      "next": "echo2"
+    },
+    "echo2": {
+      "speaker": "",
+      "text": "O caderno que ele lhe entregou ficou na gaveta de cima. Ela escreve nele, às vezes, só para saber que tem com quem dividir.",
+      "if": {
+        "flags.shared_notebook_alice": 1
+      },
+      "next": "end"
     }
   },
   "next_screen": "res://scenes/ending/EndingScene.tscn"

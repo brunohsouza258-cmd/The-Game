@@ -58,10 +58,26 @@
     "n3": {
       "speaker": "",
       "text": "O sol aparece por cima do prédio da escola. Pela primeira vez, a quarta raia brilha sem ninguém nela.",
-      "next": "end"
+      "next": "echo1"
     },
     "end": {
       "end": true
+    },
+    "echo1": {
+      "speaker": "",
+      "text": "Os nós dos dedos ainda guardam a marca da briga do dia 6. Ela os esfrega, e já não os esconde.",
+      "if": {
+        "flags.hikari_fight": 1
+      },
+      "next": "echo2"
+    },
+    "echo2": {
+      "speaker": "",
+      "text": "Ela se lembra de que, no dia 8, não subiu sozinha. Agora, na curva da pista, também não corre sozinha.",
+      "if": {
+        "flags.hikari_together": 1
+      },
+      "next": "end"
     }
   },
   "next_screen": "res://scenes/ending/EndingScene.tscn"

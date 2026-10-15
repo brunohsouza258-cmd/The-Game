@@ -57,10 +57,15 @@
       "effects": {
         "dread": 3
       },
-      "next": "outro1",
+      "next": "outro1f",
       "fx": "glitch",
       "pace": "slow",
       "noauto": true
+    },
+    "outro1f": {
+      "speaker": "",
+      "text": "De noite, sozinho no quarto, ele repete as duas letras que viu no caderno: K.M.\n\nNão faz sentido. Ele tenta esquecer, como prometeu a Maya, e a mão fecha de novo, sozinha, em volta de ninguém.",
+      "next": "outro2"
     },
     "end": {
       "end": true

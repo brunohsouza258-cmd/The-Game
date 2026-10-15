@@ -4,12 +4,13 @@
       "title": "Final Secreto — Quem aperta 'Novo Jogo'",
       "background": "res://assets/backgrounds/hallway_dusk.png",
       "text": "No telhado, a chuva para no ar. Kaito olha para {player_name}, depois para cima — não para o céu, para além dele. \"Não é você que faz isso voltar\", ele diz. \"Nem a Maya. É quem está do outro lado, apertando 'Novo Jogo' de novo.\" Maya, na escada, entende ao mesmo tempo. A Alice tinha escrito isso no caderno sem saber o que significava: alguém de fora. {player_name} solta a grade sem medo, porque dessa vez não há ninguém para segurar. A última coisa que ele diz não é para o Kaito. É para você: \"Pode fechar o jogo agora. Ele já foi. Deixa ele ir.\"",
-      "hint": "Só aparece para quem já voltou a esta história mais de uma vez."
+      "hint": "Só aparece para quem já voltou a esta história mais de uma vez.",
+      "hint_full": "Em uma segunda partida ou mais: peça a verdade à Maya (dia 8), entregue o caderno à Alice, aceite a perda (dia 10) e chegue ao telhado com o pavor alto."
     },
     "truth": {
       "title": "Final da Verdade",
       "background": "res://assets/backgrounds/hallway_dusk.png",
-      "text": "21:47. Kaito sobe na grade, rindo, igualzinho à primeira vez. {player_name} não corre. Fica onde está e diz o que nunca disse em nenhuma das voltas: \"Desculpa. Não foi culpa minha. E também não foi sua.\" Kaito para. Pela primeira vez ele parece ouvir. \"Então é isso. Você finalmente vai embora.\" A chuva começa a cair de verdade, sem repetir. De manhã é dia 13. Na escola, uma carteira vazia tem as iniciais K.M. e uma flor. A Maya está ao lado dela. Ela lembra de tudo. {player_name} também. Dói — e continua sendo amanhã.",
+      "text": "21:47. Kaito sobe na grade, rindo, igualzinho à primeira vez. {player_name} não corre. Fica onde está e diz o que nunca disse em nenhuma das voltas: \"Desculpa. Não foi culpa minha. E também não foi sua.\" Kaito para. Pela primeira vez ele parece ouvir. \"Então é isso. Você finalmente vai embora.\" A chuva começa a cair de verdade, sem repetir. De manhã é dia 13. Na escola, a carteira vazia voltou ao lugar, com as iniciais K.M. e uma flor. A Maya está ao lado dela. Ela lembra de tudo. {player_name} também. Dói — e continua sendo amanhã.",
       "hint": "Exige aceitar a perda, confiar na Maya e encarar o medo até o fim."
     },
     "illusion": {

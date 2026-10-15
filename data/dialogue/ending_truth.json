@@ -69,13 +69,29 @@
     "n6": {
       "speaker": "",
       "text": "O ponteiro do relógio do pátio marca 21:47. Pela primeira vez, a chuva não se repete. Ela cai, e fica no chão, e escorre. Como chuva de verdade.",
-      "next": "end",
+      "next": "echo1",
       "fx": "thud",
       "pace": "slow",
       "noauto": true
     },
     "end": {
       "end": true
+    },
+    "echo1": {
+      "speaker": "",
+      "text": "Ao lado da flor, uma lanterna branca está acesa. Por dentro, com a letra firme de {player_name}, quatro letras: Kaito.",
+      "if": {
+        "flags.wrote_kaito_name": 1
+      },
+      "next": "echo2"
+    },
+    "echo2": {
+      "speaker": "",
+      "text": "A Maya segura a mão dele um instante mais do que o necessário. Ela estava com ele na noite do dia 12, e não vai pedir desculpa por isso.",
+      "if": {
+        "flags.maya_with_you": 1
+      },
+      "next": "end"
     }
   },
   "next_screen": "res://scenes/ending/EndingScene.tscn"

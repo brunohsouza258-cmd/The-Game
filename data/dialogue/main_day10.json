@@ -19,7 +19,7 @@
     },
     "window": {
       "speaker": "",
-      "text": "Pela janela, ao meio-dia, o sol está se pondo. O mesmo pôr do sol do corredor da Maya, parado no céu, como um papel de parede.",
+      "text": "Pela janela, ao meio-dia, o sol está se pondo. Parado no céu, como um papel de parede.",
       "effect": "glitch",
       "effects": {
         "dread": 2
@@ -47,7 +47,21 @@
             "dread": 4,
             "flags.try_save": true
           },
-          "next": "save"
+          "next": "save",
+          "requires": {
+            "flags.maya_truth_asked": 1
+          }
+        },
+        {
+          "text": "\"Eu não sei quem é. Mas eu não vou soltar.\"",
+          "effects": {
+            "dread": 4,
+            "flags.try_save": true
+          },
+          "next": "save",
+          "requires": {
+            "flags.chose_forget": 1
+          }
         },
         {
           "text": "\"Eu preciso deixar ele ir.\"",
@@ -55,7 +69,21 @@
             "dread": 2,
             "flags.accept_loss": true
           },
-          "next": "let_go"
+          "next": "let_go",
+          "requires": {
+            "flags.maya_truth_asked": 1
+          }
+        },
+        {
+          "text": "\"Eu preciso parar de segurar isso, seja o que for.\"",
+          "effects": {
+            "dread": 2,
+            "flags.accept_loss": true
+          },
+          "next": "let_go",
+          "requires": {
+            "flags.chose_forget": 1
+          }
         },
         {
           "text": "\"Eu não sei.\"",
@@ -71,7 +99,7 @@
     },
     "save": {
       "speaker": "",
-      "text": "A mão direita dele se fecha. A cicatriz na palma, que ele nunca tinha notado, arde. Lá fora, o pôr do sol pisca, como se o mundo tivesse ouvido.",
+      "text": "A mão direita dele se fecha. A cicatriz na palma arde. Lá fora, o pôr do sol pisca, como se o mundo tivesse ouvido.",
       "effect": "glitch",
       "next": "outro1"
     },

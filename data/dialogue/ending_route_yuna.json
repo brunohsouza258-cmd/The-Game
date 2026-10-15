@@ -24,7 +24,7 @@
     },
     "b1": {
       "speaker": "",
-      "text": "A carteira vazia, com as iniciais K.M., continua no fundo da sala. A Yuna coloca a marmita ali e arruma os hashis com cuidado.",
+      "text": "A carteira vazia, com as iniciais K.M., voltou ao fundo da sala, sem que ninguém saiba quem a trouxe. A Yuna coloca a marmita ali e arruma os hashis com cuidado.",
       "next": "b2"
     },
     "b2": {
@@ -33,7 +33,7 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "happy",
       "text": "Pronto. Ele sempre reclamava que eu fazia comida demais. Dessa vez eu fiz de propósito.",
-      "next": "end"
+      "next": "echo1"
     },
     "b3": {
       "speaker": "Yuna",
@@ -49,7 +49,7 @@
       "sprite": "res://assets/characters/yuna.png",
       "pose": "happy",
       "text": "Eu não preciso estar bem. Mas eu também não quero estar sozinha. E eu não estou.",
-      "next": "end"
+      "next": "echo1"
     },
     "n2": {
       "speaker": "Yuna",
@@ -70,6 +70,22 @@
     },
     "end": {
       "end": true
+    },
+    "echo1": {
+      "speaker": "",
+      "text": "Ela pediu ajuda uma vez, no dia 7, com as mãos tremendo. Foi a primeira vez que pediu, e ela agora sabe que dá para pedir de novo.",
+      "if": {
+        "flags.yuna_asked_help": 1
+      },
+      "next": "echo2"
+    },
+    "echo2": {
+      "speaker": "",
+      "text": "No bolso do avental, dobrado em quatro, o bilhete que ele lhe deixou no dia 10. Ela o relê quando a cozinha fica quieta demais.",
+      "if": {
+        "flags.yuna_note": 1
+      },
+      "next": "end"
     }
   },
   "next_screen": "res://scenes/ending/EndingScene.tscn"

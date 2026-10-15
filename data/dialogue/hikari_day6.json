@@ -38,7 +38,8 @@
           "effects": {
             "affinity.hikari": 2,
             "dread": 2,
-            "flags.hikari_fight": true
+            "flags.hikari_fight": true,
+            "trust.hikari": 1
           },
           "next": "fight"
         }

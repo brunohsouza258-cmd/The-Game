@@ -40,6 +40,9 @@ func _determine_ending() -> String:
 		return "truth"
 	if GameState.has_flag("chose_forget"):
 		return "illusion"
+	# Quem escolheu segurar o Kaito no dia 10 não "soltou": o final é o do Recomeço.
+	if GameState.has_flag("try_save"):
+		return "restart"
 
 	var best_char := ""
 	var best_affinity := -999
