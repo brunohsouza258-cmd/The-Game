@@ -46,17 +46,19 @@ alignment = 2
 wait_time = 0.02
 
 [node name="HistoryButton" type="Button" parent="."]
-offset_left = 1150.0
-offset_top = 478.0
+offset_left = 1104.0
+offset_top = 474.0
 offset_right = 1240.0
 offset_bottom = 512.0
+theme_override_font_sizes/font_size = 16
 text = "Histórico"
 
 [node name="AutoButton" type="Button" parent="."]
-offset_left = 1040.0
-offset_top = 478.0
-offset_right = 1140.0
+offset_left = 960.0
+offset_top = 474.0
+offset_right = 1096.0
 offset_bottom = 512.0
+theme_override_font_sizes/font_size = 16
 text = "Auto: Sim"
 
 [node name="HistoryPanel" type="Panel" parent="."]

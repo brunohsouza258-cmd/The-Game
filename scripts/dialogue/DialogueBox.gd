@@ -35,6 +35,14 @@ var _pending_choices: Array = []
 var _name_color: Color = Color(1, 1, 1, 1)
 
 func _ready() -> void:
+	var plate := StyleBoxFlat.new()
+	plate.bg_color = Color(1, 1, 1, 0.94)
+	plate.set_corner_radius_all(10)
+	plate.content_margin_left = 10.0
+	plate.content_margin_right = 10.0
+	name_plate.add_theme_stylebox_override("panel", plate)
+	name_label.add_theme_color_override("font_color", Color(0.1, 0.06, 0.12))
+	name_label.add_theme_font_size_override("font_size", 21)
 	_hide_all()
 	type_timer.timeout.connect(_on_type_tick)
 	history_button.pressed.connect(_on_history_pressed)

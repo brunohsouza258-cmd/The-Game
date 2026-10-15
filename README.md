@@ -57,6 +57,7 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - **Eco do poema:** nos dias seguintes a garota que leu o poema cita a palavra que mais combinou com ela (`{poem_word}`, requisito `poem.<id>`).
 - **Memória do loop:** a partir da 2ª partida, os eventos principais ganham um trecho extra (`"if": {"loop": 2}`).
 - **Título que adoece** depois dos finais; **rosto que se quebra** (shader) com pavor alto; **ambiência** de chuva e efeitos de porta, sino e página.
+- **Visual:** tema global (`assets/ui/theme.tres`) com botões arredondados e brilho no hover, título com contorno e sombra, lanternas de papel flutuando na tela inicial, botões que entram em fade e placa de nome na cor de cada personagem.
 - **Saves com miniatura** e data. Controle: Start abre a pausa.
 - Nós de diálogo aceitam `"if": {requisitos}` (só aparecem se atendidos), `"sfx"` e `"amb"`.
 

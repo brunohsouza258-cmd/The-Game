@@ -42,6 +42,7 @@ func _ready() -> void:
 		_boot_layer.visible = false
 		_boot_active = false
 	_build_sick_title()
+	_style_title()
 	add_child(load("res://scripts/effects/HorrorFX.gd").new())
 	var fade_layer := CanvasLayer.new()
 	fade_layer.layer = 100
@@ -180,6 +181,74 @@ func _title_glitch() -> void:
 	if victim:
 		victim.modulate = Color.WHITE
 
+# Título com contorno e sombra, lanternas de papel flutuando e botões que entram em fade.
+func _style_title() -> void:
+	var title: Label = $TitleScreen/TitleLabel
+	title.add_theme_font_size_override("font_size", 60)
+	title.add_theme_color_override("font_color", Color(1, 0.96, 0.97))
+	title.add_theme_color_override("font_outline_color", Color(0.25, 0.08, 0.22, 0.95))
+	title.add_theme_constant_override("outline_size", 12)
+	title.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.55))
+	title.add_theme_constant_override("shadow_offset_x", 3)
+	title.add_theme_constant_override("shadow_offset_y", 4)
+	var author: Label = $TitleScreen/AuthorLabel
+	author.add_theme_font_size_override("font_size", 20)
+	author.add_theme_color_override("font_color", Color(1, 0.8, 0.9))
+	author.add_theme_color_override("font_outline_color", Color(0.2, 0.05, 0.15, 0.9))
+	author.add_theme_constant_override("outline_size", 6)
+	var menu_box: VBoxContainer = $TitleScreen/MenuPanel/VBoxContainer
+	menu_box.add_theme_constant_override("separation", 6)
+	for child in menu_box.get_children():
+		if child is Button:
+			child.custom_minimum_size.y = 36
+	_add_floating_lanterns()
+
+func _add_floating_lanterns() -> void:
+	var glow := Gradient.new()
+	glow.set_color(0, Color(1.0, 0.82, 0.55, 1.0))
+	glow.set_color(1, Color(1.0, 0.5, 0.25, 0.0))
+	var texture := GradientTexture2D.new()
+	texture.gradient = glow
+	texture.fill = GradientTexture2D.FILL_RADIAL
+	texture.fill_from = Vector2(0.5, 0.5)
+	texture.fill_to = Vector2(1.0, 0.5)
+	texture.width = 48
+	texture.height = 48
+	var fade := Gradient.new()
+	fade.set_color(0, Color(1, 1, 1, 0.0))
+	fade.add_point(0.2, Color(1, 1, 1, 0.75))
+	fade.add_point(0.8, Color(1, 1, 1, 0.75))
+	fade.set_color(fade.get_point_count() - 1, Color(1, 1, 1, 0.0))
+	var particles := CPUParticles2D.new()
+	particles.texture = texture
+	particles.amount = 22
+	particles.lifetime = 16.0
+	particles.preprocess = 16.0
+	particles.position = Vector2(640, 760)
+	particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_RECTANGLE
+	particles.emission_rect_extents = Vector2(680, 8)
+	particles.direction = Vector2(0, -1)
+	particles.spread = 10.0
+	particles.gravity = Vector2.ZERO
+	particles.initial_velocity_min = 22.0
+	particles.initial_velocity_max = 48.0
+	particles.scale_amount_min = 0.5
+	particles.scale_amount_max = 1.4
+	particles.color_ramp = fade
+	title_screen.add_child(particles)
+	title_screen.move_child(particles, $TitleScreen/TitleLabel.get_index())
+
+func _fade_in_menu_buttons() -> void:
+	var box: VBoxContainer = $TitleScreen/MenuPanel/VBoxContainer
+	var i := 0
+	for child in box.get_children():
+		if child is Button:
+			child.modulate.a = 0.0
+			var tween := create_tween()
+			tween.tween_interval(0.12 + i * 0.07)
+			tween.tween_property(child, "modulate:a", 1.0, 0.35)
+			i += 1
+
 func _build_pause_menu() -> void:
 	_pause_layer = CanvasLayer.new()
 	_pause_layer.layer = 90
@@ -278,6 +347,7 @@ func show_title() -> void:
 	menu_panel.visible = true
 	name_prompt.visible = false
 	_refresh_continue_button()
+	_fade_in_menu_buttons()
 	if not _boot_active:
 		MusicPlayer.play_mood("title")
 
