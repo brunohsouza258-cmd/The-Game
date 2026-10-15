@@ -2,6 +2,10 @@ extends Node
 
 const SAVE_PATH_FORMAT := "user://save_slot_%d.json"
 const SLOT_COUNT := 3
+const AUTOSAVE_SLOT := 0
+
+func autosave() -> void:
+	save_game(AUTOSAVE_SLOT)
 
 func save_game(slot: int = 1) -> void:
 	var file := FileAccess.open(SAVE_PATH_FORMAT % slot, FileAccess.WRITE)

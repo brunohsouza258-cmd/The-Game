@@ -74,6 +74,7 @@ func _on_next_day_button_pressed() -> void:
 	if GameState.day >= FINAL_DAY:
 		return
 	GameState.day += 1
+	SaveManager.autosave()
 	_play_main_event()
 
 func _on_save_load_button_pressed() -> void:

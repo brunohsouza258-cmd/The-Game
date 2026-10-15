@@ -4,6 +4,7 @@ const HUB_SCENE := "res://scenes/main/Hub.tscn"
 const SAVE_SLOTS_SCENE := "res://scenes/main/SaveSlots.tscn"
 const SETTINGS_SCENE := "res://scenes/main/Settings.tscn"
 const CREDITS_SCENE := "res://scenes/main/Credits.tscn"
+const GALLERY_SCENE := "res://scenes/main/EndingsGallery.tscn"
 
 @onready var title_screen: CanvasLayer = $TitleScreen
 @onready var menu_panel: Control = $TitleScreen/MenuPanel
@@ -63,7 +64,7 @@ func _load_and_enter(slot: int) -> void:
 
 func _refresh_continue_button() -> void:
 	var any_save := false
-	for slot in range(1, SaveManager.SLOT_COUNT + 1):
+	for slot in range(SaveManager.AUTOSAVE_SLOT, SaveManager.SLOT_COUNT + 1):
 		if SaveManager.has_save(slot):
 			any_save = true
 			break
@@ -98,6 +99,11 @@ func _on_settings_pressed() -> void:
 	SfxPlayer.play_click()
 	title_screen.visible = false
 	show_screen(SETTINGS_SCENE)
+
+func _on_endings_pressed() -> void:
+	SfxPlayer.play_click()
+	title_screen.visible = false
+	show_screen(GALLERY_SCENE)
 
 func _on_credits_pressed() -> void:
 	SfxPlayer.play_click()

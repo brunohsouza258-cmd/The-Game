@@ -10,6 +10,7 @@ const ENDINGS_PATH := "res://data/endings/endings.json"
 func _ready() -> void:
 	back_button.pressed.connect(_on_back_pressed)
 	var ending_id := _determine_ending()
+	GameSettings.unlock_ending(ending_id)
 	var data := _load_ending(ending_id)
 	title_label.text = data.get("title", "")
 	text_label.text = _interpolate(data.get("text", ""))
@@ -26,7 +27,7 @@ func _determine_ending() -> String:
 		return "secret"
 	if GameState.has_flag("accept_loss") and trust_maya >= 12 and dread >= 50:
 		return "truth"
-	if GameState.has_flag("chose_forget") or dread < 30:
+	if GameState.has_flag("chose_forget"):
 		return "illusion"
 
 	var best_char := ""
@@ -38,6 +39,10 @@ func _determine_ending() -> String:
 			best_char = char_id
 	if best_affinity >= 14 and int(GameState.trust.get(best_char, 0)) >= 8:
 		return "route_" + best_char
+
+	# Sem rota forte e sem enfrentar o medo: a ilusão confortável.
+	if dread < 30:
+		return "illusion"
 
 	return "restart"
 

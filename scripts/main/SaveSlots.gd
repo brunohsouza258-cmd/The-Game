@@ -10,7 +10,7 @@ func _ready() -> void:
 func _build_slots() -> void:
 	for child in slots_container.get_children():
 		child.queue_free()
-	for slot in range(1, SaveManager.SLOT_COUNT + 1):
+	for slot in range(SaveManager.AUTOSAVE_SLOT, SaveManager.SLOT_COUNT + 1):
 		var row := HBoxContainer.new()
 		var label := Label.new()
 		label.custom_minimum_size = Vector2(360, 0)
@@ -19,7 +19,7 @@ func _build_slots() -> void:
 
 		var save_button := Button.new()
 		save_button.text = "Salvar"
-		save_button.disabled = not get_tree().current_scene.is_in_game()
+		save_button.disabled = slot == SaveManager.AUTOSAVE_SLOT or not get_tree().current_scene.is_in_game()
 		save_button.pressed.connect(_on_save_pressed.bind(slot))
 		row.add_child(save_button)
 
@@ -33,11 +33,12 @@ func _build_slots() -> void:
 
 func _slot_description(slot: int) -> String:
 	var data := SaveManager.peek(slot)
+	var label := "Autosave" if slot == SaveManager.AUTOSAVE_SLOT else "Slot %d" % slot
 	if data.is_empty():
-		return "Slot %d — vazio" % slot
+		return "%s — vazio" % label
 	var player_name: String = data.get("player_name", "Jogador")
 	var day: int = data.get("day", 1)
-	return "Slot %d — %s, dia %d" % [slot, player_name, day]
+	return "%s — %s, dia %d" % [label, player_name, day]
 
 func _on_save_pressed(slot: int) -> void:
 	SfxPlayer.play_click()

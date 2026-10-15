@@ -12,6 +12,8 @@ var text_speed: float = 0.03
 var fullscreen: bool = false
 # Persists across new games: how many times the player has started this story.
 var loop_count: int = 0
+# Finais já vistos (persiste entre partidas, como o loop_count).
+var unlocked_endings: Array = []
 
 func _ready() -> void:
 	_ensure_bus(BUS_MUSIC)
@@ -44,6 +46,7 @@ func load_settings() -> void:
 		text_speed = config.get_value("text", "speed", text_speed)
 		fullscreen = config.get_value("display", "fullscreen", fullscreen)
 		loop_count = config.get_value("meta", "loop_count", loop_count)
+		unlocked_endings = config.get_value("meta", "unlocked_endings", unlocked_endings)
 	_apply_all()
 
 func save_settings() -> void:
@@ -54,6 +57,7 @@ func save_settings() -> void:
 	config.set_value("text", "speed", text_speed)
 	config.set_value("display", "fullscreen", fullscreen)
 	config.set_value("meta", "loop_count", loop_count)
+	config.set_value("meta", "unlocked_endings", unlocked_endings)
 	config.save(CONFIG_PATH)
 
 func set_master_volume(value: float) -> void:
@@ -91,6 +95,12 @@ func reset_to_defaults() -> void:
 
 func register_new_loop() -> void:
 	loop_count += 1
+	save_settings()
+
+func unlock_ending(ending_id: String) -> void:
+	if ending_id == "" or unlocked_endings.has(ending_id):
+		return
+	unlocked_endings.append(ending_id)
 	save_settings()
 
 func _apply_all() -> void:

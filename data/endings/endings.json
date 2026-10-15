@@ -3,42 +3,50 @@
     "secret": {
       "title": "Final Secreto — Quem aperta 'Novo Jogo'",
       "background": "res://assets/backgrounds/hallway_dusk.png",
-      "text": "No telhado, a chuva para no ar. Kaito olha para {player_name}, depois para cima — não para o céu, para além dele. \"Não é você que faz isso voltar\", ele diz. \"Nem a Maya. É quem está do outro lado, apertando 'Novo Jogo' de novo.\" Maya, na escada, entende ao mesmo tempo. A Alice tinha escrito isso no caderno sem saber o que significava: alguém de fora. {player_name} solta a grade sem medo, porque dessa vez não há ninguém para segurar. A última coisa que ele diz não é para o Kaito. É para você: \"Pode fechar o jogo agora. Ele já foi. Deixa ele ir.\""
+      "text": "No telhado, a chuva para no ar. Kaito olha para {player_name}, depois para cima — não para o céu, para além dele. \"Não é você que faz isso voltar\", ele diz. \"Nem a Maya. É quem está do outro lado, apertando 'Novo Jogo' de novo.\" Maya, na escada, entende ao mesmo tempo. A Alice tinha escrito isso no caderno sem saber o que significava: alguém de fora. {player_name} solta a grade sem medo, porque dessa vez não há ninguém para segurar. A última coisa que ele diz não é para o Kaito. É para você: \"Pode fechar o jogo agora. Ele já foi. Deixa ele ir.\"",
+      "hint": "Só aparece para quem já voltou a esta história mais de uma vez."
     },
     "truth": {
       "title": "Final da Verdade",
       "background": "res://assets/backgrounds/hallway_dusk.png",
-      "text": "21:47. Kaito sobe na grade, rindo, igualzinho à primeira vez. {player_name} não corre. Fica onde está e diz o que nunca disse em nenhuma das voltas: \"Desculpa. Não foi culpa minha. E também não foi sua.\" Kaito para. Pela primeira vez ele parece ouvir. \"Então é isso. Você finalmente vai embora.\" A chuva começa a cair de verdade, sem repetir. De manhã é dia 13. Na escola, uma carteira vazia tem as iniciais K.M. e uma flor. A Maya está ao lado dela. Ela lembra de tudo. {player_name} também. Dói — e continua sendo amanhã."
+      "text": "21:47. Kaito sobe na grade, rindo, igualzinho à primeira vez. {player_name} não corre. Fica onde está e diz o que nunca disse em nenhuma das voltas: \"Desculpa. Não foi culpa minha. E também não foi sua.\" Kaito para. Pela primeira vez ele parece ouvir. \"Então é isso. Você finalmente vai embora.\" A chuva começa a cair de verdade, sem repetir. De manhã é dia 13. Na escola, uma carteira vazia tem as iniciais K.M. e uma flor. A Maya está ao lado dela. Ela lembra de tudo. {player_name} também. Dói — e continua sendo amanhã.",
+      "hint": "Exige aceitar a perda, confiar na Maya e encarar o medo até o fim."
     },
     "illusion": {
       "title": "Final da Ilusão",
       "background": "res://assets/backgrounds/clubroom.png",
-      "text": "{player_name} sobe a escada, olha para a porta do telhado e dá meia-volta. É mais fácil assim. Lá embaixo, o festival está bonito, a Yuna está rindo, o dia está perfeito. Quando o relógio marca 21:47, tudo fica branco por um instante. Primeiro dia. {player_name} atravessa o portão da escola carregando mais expectativa do que faz sentido admitir. Alguém, no corredor ao entardecer, sorri como quem já viu essa cena muitas vezes. Nada fora do comum. Ainda."
+      "text": "{player_name} sobe a escada, olha para a porta do telhado e dá meia-volta. É mais fácil assim. Lá embaixo, o festival está bonito, a Yuna está rindo, o dia está perfeito. Quando o relógio marca 21:47, tudo fica branco por um instante. Primeiro dia. {player_name} atravessa o portão da escola carregando mais expectativa do que faz sentido admitir. Alguém, no corredor ao entardecer, sorri como quem já viu essa cena muitas vezes. Nada fora do comum. Ainda.",
+      "hint": "Fugir da verdade, ou nunca chegar perto dela, tem um preço confortável."
     },
     "restart": {
       "title": "Final do Recomeço",
       "background": "res://assets/backgrounds/courtyard.png",
-      "text": "No telhado, {player_name} estende a mão — e percebe que não sabe mais por que está fazendo isso. Não lembra direito do rosto do Kaito. Só da sensação de ter perdido alguém. Ele não consegue salvar ninguém dessa vez, e não consegue mais se lembrar o suficiente para continuar tentando. Então desce. No dia seguinte o loop não volta, mas fica um buraco onde antes havia um nome. {player_name} não entende tudo. Mas decide seguir em frente com o pouco que sobrou, devagar, sem pressa de ter todas as respostas."
+      "text": "No telhado, {player_name} estende a mão — e percebe que não sabe mais por que está fazendo isso. Não lembra direito do rosto do Kaito. Só da sensação de ter perdido alguém. Ele não consegue salvar ninguém dessa vez, e não consegue mais se lembrar o suficiente para continuar tentando. Então desce. No dia seguinte o loop não volta, mas fica um buraco onde antes havia um nome. {player_name} não entende tudo. Mas decide seguir em frente com o pouco que sobrou, devagar, sem pressa de ter todas as respostas.",
+      "hint": "Ninguém conseguiu se aproximar o bastante de ninguém."
     },
     "route_maya": {
       "title": "Final de uma Rota — Maya",
       "background": "res://assets/backgrounds/hallway_dusk.png",
-      "text": "Maya sobe com {player_name}. Os dois seguram a mão do Kaito juntos, e juntos soltam — não porque desistiram, mas porque finalmente aceitaram que não era deles para segurar. Na manhã seguinte, Maya não sabe mais o que ele vai dizer antes de ele dizer. \"É estranho\", ela confessa, \"não te conhecer de cor.\" \"Então me conhece de novo\", {player_name} responde. Dessa vez é de verdade, e não uma repetição."
+      "text": "Maya sobe com {player_name}. Os dois seguram a mão do Kaito juntos, e juntos soltam — não porque desistiram, mas porque finalmente aceitaram que não era deles para segurar. Na manhã seguinte, Maya não sabe mais o que ele vai dizer antes de ele dizer. \"É estranho\", ela confessa, \"não te conhecer de cor.\" \"Então me conhece de novo\", {player_name} responde. Dessa vez é de verdade, e não uma repetição.",
+      "hint": "Aproxime-se e confie na Maya."
     },
     "route_yuna": {
       "title": "Final de uma Rota — Yuna",
       "background": "res://assets/backgrounds/clubroom.png",
-      "text": "No telhado, Yuna chega correndo, sem sorriso nenhum, chorando alto pela primeira vez sem pedir desculpa. É isso que faz {player_name} soltar a grade. No dia seguinte ela traz duas marmitas — uma para ele, e outra que ela deixa na carteira vazia com as iniciais K.M. \"Eu não preciso estar bem\", ela diz. \"Mas eu não quero estar sozinha.\" Ela não está."
+      "text": "No telhado, Yuna chega correndo, sem sorriso nenhum, chorando alto pela primeira vez sem pedir desculpa. É isso que faz {player_name} soltar a grade. No dia seguinte ela traz duas marmitas — uma para ele, e outra que ela deixa na carteira vazia com as iniciais K.M. \"Eu não preciso estar bem\", ela diz. \"Mas eu não quero estar sozinha.\" Ela não está.",
+      "hint": "Aproxime-se e confie na Yuna."
     },
     "route_alice": {
       "title": "Final de uma Rota — Alice",
       "background": "res://assets/backgrounds/classroom.png",
-      "text": "O relógio da Alice marca 21:47 e para. Ela lê em voz alta a última anotação do caderno: \"Confie no {player_name}.\" Ele confia em si mesmo, e deixa o Kaito ir. A verdade não resolve tudo — a Alice continua acordando de madrugada para conferir se o dia avançou. Mas agora ela confere junto com alguém, e o dia sempre avança."
+      "text": "O relógio da Alice marca 21:47 e para. Ela lê em voz alta a última anotação do caderno: \"Confie no {player_name}.\" Ele confia em si mesmo, e deixa o Kaito ir. A verdade não resolve tudo — a Alice continua acordando de madrugada para conferir se o dia avançou. Mas agora ela confere junto com alguém, e o dia sempre avança.",
+      "hint": "Aproxime-se e confie na Alice."
     },
     "route_hikari": {
       "title": "Final de uma Rota — Hikari",
       "background": "res://assets/backgrounds/courtyard.png",
-      "text": "Hikari chega ao telhado pronta para brigar com a gravidade, com os nós dos dedos ainda machucados. {player_name} segura a mão dela, não a do Kaito. \"Tem coisa que não se vence\", ele diz. Ela chora com raiva, depois sem raiva. Na semana seguinte, o time de revezamento corre com três atletas e uma raia vazia. Hikari não pede para ninguém preencher. Ela aprendeu a perder sem desaparecer."
+      "text": "Hikari chega ao telhado pronta para brigar com a gravidade, com os nós dos dedos ainda machucados. {player_name} segura a mão dela, não a do Kaito. \"Tem coisa que não se vence\", ele diz. Ela chora com raiva, depois sem raiva. Na semana seguinte, o time de revezamento corre com três atletas e uma raia vazia. Hikari não pede para ninguém preencher. Ela aprendeu a perder sem desaparecer.",
+      "hint": "Aproxime-se e confie na Hikari."
     }
   }
 }

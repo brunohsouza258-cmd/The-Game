@@ -49,6 +49,8 @@ func advance() -> void:
 		return
 	var node: Dictionary = _dialogue_data.get("nodes", {}).get(_current_node_id, {})
 	if node.get("choices", []).is_empty() or _available_choices(node.get("choices", [])).is_empty():
+		if not node.get("choices", []).is_empty() and not node.has("next"):
+			push_warning("Todas as escolhas de '%s' foram filtradas e o nó não tem 'next'; encerrando." % _current_node_id)
 		_current_node_id = node.get("next", "end")
 		_show_current_node()
 
