@@ -48,18 +48,23 @@
       "speaker": "Alice",
       "pose": "thinking",
       "text": "\"Não sei\" é um dado também. Eu vou anotar. Quem não sabe ainda pode descobrir. Quem mente fica preso.",
-      "next": "end"
+      "next": "closing"
     },
     "yes": {
       "speaker": "Alice",
       "pose": "sad",
       "text": "Segurou. E não conseguiu. ...Obrigada por me falar. Eu não vou anotar isso. Tem coisa que não é dado, é ferida.",
-      "next": "end"
+      "next": "closing"
     },
     "leave": {
       "speaker": "",
       "pose": "sad",
       "text": "Ele sai da sala. Quando olha para trás, Alice está escrevendo, rápido, sem levantar os olhos.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela deixa uma caixinha de curativos em cima da carteira dele, com um bilhete grudado: \"Troca de manhã e à noite. Se não trocar, eu fico sabendo.\" É a coisa mais parecida com um abraço que ela sabe fazer.",
       "next": "end"
     },
     "end": {

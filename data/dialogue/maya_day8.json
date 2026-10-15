@@ -35,12 +35,17 @@
       "speaker": "Maya",
       "pose": "happy",
       "text": "De mim... Eu gostava de piano. Parei porque nunca dava tempo de terminar uma música antes de tudo voltar. Faz tanto tempo que alguém me pergunta de mim que eu precisei pensar.",
-      "next": "end"
+      "next": "closing"
     },
     "place": {
       "speaker": "Maya",
       "pose": "sad",
       "text": "É o que sobra da escola depois de tantas voltas. Um rascunho apagado demais. Se ninguém parar isso, um dia esse lado da porta vai ficar igual ao outro.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Se você escolher esquecer\", ela diz na porta, sem se virar, \"eu vou cuidar para que pareça que sempre foi assim.\" O corredor engole o resto da frase.",
       "next": "end"
     },
     "end": {

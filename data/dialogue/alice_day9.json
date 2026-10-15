@@ -41,12 +41,17 @@
       "speaker": "Alice",
       "pose": "happy",
       "text": "...Isso é uma coisa boa de ouvir quando a gente tá perdendo. Obrigada, {player_name}.",
-      "next": "end"
+      "next": "closing"
     },
     "accept": {
       "speaker": "Alice",
       "pose": "thinking",
       "text": "Aceitar. É a única variável que eu não sei medir. Acho que por isso eu nunca pensei nela.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela escreve uma linha nova no caderno em branco e vira a página para ele ver, só um segundo: \"Lembrar dói menos do que fingir\". Depois fecha o caderno e o guarda na bolsa, rápido, antes de mudar de ideia.",
       "next": "end"
     },
     "end": {

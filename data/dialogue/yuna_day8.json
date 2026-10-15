@@ -41,12 +41,17 @@
       "speaker": "Yuna",
       "pose": "close",
       "text": "Se eu errar, você fica na primeira fila? Não pra aplaudir. Só pra eu ter pra onde olhar.",
-      "next": "end"
+      "next": "closing"
     },
     "great": {
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Vai sim! Vai ser perfeito. ...Tudo nessa escola tem que ser perfeito, né?",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Yuna tira uma fotografia do pátio com o celular e franze a testa para a tela. \"Tem alguém ali\", diz, apontando um espaço vazio perto da trave. \"Eu juro que tinha alguém.\"",
       "next": "end"
     },
     "end": {

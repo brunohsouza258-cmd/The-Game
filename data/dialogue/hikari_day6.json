@@ -48,12 +48,17 @@
       "speaker": "Hikari",
       "pose": "angry",
       "text": "Fala isso pra você mesmo, primeiro. Tá na sua cara que você acha que foi culpa sua.",
-      "next": "end"
+      "next": "closing"
     },
     "fight": {
       "speaker": "Hikari",
       "pose": "happy",
       "text": "\"A gente\". Gostei disso. Ninguém nunca entra numa briga do meu lado.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela esconde a mão enfaixada atrás das costas assim que alguém passa, e só desfaz a postura quando o corredor esvazia. \"Não é fraqueza\", resmunga, \"é estratégia.\" Ele não ri. Ela agradece com um aceno.",
       "next": "end"
     },
     "end": {

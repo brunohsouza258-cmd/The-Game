@@ -41,12 +41,17 @@
       "speaker": "Yuna",
       "pose": "angry",
       "text": "Então daqui a pouco eu esqueço de você de novo. E da Maya. E de mim. ...Não. Eu não quero. Pela primeira vez na vida eu quero ficar triste e lembrar, em vez de sorrir e esquecer.",
-      "next": "end"
+      "next": "closing"
     },
     "together": {
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Junto. Tá. Se eu começar a esquecer, você me lembra. Promete? Eu não tenho vergonha de pedir. Não mais.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Eu me lembrei de uma coisa\", ela sussurra. \"Eu tinha um vizinho. Ele me ensinou a andar de bicicleta e eu caí três vezes.\" Para, com a boca aberta. \"Eu não sei o nome dele. Por quê?\"",
       "next": "end"
     },
     "end": {

@@ -53,6 +53,11 @@
       "effects": {
         "dread": 3
       },
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Maya se afasta pelo corredor sem pressa, passando a ponta dos dedos pela parede, como quem confere se ela ainda está ali. Na curva, ela olha para trás por um segundo, sorri de leve e some.",
       "next": "end"
     },
     "end": {

@@ -70,7 +70,7 @@
           "effects": {
             "affinity.maya": 1
           },
-          "next": "end"
+          "next": "closing"
         }
       ]
     },
@@ -78,6 +78,11 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Eu tô cansada de saber o final. Você conhece alguém de verdade quando já sabe tudo que a pessoa vai dizer? Ou só decorou?",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela se despede com um \"cuida da mão\" quase inaudível. Quando ele já está longe, ouve atrás de si o som de alguém recomeçando uma contagem em voz baixa: um, dois, três, quatro.",
       "next": "end"
     },
     "end": {

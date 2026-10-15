@@ -47,18 +47,23 @@
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Eu lembro do tempo dele. 12 segundos e 8. Eu nunca bati esse tempo. Agora não tem nem com quem comparar. Isso é perder pior do que perder.",
-      "next": "end"
+      "next": "closing"
     },
     "for_him": {
       "speaker": "Hikari",
       "pose": "thinking",
       "text": "Correr por alguém que nem existe? ...Talvez. Talvez seja o único jeito de ele existir um pouco.",
-      "next": "end"
+      "next": "closing"
     },
     "no_need": {
       "speaker": "Hikari",
       "pose": "surprised",
       "text": "Todo mundo diz que eu preciso. Que eu sou a melhor, que o time depende de mim. Você é o primeiro a dizer que não. Isso é... estranho de ouvir.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Vou fazer a lanterna mais rápida do festival\", ela avisa, enrolando o papel de seda com os dedos grossos. Quando termina, a lanterna está torta, amassada e adorável. Ela a pendura sem comentar.",
       "next": "end"
     },
     "end": {

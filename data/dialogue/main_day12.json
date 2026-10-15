@@ -9,8 +9,13 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Décimo segundo dia. Noite do festival. O pátio está iluminado por centenas de lanternas de papel. Começa a chover fino, como da primeira vez.",
-      "next": "clock"
+      "text": "Ninguém dormiu direito. O café da manhã foi engolido sem gosto, os livros ficaram na mochila sem abrir. Em algum momento, entre uma xícara e outra, {player_name} percebeu que escreveu seu nome na embalagem do pão, repetidamente, para ter certeza de que ainda era ele.",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "O dia passou devagar e rápido ao mesmo tempo, como acontece nos últimos dias de qualquer coisa. Nas aulas, ninguém tirou nota nenhuma. Os professores só falaram, falaram, e olharam o relógio.",
+      "next": "core"
     },
     "clock": {
       "speaker": "",
@@ -26,9 +31,29 @@
       "speaker": "",
       "text": "Ainda dá tempo de falar com quem ele quiser antes de subir.",
       "choices": [
-        { "text": "Respirar fundo e começar a noite.", "next": "end" }
+        {
+          "text": "Respirar fundo e começar a noite.",
+          "next": "outro1"
+        }
       ]
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Décimo segundo dia. Noite do festival. O pátio está iluminado por centenas de lanternas de papel. Começa a chover fino, como da primeira vez.",
+      "next": "clock"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "Quando o sol baixa, as lanternas se acendem sozinhas, uma a uma, de uma ponta à outra do pátio. Não tem ninguém no interruptor. Os alunos aplaudem como se fosse parte do show. {player_name} é o único que não sorri.",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "De longe, bem no alto, na porta do telhado, uma lanterna branca balança no vento. Ele a olha por muito tempo. Quando pisca, ela já está apagada.",
+      "next": "end"
+    }
   }
 }

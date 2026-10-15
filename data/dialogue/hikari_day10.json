@@ -41,12 +41,17 @@
       "speaker": "Hikari",
       "pose": "angry",
       "text": "Ganhou. Parabéns. ...Viu? É isso que acontece. Quem cai fica pra trás. Sempre.",
-      "next": "end"
+      "next": "closing"
     },
     "stop": {
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Você... parou? Você ia ganhar. Por que você parou? ...O Kaito também teria parado. Ele fingia que não, mas teria. Droga. Ninguém ganha essa, né?",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Hikari amarra o cadarço de novo, com força demais. \"Eu vou correr até a escola ficar cheia\", anuncia. \"Quantas voltas precisarem.\" Sai em disparada, e o eco dos passos continua muito depois dela.",
       "next": "end"
     },
     "end": {

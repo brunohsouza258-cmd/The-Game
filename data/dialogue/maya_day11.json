@@ -48,18 +48,23 @@
       "speaker": "Maya",
       "pose": "happy",
       "text": "A música inteira. Até o fim. ...Faz tanto tempo que eu não penso num \"depois\" que eu esqueci que ele podia ser bom.",
-      "next": "end"
+      "next": "closing"
     },
     "flower": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "Ele ia rir de você. \"Flor, sério?\" ...Eu vou junto. Se existir dia 13, eu vou junto.",
-      "next": "end"
+      "next": "closing"
     },
     "doubt": {
       "speaker": "Maya",
       "pose": "sad",
       "text": "Eu também não. Mas é a primeira vez em muito tempo que eu quero que exista.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Antes de se afastar, ela aponta a lanterna branca no fundo do pátio. \"Amanhã\", é tudo o que diz. Ele fica com a palavra na boca, e o gosto dela, de despedida, demora a sair.",
       "next": "end"
     },
     "end": {

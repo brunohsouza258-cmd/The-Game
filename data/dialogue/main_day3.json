@@ -8,15 +8,32 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Terceiro dia. A professora faz a chamada em voz alta, nome por nome. {player_name} percebe que ela pula uma linha da lista — os olhos dela param ali por meio segundo e seguem em frente.",
-      "next": "desk"
+      "text": "A chuva começou na madrugada e não parou. As janelas do ônibus embaçam e o motorista muda de estação toda vez que a música fica boa. {player_name} desenha, com o dedo, as iniciais K.M. no vidro sem se dar conta, e as apaga com a manga quando percebe.",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "Na entrada, a poça diante do portão tem o reflexo de um prédio mais alto do que o da escola. Ele pisa dentro dela de propósito, e o reflexo some.",
+      "next": "core"
     },
     "desk": {
       "speaker": "",
       "text": "Na fileira da janela tem uma carteira vazia. Ninguém senta nela. Na madeira, alguém entalhou duas letras: K.M.",
       "choices": [
-        { "text": "Perguntar de quem é a carteira.", "effects": {"dread": 2}, "next": "ask" },
-        { "text": "Deixar pra lá e prestar atenção na aula.", "effects": {"dread": -1}, "next": "ignore" }
+        {
+          "text": "Perguntar de quem é a carteira.",
+          "effects": {
+            "dread": 2
+          },
+          "next": "ask"
+        },
+        {
+          "text": "Deixar pra lá e prestar atenção na aula.",
+          "effects": {
+            "dread": -1
+          },
+          "next": "ignore"
+        }
       ]
     },
     "ask": {
@@ -33,9 +50,28 @@
       "speaker": "",
       "text": "Por um instante, a sala some: vento frio, cheiro de chuva, uma grade de metal molhada sob a mão. Depois o barulho da sala volta, normal. A dor de cabeça fica.",
       "effect": "glitch",
-      "effects": {"dread": 3},
-      "next": "end"
+      "effects": {
+        "dread": 3
+      },
+      "next": "outro1"
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Terceiro dia. A professora faz a chamada em voz alta, nome por nome. {player_name} percebe que ela pula uma linha da lista — os olhos dela param ali por meio segundo e seguem em frente.",
+      "next": "desk"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "Na hora da saída, a professora o chama de lado e pergunta, em voz baixa, se ele está dormindo bem. Parece que ela quer perguntar outra coisa, e que a pergunta verdadeira está dentro de outra, como bonecas russas.",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "{player_name} responde que sim. Ela concorda com a cabeça, devagar, e olha uma última vez para a carteira vazia. \"Se precisar de alguém para conversar\", ela diz, e para. \"Alguém sempre precisa.\"",
+      "next": "end"
+    }
   }
 }

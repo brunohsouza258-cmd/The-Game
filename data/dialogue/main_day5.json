@@ -9,8 +9,13 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Quinto dia. Assembleia no pátio. O diretor anuncia, animado, que o festival cultural acontece daqui a uma semana — no dia 12, à noite, com lanternas no pátio inteiro.",
-      "next": "festival"
+      "text": "O pátio amanheceu cheio de fitas coloridas, quase de propósito. Alguém passou a madrugada pendurando enfeites nas árvores sem que ninguém visse. Os alunos chegam em grupos, rindo e conferindo o celular, enquanto o vento balança as fitas.",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "{player_name} sente a mão direita formigar, como se tivesse dormido sobre ela. Abre e fecha os dedos. A cicatriz na palma, uma linha fina e clara, parece mais funda do que ontem.",
+      "next": "core"
     },
     "festival": {
       "speaker": "",
@@ -21,7 +26,9 @@
       "speaker": "Alto-falante",
       "text": "Aviso da secretaria: o aluno Kaito Mori, da turma 2-B, favor comparecer para entregar os documentos de—",
       "effect": "glitch",
-      "effects": {"dread": 2},
+      "effects": {
+        "dread": 2
+      },
       "next": "correction"
     },
     "correction": {
@@ -33,17 +40,49 @@
       "speaker": "",
       "text": "Algumas pessoas riem. Do outro lado do pátio, {player_name} vê a Maya, a Alice, a Hikari e a Yuna. Nenhuma das quatro está rindo.",
       "choices": [
-        { "text": "Sustentar o olhar da Maya.", "effects": {"trust.maya": 1, "dread": 1}, "next": "rain" },
-        { "text": "Olhar para o chão.", "effects": {"dread": -1}, "next": "rain" }
+        {
+          "text": "Sustentar o olhar da Maya.",
+          "effects": {
+            "trust.maya": 1,
+            "dread": 1
+          },
+          "next": "rain"
+        },
+        {
+          "text": "Olhar para o chão.",
+          "effects": {
+            "dread": -1
+          },
+          "next": "rain"
+        }
       ]
     },
     "rain": {
       "speaker": "",
       "text": "Uma imagem atravessa a cabeça dele, nítida demais para ser imaginação: chuva, um telhado, uma mão escorregando da dele. Uma voz rindo: \"Ainda sou mais corajoso que você.\"",
       "effect": "glitch",
-      "effects": {"dread": 2},
-      "next": "end"
+      "effects": {
+        "dread": 2
+      },
+      "next": "outro1"
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Quinto dia. Assembleia no pátio. O diretor anuncia, animado, que o festival cultural acontece daqui a uma semana — no dia 12, à noite, com lanternas no pátio inteiro.",
+      "next": "festival"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "Depois da assembleia, os alunos formam uma fila para pegar papel de seda e varetas de bambu. Cada turma vai fazer suas lanternas. A professora distribui as folhas em silêncio e deixa uma sem dono em cima da mesa mais ao fundo.",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "Ninguém reclama da folha sobrando. É como se todos soubessem, em algum lugar fundo, que ela já tinha dono. {player_name} dobra o papel branco com cuidado e não escreve nenhum nome.",
+      "next": "end"
+    }
   }
 }

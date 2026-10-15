@@ -41,12 +41,17 @@
       "speaker": "Alice",
       "pose": "close",
       "text": "Quando ele marcar 21:48, pela primeira vez, eu quero que você olhe pra ele e lembre que alguém confiou em você sem prova nenhuma.",
-      "next": "end"
+      "next": "closing"
     },
     "refuse": {
       "speaker": "Alice",
       "pose": "happy",
       "text": "Tá. Então amanhã eu fico do seu lado e a gente olha pro mesmo relógio. Dá no mesmo. Talvez dê até mais.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Amanhã\", ela diz, devolvendo o relógio ao bolso. \"Eu vou estar no pátio às sete. Se eu não aparecer\", e a frase fica ali, no ar, sem terminar, porque ela sabe que ele já entendeu.",
       "next": "end"
     },
     "end": {

@@ -9,22 +9,38 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Oitavo dia, três da manhã. {player_name} não lembra de ter decidido vir. Está no corredor da escola às escuras, de uniforme, com a mão enfaixada latejando.",
-      "next": "chain"
+      "text": "O corredor tem um cheiro que ele reconhece de algum lugar muito antigo: poeira, ferrugem, chuva em concreto. Cada passo ecoa um segundo depois do que deveria, como se alguém caminhasse logo atrás, no mesmo ritmo, parando quando ele para.",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "A escola está às escuras. Nenhuma luz de emergência, nenhum zumbido de geladeira. Só a luz azul de uma lua que não deveria estar ali, já que lá fora, pela janela, o céu está nublado e sem estrelas.",
+      "next": "core"
     },
     "chain": {
       "speaker": "",
       "text": "A corrente da escada do telhado está no chão, cortada. A porta de metal lá em cima está aberta. Vento frio desce pelos degraus. \"Ela nunca abre antes do dia 8\", dizia o caderno.",
       "choices": [
-        { "text": "Subir.", "effects": {"dread": 3}, "next": "climb" },
-        { "text": "Tentar voltar pra casa.", "next": "cant_leave" }
+        {
+          "text": "Subir.",
+          "effects": {
+            "dread": 3
+          },
+          "next": "climb"
+        },
+        {
+          "text": "Tentar voltar pra casa.",
+          "next": "cant_leave"
+        }
       ]
     },
     "cant_leave": {
       "speaker": "",
       "text": "Ele vira e anda até a saída. O corredor é mais comprido do que deveria. No fim dele, a mesma escada, a mesma porta aberta. Não existe outro caminho hoje.",
       "effect": "glitch",
-      "effects": {"dread": 2},
+      "effects": {
+        "dread": 2
+      },
       "next": "climb"
     },
     "climb": {
@@ -36,7 +52,9 @@
       "speaker": "",
       "text": "Na parede, riscos de contagem. Dezenas. Centenas. Os mais antigos quase sumidos, os últimos fundos e recentes. Embaixo, na letra dele: \"ELE NÃO PULOU. VOCÊ NÃO EMPURROU. VOCÊ SÓ NÃO CONSEGUIU SEGURAR.\"",
       "effect": "glitch",
-      "effects": {"dread": 4},
+      "effects": {
+        "dread": 4
+      },
       "next": "maya"
     },
     "maya": {
@@ -48,21 +66,54 @@
       "speaker": "Maya",
       "text": "Eu vou te perguntar uma vez só, {player_name}. Você quer saber o que aconteceu de verdade? Ou quer que eu te deixe esquecer? Se você escolher esquecer, eu prometo que vou fazer parecer um dia normal.",
       "choices": [
-        { "text": "Eu quero saber.", "effects": {"dread": 4, "trust.maya": 3, "flags.maya_truth_asked": true}, "next": "know" },
-        { "text": "Me deixa esquecer.", "effects": {"dread": -6, "affinity.maya": 1, "flags.chose_forget": true}, "next": "forget" }
+        {
+          "text": "Eu quero saber.",
+          "effects": {
+            "dread": 4,
+            "trust.maya": 3,
+            "flags.maya_truth_asked": true
+          },
+          "next": "know"
+        },
+        {
+          "text": "Me deixa esquecer.",
+          "effects": {
+            "dread": -6,
+            "affinity.maya": 1,
+            "flags.chose_forget": true
+          },
+          "next": "forget"
+        }
       ]
     },
     "know": {
       "speaker": "Maya",
       "text": "Então amanhã eu conto tudo. Hoje, só uma coisa: ele era seu melhor amigo. E você foi a última pessoa que ele viu.",
       "effect": "glitch",
-      "next": "end"
+      "next": "outro1"
     },
     "forget": {
       "speaker": "Maya",
       "text": "Tudo bem. Fecha os olhos. Quando abrir, vai ser só uma escada, só uma porta trancada, só um dia normal.",
-      "next": "end"
+      "next": "outro1"
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Oitavo dia, três da manhã. {player_name} não lembra de ter decidido vir. Está no corredor da escola às escuras, de uniforme, com a mão enfaixada latejando.",
+      "next": "chain"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "Quando abre os olhos, está na cama de casa, vestido, os sapatos sujos de reboco. O despertador marca seis da manhã. O sol nasce pela janela como em qualquer outro dia. Mas a mão está enfaixada com uma atadura que ele não lembra de ter colocado.",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "Na mesa, o bilhete do primeiro dia. Alguém acrescentou, abaixo da frase borrada, uma linha com a letra dele: \"Você vai voltar. Sempre volta.\"",
+      "next": "end"
+    }
   }
 }

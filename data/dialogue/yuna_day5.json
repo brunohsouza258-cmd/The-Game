@@ -48,12 +48,17 @@
       "pose": "corrupted",
       "text": "Kaito... Kai. Eu chamava ele de Kai. Como eu sei disso? {player_name}, como VOCÊ sabe disso?",
       "effect": "glitch",
-      "next": "end"
+      "next": "closing"
     },
     "gentle": {
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Você é estranho, sabia? Todo mundo me diz pra animar. Você é o único que me deixa não lembrar.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Yuna sobe na mesa, com cola nos dedos e fita no cabelo, e declara que a sua lanterna vai ser a mais bonita do mundo. Todos aplaudem. Só ela repara que o aplauso demorou um segundo a mais para começar.",
       "next": "end"
     },
     "end": {

@@ -43,18 +43,23 @@
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Ninguém manda em mim. ...Mas é bom saber que alguém tentaria.",
-      "next": "end"
+      "next": "closing"
     },
     "together": {
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Junto. Tá. Mas eu chego primeiro na escada. Isso não é negociável.",
-      "next": "end"
+      "next": "closing"
     },
     "nobody": {
       "speaker": "",
       "pose": "sad",
       "text": "Hikari abre a boca para responder e não responde. Ela olha para as próprias mãos machucadas por um tempo longo. \"Ninguém nunca me disse que eu não precisava aguentar\", ela fala, por fim.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Se você for lá em cima de novo\", ela fala, séria, \"me chama. Eu não vou deixar você pisar sozinho num lugar que eu já sei que não gosto.\" Dá um soco leve no ombro dele, como selo.",
       "next": "end"
     },
     "end": {

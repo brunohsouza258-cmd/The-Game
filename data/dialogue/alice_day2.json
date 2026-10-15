@@ -17,7 +17,7 @@
           "effects": {
             "trust.alice": -1
           },
-          "next": "end"
+          "next": "closing"
         },
         {
           "text": "Me mostra essas anotações.",
@@ -34,6 +34,11 @@
       "speaker": "Alice",
       "pose": "neutral",
       "text": "Aqui. Eu não sei o que significa ainda, mas vou continuar observando.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Alice fecha o caderno com um estalo seco e empurra os óculos no nariz. \"Anotado\", diz, como se isso resolvesse alguma coisa, e sai com os passos contados: vinte e dois até a porta, nem um a mais.",
       "next": "end"
     },
     "end": {

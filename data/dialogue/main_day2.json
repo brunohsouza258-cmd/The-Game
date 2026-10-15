@@ -8,21 +8,45 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Segundo dia. O sistema de som da escola toca o aviso de sempre antes da primeira aula — e então, por meio segundo, a voz muda.",
-      "next": "glitch_announcement"
+      "text": "A noite foi curta. Ele sonhou com uma sala sem janelas e um relógio que só tinha o ponteiro das horas. Acordou antes do despertador, com a sensação de ter esquecido de fazer alguma coisa importante às nove da noite do dia anterior.",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "No caminho para a escola, o semáforo da esquina fica vermelho três vezes seguidas, sem carro nenhum passando. {player_name} espera as três, porque algo nele acha que é importante esperar.",
+      "next": "core"
     },
     "glitch_announcement": {
       "speaker": "Alto-falante",
       "text": "— {player_name}, bem-vindo de volta. Dessa vez, tente —",
       "effect": "glitch",
-      "effects": {"dread": 4},
+      "effects": {
+        "dread": 4
+      },
       "next": "aftermath"
     },
     "aftermath": {
       "speaker": "",
       "text": "A voz normal retoma, como se nada tivesse acontecido, terminando o aviso sobre o horário de aulas. Ninguém ao redor parece ter notado. {player_name} olha em volta — todo mundo continua sua manhã, exatamente como se a frase nunca tivesse sido dita.",
-      "next": "end"
+      "next": "outro1"
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Segundo dia. O sistema de som da escola toca o aviso de sempre antes da primeira aula — e então, por meio segundo, a voz muda.",
+      "next": "glitch_announcement"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "No intervalo, ele pergunta a um colega se tinha ouvido a voz diferente no aviso da manhã. O colega devolve um sorriso vago: \"Que voz diferente?\" A resposta é rápida demais, como uma fala decorada.",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "Ao fim do dia, {player_name} fica olhando o alto-falante enferrujado do corredor. Nenhuma voz sai dele. Mas o fio da caixa de som está desligado da tomada, e isso não faz sentido nenhum.",
+      "next": "end"
+    }
   }
 }

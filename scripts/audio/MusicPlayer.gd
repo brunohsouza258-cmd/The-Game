@@ -7,12 +7,13 @@ const GLITCH_DURATION := 0.4
 const MOOD_TRACKS := {
 	"title": "res://assets/music/title_yoiyami_core_theme.wav",
 	"menu": "res://assets/music/calm_relax.mp3",
-	"classroom": "res://assets/music/calm_relax.mp3",
+	"classroom": "res://assets/music/contemplation.mp3",
 	"clubroom": "res://assets/music/happy_clappy_loop.wav",
 	"courtyard": "res://assets/music/happy_clappy_loop.wav",
-	"festival": "res://assets/music/happy_clappy_loop.wav",
+	"festival": "res://assets/music/menu_loop.mp3",
 	"hallway": "res://assets/music/starfield_romance.wav",
-	"night": "res://assets/music/insistent.ogg",
+	"night": "res://assets/music/emerald_tower.ogg",
+	"tense": "res://assets/music/insistent.ogg",
 	"corrupted": "res://assets/music/abandoned_passages.ogg",
 	"ending": "res://assets/music/first_light_particles.wav",
 }

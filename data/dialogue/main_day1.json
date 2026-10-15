@@ -8,14 +8,36 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Primeiro dia. {player_name} atravessa o portão da escola carregando mais expectativa do que faz sentido admitir — um recomeço, talvez. Uma chance de ser outra versão de si mesmo, nem que seja só um pouco.",
-      "next": "hallway"
+      "text": "A manhã tem cheiro de grama cortada e de uniforme novo. {player_name} confere pela terceira vez o bolso do casaco: o bilhete ainda está lá, dobrado em quatro, a tinta tão borrada que só dá para ler uma frase. \"Volta. A escola é chata sem você.\"",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "Não tem assinatura. Ele não lembra quem escreveu, nem por que guardou. Só sabe que, quando leu pela primeira vez, o peito apertou como se tivesse esquecido de avisar alguém que estava saindo.",
+      "next": "core"
     },
     "hallway": {
       "speaker": "",
       "text": "O corredor principal está cheio do barulho normal de um primeiro dia: risadas, passos apressados, alguém gritando o nome de outra pessoa do outro lado do pátio. Nada fora do comum. Ainda.",
-      "next": "end"
+      "next": "outro1"
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Primeiro dia. {player_name} atravessa o portão da escola carregando mais expectativa do que faz sentido admitir — um recomeço, talvez. Uma chance de ser outra versão de si mesmo, nem que seja só um pouco.",
+      "next": "hallway"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "Na secretaria, uma moça lhe entrega o horário das aulas e a chave de um armário. Ela sorri com a simpatia de quem já repetiu essa frase muitas vezes: \"Bem-vindo de volta\". Ele corrige, educado: é a primeira vez dele ali. Ela pisca, confusa, e pede desculpas.",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "No fim do corredor, as quatro portas do clube de literatura estão abertas. De dentro vem o som de risadas e de papel sendo dobrado. {player_name} segue o barulho sem decidir, como quem acompanha um fio.",
+      "next": "end"
+    }
   }
 }

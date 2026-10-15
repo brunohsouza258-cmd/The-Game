@@ -9,14 +9,21 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Décimo dia. Metade das carteiras está vazia. \"Gripe\", diz a professora, lendo uma lista de nomes que vai ficando mais curta enquanto ela lê.",
-      "next": "window"
+      "text": "A cantina está aberta, mas ninguém serve. As bandejas, empilhadas, ainda estão quentes. Uma colher de sopa balança sozinha dentro de uma panela, como se alguém tivesse acabado de soltá-la.",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "{player_name} atravessa o refeitório vazio escutando o próprio coração. De algum lugar vem o som de um rádio mal sintonizado, soltando uma música antiga que ele sabe a letra e não sabe de onde.",
+      "next": "core"
     },
     "window": {
       "speaker": "",
       "text": "Pela janela, ao meio-dia, o sol está se pondo. O mesmo pôr do sol do corredor da Maya, parado no céu, como um papel de parede.",
       "effect": "glitch",
-      "effects": {"dread": 2},
+      "effects": {
+        "dread": 2
+      },
       "next": "understand"
     },
     "understand": {
@@ -28,27 +35,64 @@
       "speaker": "",
       "text": "Faltam dois dias. Ele precisa decidir o que vai fazer quando o relógio marcar 21:47.",
       "choices": [
-        { "text": "\"Dessa vez eu seguro ele. Custe o que custar.\"", "effects": {"dread": 4, "flags.try_save": true}, "next": "save" },
-        { "text": "\"Eu preciso deixar ele ir.\"", "effects": {"dread": 2, "flags.accept_loss": true}, "next": "let_go" },
-        { "text": "\"Eu não sei.\"", "effects": {"dread": 1}, "next": "unsure" }
+        {
+          "text": "\"Dessa vez eu seguro ele. Custe o que custar.\"",
+          "effects": {
+            "dread": 4,
+            "flags.try_save": true
+          },
+          "next": "save"
+        },
+        {
+          "text": "\"Eu preciso deixar ele ir.\"",
+          "effects": {
+            "dread": 2,
+            "flags.accept_loss": true
+          },
+          "next": "let_go"
+        },
+        {
+          "text": "\"Eu não sei.\"",
+          "effects": {
+            "dread": 1
+          },
+          "next": "unsure"
+        }
       ]
     },
     "save": {
       "speaker": "",
       "text": "A mão direita dele se fecha. A cicatriz na palma, que ele nunca tinha notado, arde. Lá fora, o pôr do sol pisca, como se o mundo tivesse ouvido.",
       "effect": "glitch",
-      "next": "end"
+      "next": "outro1"
     },
     "let_go": {
       "speaker": "",
       "text": "Dizer isso em voz baixa dói mais do que qualquer ferida das últimas noites. Mas, por um segundo, o relógio da sala anda. 21:47 vira 21:48. Depois volta.",
-      "next": "end"
+      "next": "outro1"
     },
     "unsure": {
       "speaker": "",
       "text": "Ele não decide. O relógio continua parado. Talvez seja assim que todas as outras voltas começaram: com um \"eu não sei\".",
-      "next": "end"
+      "next": "outro1"
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Décimo dia. Metade das carteiras está vazia. \"Gripe\", diz a professora, lendo uma lista de nomes que vai ficando mais curta enquanto ela lê.",
+      "next": "window"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "Pela primeira vez, as quatro estão juntas no mesmo corredor, sem combinar, sem conversar, só presentes. A Maya olha para as janelas, a Alice conta passos, a Yuna segura a mão da Hikari sem perceber que segura, e a Hikari deixa.",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "{player_name} para a poucos metros delas. Não precisa dizer nada. Pela primeira vez em muito tempo, o silêncio entre as cinco pessoas não pesa. É só um silêncio que cabe.",
+      "next": "end"
+    }
   }
 }

@@ -53,6 +53,11 @@
       "speaker": "Alice",
       "pose": "sad",
       "text": "Sabe o que mais me assusta? Eu achava que conhecer a verdade resolvia as coisas. Eu tô cada vez mais perto dela, e nada está resolvido. Só ficou mais pesado.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "O relógio de pulso da Alice treme na mesa, tenta andar, e volta. Ela o encara sem piscar até ele parar de tremer. \"Não vai ganhar de mim\", murmura, para o relógio, para o dia, para ninguém.",
       "next": "end"
     },
     "end": {

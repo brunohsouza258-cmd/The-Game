@@ -40,12 +40,17 @@
       "speaker": "Hikari",
       "pose": "thinking",
       "text": "Faz eu me sentir fraca. Mas talvez... talvez sentir fraca e continuar seja um tipo de força que eu ainda não treinei.",
-      "next": "end"
+      "next": "closing"
     },
     "silence": {
       "speaker": "",
       "pose": "close",
       "text": "Ficam assim até o sol ir embora. Hikari, sem perceber, encosta o ombro no dele. Ela não pede desculpas. Ela não se afasta.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela para na linha de largada e olha o horizonte de lanternas. \"Amanhã\", diz, \"eu vou ser a primeira a chegar.\" Não diz onde. Ele sabe. Ela também.",
       "next": "end"
     },
     "end": {

@@ -62,19 +62,24 @@
       "speaker": "Yuna",
       "pose": "sad",
       "text": "Não precisa fazer nada. Só come a marmita sem ovo comigo. ...É bom não estar bem do lado de alguém. É menos pesado.",
-      "next": "end"
+      "next": "closing"
     },
     "mistake": {
       "speaker": "Yuna",
       "pose": "sad",
       "text": "É. Engano. ...Desculpa ter pedido. Eu fico bem. Eu sempre fico.",
-      "next": "end"
+      "next": "closing"
     },
     "kai": {
       "speaker": "Yuna",
       "pose": "corrupted",
       "text": "Do Kai. Ele odiava ovo. Ele ria alto. Ele... ele não está mais aqui, né? Não é que ele foi embora. Ele não está mais em lugar nenhum.",
       "effect": "glitch",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Eu não comi nada hoje\", ela admite de repente, sentando no meio do corredor. \"Fiz duas marmitas e não consegui nem abrir a minha.\" Divide a dele em duas partes iguais, sem pedir.",
       "next": "end"
     },
     "end": {

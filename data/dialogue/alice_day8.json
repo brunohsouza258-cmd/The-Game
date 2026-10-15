@@ -42,12 +42,17 @@
       "speaker": "Alice",
       "pose": "happy",
       "text": "Eu vou sincronizar nossos relógios. Se o tempo voltar, pelo menos vai voltar pros dois ao mesmo tempo.",
-      "next": "end"
+      "next": "closing"
     },
     "danger": {
       "speaker": "Alice",
       "pose": "angry",
       "text": "Perigoso é ser a única pessoa que sabe e não fazer nada. Mas eu respeito. Se você mudar de ideia, eu estarei com o relógio pronto.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Quando alguém fala que não quer saber\", ela comenta, sem olhar, \"eu sempre anoto o horário. É sempre a mesma hora do dia: logo antes de querer.\" Então vai embora, sem esperar resposta.",
       "next": "end"
     },
     "end": {

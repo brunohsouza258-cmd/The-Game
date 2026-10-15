@@ -9,15 +9,32 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Quarto dia. Antes da primeira aula, {player_name} abre o armário do corredor para guardar o casaco. Tem um caderno lá dentro. Capa preta, sem nome.",
-      "next": "open"
+      "text": "Acordou cedo e sem alarme. A casa está quieta demais, como uma sala depois de uma aula que terminou antes da hora. Na mesa da cozinha tem um prato de torrada já fria e um bilhete da mãe: \"Volto tarde\".",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "Ele guarda o casaco na mochila sem olhar direito. Se tivesse olhado, teria visto que o casaco ainda estava úmido, como se tivesse passado a noite na chuva.",
+      "next": "core"
     },
     "open": {
       "speaker": "",
       "text": "A letra é dele. Não parecida com a dele — é a dele, com o mesmo jeito torto de fazer o \"a\". As entradas têm datas. Dia 5. Dia 6. Dia 7. Dias que ainda não aconteceram.",
       "choices": [
-        { "text": "Ler as entradas.", "effects": {"dread": 3}, "next": "read" },
-        { "text": "Fechar o caderno e jogar no lixo.", "effects": {"dread": -2}, "next": "trash" }
+        {
+          "text": "Ler as entradas.",
+          "effects": {
+            "dread": 3
+          },
+          "next": "read"
+        },
+        {
+          "text": "Fechar o caderno e jogar no lixo.",
+          "effects": {
+            "dread": -2
+          },
+          "next": "trash"
+        }
       ]
     },
     "read": {
@@ -29,16 +46,38 @@
       "speaker": "",
       "text": "Ele joga o caderno no lixo do corredor e vai para a aula. No intervalo, quando abre a mochila, o caderno está lá dentro. Ele não colocou ali.",
       "effect": "glitch",
-      "effects": {"dread": 2},
+      "effects": {
+        "dread": 2
+      },
       "next": "torn"
     },
     "torn": {
       "speaker": "",
       "text": "As páginas depois do Dia 12 foram arrancadas. Na última que sobrou, um nome escrito várias vezes, cada vez mais apagado, como se a caneta estivesse falhando — ou a memória: Kaito. Kaito. Kaito. Kaito Mori.",
       "effect": "glitch",
-      "effects": {"dread": 3, "flags.found_notebook": true},
-      "next": "end"
+      "effects": {
+        "dread": 3,
+        "flags.found_notebook": true
+      },
+      "next": "outro1"
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Quarto dia. Antes da primeira aula, {player_name} abre o armário do corredor para guardar o casaco. Tem um caderno lá dentro. Capa preta, sem nome.",
+      "next": "open"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "À tarde, na biblioteca, a bibliotecária lhe entrega uma lista de empréstimos antigos que ele nunca pediu. Seu nome aparece em todas as linhas, com datas de anos diferentes, sempre o mesmo livro: um volume de contos sem autor.",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "Ele não abre o livro. Mas, ao devolver a lista, nota que a bibliotecária tem os olhos molhados e não sabe por quê. \"Desculpa\", ela diz, rindo sem graça. \"Algum dia eu me lembro.\"",
+      "next": "end"
+    }
   }
 }

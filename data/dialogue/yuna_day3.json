@@ -104,12 +104,17 @@
       "speaker": "Yuna",
       "pose": "sad",
       "text": "Às vezes eu acordo com o rosto molhado. Como se tivesse chorado a noite toda por alguém. Mas não tem ninguém. ...Desculpa, isso foi muito pesado pro terceiro dia, né?",
-      "next": "end"
+      "next": "closing"
     },
     "tea": {
       "speaker": "Yuna",
       "pose": "happy",
       "text": "O chá! Claro! Senta aí, {player_name}. Hoje vai ser um dia normal. Eu prometo.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Se eu esquecer o seu nome amanhã, me lembra\", ela brinca, e ri. Ele ri junto. Depois fica pensando por que a piada parecia, vista de perto, um pedido.",
       "next": "end"
     },
     "end": {

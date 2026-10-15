@@ -74,25 +74,30 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Ninguém. Ele virou ninguém. ...Me dá mais uns dias, {player_name}. Se eu falar tudo agora, você não acredita. Eu sei porque já tentei.",
-      "next": "end"
+      "next": "closing"
     },
     "loop": {
       "speaker": "Maya",
       "pose": "corrupted",
       "text": "Escreveu. A letra fica um pouco mais fraca a cada vez. Como se você estivesse ficando sem tinta por dentro.",
       "effect": "glitch",
-      "next": "end"
+      "next": "closing"
     },
     "not_now": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "Tudo bem. Não saber também é uma escolha. Eu só queria que você soubesse que pode me perguntar.",
-      "next": "end"
+      "next": "closing"
     },
     "hide": {
       "speaker": "Maya",
       "pose": "angry",
       "text": "Tá bom. Mas não deixa ele no armário. Ele sempre volta pro armário quando você não quer ver.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Maya deixa um marcador de livro sobre a mesa, uma tira de papel com uma frase riscada. Ele só entende depois de ela sair: era um convite para ler a mesma página que ela, em horários diferentes.",
       "next": "end"
     },
     "end": {

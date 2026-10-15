@@ -98,18 +98,23 @@
       "speaker": "Alice",
       "pose": "scared",
       "text": "K.M.? ...Eu escrevi essas mesmas letras no meu caderno semana passada. E não lembro por quê.",
-      "next": "end"
+      "next": "closing"
     },
     "start_where": {
       "speaker": "Alice",
       "pose": "thinking",
       "text": "Pelos registros da secretaria. Papel mente menos que gente.",
-      "next": "end"
+      "next": "closing"
     },
     "alone": {
       "speaker": "Alice",
       "pose": "sad",
       "text": "Talvez. Mas eu sou péssima em deixar coisas pra lá.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Antes de ir, ela puxa um papel do bolso e o desamassa na mesa. É uma lista de nomes riscados, e um, no meio, só sublinhado. \"Pensa nisso\", ela pede, e se vai sem dizer qual.",
       "next": "end"
     },
     "end": {

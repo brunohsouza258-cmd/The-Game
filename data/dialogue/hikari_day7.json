@@ -41,7 +41,7 @@
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Me machucar é o de menos. ...Mas tá. Você é a segunda pessoa que me pede pra parar. A primeira me passava na reta final rindo, dizendo que eu me esforçava demais.",
-      "next": "end"
+      "next": "closing"
     },
     "join": {
       "speaker": "",
@@ -51,6 +51,11 @@
       "effects": {
         "dread": 2
       },
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Hikari amassa uma garrafa de plástico com uma mão só e a joga com precisão na lixeira. \"Ponto\", diz. Mas o sorriso some rápido: do lado da lixeira, o espaço onde alguém sempre ficava parado, esperando.",
       "next": "end"
     },
     "end": {

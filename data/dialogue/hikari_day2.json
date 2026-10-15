@@ -32,12 +32,17 @@
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Vamos ver do que você é feito, então!",
-      "next": "end"
+      "next": "closing"
     },
     "watch": {
       "speaker": "Hikari",
       "pose": "angry",
       "text": "Covarde. Mas tudo bem, fica aí na sombra.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Hikari bate no ombro dele, forte, num cumprimento que quase derruba os dois. \"Amanhã tem treino\", ela avisa, como se isso fosse um convite. E talvez seja, do jeito dela.",
       "next": "end"
     },
     "end": {

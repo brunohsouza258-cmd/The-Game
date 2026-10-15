@@ -75,7 +75,7 @@
       "speaker": "Maya",
       "pose": "happy",
       "text": "Obrigada. Você sempre promete. Eu só queria ouvir de novo.",
-      "next": "end"
+      "next": "closing"
     },
     "why": {
       "speaker": "Maya",
@@ -98,7 +98,7 @@
           "effects": {
             "trust.maya": 1
           },
-          "next": "end"
+          "next": "closing"
         }
       ]
     },
@@ -107,12 +107,17 @@
       "pose": "corrupted",
       "text": "...Da última vez você não prometeu.",
       "effect": "glitch",
-      "next": "end"
+      "next": "closing"
     },
     "joke": {
       "speaker": "Maya",
       "pose": "angry",
       "text": "Não. Não brinca com isso. Por favor.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Antes de ir, a Maya arruma a gola do casaco dele sem pensar, com a naturalidade de um gesto muito repetido. Percebe o que fez e recolhe a mão, vermelha. \"Hábito\", ela murmura, e vai embora rápido.",
       "next": "end"
     },
     "end": {

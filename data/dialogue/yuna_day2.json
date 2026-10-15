@@ -33,12 +33,17 @@
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Isso! Sabia que ia topar.",
-      "next": "end"
+      "next": "closing"
     },
     "decline": {
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Sem problema! Guardo pra amanhã então.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Yuna se despede com um abano exagerado, daqueles que gastam o braço inteiro. Só quando ele já virou a esquina é que o sorriso dela cai, bem devagar, e ela fica um tempo olhando a marmita fechada.",
       "next": "end"
     },
     "end": {

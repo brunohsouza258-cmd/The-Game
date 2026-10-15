@@ -70,7 +70,7 @@
             "affinity.maya": 1,
             "dread": -1
           },
-          "next": "end"
+          "next": "closing"
         }
       ]
     },
@@ -78,7 +78,7 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Você pediu pra esquecer. Eu tô tentando te dar isso. É o único presente que eu sei dar. ...Não me pede pra parar no meio. Por favor.",
-      "next": "end"
+      "next": "closing"
     },
     "why": {
       "speaker": "Maya",
@@ -116,12 +116,17 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Isso doeu. E foi a coisa mais verdadeira que alguém me disse em... muitas voltas. Obrigada.",
-      "next": "end"
+      "next": "closing"
     },
     "stay": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "\"Última vez\". Você diz isso como se tivesse certeza. Eu queria ter essa certeza.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela entrega a ele um chaveiro velho, de metal, com uma letra K gravada. \"Eu estou com isso há tanto tempo\", ela diz. \"Eu só queria que alguém pudesse segurar um pouco.\"",
       "next": "end"
     },
     "end": {

@@ -66,24 +66,29 @@
       "pose": "corrupted",
       "text": "Da última vez que eu contei tudo no quinto dia, você subiu no telhado no sexto. Sozinho. Não. Não dessa vez.",
       "effect": "glitch",
-      "next": "end"
+      "next": "closing"
     },
     "time": {
       "speaker": "Maya",
       "pose": "sad",
       "text": "Obrigada. Você é gentil em todas as voltas. Isso é o pior.",
-      "next": "end"
+      "next": "closing"
     },
     "hand": {
       "speaker": "",
       "pose": "close",
       "text": "A mão dela está fria. Ela não solta. Fica olhando para os dedos dele como quem confere se ainda estão todos ali.",
-      "next": "end"
+      "next": "closing"
     },
     "space": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "Tudo bem. Eu espero. Eu sou boa em esperar. Já tive muita prática.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Amanhã eu trago o poema\", ela diz, com a voz de quem promete e teme cumprir. Atravessa o pátio sem olhar as lanternas que a Yuna pendura, e para só embaixo da árvore, parada, olhando o telhado.",
       "next": "end"
     },
     "end": {

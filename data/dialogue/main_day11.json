@@ -9,8 +9,13 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Décimo primeiro dia. Tudo está perfeito. Todas as carteiras ocupadas. O sol no lugar certo. O pátio cheio de lanternas sendo montadas para amanhã, gente rindo, música tocando.",
-      "next": "too_perfect"
+      "text": "O alvorecer parece pintado. Nenhuma nuvem, nenhum vento, as cores todas um pouco saturadas demais. {player_name} abre a janela e escuta pássaros cantando uma melodia que se repete a cada trinta segundos, idêntica.",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "Na rua, os vizinhos cumprimentam com a mesma frase: \"Que dia lindo, não é?\" Ele respondeu ontem com um sorriso. Hoje responde com um aceno, e sente que todos repararam na diferença.",
+      "next": "core"
     },
     "too_perfect": {
       "speaker": "",
@@ -26,22 +31,53 @@
       "speaker": "",
       "text": "No corredor, uma risada. Alta, despreocupada, inconfundível. {player_name} conhece essa risada desde os seis anos de idade. Ela vem da direção da escada do telhado.",
       "choices": [
-        { "text": "Seguir a risada.", "effects": {"dread": 3}, "next": "follow" },
-        { "text": "Ficar no pátio, com as pessoas que ainda estão aqui.", "effects": {"dread": -2}, "next": "stay" }
+        {
+          "text": "Seguir a risada.",
+          "effects": {
+            "dread": 3
+          },
+          "next": "follow"
+        },
+        {
+          "text": "Ficar no pátio, com as pessoas que ainda estão aqui.",
+          "effects": {
+            "dread": -2
+          },
+          "next": "stay"
+        }
       ]
     },
     "follow": {
       "speaker": "",
       "text": "No pé da escada não tem ninguém. Só a porta lá em cima, fechada. E escrito na poeira do corrimão, com o dedo, numa letra que não é a dele: \"amanhã você vem, né?\"",
       "effect": "glitch",
-      "effects": {"dread": 2},
-      "next": "end"
+      "effects": {
+        "dread": 2
+      },
+      "next": "outro1"
     },
     "stay": {
       "speaker": "",
       "text": "Ele fica. Ajuda a pendurar uma lanterna. A risada para. Por algum motivo, isso dói mais do que se ela continuasse.",
-      "next": "end"
+      "next": "outro1"
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Décimo primeiro dia. Tudo está perfeito. Todas as carteiras ocupadas. O sol no lugar certo. O pátio cheio de lanternas sendo montadas para amanhã, gente rindo, música tocando.",
+      "next": "too_perfect"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "No fim do dia, depois que as lanternas estão todas penduradas, o diretor passa por cada sala apagando as luzes. Quando chega à última, para na porta, olha para {player_name} e sussurra: \"Tudo vai estar no lugar amanhã. Eu garanto.\"",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "Ele diz aquilo como quem promete a si mesmo. Ao sair, o diretor deixa a luz do corredor acesa. É a única luz da escola que fica ligada a noite inteira.",
+      "next": "end"
+    }
   }
 }

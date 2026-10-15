@@ -47,12 +47,17 @@
       "speaker": "Alice",
       "pose": "happy",
       "text": "Eu escrevi isso pra mim. Numa volta que eu esqueci. Então... eu confio. Mesmo sem prova. Isso é muito difícil pra mim, você sabe.",
-      "next": "end"
+      "next": "closing"
     },
     "lie": {
       "speaker": "Alice",
       "pose": "sad",
       "text": "Está em branco. Então eu perdi tudo. ...Você hesitou antes de responder. Eu anotaria isso, se ainda tivesse onde.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Alice conta os passos até a porta. Chega em vinte e dois, como sempre. Mas desta vez, em vez de seguir, para e olha para trás: \"Eu estou com medo\", diz, e é a primeira vez que ela fala isso sem escrever antes.",
       "next": "end"
     },
     "end": {

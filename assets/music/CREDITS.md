@@ -11,3 +11,6 @@ Todas as faixas abaixo são **CC0 1.0 (domínio público)**, baixadas do OpenGam
 | `insistent.ogg` | Insistent: background loop | yd | https://opengameart.org/content/insistent-background-loop |
 | `abandoned_passages.ogg` | Abandoned passages (horror ambience loop) | congusbongus | https://opengameart.org/content/abandoned-passages-horror-ambience-loop |
 | `first_light_particles.wav` | First Light Particles | Yoiyami | https://opengameart.org/node/182244 |
+| `contemplation.mp3` | Contemplation | Joth | https://opengameart.org/content/contemplation-0 |
+| `emerald_tower.ogg` | Emerald Tower | Kistol | https://opengameart.org/content/emerald-tower |
+| `menu_loop.mp3` | Menu Music Loop | wipics | https://opengameart.org/content/menu-music-2 |

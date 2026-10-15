@@ -53,13 +53,13 @@
       "speaker": "Hikari",
       "pose": "happy",
       "text": "...Sério? Ninguém nunca acredita quando eu falo uma coisa que não é sobre ganhar. Valeu, {player_name}. De verdade.",
-      "next": "end"
+      "next": "closing"
     },
     "broken": {
       "speaker": "Hikari",
       "pose": "angry",
       "text": "Defeito. Claro. E eu sou defeituosa também, né? Esquece.",
-      "next": "end"
+      "next": "closing"
     },
     "race": {
       "speaker": "",
@@ -69,6 +69,11 @@
       "effects": {
         "dread": 2
       },
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Hikari alonga o braço por cima da cabeça e estala o pescoço. \"Foi bom\", resume, a coisa mais próxima de \"obrigada\" que ela diz, e vira, e vai embora com os tênis fazendo barulho no corredor.",
       "next": "end"
     },
     "end": {

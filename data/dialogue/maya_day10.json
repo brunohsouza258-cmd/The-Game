@@ -48,18 +48,23 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Então eu tenho que decidir também. Não dá pra soltar sozinho uma coisa que duas pessoas seguram. ...Me dá até o festival. Eu vou tentar.",
-      "next": "end"
+      "next": "closing"
     },
     "hold": {
       "speaker": "Maya",
       "pose": "angry",
       "text": "Você já tentou isso. Muitas vezes. Os riscos na parede são isso. Eu não vou te impedir. Mas eu queria que, pelo menos uma vez, você tentasse outra coisa.",
-      "next": "end"
+      "next": "closing"
     },
     "unsure": {
       "speaker": "Maya",
       "pose": "thinking",
       "text": "Tudo bem não saber. Só não deixa o \"não sei\" decidir por você. Ele já decidiu vezes demais.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Maya olha para o céu parado pela janela, o sol que não anda. \"Bonito, não é?\", ela diz. \"Eu odeio ele\", e ri, e a risada sai quebrada, e ela não esconde.",
       "next": "end"
     },
     "end": {

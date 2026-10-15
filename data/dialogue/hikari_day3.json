@@ -65,18 +65,23 @@
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Você? Hah. Você nem sabe passar o bastão. ...Mas valeu. Ninguém nunca se oferece.",
-      "next": "end"
+      "next": "closing"
     },
     "left": {
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Saiu e levou o próprio nome junto? Não faz sentido. Mas tem dias que eu entro no vestiário e espero ouvir alguém rindo. Uma risada específica.",
-      "next": "end"
+      "next": "closing"
     },
     "lose": {
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Perder é ficar pra trás. E quem fica pra trás some. Pelo menos foi isso que eu aprendi.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela dá meia-volta no portão e o chama de volta, sem graça. \"Se alguém perguntar, eu corri hoje\", diz. \"Eu não quero explicar que fiquei olhando a raia vazia.\" E sai trotando, antes que ele responda.",
       "next": "end"
     },
     "end": {

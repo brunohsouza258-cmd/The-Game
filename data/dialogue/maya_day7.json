@@ -57,12 +57,17 @@
       "speaker": "Maya",
       "pose": "sad",
       "text": "Parar significa chegar no dia 12 e não voltar. Significa ele ficar perdido de verdade. Eu não sei se eu consigo. Eu não sei se você consegue.",
-      "next": "end"
+      "next": "closing"
     },
     "here": {
       "speaker": "Maya",
       "pose": "happy",
       "text": "Você sempre diz isso. E sempre esquece primeiro. ...Mas eu gosto quando você diz.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Maya demora em sair. Fica um tempo de pé onde a carteira costumava estar, passando a palma da mão no ar como se houvesse um tampo ali. Depois ajeita a mochila, e vai.",
       "next": "end"
     },
     "end": {

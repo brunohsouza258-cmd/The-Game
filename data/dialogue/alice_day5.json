@@ -48,12 +48,17 @@
       "speaker": "Alice",
       "pose": "scared",
       "text": "Dia 6: \"mãos machucadas\". É amanhã. {player_name}... se isso acontecer amanhã, o caderno não é diário. É aviso. Você está escrevendo pra você mesmo, de uma volta pra outra.",
-      "next": "end"
+      "next": "closing"
     },
     "impossible": {
       "speaker": "Alice",
       "pose": "angry",
       "text": "Impossível é uma palavra pra coisas que ainda não aconteceram com você. Eu vou continuar anotando. Você vai acabar precisando das minhas anotações.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Dia doze, vinte e uma e quarenta e sete\", ela escreve na primeira página em branco, no alto, com letra bem firme. \"Para não esquecer\", explica. \"Ou para ter alguém para culpar depois.\"",
       "next": "end"
     },
     "end": {

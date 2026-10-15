@@ -40,12 +40,17 @@
       "speaker": "Hikari",
       "pose": "sad",
       "text": "Se eu parar, eu penso. E se eu pensar, eu entendo que tem coisa que não se vence com força. E eu não sei ser outra coisa além de forte.",
-      "next": "end"
+      "next": "closing"
     },
     "train_together": {
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Hah. Você não aguenta vinte. ...Mas fica. É menos solitário contar com alguém do lado.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela fica um tempo calada, os braços cruzados. \"Eu odeio quando a resposta é sim\", resmunga, por fim. \"Porque aí eu não tenho como lutar contra.\" Vira o rosto, e é só o rosto virado que ele vê.",
       "next": "end"
     },
     "end": {

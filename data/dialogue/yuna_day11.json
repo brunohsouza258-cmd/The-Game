@@ -41,12 +41,17 @@
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Você reparou! É que hoje eu tô triste e feliz ao mesmo tempo, e não tô escondendo nenhum dos dois. Não sabia que dava pra fazer isso.",
-      "next": "end"
+      "next": "closing"
     },
     "careful": {
       "speaker": "Yuna",
       "pose": "thinking",
       "text": "Eu sei. Eu também sinto que tem alguma coisa errada nessa perfeição toda. Mas eu quero aproveitar mesmo assim. Saber que pode acabar não é motivo pra não acender a lanterna.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "\"Amanhã eu vou cantar\", ela anuncia no portão, de costas, as duas mãos nas alças da mochila. \"Se eu esquecer a letra, você me ajuda, tá?\" Ele promete, e não sabe de que letra ela fala.",
       "next": "end"
     },
     "end": {

@@ -42,18 +42,23 @@
       "speaker": "Yuna",
       "pose": "angry",
       "text": "Você nem tem bicicleta. Eu... eu odeio quando as pessoas mentem pra me proteger. A última pessoa que fez isso sumiu. Eu acho. Eu não sei. Eu não sei mais o que eu acho.",
-      "next": "end"
+      "next": "closing"
     },
     "truth": {
       "speaker": "Yuna",
       "pose": "scared",
       "text": "Acordou assim. Igual eu acordo chorando. ...{player_name}, tem alguma coisa errada com essa escola. Com a gente. Eu tô com medo. Pronto, falei.",
-      "next": "end"
+      "next": "closing"
     },
     "bandage": {
       "speaker": "",
       "pose": "happy",
       "text": "Ela refaz o curativo devagar, concentrada, o sorriso esquecido no rosto. \"O Kai também vivia se machucando\", ela diz, sem perceber que disse o nome. \"Eu era a enfermeira oficial.\"",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela passa o resto da tarde com a mão dele entre as suas, \"conferindo a atadura\", e finge que não percebe que há outra pessoa, ninguém, ao lado deles, que segura a outra mão.",
       "next": "end"
     },
     "end": {

@@ -42,12 +42,17 @@
       "speaker": "Yuna",
       "pose": "happy",
       "text": "\"Querida Yuna: você pode chorar. Tem alguém que fica. O nome dele é {player_name}. E o Kai odiava ovo.\" ...Pronto. Vou guardar dentro da foto.",
-      "next": "end"
+      "next": "closing"
     },
     "no_next": {
       "speaker": "Yuna",
       "pose": "thinking",
       "text": "Você fala igual o Kai falava antes de fazer uma besteira corajosa. ...Mas eu acredito. Eu escolho acreditar.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "Ela se levanta do degrau e limpa a saia com as duas mãos, devagar, como quem arruma a si mesma. \"Eu vou ficar bem\", diz, e é a primeira vez que o sorriso não chega aos olhos e ela deixa ficar assim.",
       "next": "end"
     },
     "end": {

@@ -45,7 +45,7 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - **Cenários** (`assets/backgrounds/`): 4 ilustrações geradas por IA e 5 derivadas delas por `tools/make_backgrounds.py` (festival à noite, escola à noite, escola decadente, telhado ao entardecer e telhado na chuva).
 - **Personagens** (`assets/characters/`): PNGs com transparência real, todos recortados no mesmo enquadramento de busto. Maya e Hikari estão no estilo Classroom of the Elite. Yuna e Alice continuam no estilo anterior até haver créditos para gerar as duas no estilo novo.
 - **Poses**: cada fala das garotas tem uma pose (`"pose"` no JSON): `neutral`, `happy`, `sad`, `surprised`, `scared`, `angry`, `thinking`, `close` ou `corrupted`. Hoje a pose é animada sobre o sprite base (pulo, tremor, aproximação, inclinação, cor e glitch). Se existir `assets/characters/<nome>_<pose>.png` (ex.: `yuna_sad.png`), o jogo usa essa imagem automaticamente naquela pose.
-- **Trilha sonora** (`assets/music/`, créditos em `assets/music/CREDITS.md`): 7 faixas CC0 do OpenGameArt, com transição suave entre cenas (`scripts/audio/MusicPlayer.gd`). O glitch distorce o tom da música por um instante. Efeitos sonoros: `scripts/audio/SfxPlayer.gd`.
+- **Trilha sonora** (`assets/music/`, créditos em `assets/music/CREDITS.md`): 10 faixas CC0 do OpenGameArt, com transição suave entre cenas (`scripts/audio/MusicPlayer.gd`). O glitch distorce o tom da música por um instante. Efeitos sonoros: `scripts/audio/SfxPlayer.gd`.
 
 ## Estado atual
 
@@ -55,6 +55,7 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 ## Ferramentas
 
 - `Godot --headless --path . --script tools/smoke_test.gd`: toca todos os diálogos até o fim e abre as telas principais (sai com erro se algo falhar).
+- `powershell -File tools/build_exe.ps1 -Godot <caminho do Godot.exe>`: gera `build/LanternasDePapel.exe` + `.pck` sem precisar dos export templates (o `.exe` é o Godot com o `.pck` de mesmo nome; mantenha os dois na mesma pasta). Para um `.exe` independente, instale os export templates e use o preset abaixo.
 - `export_presets.cfg`: preset de exportação para Windows (precisam estar instalados os export templates do Godot; saída em `build/`).
 - `python tools/make_backgrounds.py`: regenera os cenários derivados (requer Pillow).
 - `python tools/validate_data.py`: valida os JSONs de diálogo e finais (referências `next`, nó `start`, backgrounds e sprites). Rode antes de cada commit.

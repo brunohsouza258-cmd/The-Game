@@ -77,12 +77,17 @@
       "speaker": "Alice",
       "pose": "happy",
       "text": "Combinado. Duas testemunhas são melhores que uma. Mesmo que nenhuma das duas consiga provar nada.",
-      "next": "end"
+      "next": "closing"
     },
     "careful": {
       "speaker": "Alice",
       "pose": "sad",
       "text": "Saber nunca me fez mal. Não saber é que me faz. ...Mas obrigada por se preocupar.",
+      "next": "closing"
+    },
+    "closing": {
+      "speaker": "",
+      "text": "A Alice tira os óculos, esfrega os olhos com o dorso da mão e, por um segundo, parece muito mais nova do que o jeito dela deixa a gente esquecer. Depois os recoloca, e volta a ser a Alice.",
       "next": "end"
     },
     "end": {

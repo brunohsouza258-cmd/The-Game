@@ -9,37 +9,77 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Sétimo dia. A carteira com as letras K.M. não está mais na sala. No lugar dela, o piso é de uma cor um pouco mais clara, como se tivesse ficado ali muitos anos — ou nenhum.",
-      "next": "clock"
+      "text": "O dia começa errado por detalhes pequenos. A água da torneira tem gosto de metal. O relógio do forno marca 21:47 mesmo ao meio-dia, e a mãe, que nunca atrasa, nem comenta. {player_name} sai de casa sem tomar café.",
+      "next": "intro2"
+    },
+    "intro2": {
+      "speaker": "",
+      "text": "No ônibus, ninguém fala. O motorista dirige com os olhos fixos no retrovisor, não na rua, e vai fazendo as curvas de memória. Quando ele passa pela escola, desacelera e murmura: \"Desce aqui, filho. Hoje é aqui.\"",
+      "next": "core"
     },
     "clock": {
       "speaker": "",
       "text": "O relógio da parede está parado em 21:47. A professora dá aula normalmente, olhando para ele de vez em quando, sem estranhar que seja de noite às dez da manhã.",
       "effect": "glitch",
-      "effects": {"dread": 2},
+      "effects": {
+        "dread": 2
+      },
       "next": "photo"
     },
     "photo": {
       "speaker": "",
       "text": "No mural da sala, a foto da turma do ano passado. {player_name} nunca esteve nesta escola no ano passado. Mesmo assim está na foto, na fileira de trás. Ao lado dele, um garoto com o rosto borrado, como se tivesse se mexido no exato momento do flash.",
       "choices": [
-        { "text": "Chegar perto da foto.", "effects": {"dread": 3}, "next": "closer" },
-        { "text": "Sair da sala.", "effects": {"dread": -1}, "next": "hallway" }
+        {
+          "text": "Chegar perto da foto.",
+          "effects": {
+            "dread": 3
+          },
+          "next": "closer"
+        },
+        {
+          "text": "Sair da sala.",
+          "effects": {
+            "dread": -1
+          },
+          "next": "hallway"
+        }
       ]
     },
     "closer": {
       "speaker": "",
       "text": "De perto, o borrão não é um borrão. São várias versões do mesmo rosto, sobrepostas, cada uma um pouco mais apagada que a anterior. Uma para cada vez que tudo voltou ao começo.",
       "effect": "glitch",
-      "effects": {"dread": 2},
+      "effects": {
+        "dread": 2
+      },
       "next": "hallway"
     },
     "hallway": {
       "speaker": "",
       "text": "No corredor, os alunos andam um pouco devagar demais. Ninguém fala do festival agora. Ninguém fala de nada. A escola parece um lugar que está sendo lembrado por alguém que esqueceu os detalhes.",
-      "effects": {"dread": 2},
-      "next": "end"
+      "effects": {
+        "dread": 2
+      },
+      "next": "outro1"
     },
-    "end": { "end": true }
+    "end": {
+      "end": true
+    },
+    "core": {
+      "speaker": "",
+      "text": "Sétimo dia. A carteira com as letras K.M. não está mais na sala. No lugar dela, o piso é de uma cor um pouco mais clara, como se tivesse ficado ali muitos anos — ou nenhum.",
+      "next": "clock"
+    },
+    "outro1": {
+      "speaker": "",
+      "text": "No fim da tarde, a Alice o intercepta perto da secretaria. Sem preâmbulo, estende o relógio de pulso: o ponteiro dos segundos treme, tenta andar, e volta. \"Quatro vezes\", ela diz. \"Eu medi. Quatro vezes por minuto ele tenta. E volta.\"",
+      "next": "outro2"
+    },
+    "outro2": {
+      "speaker": "",
+      "text": "Ela guarda o relógio no bolso e olha para o corredor onde a carteira costumava ficar. \"Se alguém apagou uma pessoa\", ela murmura, \"esqueceu de apagar os rastros.\" Depois vai embora sem esperar resposta.",
+      "next": "end"
+    }
   }
 }
