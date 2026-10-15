@@ -71,6 +71,7 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - `Godot --headless --path . --script tools/simulate.gd`: joga a história inteira centenas de vezes com várias estratégias e imprime a distribuição de finais (para checar alcançabilidade e balanceamento).
 - `Godot --headless --path . --script tools/smoke_test.gd`: toca todos os diálogos até o fim e abre as telas principais (sai com erro se algo falhar).
 - `powershell -File tools/build_exe.ps1 -Godot <caminho do Godot.exe>`: gera `build/LanternasDePapel.exe` + `.pck` sem precisar dos export templates (o `.exe` é o Godot com o `.pck` de mesmo nome; mantenha os dois na mesma pasta). Para um `.exe` independente, instale os export templates e use o preset abaixo.
+- `python tools/make_icon.py`: gera o ícone do jogo (`assets/icon.png` e `assets/icon.ico`). O ícone é embutido no `.exe` na exportação; para isso o Godot precisa do rcedit configurado em Editor > Configurações do editor > Export > Windows.
 - `export_presets.cfg`: preset de exportação para Windows (precisa dos export templates do Godot). Exporte com `Godot --headless --path . --export-release "Windows Desktop" build/release/LanternasDePapel.exe`: gera um `.exe` único, sem o "(DEBUG)" no título.
 - `python tools/make_backgrounds.py`: regenera os cenários derivados (requer Pillow).
 - `python tools/validate_data.py`: valida os JSONs de diálogo e finais (referências `next`, nó `start`, backgrounds e sprites). Rode antes de cada commit.

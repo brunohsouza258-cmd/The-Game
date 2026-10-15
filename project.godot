@@ -14,6 +14,8 @@ config/name="Lanternas de Papel"
 config/description="Lanternas de Papel — um jogo de Bruno"
 run/main_scene="res://scenes/main/Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://assets/icon.png"
+config/windows_native_icon="res://assets/icon.ico"
 
 [autoload]
 
