@@ -25,7 +25,8 @@
     "b1": {
       "speaker": "",
       "text": "A carteira vazia, com as iniciais K.M., voltou ao fundo da sala, sem que ninguém saiba quem a trouxe. A Yuna coloca a marmita ali e arruma os hashis com cuidado.",
-      "next": "b2"
+      "next": "b2",
+      "image": "res://assets/inserts/desk_km.png"
     },
     "b2": {
       "speaker": "Yuna",

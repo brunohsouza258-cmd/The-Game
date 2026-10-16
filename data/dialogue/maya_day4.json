@@ -34,7 +34,8 @@
       "speaker": "",
       "pose": "thinking",
       "text": "Maya folheia sem surpresa nenhuma. Para numa página. Na margem tem um desenho pequeno: uma porta de metal com uma placa. O mesmo desenho que ela fez ontem.",
-      "next": "her_drawing"
+      "next": "her_drawing",
+      "image": "res://assets/inserts/notebook.png"
     },
     "her_drawing": {
       "speaker": "Maya",
@@ -68,7 +69,8 @@
           },
           "next": "not_now"
         }
-      ]
+      ],
+      "image": ""
     },
     "kaito": {
       "speaker": "Maya",

@@ -10,7 +10,9 @@
     "start": {
       "speaker": "",
       "text": "A cantina está aberta, mas ninguém serve. As bandejas, empilhadas, ainda estão quentes. Uma colher de sopa balança sozinha dentro de uma panela, como se alguém tivesse acabado de soltá-la.",
-      "next": "intro2"
+      "next": "intro2",
+      "background": "res://assets/backgrounds/cafeteria.png",
+      "tint": "#cfc8d8"
     },
     "intro2": {
       "speaker": "",
@@ -131,7 +133,9 @@
     "core": {
       "speaker": "",
       "text": "Décimo dia. Metade das carteiras está vazia. \"Gripe\", diz a professora, lendo uma lista de nomes que vai ficando mais curta enquanto ela lê.",
-      "next": "window"
+      "next": "window",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#a99fb4"
     },
     "outro1": {
       "speaker": "",

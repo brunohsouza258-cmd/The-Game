@@ -13,6 +13,7 @@ var _static_left: int = 0
 var _static_total: int = 1
 var _thud_left: int = 0
 var _beat_clock: float = 0.0
+var _beat_left: float = 0.0  # segundos restantes de batimento depois de uma cena de tensão
 var _in_dialogue: bool = false
 const THUD_SECONDS := 0.5
 const SAMPLE_DIR := "res://assets/sfx/"
@@ -34,6 +35,7 @@ func _ready() -> void:
 	_player.play()
 	_playback = _player.get_stream_playback()
 	EventBus.glitch_requested.connect(play_glitch)
+	EventBus.horror_requested.connect(func(_kind, _data): _beat_left = 7.0)
 	EventBus.dialogue_started.connect(func(_m): _in_dialogue = true)
 	EventBus.dialogue_ended.connect(func(_id): _in_dialogue = false; set_ambience(""))
 	EventBus.dialogue_cancelled.connect(func(): _in_dialogue = false; set_ambience(""))
@@ -94,21 +96,22 @@ func play_thud() -> void:
 # Batimento cardíaco: aparece com o pavor >= 40 e acelera/engrossa até 100.
 func _heartbeat_sample(dread: int) -> float:
 	var strength := clampf((dread - 40) / 60.0, 0.0, 1.0)
-	if strength <= 0.0 or not _in_dialogue or get_tree().paused:
+	if strength <= 0.0 or _beat_left <= 0.0 or not _in_dialogue or get_tree().paused:
 		return 0.0
 	var bpm := 58.0 + 80.0 * strength
 	var period := 60.0 / bpm
 	_beat_clock = fmod(_beat_clock + 1.0 / SAMPLE_RATE, period)
 	var lub := _thump(_beat_clock)
 	var dub := _thump(_beat_clock - period * 0.28) * 0.7
-	return (lub + dub) * (0.12 + 0.4 * strength)
+	return (lub + dub) * (0.12 + 0.4 * strength) * clampf(_beat_left / 2.0, 0.0, 1.0)
 
 func _thump(t: float) -> float:
 	if t < 0.0:
 		return 0.0
 	return sin(TAU * 48.0 * t) * exp(-t * 20.0)
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	_beat_left = maxf(0.0, _beat_left - delta)
 	if _playback == null:
 		return
 	var frames_available := _playback.get_frames_available()

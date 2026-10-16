@@ -9,12 +9,16 @@
     "start": {
       "speaker": "",
       "text": "A noite foi curta. Ele sonhou com uma sala sem janelas e um relógio que só tinha o ponteiro das horas. Acordou antes do despertador, com a sensação de ter esquecido de fazer alguma coisa importante às nove da noite do dia anterior.",
-      "next": "intro2"
+      "next": "intro2",
+      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "tint": "#ffffff"
     },
     "intro2": {
       "speaker": "",
       "text": "No caminho para a escola, o semáforo da esquina fica vermelho três vezes seguidas, sem carro nenhum passando. {player_name} espera as três, porque algo nele acha que é importante esperar.",
-      "next": "loop_echo"
+      "next": "loop_echo",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#ffffff"
     },
     "glitch_announcement": {
       "speaker": "Alto-falante",
@@ -50,7 +54,9 @@
     "core": {
       "speaker": "",
       "text": "Segundo dia. O sistema de som da escola toca o aviso de sempre antes da primeira aula — e então, por meio segundo, a voz muda.",
-      "next": "glitch_announcement"
+      "next": "glitch_announcement",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#ffffff"
     },
     "outro1": {
       "speaker": "",

@@ -12,7 +12,8 @@
       "speaker": "",
       "pose": "sad",
       "text": "Yuna está diante de duas marmitas abertas na mesa do clube. Uma com o arroz em formato de coelho. Outra sem ovo, porque alguém odiava ovo.",
-      "next": "two"
+      "next": "two",
+      "image": "res://assets/inserts/lunchboxes.png"
     },
     "two": {
       "speaker": "Yuna",
@@ -24,7 +25,8 @@
       "speaker": "",
       "pose": "sad",
       "text": "O sorriso dela não aparece. Ela tenta, e o rosto não obedece. A voz sai pequena:",
-      "next": "ask_help"
+      "next": "ask_help",
+      "image": ""
     },
     "ask_help": {
       "speaker": "Yuna",

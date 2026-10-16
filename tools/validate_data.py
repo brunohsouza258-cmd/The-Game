@@ -33,7 +33,7 @@ def main():
             if d.get(key) and not res_exists(d[key]):
                 errors.append(f"{name}: {key} inexistente: {d[key]}")
         for nid, node in nodes.items():
-            for key in ("sprite", "partner", "background"):
+            for key in ("sprite", "partner", "background", "image"):
                 if node.get(key) and not res_exists(node[key]):
                     errors.append(f"{name}: nó '{nid}' com {key} inexistente: {node[key]}")
             targets = [node.get("next")] + [c.get("next") for c in node.get("choices", [])]

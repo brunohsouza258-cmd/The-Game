@@ -12,7 +12,8 @@
       "text": "A foto da turma está pendurada no quadro. A Maya e a Yuna estão paradas diante dela, a uns dez centímetros do vidro.",
       "next": "n1",
       "background": "res://assets/backgrounds/classroom.png",
-      "tint": "#bdb2c4"
+      "tint": "#bdb2c4",
+      "image": "res://assets/inserts/photo_class.png"
     },
     "n1": {
       "speaker": "Yuna",
@@ -140,7 +141,8 @@
             "dread": 6
           }
         }
-      ]
+      ],
+      "image": ""
     },
     "end": {
       "end": true

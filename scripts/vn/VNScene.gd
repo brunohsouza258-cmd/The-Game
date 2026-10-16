@@ -40,6 +40,11 @@ var _stage_x: float = SCREEN_SIZE.x / 2.0
 var _partner_scale: float = 1.0
 var _next_screen: String = "res://scenes/main/Hub.tscn"
 var _glitch_pulse: float = 0.0
+const INSERT_CENTER := Vector2(640, 218)
+const INSERT_MAX := Vector2(640, 350)
+var _insert_dim: ColorRect
+var _insert: Sprite2D
+var _insert_tween: Tween
 var _sprite_material: ShaderMaterial
 var _partner_material: ShaderMaterial
 
@@ -50,6 +55,18 @@ func _ready() -> void:
 	_partner_sprite.modulate = PARTNER_TINT
 	add_child(_partner_sprite)
 	move_child(_partner_sprite, character_sprite.get_index())
+	# Objetos mostrados em cena (foto, caderno, relógio...): "image" no nó do diálogo.
+	_insert_dim = ColorRect.new()
+	_insert_dim.color = Color(0, 0, 0, 0.5)
+	_insert_dim.size = SCREEN_SIZE
+	_insert_dim.modulate.a = 0.0
+	_insert_dim.visible = false
+	add_child(_insert_dim)
+	_insert = Sprite2D.new()
+	_insert.position = INSERT_CENTER
+	_insert.modulate.a = 0.0
+	_insert.visible = false
+	add_child(_insert)
 	var shader: Shader = load("res://assets/shaders/sprite_glitch.gdshader")
 	_sprite_material = ShaderMaterial.new()
 	_sprite_material.shader = shader
@@ -92,7 +109,34 @@ func _on_node_shown(node_data: Dictionary) -> void:
 
 # Cenas com várias personagens trocam sprite, cenário e tom por fala:
 # "sprite": "res://...png" (ou "" para esconder), "background", "tint".
+func _show_insert(path: String) -> void:
+	if _insert_tween:
+		_insert_tween.kill()
+	if path == "":
+		if _insert.visible:
+			_insert_tween = create_tween().set_parallel(true)
+			_insert_tween.tween_property(_insert, "modulate:a", 0.0, 0.25)
+			_insert_tween.tween_property(_insert_dim, "modulate:a", 0.0, 0.25)
+			_insert_tween.chain().tween_callback(func():
+				_insert.visible = false
+				_insert_dim.visible = false)
+		return
+	var texture: Texture2D = load(path)
+	if texture == null:
+		return
+	_insert.texture = texture
+	var fit := minf(INSERT_MAX.x / texture.get_size().x, INSERT_MAX.y / texture.get_size().y)
+	_insert.scale = Vector2.ONE * fit * 0.94
+	_insert.visible = true
+	_insert_dim.visible = true
+	_insert_tween = create_tween().set_parallel(true).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	_insert_tween.tween_property(_insert, "modulate:a", 1.0, 0.35)
+	_insert_tween.tween_property(_insert_dim, "modulate:a", 1.0, 0.35)
+	_insert_tween.tween_property(_insert, "scale", Vector2.ONE * fit, 0.35)
+
 func _apply_node_scene(node_data: Dictionary) -> void:
+	if node_data.has("image"):
+		_show_insert(str(node_data["image"]))
 	if node_data.has("background"):
 		SfxPlayer.set_ambience(_ambience_for(node_data["background"]))
 		background.texture = load(node_data["background"])
@@ -144,9 +188,7 @@ func _set_texture(path: String) -> void:
 func _update_glitch_shader(delta: float) -> void:
 	_glitch_pulse = maxf(0.0, _glitch_pulse - delta * 2.0)
 	var calm := GameSettings.reduce_flashing
-	var dread_amount := clampf((GameState.dread - 60) / 40.0, 0.0, 1.0)
-	var flicker := 1.0 if fmod(_time * 0.7, 5.0) < 0.35 else 0.0
-	var intensity := dread_amount * 0.3 * flicker + _glitch_pulse * 0.9
+	var intensity := _glitch_pulse * 0.9
 	if _base_sprite_path != "" and character_sprite.modulate.g < 0.7:
 		intensity = maxf(intensity, 0.5)
 	if calm:

@@ -7,23 +7,23 @@ script = ExtResource("1")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 40.0
-offset_top = 520.0
+offset_top = 504.0
 offset_right = 1240.0
-offset_bottom = 690.0
+offset_bottom = 702.0
 
 [node name="TextLabel" type="Label" parent="Panel"]
 offset_left = 30.0
-offset_top = 45.0
+offset_top = 36.0
 offset_right = 1170.0
-offset_bottom = 160.0
+offset_bottom = 188.0
 theme_override_font_sizes/font_size = 22
 autowrap_mode = 2
 
 [node name="NamePlate" type="Panel" parent="."]
 offset_left = 40.0
-offset_top = 478.0
+offset_top = 462.0
 offset_right = 280.0
-offset_bottom = 522.0
+offset_bottom = 506.0
 
 [node name="NameLabel" type="Label" parent="NamePlate"]
 offset_left = 0.0
@@ -37,9 +37,9 @@ text = "Nome"
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="."]
 offset_left = 390.0
-offset_top = 330.0
+offset_top = 310.0
 offset_right = 890.0
-offset_bottom = 470.0
+offset_bottom = 452.0
 alignment = 2
 
 [node name="TypeTimer" type="Timer" parent="."]
@@ -47,17 +47,17 @@ wait_time = 0.02
 
 [node name="HistoryButton" type="Button" parent="."]
 offset_left = 1104.0
-offset_top = 474.0
+offset_top = 458.0
 offset_right = 1240.0
-offset_bottom = 512.0
+offset_bottom = 496.0
 theme_override_font_sizes/font_size = 16
 text = "Histórico"
 
 [node name="AutoButton" type="Button" parent="."]
 offset_left = 960.0
-offset_top = 474.0
+offset_top = 458.0
 offset_right = 1096.0
-offset_bottom = 512.0
+offset_bottom = 496.0
 theme_override_font_sizes/font_size = 16
 text = "Auto: Sim"
 

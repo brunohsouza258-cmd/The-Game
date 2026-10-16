@@ -10,7 +10,9 @@
     "start": {
       "speaker": "",
       "text": "O corredor tem um cheiro que ele reconhece de algum lugar muito antigo: poeira, ferrugem, chuva em concreto. Cada passo ecoa um segundo depois do que deveria, como se alguém caminhasse logo atrás, no mesmo ritmo, parando quando ele para.",
-      "next": "intro2"
+      "next": "intro2",
+      "background": "res://assets/backgrounds/school_night.png",
+      "tint": "#ffffff"
     },
     "intro2": {
       "speaker": "",
@@ -64,7 +66,9 @@
         "> ERRO: personagem 'Kaito Mori' não encontrado",
         "> {player_name}, você ainda está aí?"
       ],
-      "sfx": "door_hinge"
+      "sfx": "door_hinge",
+      "background": "res://assets/backgrounds/school_decayed.png",
+      "tint": "#ffffff"
     },
     "wall": {
       "speaker": "",
@@ -142,12 +146,15 @@
     "outro1": {
       "speaker": "",
       "text": "A cena se desfaz. Quando ele pisca, está na cama de casa, vestido, os sapatos sujos de reboco. O despertador marca seis da manhã. O sol nasce pela janela como em qualquer outro dia. Mas a mão está enfaixada com uma atadura que ele não lembra de ter colocado.",
-      "next": "outro2"
+      "next": "outro2",
+      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "tint": "#d8d0e0"
     },
     "outro2": {
       "speaker": "",
       "text": "Na mesa, o bilhete do primeiro dia. Alguém acrescentou, abaixo da frase borrada, uma linha com a letra dele: \"Você vai voltar. Sempre volta.\"",
-      "next": "end"
+      "next": "end",
+      "image": "res://assets/inserts/bilhete.png"
     }
   }
 }

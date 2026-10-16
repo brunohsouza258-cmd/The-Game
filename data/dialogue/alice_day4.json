@@ -38,7 +38,8 @@
           },
           "next": "initials"
         }
-      ]
+      ],
+      "image": "res://assets/inserts/roster.png"
     },
     "notebook": {
       "speaker": "Alice",
@@ -72,7 +73,8 @@
           },
           "next": "careful"
         }
-      ]
+      ],
+      "image": ""
     },
     "deal": {
       "speaker": "Alice",

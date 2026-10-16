@@ -12,7 +12,8 @@
       "speaker": "Yuna",
       "pose": "surprised",
       "text": "Eu lembrei da risada dele. Do Kai. Hoje de manhã, escovando os dentes. Do nada. E aí lembrei da foto — a criança riscada era ele. E a outra, do lado...",
-      "next": "photo"
+      "next": "photo",
+      "image": "res://assets/inserts/photo_kids.png"
     },
     "photo": {
       "speaker": "Yuna",
@@ -41,13 +42,15 @@
       "speaker": "Yuna",
       "pose": "angry",
       "text": "Então daqui a pouco eu esqueço de você de novo. E da Maya. E de mim. ...Não. Eu não quero. Pela primeira vez na vida eu quero ficar triste e lembrar, em vez de sorrir e esquecer.",
-      "next": "poem_echo"
+      "next": "poem_echo",
+      "image": ""
     },
     "together": {
       "speaker": "Yuna",
       "pose": "happy",
       "text": "Junto. Tá. Se eu começar a esquecer, você me lembra. Promete? Eu não tenho vergonha de pedir. Não mais.",
-      "next": "poem_echo"
+      "next": "poem_echo",
+      "image": ""
     },
     "poem_echo": {
       "speaker": "",

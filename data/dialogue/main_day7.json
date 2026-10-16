@@ -10,12 +10,18 @@
     "start": {
       "speaker": "",
       "text": "O dia começa errado por detalhes pequenos. A água da torneira tem gosto de metal. O relógio do forno marca 21:47 mesmo ao meio-dia, e a mãe, que nunca atrasa, nem comenta. {player_name} sai de casa sem tomar café.",
-      "next": "intro2"
+      "next": "intro2",
+      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "tint": "#ffffff",
+      "image": "res://assets/inserts/clock_2147.png"
     },
     "intro2": {
       "speaker": "",
       "text": "No ônibus, ninguém fala. O motorista dirige com os olhos fixos no retrovisor, não na rua, e vai fazendo as curvas de memória. Quando ele passa pela escola, desacelera e murmura: \"Desce aqui, filho. Hoje é aqui.\"",
-      "next": "loop_echo"
+      "next": "loop_echo",
+      "background": "res://assets/backgrounds/bus_rain.png",
+      "tint": "#ffffff",
+      "image": ""
     },
     "clock": {
       "speaker": "",
@@ -26,7 +32,8 @@
       },
       "next": "photo",
       "fx": "static",
-      "pace": "slow"
+      "pace": "slow",
+      "image": "res://assets/inserts/clock_2147.png"
     },
     "photo": {
       "speaker": "",
@@ -46,7 +53,8 @@
           },
           "next": "hallway"
         }
-      ]
+      ],
+      "image": "res://assets/inserts/photo_class.png"
     },
     "closer": {
       "speaker": "",
@@ -66,7 +74,10 @@
       "effects": {
         "dread": 2
       },
-      "next": "outro1"
+      "next": "outro1",
+      "image": "",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "tint": "#a89cb4"
     },
     "end": {
       "end": true
@@ -83,7 +94,9 @@
     "core": {
       "speaker": "",
       "text": "Sétimo dia. A carteira com as letras K.M. não está mais na sala. No lugar dela, o piso é de uma cor um pouco mais clara, como se tivesse ficado ali muitos anos — ou nenhum.",
-      "next": "clock"
+      "next": "clock",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#bdb2c4"
     },
     "outro1": {
       "speaker": "",

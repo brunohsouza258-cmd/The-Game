@@ -17,7 +17,9 @@ const SKIP_INTERVAL := 0.07
 
 const PACES := {"slow": 2.5, "crawl": 5.0, "fast": 0.4}
 const CORRUPT_GLYPHS := "█▓▒░#@%&§¤¿?¡"
-const PANEL_HOME := Vector2(40, 520)
+const PANEL_HOME := Vector2(40, 504)
+const TENSION_SECONDS := 1.6
+const MIN_FONT := 14
 
 var _auto_timer: Timer
 var _noauto: bool = false
@@ -27,6 +29,7 @@ var _corrupt_left: float = 0.0
 var _corrupt_tick: float = 0.0
 var _real_name: String = ""
 var _name_garble_left: float = 0.0
+var _tension_left: float = 0.0
 var _skip_cooldown: float = 0.0
 
 var _full_text: String = ""
@@ -71,21 +74,39 @@ func _corrupt(text: String, chance: float = 0.22) -> String:
 			out += ch
 	return out
 
-# Com o pavor alto a própria interface "adoece": a caixa treme e o nome falha.
+# A interface só "adoece" nos momentos de tensão (fx, glitch, texto embaralhado), nunca o tempo todo.
 func _dread_interface(delta: float) -> void:
-	var dread := GameState.dread
-	if dread >= 70:
-		var power := (dread - 60) / 40.0 * 2.5
-		panel.position = PANEL_HOME + Vector2(randf_range(-power, power), randf_range(-power, power))
-	else:
+	if _tension_left <= 0.0:
 		panel.position = PANEL_HOME
+		if _name_garble_left > 0.0 or name_label.text != _real_name:
+			name_label.text = _real_name
+			_name_garble_left = 0.0
+		return
+	_tension_left -= delta
+	if GameSettings.reduce_flashing:
+		return
+	var power := 1.0 + clampf(GameState.dread / 100.0, 0.0, 1.0) * 2.5
+	panel.position = PANEL_HOME + Vector2(randf_range(-power, power), randf_range(-power, power))
 	if _name_garble_left > 0.0:
 		_name_garble_left -= delta
 		if _name_garble_left <= 0.0:
 			name_label.text = _real_name
-	elif dread >= 75 and name_plate.visible and _real_name != "" and randf() < 0.01:
+	elif GameState.dread >= 60 and name_plate.visible and _real_name != "" and randf() < 0.08:
 		name_label.text = _corrupt(_real_name, 0.6)
-		_name_garble_left = 0.12
+		_name_garble_left = 0.1
+
+# Encolhe a fonte até o texto caber na caixa (sem sair da tela).
+func _fit_text(text: String) -> void:
+	var size := roundi(22.0 * GameSettings.font_scale)
+	var font: Font = text_label.get_theme_font("font")
+	var width := text_label.size.x
+	var max_height := text_label.size.y
+	while size > MIN_FONT:
+		var height := font.get_multiline_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, width, size).y
+		if height <= max_height:
+			break
+		size -= 1
+	text_label.add_theme_font_size_override("font_size", size)
 
 func _process(delta: float) -> void:
 	if panel.visible:
@@ -189,7 +210,9 @@ func _on_node_shown(node_data: Dictionary) -> void:
 	# Controle de ritmo por fala: "pace" (slow/crawl/fast/instant), "pause" (s antes do texto),
 	# "noauto" (não avança sozinho) e "corrupt" (s de texto embaralhado).
 	_noauto = bool(node_data.get("noauto", false))
-	text_label.add_theme_font_size_override("font_size", roundi(22.0 * GameSettings.font_scale))
+	_fit_text(_full_text)
+	if node_data.has("fx") or node_data.get("effect", "") == "glitch" or float(node_data.get("corrupt", 0.0)) > 0.0:
+		_tension_left = TENSION_SECONDS
 	var pace_key: String = str(node_data.get("pace", ""))
 	_pace = 0.0 if pace_key == "instant" else float(PACES.get(pace_key, 1.0))
 	_corrupt_left = float(node_data.get("corrupt", 0.0))

@@ -42,19 +42,22 @@
       "speaker": "",
       "pose": "thinking",
       "text": "Alice lê cada página duas vezes, comparando datas com as anotações dela. Os lábios se mexem enquanto ela conta.",
-      "next": "match"
+      "next": "match",
+      "image": "res://assets/inserts/notebook.png"
     },
     "match": {
       "speaker": "Alice",
       "pose": "scared",
       "text": "Dia 6: \"mãos machucadas\". É amanhã. {player_name}... se isso acontecer amanhã, o caderno não é diário. É aviso. Você está escrevendo pra você mesmo, de uma volta pra outra.",
-      "next": "poem_echo"
+      "next": "poem_echo",
+      "image": ""
     },
     "impossible": {
       "speaker": "Alice",
       "pose": "angry",
       "text": "Impossível é uma palavra pra coisas que ainda não aconteceram com você. Eu vou continuar anotando. Você vai acabar precisando das minhas anotações.",
-      "next": "poem_echo"
+      "next": "poem_echo",
+      "image": ""
     },
     "poem_echo": {
       "speaker": "",

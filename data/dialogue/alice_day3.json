@@ -35,7 +35,8 @@
           },
           "next": "vandal"
         }
-      ]
+      ],
+      "image": "res://assets/inserts/yearbook.png"
     },
     "hide": {
       "speaker": "Alice",
@@ -71,7 +72,8 @@
           },
           "next": "alone"
         }
-      ]
+      ],
+      "image": ""
     },
     "partner": {
       "speaker": "Alice",

@@ -12,7 +12,8 @@
       "text": "As lanternas balançam devagar com o vento. A Yuna está sentada no degrau do palco com duas lanternas apagadas no colo, uma branca e uma vermelha, e uma caneta preta.",
       "next": "n1",
       "background": "res://assets/backgrounds/festival_night.png",
-      "tint": "#ffffff"
+      "tint": "#ffffff",
+      "image": "res://assets/inserts/white_lantern.png"
     },
     "n1": {
       "speaker": "Yuna",

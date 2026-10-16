@@ -57,7 +57,8 @@
     "n5": {
       "speaker": "",
       "text": "A Alice vira o caderno para a Yuna. Na página, uma lista de datas escritas com a letra do próprio {player_name}, mas ele nunca viu aquele caderno antes.",
-      "next": "n6"
+      "next": "n6",
+      "image": "res://assets/inserts/notebook.png"
     },
     "n6": {
       "speaker": "Yuna",
@@ -135,7 +136,8 @@
             "dread": -3
           }
         }
-      ]
+      ],
+      "image": ""
     },
     "end": {
       "end": true

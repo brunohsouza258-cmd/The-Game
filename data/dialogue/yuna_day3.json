@@ -61,7 +61,8 @@
           },
           "next": "cute"
         }
-      ]
+      ],
+      "image": "res://assets/inserts/photo_kids.png"
     },
     "who": {
       "speaker": "Yuna",
@@ -98,7 +99,8 @@
           },
           "next": "tea"
         }
-      ]
+      ],
+      "image": ""
     },
     "crying": {
       "speaker": "Yuna",

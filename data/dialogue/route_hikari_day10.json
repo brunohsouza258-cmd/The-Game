@@ -11,8 +11,8 @@
       "speaker": "",
       "text": "O ginásio está às escuras. A Hikari bate num saco de pancada preso ao teto, devagar, sem força, como alguém que bate para ter o que fazer com as mãos.",
       "next": "n1",
-      "background": "res://assets/backgrounds/school_night.png",
-      "tint": "#a0a0b8"
+      "background": "res://assets/backgrounds/gym.png",
+      "tint": "#9a98b0"
     },
     "n1": {
       "speaker": "Hikari",

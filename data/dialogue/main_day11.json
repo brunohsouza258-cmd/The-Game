@@ -10,12 +10,16 @@
     "start": {
       "speaker": "",
       "text": "O alvorecer parece pintado. Nenhuma nuvem, nenhum vento, as cores todas um pouco saturadas demais. {player_name} abre a janela e escuta pássaros cantando uma melodia que se repete a cada trinta segundos, idêntica.",
-      "next": "intro2"
+      "next": "intro2",
+      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "tint": "#ffffff"
     },
     "intro2": {
       "speaker": "",
       "text": "Na rua, os vizinhos cumprimentam com a mesma frase: \"Que dia lindo, não é?\" Ele respondeu ontem com um sorriso. Hoje responde com um aceno, e sente que todos repararam na diferença.",
-      "next": "loop_echo"
+      "next": "loop_echo",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#fff2e0"
     },
     "too_perfect": {
       "speaker": "",

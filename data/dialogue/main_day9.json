@@ -10,12 +10,15 @@
     "start": {
       "speaker": "",
       "text": "Não houve sonho nenhum. Pela primeira vez em muitos dias, {player_name} dormiu sem imagem, sem voz, sem relógio. Acordou com a sensação de que algo foi tirado de dentro dele durante a noite, algo pesado, e que o espaço vazio ainda não aprendeu a ser vazio.",
-      "next": "intro2"
+      "next": "intro2",
+      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "tint": "#b8aec4"
     },
     "intro2": {
       "speaker": "",
       "text": "A mochila está ao lado da cama, já pronta. Dentro, o caderno preto. As páginas depois do dia 12 continuam arrancadas, mas ele agora percebe uma marca de pressão no papel de trás: alguém escreveu e apagou várias vezes, tentando acertar uma única palavra.",
-      "next": "loop_echo"
+      "next": "loop_echo",
+      "image": "res://assets/inserts/notebook.png"
     },
     "truth": {
       "speaker": "Maya",
@@ -65,7 +68,9 @@
     "outro1f": {
       "speaker": "",
       "text": "De noite, sozinho no quarto, ele repete as duas letras que viu no caderno: K.M.\n\nNão faz sentido. Ele tenta esquecer, como prometeu a Maya, e a mão fecha de novo, sozinha, em volta de ninguém.",
-      "next": "outro2"
+      "next": "outro2",
+      "background": "res://assets/backgrounds/bedroom_night.png",
+      "tint": "#ffffff"
     },
     "end": {
       "end": true
@@ -97,12 +102,17 @@
             "flags.chose_forget": 1
           }
         }
-      ]
+      ],
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "tint": "#b8aec4",
+      "image": ""
     },
     "outro1": {
       "speaker": "",
       "text": "De noite, sozinho no quarto, ele repete o nome em voz baixa, testando o peso dele na boca. Kaito. Não ecoa. Não faz a casa tremer. É só um nome, comum, como o de um vizinho. Mas a garganta aperta do mesmo jeito.",
-      "next": "outro2"
+      "next": "outro2",
+      "background": "res://assets/backgrounds/bedroom_night.png",
+      "tint": "#ffffff"
     },
     "outro2": {
       "speaker": "",

@@ -10,7 +10,9 @@
     "start": {
       "speaker": "",
       "text": "O espelho do banheiro mostra um rosto cansado demais para a idade. {player_name} lava as mãos devagar, mais pela dor do que pela sujeira. A água do ralo roda rosada por alguns segundos.",
-      "next": "intro2"
+      "next": "intro2",
+      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "tint": "#ffffff"
     },
     "intro2": {
       "speaker": "",
@@ -50,7 +52,9 @@
       "speaker": "",
       "text": "Na escola, no fim do corredor, a escada que leva ao telhado está isolada com uma corrente. Na parede ao lado, riscado fundo no reboco, como se tivesse sido feito com as unhas:",
       "next": "wall",
-      "sfx": "lock"
+      "sfx": "lock",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "tint": "#c9bfd2"
     },
     "wall": {
       "speaker": "",
@@ -63,7 +67,8 @@
       "fx": "flash_red",
       "pause": 1.0,
       "pace": "slow",
-      "noauto": true
+      "noauto": true,
+      "image": "res://assets/inserts/wall_nao_suba.png"
     },
     "end": {
       "end": true
@@ -85,7 +90,8 @@
     "outro1": {
       "speaker": "",
       "text": "Na hora do almoço, a Hikari passa por ele no corredor com as duas mãos escondidas nos bolsos do agasalho. Os olhos se cruzam. Ela vira a cara rápido demais, e ele percebe que ela também não consegue fechar bem os dedos.",
-      "next": "outro2"
+      "next": "outro2",
+      "image": ""
     },
     "outro2": {
       "speaker": "",

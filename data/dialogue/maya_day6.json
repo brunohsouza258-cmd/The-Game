@@ -12,7 +12,9 @@
       "speaker": "",
       "pose": "sad",
       "text": "Maya vê a mão enfaixada e não pergunta nada. Pega o pulso dele e leva para a enfermaria vazia, como quem já fez esse caminho muitas vezes.",
-      "next": "nurse"
+      "next": "nurse",
+      "background": "res://assets/backgrounds/infirmary.png",
+      "tint": "#ffffff"
     },
     "nurse": {
       "speaker": "Maya",

@@ -12,7 +12,8 @@
       "text": "O corredor está quase vazio. A luz do fim de tarde corta os armários em faixas. Perto da escada, a Alice e a Maya estão paradas diante de uma carteira vazia que alguém deixou no corredor.",
       "next": "n1",
       "background": "res://assets/backgrounds/hallway_dusk.png",
-      "tint": "#e0c9d6"
+      "tint": "#e0c9d6",
+      "image": "res://assets/inserts/desk_km.png"
     },
     "n1": {
       "speaker": "Alice",
@@ -140,7 +141,8 @@
             "dread": 4
           }
         }
-      ]
+      ],
+      "image": ""
     },
     "end": {
       "end": true

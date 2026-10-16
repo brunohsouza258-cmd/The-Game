@@ -17,7 +17,8 @@
       "speaker": "",
       "pose": "scared",
       "text": "O cronômetro digital marca dois tempos. O dela, 13 segundos e 2. E outro, logo acima: 12 segundos e 8. Alguém chegou antes dela.",
-      "next": "heard"
+      "next": "heard",
+      "image": "res://assets/inserts/stopwatch.png"
     },
     "heard": {
       "speaker": "Hikari",
@@ -49,7 +50,8 @@
           },
           "next": "race"
         }
-      ]
+      ],
+      "image": ""
     },
     "believe": {
       "speaker": "Hikari",

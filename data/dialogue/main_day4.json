@@ -10,7 +10,9 @@
     "start": {
       "speaker": "",
       "text": "Acordou cedo e sem alarme. A casa está quieta demais, como uma sala depois de uma aula que terminou antes da hora. Na mesa da cozinha tem um prato de torrada já fria e um bilhete da mãe: \"Volto tarde\".",
-      "next": "intro2"
+      "next": "intro2",
+      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "tint": "#ffffff"
     },
     "intro2": {
       "speaker": "",
@@ -36,7 +38,8 @@
           "next": "trash"
         }
       ],
-      "sfx": "page"
+      "sfx": "page",
+      "image": "res://assets/inserts/notebook.png"
     },
     "read": {
       "speaker": "Caderno",
@@ -80,12 +83,17 @@
     "core": {
       "speaker": "",
       "text": "Quarto dia. Antes da primeira aula, {player_name} abre o armário do corredor para guardar o casaco. Tem um caderno lá dentro. Capa preta, sem nome.",
-      "next": "open"
+      "next": "open",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "tint": "#d8d4e8"
     },
     "outro1": {
       "speaker": "",
       "text": "À tarde, na biblioteca, a bibliotecária lhe entrega uma lista de empréstimos antigos que ele nunca pediu. Seu nome aparece em todas as linhas, com datas que ele não lembra de ter vivido, sempre o mesmo livro: um volume de contos sem autor.",
-      "next": "outro2"
+      "next": "outro2",
+      "image": "",
+      "background": "res://assets/backgrounds/clubroom.png",
+      "tint": "#d0d8f0"
     },
     "outro2": {
       "speaker": "",

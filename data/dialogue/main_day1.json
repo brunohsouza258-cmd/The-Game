@@ -9,7 +9,8 @@
     "start": {
       "speaker": "",
       "text": "A manhã tem cheiro de grama cortada e de uniforme novo. {player_name} confere pela terceira vez o bolso do casaco: o bilhete ainda está lá, dobrado em quatro, a tinta tão borrada que só dá para ler uma frase. \"Volta. A escola é chata sem você.\"",
-      "next": "intro2"
+      "next": "intro2",
+      "image": "res://assets/inserts/bilhete.png"
     },
     "intro2": {
       "speaker": "",
@@ -37,7 +38,8 @@
     "core": {
       "speaker": "",
       "text": "Primeiro dia. {player_name} atravessa o portão da escola carregando mais expectativa do que faz sentido admitir — um recomeço, talvez. Uma chance de ser outra versão de si mesmo, nem que seja só um pouco.",
-      "next": "hallway"
+      "next": "hallway",
+      "image": ""
     },
     "outro1": {
       "speaker": "",

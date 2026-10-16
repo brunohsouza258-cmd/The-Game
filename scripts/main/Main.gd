@@ -148,14 +148,14 @@ func _accept_warning(reduce: bool) -> void:
 # Depois dos finais, a tela de título "adoece": o nome falha e as garotas somem por instantes.
 func _build_sick_title() -> void:
 	_sick_timer = Timer.new()
-	_sick_timer.wait_time = 7.0
+	_sick_timer.wait_time = 35.0
 	_sick_timer.autostart = true
 	_sick_timer.timeout.connect(_title_glitch)
 	add_child(_sick_timer)
 
 func _title_glitch() -> void:
 	var endings := GameSettings.unlocked_endings.size()
-	if endings == 0 or not title_screen.visible or not menu_panel.visible or randf() < 0.35:
+	if endings < 3 or not title_screen.visible or not menu_panel.visible or randf() < 0.4:
 		return
 	var title: Label = $TitleScreen/TitleLabel
 	var author: Label = $TitleScreen/AuthorLabel

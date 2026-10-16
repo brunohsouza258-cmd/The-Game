@@ -67,7 +67,8 @@
     "n6": {
       "speaker": "",
       "text": "A Maya dobra o papel com muito cuidado. Dentro, em letra miúda, ela escreve uma sigla e cobre com a mão antes que alguém veja.",
-      "next": "n7"
+      "next": "n7",
+      "image": "res://assets/inserts/white_lantern.png"
     },
     "b1": {
       "speaker": "Maya",
@@ -134,7 +135,8 @@
             "dread": 4
           }
         }
-      ]
+      ],
+      "image": ""
     },
     "end": {
       "end": true

@@ -112,12 +112,6 @@ func _process(delta: float) -> void:
 		get_tree().root.canvas_transform = Transform2D(0.0, Vector2(randf_range(-power, power), randf_range(-power, power)))
 		if _shake_time <= 0.0:
 			get_tree().root.canvas_transform = Transform2D.IDENTITY
-	# Com o pavor alto, a escola "falha" sozinha de vez em quando.
-	if _in_dialogue and not _busy and not GameSettings.reduce_flashing and GameState.dread >= AMBIENT_DREAD and not get_tree().paused:
-		_ambient_left -= delta
-		if _ambient_left <= 0.0:
-			_ambient_left = randf_range(AMBIENT_MIN, AMBIENT_MAX) * (1.5 - GameState.dread / 100.0)
-			_run_static(0.35, 0.35)
 
 func play(kind: String, data: Dictionary = {}) -> void:
 	match kind:
