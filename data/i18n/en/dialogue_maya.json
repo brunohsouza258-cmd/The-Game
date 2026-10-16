@@ -1,0 +1,120 @@
+{
+  "maya_day1": {
+    "start": {"text": "You're {player_name}, right? The new student.", "choices": ["How do you know my name?", "I am. And you are...?"]},
+    "curious": {"text": "Hm. Good question. I think someone mentioned it in class. Or... I don't know. I just knew."},
+    "intro": {"text": "Maya. I usually hang around here after class. The hallway looks pretty at this hour — you can almost forget it's a school."},
+    "name_moment": {"text": "{player_name}... Funny. It sounds like a name I've said many times.", "choices": ["Maybe because I've been here before.", "What are you talking about?", "It must be a common name."]},
+    "returned": {"text": "...You feel it too? Then it's not just me. Don't tell anyone, okay? Not yet."},
+    "deflect": {"text": "Nothing. Forget it. Sometimes I say things without thinking — I've told you that before, haven't I? Or I only thought I did."},
+    "goodbye": {"text": "Must be. See you tomorrow, {player_name}."}
+  },
+  "maya_day2": {
+    "start": {"text": "You came back. I knew you would — that's not a compliment, it's just... a pattern I recognize.", "choices": ["What kind of pattern?", "You talk like you're sure of what I'm going to do."]},
+    "pattern": {"text": "I can't really explain it. It's as if I'd seen this conversation before it happened."},
+    "certainty": {"text": "It's not certainty. It's more like... a memory of something that hasn't happened to you yet."},
+    "glitch_moment": {"text": "{player_name}, can I ask you something strange? How many times have you pressed 'continue' today?"},
+    "poem_echo": {"text": "Before leaving, Maya quotes a word from the poem he wrote: \"{poem_word}\". She says it stayed in her ears all day."},
+    "closing": {"text": "Maya walks off down the hallway without hurry, running her fingertips along the wall, as if checking it's still there."},
+    "closing__2": {"text": "At the corner she looks back for a second, smiles faintly, and is gone."}
+  },
+  "maya_day3": {
+    "start": {"text": "You look like you didn't sleep, {player_name}. Headache?", "choices": ["How do you know?", "Just tired."]},
+    "know": {"text": "Everyone who sits by the window gets a headache on the third day. It's the light. ...It's probably the light."},
+    "drawing": {"text": "She's drawing in her notebook: a metal door with a sign. \"Roof access — forbidden.\" The drawing is too detailed to have been done from memory in one go."},
+    "promise": {"text": "Will you promise me something? Don't go up to the roof. Not even if someone calls you. Especially if someone calls you.", "choices": ["I promise.", "Why? What's up there?", "Is that an invitation, then?"]},
+    "promised": {"text": "Thank you. You always promise. I just wanted to hear it again."},
+    "why": {"text": "Wind. A low railing. And nothing worth seeing. ...Forget I asked. Or don't. I don't know which one helps.", "choices": ["Did you ask me that last time too?", "Okay. I won't go up."]},
+    "last_time": {"text": "...Last time you didn't promise."},
+    "joke": {"text": "No. Don't joke about that. Please."},
+    "poem_echo": {"text": "Maya looks at him a moment longer. \"{poem_word},\" she repeats softly, and disappears down the hallway carrying the word."},
+    "closing": {"text": "Before leaving, Maya straightens his coat collar without thinking, with the ease of a gesture repeated many times. She realizes what she did and pulls her hand back, blushing."},
+    "closing__2": {"text": "\"Habit,\" she murmurs, and leaves quickly."}
+  },
+  "maya_day4": {
+    "start": {"text": "You found the notebook. I can see it on your face.", "choices": ["Show her the notebook.", "What notebook?"]},
+    "show": {"text": "Maya leafs through it without any surprise. She stops on a page. In the margin there's a small drawing: a metal door with a sign. The same drawing she made yesterday."},
+    "her_drawing": {"text": "I drew that. In your notebook. One time you don't remember. ...You lent me your pen. You always lend me the blue one.", "choices": ["Who is Kaito Mori?", "Did I write that last time too?", "I don't want to know right now."]},
+    "kaito": {"text": "No one. He became no one. ...Give me a few more days, {player_name}. If I tell you everything now, you won't believe me. I know because I've tried."},
+    "loop": {"text": "You did. The handwriting gets a little fainter every time. As if you were running out of ink inside."},
+    "not_now": {"text": "That's fine. Not knowing is a choice too. I just wanted you to know you can ask me."},
+    "hide": {"text": "Okay. But don't leave it in the locker. It always comes back to the locker when you don't want to see it."},
+    "poem_echo": {"text": "Before leaving, Maya quotes a word from the poem he wrote: \"{poem_word}\". She says it stayed in her ears all day."},
+    "closing": {"text": "Maya leaves a bookmark on the desk, a strip of paper with a crossed-out sentence."},
+    "closing__2": {"text": "He only understands after she's gone: it was an invitation to read the same page as her, at different times."}
+  },
+  "maya_day5": {
+    "start": {"text": "You heard his voice today. In your head. I saw it happen — you always reach with your right hand, as if you were still holding something.", "choices": ["You were there. On the roof.", "I don't want to talk about it."]},
+    "there": {"text": "On the stairs. I was on the stairs. I saw the door slam in the wind. That's all I'm going to say today.", "choices": ["Tell me the rest. Now.", "It's okay. In your own time.", "Hold her hand."]},
+    "push": {"text": "The last time I told you everything on the fifth day, you went up to the roof on the sixth. Alone. No. Not this time."},
+    "time": {"text": "Thank you. You're kind in every loop. That's the worst part."},
+    "hand": {"text": "Her hand is cold. She doesn't let go. She keeps looking at his fingers like someone checking they're all still there."},
+    "space": {"text": "That's fine. I'll wait. I'm good at waiting. I've had a lot of practice."},
+    "poem_echo": {"text": "Maya looks at him a moment longer. \"{poem_word},\" she repeats softly, and disappears down the hallway carrying the word."},
+    "closing": {"text": "\"Tomorrow I'll bring the poem,\" she says, in the voice of someone who promises and fears keeping it."},
+    "closing__2": {"text": "She crosses the courtyard without looking at the lanterns Yuna is hanging, and stops only under the tree, standing still, looking at the roof."}
+  },
+  "maya_day6": {
+    "start": {"text": "Maya sees the bandaged hand and asks nothing. She takes his wrist and leads him to the empty infirmary, like someone who has walked this path many times."},
+    "nurse": {"text": "Sixth day. You always come to school before dawn, always pound on the roof door until your hand splits open, and never remember. I clean it, you thank me, and tomorrow you forget I cleaned it.", "choices": ["Why do you always take care of me?", "Why do I pound on the door?"]},
+    "why": {"text": "Because I'm the only one who remembers you bled here. If I don't take care of it, no one takes care of something that never happened."},
+    "door": {"text": "Because on the other side is the place where you lost him. And part of you thinks that if you open the door early enough, you'll make it in time."},
+    "tired": {"text": "There. It's clean.", "choices": ["You look tired, Maya.", "Thank you."]},
+    "confess": {"text": "I'm tired of knowing the ending. Do you really know someone when you already know everything they'll say? Or have you just memorized them?"},
+    "poem_echo": {"text": "Before leaving, Maya quotes a word from the poem he wrote: \"{poem_word}\". She says it stayed in her ears all day."},
+    "closing": {"text": "She says goodbye with an almost inaudible \"take care of that hand\". When he's already far away, he hears behind him someone starting a count again, under their breath: one, two, three, four."}
+  },
+  "maya_day7": {
+    "start": {"text": "{player_name}. I need to tell you something before I forget again."},
+    "skip1": {"text": "{player_name}. I need to tell you something before I forget again."},
+    "skip2": {"text": "{player_name}. I need to tell you— ...I said that three times, didn't I? I saw it on your face."},
+    "losing": {"text": "Something is taking pieces. Kaito first. Then the things around him. Now it's started taking from me. Today I forgot the way home for ten minutes.", "choices": ["Then we have to stop it.", "I'm here. I won't let you forget."]},
+    "stop": {"text": "Stopping means reaching day 12 and not coming back. It means he's lost for real. I don't know if I can. I don't know if you can."},
+    "here": {"text": "You always say that. And you always forget first. ...But I like it when you say it."},
+    "poem_echo": {"text": "Maya looks at him a moment longer. \"{poem_word},\" she repeats softly, and disappears down the hallway carrying the word."},
+    "closing": {"text": "Maya is slow to leave. She stands for a while where the desk used to be, running her palm through the air as if there were a desktop there. Then she adjusts her backpack, and goes."}
+  },
+  "maya_day8": {
+    "start": {"text": "After last night, I wanted to talk to you as if it were an ordinary day. Just for a little while. Can I?", "choices": ["Sure. Tell me about you, not the loop.", "That place on the other side of the door... is it real?"]},
+    "herself": {"text": "About me... I used to love piano. I stopped because there was never time to finish a piece before everything reset. It's been so long since anyone asked about me that I had to think."},
+    "place": {"text": "It's what's left of the school after so many loops. A draft erased too many times. If no one stops this, one day this side of the door will look just like the other."},
+    "poem_echo": {"text": "Before leaving, Maya quotes a word from the poem he wrote: \"{poem_word}\". She says it stayed in her ears all day."},
+    "closing": {"text": "\"If you choose to forget,\" she says at the door, without turning around, \"I'll make sure it looks like it was always this way.\" The hallway swallows the rest of the sentence."}
+  },
+  "maya_day9": {
+    "start": {"text": "Maya is leaning against the hallway window, watching the gray light outside.", "choices": ["Maya. About what you told me...", "Hi, Maya."]},
+    "untold": {"text": "You know the part I didn't tell you, right? Why I remember everything and the others don't.", "choices": ["Why?", "You don't have to tell me."]},
+    "fake": {"text": "Hi, {player_name}! Beautiful day, huh? Normal. Very normal. Excited for the festival?", "choices": ["You're lying to me.", "Yeah. It's nice."]},
+    "fake_break": {"text": "You asked to forget. I'm trying to give you that. It's the only gift I know how to give. ...Don't ask me to stop halfway. Please."},
+    "why": {"text": "Because I didn't accept it either. I liked him. Kaito. I never told him. When he fell, I thought: just one more chance. Just one more loop."},
+    "why__2": {"text": "I think the loop is made of two people who can't let go."},
+    "intimacy": {"text": "And you... I know everything about you. The blue pen, the right hand, the way you look left when you lie. But I don't know if that's knowing you, or just having watched you repeat.", "choices": ["Then you know what I repeat. Not who I am yet.", "Then stay with me this last time."]},
+    "honest": {"text": "That hurt. And it was the truest thing anyone has said to me in... many loops. Thank you."},
+    "stay": {"text": "\"Last time.\" You say it like you're sure. I wish I were."},
+    "poem_echo": {"text": "Maya looks at him a moment longer. \"{poem_word},\" she repeats softly, and disappears down the hallway carrying the word."},
+    "closing": {"text": "She hands him an old metal keychain with a K engraved on it. \"I've had this for so long,\" she says. \"I just wanted someone else to hold it for a while.\""}
+  },
+  "maya_day10": {
+    "start": {"text": "Two days left. You've already decided what you'll do at 21:47, haven't you? I can tell by the way you hold your right hand.", "choices": ["I'm going to let him go. Today the clock moved a minute when I said it.", "I've decided to hold on to him this time.", "I still don't know what to do."]},
+    "letgo": {"text": "Then I have to decide too. You can't let go alone of something two people are holding. ...Give me until the festival. I'll try."},
+    "hold": {"text": "You've tried that. Many times. That's what the marks on the wall are. I won't stop you. But I wish, just once, you'd try something else."},
+    "unsure": {"text": "It's okay not to know. Just don't let the \"I don't know\" decide for you. It has decided too many times already."},
+    "poem_echo": {"text": "Before leaving, Maya quotes a word from the poem he wrote: \"{poem_word}\". She says it stayed in her ears all day."},
+    "closing": {"text": "Maya looks at the frozen sky through the window, the sun that won't move. \"Pretty, isn't it?\" she says. \"I hate it,\" and she laughs, and the laugh comes out broken, and she doesn't hide it."}
+  },
+  "maya_day11": {
+    "start": {"text": "The last day before the festival is always the most beautiful. That's how it convinces you to stay. I fell for it many times."},
+    "tomorrow": {"text": "Can I ask you something silly? If there were a day 13... what would you do?", "choices": ["Listen to you play the piano. The whole piece.", "Bring a flower to Kaito's desk.", "I don't know if there will be a day 13."]},
+    "piano": {"text": "The whole piece. To the end. ...It's been so long since I thought about an \"after\" that I forgot it could be good."},
+    "flower": {"text": "He'd laugh at you. \"A flower, seriously?\" ...I'll come with you. If there's a day 13, I'll come with you."},
+    "doubt": {"text": "Me neither. But it's the first time in a long while that I want there to be one."},
+    "poem_echo": {"text": "Maya looks at him a moment longer. \"{poem_word},\" she repeats softly, and disappears down the hallway carrying the word."},
+    "closing": {"text": "Before walking away, she points at the white lantern at the far end of the courtyard. \"Tomorrow,\" is all she says. The word stays in his mouth, and its taste, like a goodbye, takes a long time to fade."}
+  },
+  "maya_day12": {
+    "start": {"text": "Under the unlit lantern. This is where I stood the first time, before following you two up. I've never changed places. Not in any loop."},
+    "ask": {"text": "When you go up, I'll be on the stairs. As always. Do you want me to come up this time?", "choices": ["Come up with me. We'll let go together.", "Stay away this time. Protect yourself.", "Do what you need to do, Maya."]},
+    "together": {"text": "Together. Okay. If it goes wrong, at least this time I won't be watching from the stairs."},
+    "away": {"text": "You always try to protect me. Maybe that's why I could never let go: you never let me hold anything."},
+    "her_choice": {"text": "...No one has ever let me choose. Not even me. Thank you, {player_name}. I'll be there. However I decide."}
+  }
+}

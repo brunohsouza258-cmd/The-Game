@@ -54,6 +54,14 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - **Poses**: cada fala das garotas tem uma pose (`"pose"` no JSON): `neutral`, `happy`, `sad`, `surprised`, `scared`, `angry`, `thinking`, `close` ou `corrupted`. Hoje a pose é animada sobre o sprite base (pulo, tremor, aproximação, inclinação, cor e glitch). Se existir `assets/characters/<nome>_<pose>.png` (ex.: `yuna_sad.png`), o jogo usa essa imagem automaticamente naquela pose.
 - **Trilha sonora** (`assets/music/`, créditos em `assets/music/CREDITS.md`): 10 faixas CC0 do OpenGameArt, com transição suave entre cenas (`scripts/audio/MusicPlayer.gd`). O glitch distorce o tom da música por um instante. Efeitos sonoros: `scripts/audio/SfxPlayer.gd`.
 
+## Idiomas
+
+O jogo está em **português** e **inglês** (Configurações > Idioma, ou o botão no aviso inicial).
+- Interface: `data/i18n/en/ui.json` (texto em português -> inglês; os botões e rótulos se traduzem sozinhos).
+- Diálogos: `data/i18n/en/dialogue_*.json`, por cena e por nó (texto, quem fala, opções e linhas do crash).
+- Finais, diário, créditos e poema: arquivos de mesmo nome em `data/i18n/en/`.
+- `python tools/check_translation.py` confere se toda fala tem tradução (roda também no GitHub Actions).
+
 ## Novidades de acessibilidade e extras
 
 - **Aviso de saúde e bem-estar** sempre que o jogo abre, antes do título e da música (luzes e sons, conteúdo, pausas, contato do CVV 188 e o que o jogo faz com o nome de usuário). O botão de continuar libera após 4 s, e há atalho para ativar a redução de luzes e tremores (também em Configurações). Tamanho do texto ajustável.

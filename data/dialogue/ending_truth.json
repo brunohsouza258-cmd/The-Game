@@ -86,7 +86,7 @@
     },
     "echo1": {
       "speaker": "",
-      "text": "Ao lado da flor, uma lanterna branca está acesa. Por dentro, com a letra firme de {player_name}, quatro letras: Kaito.",
+      "text": "Ao lado da flor, uma lanterna branca está acesa. Por dentro, com a letra firme de {player_name}, cinco letras: Kaito.",
       "if": {
         "flags.wrote_kaito_name": 1
       },

@@ -15,7 +15,7 @@ func start_dialogue(json_path: String, start_node_id: String = "start") -> void:
 	if typeof(parsed) != TYPE_DICTIONARY:
 		push_error("JSON de diálogo inválido: %s" % json_path)
 		return
-	_dialogue_data = parsed
+	_dialogue_data = GameSettings.localize_dialogue(parsed)
 	_current_node_id = start_node_id
 	_active = true
 	EventBus.dialogue_started.emit(_dialogue_data)

@@ -35,12 +35,12 @@ func _ready() -> void:
 	_refresh()
 
 func _refresh() -> void:
-	day_label.text = "Dia %d" % GameState.day
+	day_label.text = tr("Dia %d") % GameState.day
 	for char_id in character_buttons:
 		var button: Button = character_buttons[char_id]
 		var done := GameState.visited_today(char_id)
 		button.disabled = done
-		button.text = ("Já conversou com %s hoje" if done else "Falar com %s") % CHARACTER_NAMES[char_id]
+		button.text = (tr("Já conversou com %s hoje") if done else tr("Falar com %s")) % CHARACTER_NAMES[char_id]
 	var poem_done := GameState.visited_today("poem")
 	poem_button.disabled = poem_done
 	poem_button.text = "Poema de hoje já escrito" if poem_done else "Escrever um poema"
@@ -58,7 +58,7 @@ func _refresh() -> void:
 	var route_done := GameState.visited_today("route")
 	route_button.disabled = route_done
 	if route_id != "":
-		route_button.text = ("Momento a sós com %s (feito)" if route_done else "Momento a sós com %s") % CHARACTER_NAMES[route_id]
+		route_button.text = (tr("Momento a sós com %s (feito)") if route_done else tr("Momento a sós com %s")) % CHARACTER_NAMES[route_id]
 	var final_day := GameState.day >= FINAL_DAY
 	next_day_button.visible = not final_day
 	end_button.visible = final_day
@@ -69,9 +69,9 @@ func _status_text(final_day: bool) -> String:
 	for char_id in character_buttons:
 		if not GameState.visited_today(char_id):
 			pending.append(CHARACTER_NAMES[char_id])
-	var text := "Você já falou com todas hoje." if pending.is_empty() else "Ainda dá tempo de falar com: %s.\nQuem ficar sem conversa perde 1 de afinidade ao virar o dia." % ", ".join(pending)
+	var text := tr("Você já falou com todas hoje.") if pending.is_empty() else tr("Ainda dá tempo de falar com: %s.\nQuem ficar sem conversa perde 1 de afinidade ao virar o dia.") % ", ".join(pending)
 	if final_day:
-		text += "\n\nÉ a noite do festival. Quando estiver pronto, suba ao telhado. Depois disso, não tem volta."
+		text += "\n\n" + tr("É a noite do festival. Quando estiver pronto, suba ao telhado. Depois disso, não tem volta.")
 	return text
 
 func _play_main_event() -> void:

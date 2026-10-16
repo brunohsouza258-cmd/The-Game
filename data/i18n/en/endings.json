@@ -1,0 +1,53 @@
+{
+  "endings": {
+    "secret": {
+      "title": "Secret Ending — Whoever presses 'New Game'",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "text": "On the roof, the rain stops in midair. Kaito looks at {player_name}, then up — not at the sky, beyond it. \"It's not you who makes this come back,\" he says. \"Not Maya either. It's whoever is on the other side, pressing 'New Game' again.\" Maya, on the stairs, understands at the same moment. Alice had written it in her notebook without knowing what it meant: someone from outside. {player_name} lets go of the railing without fear, because this time there's no one to hold. The last thing he says isn't for Kaito. It's for you: \"You can close the game now. He's gone. Let him go.\"",
+      "hint": "Only appears for those who have come back to this story more than once.",
+      "hint_full": "On a second playthrough or later: ask Maya for the truth (day 8), give Alice the notebook, accept the loss (day 10) and reach the roof with high dread."
+    },
+    "truth": {
+      "title": "Ending of Truth",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "text": "21:47. Kaito climbs the railing, laughing, just like the first time. {player_name} doesn't run. He stays where he is and says what he never said in any loop: \"I'm sorry. It wasn't my fault. And it wasn't yours either.\" Kaito stops. For the first time he seems to listen. \"So that's it. You're finally letting go.\" The rain starts to fall for real, without repeating. In the morning it's day 13. At school, the empty desk is back in its place, with the initials K.M. and a flower. Maya is next to it. She remembers everything. So does {player_name}. It hurts — and it's still tomorrow.",
+      "hint": "Requires accepting the loss, trusting Maya and facing the fear to the end."
+    },
+    "illusion": {
+      "title": "Ending of Illusion",
+      "background": "res://assets/backgrounds/clubroom.png",
+      "text": "{player_name} climbs the stairs, looks at the roof door and turns back. It's easier this way. Down below, the festival is beautiful, Yuna is laughing, the day is perfect. When the clock strikes 21:47, everything goes white for an instant. First day. {player_name} walks through the school gate carrying more hope than he'd care to admit. Someone in the hallway at dusk smiles like someone who has seen this scene many times. Nothing out of the ordinary. Yet.",
+      "hint": "Running from the truth, or never getting close to it, has a comfortable price."
+    },
+    "restart": {
+      "title": "Ending of Starting Over",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "text": "On the roof, {player_name} reaches out — and realizes he no longer knows why he's doing it. He can't quite remember Kaito's face. Only the feeling of having lost someone. He can't save anyone this time, and he can no longer remember enough to keep trying. So he goes down. The next day the loop doesn't come back, but there's a hole where a name used to be. {player_name} doesn't understand everything. But he decides to move on with the little that's left, slowly, in no hurry to have every answer.",
+      "hint": "No one got close enough to anyone."
+    },
+    "route_maya": {
+      "title": "Route Ending — Maya",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "text": "Maya goes up with {player_name}. Together they hold Kaito's hand, and together they let go — not because they gave up, but because they finally accepted it wasn't theirs to hold. The next morning, Maya no longer knows what he'll say before he says it. \"It's strange,\" she confesses, \"not knowing you by heart.\" \"Then get to know me again,\" {player_name} answers. This time it's real, and not a repetition.",
+      "hint": "Get close to Maya and trust her."
+    },
+    "route_yuna": {
+      "title": "Route Ending — Yuna",
+      "background": "res://assets/backgrounds/clubroom.png",
+      "text": "On the roof, Yuna comes running, no smile at all, crying out loud for the first time without apologizing. That's what makes {player_name} let go of the railing. The next day she brings two lunches — one for him, and another she leaves on the empty desk with the initials K.M. \"I don't have to be okay,\" she says. \"But I don't want to be alone.\" She isn't.",
+      "hint": "Get close to Yuna and trust her."
+    },
+    "route_alice": {
+      "title": "Route Ending — Alice",
+      "background": "res://assets/backgrounds/classroom.png",
+      "text": "Alice's watch shows 21:47 and stops. She reads the last note in the notebook out loud: \"Trust {player_name}.\" He trusts himself, and lets Kaito go. The truth doesn't solve everything — Alice still wakes up before dawn to check that the day moved on. But now she checks with someone, and the day always moves on.",
+      "hint": "Get close to Alice and trust her."
+    },
+    "route_hikari": {
+      "title": "Route Ending — Hikari",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "text": "Hikari reaches the roof ready to fight gravity, her knuckles still bruised. {player_name} holds her hand, not Kaito's. \"Some things can't be beaten,\" he says. She cries angrily, then without anger. The next week, the relay team runs with three athletes and one empty lane. Hikari doesn't ask anyone to fill it. She learned to lose without disappearing.",
+      "hint": "Get close to Hikari and trust her."
+    }
+  }
+}

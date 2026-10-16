@@ -1,0 +1,110 @@
+{
+  "yuna_day1": {
+    "start": {"text": "Hi! You're {player_name}, right? Welcome! I can show you around the school after class.", "choices": ["That would be great, thanks!", "Maybe another day."]},
+    "happy": {"text": "Deal, {player_name}! It'll be fun, I promise!", "choices": ["You always seem so cheerful. Don't you ever get tired?", "Can't wait."]},
+    "tired": {"text": "Ah... sometimes. But it's better to smile, you know? Everyone feels lighter around someone who smiles. ...Sorry, that came out weird. Forget I said it."},
+    "sad": {"text": "Oh... that's okay! No rush."}
+  },
+  "yuna_day2": {
+    "start": {"text": "Hey, {player_name}! I brought an extra snack today, want to share?", "choices": ["Sure, thanks!", "I already ate, but thanks."]},
+    "share": {"text": "Yes! I knew you'd say yes."},
+    "decline": {"text": "No problem! I'll save it for tomorrow then."},
+    "poem_echo": {"text": "\"{poem_word},\" Yuna says, laughing, and puts a hand to her chest. \"I read your poem again before bed. Four times.\""},
+    "closing": {"text": "Yuna says goodbye with an exaggerated wave, the kind that uses her whole arm."},
+    "closing__2": {"text": "Only when he's turned the corner does her smile fall, very slowly, and she stays a while looking at the closed lunchbox."}
+  },
+  "yuna_day3": {
+    "start": {"text": "{player_name}! Right on time. This is the club room — tea, books and zero will to study.", "choices": ["So this is the promised tour?", "Do you invite everyone here?"]},
+    "tour": {"text": "And that's the club's photo board! We take one every festival. Look at tiny me here, eight years old."},
+    "photo": {"text": "In the old photo, three children hold paper lanterns. The one in the middle is Yuna. The one on the right has their face scribbled out with a pen, hard, until the paper tore.", "choices": ["Who's that next to you?", "You were so cute."]},
+    "who": {"text": "Huh? I... don't know. Funny, right? Someone must have scribbled it as a joke. Haha."},
+    "cute": {"text": "Stop! I was, right? Now I'm just loud."},
+    "hands": {"text": "She takes the photo off the board and puts it in a drawer, quickly. Her hands are shaking.", "choices": ["Are you okay?", "So, about that tea?"]},
+    "crying": {"text": "Sometimes I wake up with a wet face. As if I'd cried all night for someone. But there's no one. ...Sorry, that was way too heavy for the third day, huh?"},
+    "tea": {"text": "The tea! Of course! Sit down, {player_name}. Today is going to be a normal day. I promise."},
+    "poem_echo": {"text": "Yuna pulls a folded paper out of her pocket: the poem, with the word \"{poem_word}\" underlined in pink pen."},
+    "closing": {"text": "\"If I forget your name tomorrow, remind me,\" she jokes, and laughs. He laughs too. Later he wonders why, up close, the joke sounded like a request."}
+  },
+  "yuna_day4": {
+    "start": {"text": "The club room is empty except for Yuna, sitting by the window. Her eyes are red. When she sees {player_name}, the smile comes too fast."},
+    "smile": {"text": "{player_name}! Allergies. Pollen. This time of year is awful, right? Haha.", "choices": ["Sit next to her without saying anything.", "It's not allergies. What happened?", "Tell a joke to cheer her up."]},
+    "silence": {"text": "They stay like that for a few minutes. Outside, someone from the track team shouts a name the wind carries away before it can be heard. Yuna rests her head on his shoulder, just a little."},
+    "thanks": {"text": "Thanks for not asking. I wouldn't know what to say. I found the photo in the drawer again... and cried looking at the scribbled face. As if I knew who it was."},
+    "ask": {"text": "I don't know! That's the problem. I'm sad and I don't know why. Have you ever missed someone you don't remember?", "choices": ["Yes. Ever since I got here.", "It must be tiredness."]},
+    "same": {"text": "Then it's not just me. Is that good or very, very bad?"},
+    "tired": {"text": "Yeah. Must be. I'll go wash my face. You didn't see anything, okay?"},
+    "joke": {"text": "Haha! Good one. ...You also think I always have to be okay, huh? That's fine. Everyone does."},
+    "poem_echo": {"text": "\"{poem_word},\" Yuna says, laughing, and puts a hand to her chest. \"I read your poem again before bed. Four times.\""},
+    "closing": {"text": "She runs after him at the gate just to hand him a cookie wrapped in a napkin. \"It's number twenty-four,\" she says, out of breath. \"Don't leave him alone.\" She doesn't explain who she means."}
+  },
+  "yuna_day5": {
+    "start": {"text": "The festival! There'll be lanterns, stalls, fireworks... I love festivals. I always went with—"},
+    "stop": {"text": "She stops mid-sentence, mouth still open, as if the next word had been ripped out."},
+    "who": {"text": "...with someone. My neighbor. We lived door to door. He taught me to hold a lantern without burning the paper. I remember his hands. I don't remember his face.", "choices": ["Kaito Mori.", "You don't have to remember now."]},
+    "name": {"text": "Kaito... Kai. I called him Kai. How do I know that? {player_name}, how do YOU know that?"},
+    "gentle": {"text": "You're strange, you know? Everyone tells me to cheer up. You're the only one who lets me not remember."},
+    "poem_echo": {"text": "Yuna pulls a folded paper out of her pocket: the poem, with the word \"{poem_word}\" underlined in pink pen."},
+    "closing": {"text": "Yuna climbs onto a desk, glue on her fingers and tape in her hair, and declares that her lantern will be the most beautiful in the world. Everyone applauds."},
+    "closing__2": {"text": "Only she notices that the applause took one second too long to start."}
+  },
+  "yuna_day6": {
+    "start": {"text": "{player_name}, what happened to your hand?! That looks awful!", "choices": ["I fell off my bike.", "I don't know. I woke up like this.", "Let her redo the bandage."]},
+    "lie": {"text": "You don't even have a bike. I... I hate it when people lie to protect me. The last person who did that disappeared. I think. I don't know. I don't know what I think anymore."},
+    "truth": {"text": "You woke up like this. Like I wake up crying. ...{player_name}, something is wrong with this school. With us. I'm scared. There, I said it."},
+    "bandage": {"text": "She redoes the bandage slowly, focused, her smile forgotten. \"Kai was always getting hurt too,\" she says, without noticing she said the name. \"I was the official nurse.\""},
+    "poem_echo": {"text": "\"{poem_word},\" Yuna says, laughing, and puts a hand to her chest. \"I read your poem again before bed. Four times.\""},
+    "closing": {"text": "She spends the rest of the afternoon with his hand between hers, \"checking the bandage\", and pretends not to notice that there's someone else, no one, beside them, holding the other hand."}
+  },
+  "yuna_day7": {
+    "start": {"text": "Yuna sits in front of two open lunchboxes on the club table. One with rice shaped like a bunny. The other with no egg, because someone hated egg."},
+    "two": {"text": "I made two. Out of habit. I've made two every Friday since I was ten. Today I realized I don't know who the second one is for."},
+    "break": {"text": "Her smile doesn't come. She tries, and her face won't obey. Her voice comes out small:"},
+    "ask_help": {"text": "{player_name}... I'm not okay. I've never said that to anyone. Will you help me?", "choices": ["I will. Stay here with me.", "It was just a mistake, Yuna. It happens.", "The second one was Kai's."]},
+    "stay": {"text": "You don't have to do anything. Just eat the no-egg lunch with me. ...It's nice to not be okay next to someone. It's less heavy."},
+    "mistake": {"text": "Yeah. A mistake. ...Sorry for asking. I'll be fine. I always am."},
+    "kai": {"text": "Kai's. He hated egg. He laughed loud. He... he isn't here anymore, is he? It's not that he left. He isn't anywhere anymore."},
+    "poem_echo": {"text": "Yuna pulls a folded paper out of her pocket: the poem, with the word \"{poem_word}\" underlined in pink pen."},
+    "closing": {"text": "\"I haven't eaten anything today,\" she admits suddenly, sitting down in the middle of the hallway. \"I made two lunches and couldn't even open mine.\" She splits his into two equal halves, without asking."}
+  },
+  "yuna_day8": {
+    "start": {"text": "I was chosen to open the festival! Microphone, stage, everything. I'll smile the whole time, I promise. It's what I do best."},
+    "crack": {"text": "Because if I stop smiling in the middle of the stage, I don't think I'll get back up. Get it? It's easier to smile.", "choices": ["You don't have to smile all the time. Not even on stage.", "It'll be amazing, Yuna."]},
+    "dont_have_to": {"text": "If I mess up, will you stand in the front row? Not to clap. Just so I have somewhere to look."},
+    "great": {"text": "It will! It'll be perfect. ...Everything at this school has to be perfect, right?"},
+    "poem_echo": {"text": "\"{poem_word},\" Yuna says, laughing, and puts a hand to her chest. \"I read your poem again before bed. Four times.\""},
+    "closing": {"text": "Yuna takes a picture of the courtyard with her phone and frowns at the screen. \"There's someone there,\" she says, pointing at an empty spot near the goalpost. \"I swear there was someone.\""}
+  },
+  "yuna_day9": {
+    "start": {"text": "I remembered his laugh. Kai's. This morning, brushing my teeth. Out of nowhere. And then I remembered the photo — the scribbled kid was him. And the other one, next to me..."},
+    "photo": {"text": "...was you, {player_name}. The three of us. Before you moved away. How did I forget you too?", "choices": ["Because the school erases everything around him.", "I had forgotten too. Now we remember together."]},
+    "erase": {"text": "Then soon I'll forget you again. And Maya. And myself. ...No. I don't want that."},
+    "erase__2": {"text": "For the first time in my life, I want to be sad and remember, instead of smiling and forgetting."},
+    "together": {"text": "Together. Okay. If I start to forget, you remind me. Promise? I'm not ashamed to ask. Not anymore."},
+    "poem_echo": {"text": "Yuna pulls a folded paper out of her pocket: the poem, with the word \"{poem_word}\" underlined in pink pen."},
+    "closing": {"text": "\"I remembered something,\" she whispers. \"I had a neighbor. He taught me to ride a bike and I fell three times.\" She stops, mouth open."},
+    "closing__2": {"text": "\"I don't know his name. Why?\""}
+  },
+  "yuna_day10": {
+    "start": {"text": "Half the club didn't come today. Flu, they said. I went to their classroom and not even their backpacks were there. {player_name}, we're disappearing, aren't we?"},
+    "note": {"text": "If everything goes back to the beginning, I want to remember at least one thing: that I wasn't alone. Will you help me write a note to myself? So I find it next loop?", "choices": ["Write the note with her.", "There won't be a next loop, Yuna."]},
+    "write": {"text": "\"Dear Yuna: you're allowed to cry. Someone stays. His name is {player_name}. And Kai hated egg.\" ...There. I'll keep it inside the photo."},
+    "no_next": {"text": "You sound just like Kai before he did something stupidly brave. ...But I believe you. I choose to believe you."},
+    "poem_echo": {"text": "\"{poem_word},\" Yuna says, laughing, and puts a hand to her chest. \"I read your poem again before bed. Four times.\""},
+    "closing": {"text": "She gets up from the step and brushes off her skirt with both hands, slowly, like someone putting herself back together."},
+    "closing__2": {"text": "\"I'll be okay,\" she says, and it's the first time the smile doesn't reach her eyes and she lets it stay that way."}
+  },
+  "yuna_day11": {
+    "start": {"text": "Yuna is setting up the club stall, full of paper lanterns. She laughs at something a classmate said. It's not her usual smile. It's smaller, and real."},
+    "real": {"text": "{player_name}! Look, I got the lantern right without burning the paper. The way Kai taught me. I remembered how he held it.", "choices": ["That smile is different. It's really yours.", "Careful. Today is the beautiful day."]},
+    "noticed": {"text": "You noticed! It's that today I'm sad and happy at the same time, and I'm not hiding either one. I didn't know you could do that."},
+    "careful": {"text": "I know. I also feel there's something wrong with all this perfection. But I want to enjoy it anyway. Knowing it might end is no reason not to light the lantern."},
+    "poem_echo": {"text": "Yuna pulls a folded paper out of her pocket: the poem, with the word \"{poem_word}\" underlined in pink pen."},
+    "closing": {"text": "\"Tomorrow I'm going to sing,\" she announces at the gate, her back to him, both hands on her backpack straps. \"If I forget the lyrics, you'll help me, okay?\" He promises, without knowing which lyrics she means."}
+  },
+  "yuna_day12": {
+    "start": {"text": "Yuna comes down from the stage after the opening. Her voice shook in the middle of the speech. She stopped, breathed, and went on without smiling. No one minded."},
+    "talk": {"text": "Did you see? I shook and kept going. {player_name}... promise me something? Whatever happens up there, don't pretend everything's fine. Not even for me.", "choices": ["I promise. And you don't either.", "Come with me to the stairs."]},
+    "promise": {"text": "Deal. No pretending. If I cry tomorrow, it'll be real crying, for someone with a name."},
+    "come": {"text": "I'll go as far as the stairs. But I won't go up. I think Kai would want someone to stay down here holding a lit lantern. So he knows the way."}
+  }
+}

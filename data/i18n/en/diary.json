@@ -1,0 +1,137 @@
+{
+  "entries": [
+    {
+      "title": "Day 1 — Back",
+      "text": "I got here. There's a note in my pocket I don't remember writing: \"Come back. School is boring without you.\"",
+      "requires": {
+        "day": 1
+      }
+    },
+    {
+      "title": "Day 2 — The voice",
+      "text": "The loudspeaker said my name before I had introduced myself to anyone. \"This time, try—\". No one else heard.",
+      "requires": {
+        "day": 2
+      }
+    },
+    {
+      "title": "Day 3 — K.M.",
+      "text": "An empty desk with the initials K.M. I wrote the same letters in the margin of my notebook without noticing.",
+      "requires": {
+        "day": 3
+      }
+    },
+    {
+      "title": "Day 4 — The notebook",
+      "text": "A black notebook in my locker, in my handwriting, with dates that haven't happened yet. The pages after day 12 were torn out.",
+      "requires": {
+        "day": 4
+      }
+    },
+    {
+      "title": "Day 5 — The festival",
+      "text": "Festival on day 12, at night, with lanterns. The last date in the notebook. Someone called a student named Kaito Mori and then said he doesn't exist.",
+      "requires": {
+        "day": 5
+      }
+    },
+    {
+      "title": "Day 6 — The hands",
+      "text": "Raw knuckles. On the wall: DON'T GO UP. The handwriting is mine. There's plaster under my nails.",
+      "requires": {
+        "day": 6
+      }
+    },
+    {
+      "title": "Day 7 — The photo",
+      "text": "The desk is gone. The clock stopped at 21:47. In the class photo there's a face layered over and over. One for each loop.",
+      "requires": {
+        "day": 7
+      }
+    },
+    {
+      "title": "Day 8 — The stairs",
+      "text": "I went up without remembering deciding to. Beyond the door, another school. Tally marks. Maya knows everything.",
+      "requires": {
+        "day": 8
+      }
+    },
+    {
+      "title": "Alice's notebook",
+      "text": "Dates written backward. The last one is the festival. The first one is tomorrow. She let me read it, and I couldn't stop.",
+      "requires": {
+        "flags.read_notebook_clubroom": 1
+      }
+    },
+    {
+      "title": "The truth",
+      "text": "Kaito Mori. My best friend. I was holding his hand when the rain made him slip. It was an accident. I just couldn't hold on.",
+      "requires": {
+        "flags.maya_truth_asked": 1
+      }
+    },
+    {
+      "title": "Forgetting",
+      "text": "I asked to forget. It works for a day. But my hand still closes by itself, as if holding someone.",
+      "requires": {
+        "flags.chose_forget": 1
+      }
+    },
+    {
+      "title": "Letting go",
+      "text": "I said under my breath that I'd let him go. It hurt more than any wound. For a second the clock moved.",
+      "requires": {
+        "flags.accept_loss": 1
+      }
+    },
+    {
+      "title": "The name on the lantern",
+      "text": "I wrote his name on a white lantern, in the firmest handwriting I had. I almost managed to breathe.",
+      "requires": {
+        "flags.wrote_kaito_name": 1
+      }
+    },
+    {
+      "title": "Maya",
+      "text": "She knows more than she says. I think she's been carrying the weight for all of us, alone, for a long time.",
+      "requires": {
+        "trust.maya": 6
+      }
+    },
+    {
+      "title": "Yuna",
+      "text": "Her smile is something she does for everyone. When she really laughs, it's a different laugh: quieter.",
+      "requires": {
+        "trust.yuna": 6
+      }
+    },
+    {
+      "title": "Alice",
+      "text": "She writes everything down so she won't forget, and I think she's forgotten how much she remembers. I trust her more than my own notebook.",
+      "requires": {
+        "trust.alice": 6
+      }
+    },
+    {
+      "title": "Hikari",
+      "text": "She runs so she won't have to stand still. I think when she stops, she'll have to feel everything at once.",
+      "requires": {
+        "trust.hikari": 6
+      }
+    },
+    {
+      "title": "Fear",
+      "text": "I'm afraid the fear is what keeps me here.",
+      "requires": {
+        "dread": 60
+      }
+    },
+    {
+      "title": "Again",
+      "text": "I've written these words before. The handwriting is the same. The ink is older.",
+      "requires": {
+        "loop": 2
+      }
+    }
+  ]
+}

@@ -21,11 +21,12 @@ func _build_rows() -> void:
 	_add_speed_slider()
 	_add_auto_rows()
 	_add_access_rows()
+	_add_language_row()
 	_add_fullscreen_toggle()
 
 func _add_percent_slider(title: String, value: float, on_change: Callable) -> void:
 	var label := Label.new()
-	label.text = "%s: %d%%" % [title, roundi(value * 100.0)]
+	label.text = "%s: %d%%" % [tr(title), roundi(value * 100.0)]
 	rows.add_child(label)
 
 	var slider := HSlider.new()
@@ -35,7 +36,7 @@ func _add_percent_slider(title: String, value: float, on_change: Callable) -> vo
 	slider.custom_minimum_size = Vector2(0, 28)
 	slider.value = roundi(value * 100.0)
 	var on_value := func(v: float) -> void:
-		label.text = "%s: %d%%" % [title, int(v)]
+		label.text = "%s: %d%%" % [tr(title), int(v)]
 		on_change.call(v / 100.0)
 	slider.value_changed.connect(on_value)
 	rows.add_child(slider)
@@ -50,9 +51,9 @@ func _add_speed_slider() -> void:
 	slider.step = 1
 	slider.custom_minimum_size = Vector2(0, 28)
 	slider.value = clampi(roundi(SPEED_FACTOR / GameSettings.text_speed - 1.0), 1, 10)
-	label.text = "Velocidade do texto: %d/10" % int(slider.value)
+	label.text = tr("Velocidade do texto: %d/10") % int(slider.value)
 	var on_value := func(v: float) -> void:
-		label.text = "Velocidade do texto: %d/10" % int(v)
+		label.text = tr("Velocidade do texto: %d/10") % int(v)
 		GameSettings.set_text_speed(SPEED_FACTOR / (v + 1.0))
 	slider.value_changed.connect(on_value)
 	rows.add_child(slider)
@@ -72,9 +73,9 @@ func _add_auto_rows() -> void:
 	slider.step = 1
 	slider.custom_minimum_size = Vector2(0, 28)
 	slider.value = clampi(roundi(GameSettings.auto_seconds), 1, 10)
-	label.text = "Tempo de leitura automática: %d s" % int(slider.value)
+	label.text = tr("Tempo de leitura automática: %d s") % int(slider.value)
 	var on_value := func(v: float) -> void:
-		label.text = "Tempo de leitura automática: %d s" % int(v)
+		label.text = tr("Tempo de leitura automática: %d s") % int(v)
 		GameSettings.set_auto_seconds(v)
 	slider.value_changed.connect(on_value)
 	rows.add_child(slider)
@@ -95,9 +96,9 @@ func _add_access_rows() -> void:
 	slider.custom_minimum_size = Vector2(0, 28)
 	var sizes := [1.0, 1.15, 1.3]
 	slider.value = clampi(sizes.find(GameSettings.font_scale) + 1, 1, 3) if sizes.has(GameSettings.font_scale) else 1
-	label.text = "Tamanho do texto: %d/3" % int(slider.value)
+	label.text = tr("Tamanho do texto: %d/3") % int(slider.value)
 	var on_value := func(v: float) -> void:
-		label.text = "Tamanho do texto: %d/3" % int(v)
+		label.text = tr("Tamanho do texto: %d/3") % int(v)
 		GameSettings.set_font_scale(sizes[int(v) - 1])
 	slider.value_changed.connect(on_value)
 	rows.add_child(slider)
@@ -108,6 +109,16 @@ func _add_access_rows() -> void:
 		SfxPlayer.play_click()
 		get_tree().current_scene.show_health_warning())
 	rows.add_child(review)
+
+func _add_language_row() -> void:
+	var button := Button.new()
+	button.text = "Idioma: Português  (mudar para English)" if not GameSettings.is_english() else "Language: English  (switch to Português)"
+	button.auto_translate_mode = Node.AUTO_TRANSLATE_MODE_DISABLED
+	button.pressed.connect(func():
+		SfxPlayer.play_click()
+		GameSettings.set_language("pt" if GameSettings.is_english() else "en")
+		_build_rows.call_deferred())
+	rows.add_child(button)
 
 func _add_fullscreen_toggle() -> void:
 	var toggle := CheckButton.new()

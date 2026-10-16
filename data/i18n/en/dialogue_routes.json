@@ -1,0 +1,138 @@
+{
+  "route_maya_day9": {
+    "start": {"text": "The club room is dark. Maya sits on the floor, back against the bookshelf, her poetry notebook open in her lap. She doesn't look up when {player_name} comes in."},
+    "n1": {"text": "I read you the last line yesterday, didn't I? I read to the walls a lot, sometimes I mix them up."},
+    "n2": {"text": "You know what's worse? This morning I woke up without remembering my dream, for the first time in a hundred loops. And I missed it."},
+    "b1": {"text": "He had a scar on his chin. From a bike. He said it was from fighting a shark. I laughed every time, even knowing it was a lie."},
+    "b2": {"text": "Thank you. I've never told anyone that. Now someone else knows about the scar."},
+    "b3": {"text": "...Love him. You said it in front of me as if it were something possible to say. No one ever has."},
+    "b4": {"text": "Okay. I'll try not to remember his face today. Just the love. That seems to be the lighter part."},
+    "n3": {"text": "I missed the nightmare. It was the only thing that let me see his face.", "choices": ["Sit beside her and ask her to describe his face.", "Say she doesn't need to remember his face to love him."]}
+  },
+  "route_maya_day10": {
+    "start": {"text": "The hallways are empty. At the end of the second floor, a single light is on. Maya is there, leaning on the window, counting the courtyard lamps like someone praying."},
+    "n1": {"text": "Four of them have gone out by themselves since yesterday. I know them. They belonged to the students in 2-C."},
+    "n2": {"text": "I did this, didn't I? When I think about letting go, the world collects. I let go half a centimeter and a third of the class disappeared."},
+    "b1": {"text": "A real promise? The kind that hurts? Then give me your hand. At least so I know the hand exists."},
+    "b2": {"text": "I'm not? I've been guilty for so long. I don't know how to be anything else. But I can try not being it for a few minutes."},
+    "n3": {"text": "I don't want you to forgive me. I want you to stop me from doing it again, if I try to hold on one more day.", "choices": ["Promise you'll stop her.", "Say none of this is her fault."]}
+  },
+  "route_maya_day11": {
+    "start": {"text": "The white lantern hangs on the last string in the courtyard, alone, unlit. Maya stares at it with an unstruck match between her fingers."},
+    "n1": {"text": "I made it on day 5. I wrote his name inside, with the tip of the pen, so it wouldn't show. A name no one knows."},
+    "n2": {"text": "Tomorrow I'll light it. I wanted you to choose the time. I don't know how to choose times. I only know how to count up to them."},
+    "b1": {"text": "Before the fireworks. Deal. Write it on your hand so I won't forget, because I'm good at counting and terrible at remembering."},
+    "b2": {"text": "When the time comes. You're giving the choice back to me. No one ever has. Thank you. I'll know, when it comes."},
+    "n3": {"text": "It could be before the first star. Or after the fireworks. Or never, and we leave it like that, beautiful, unlit.", "choices": ["Choose to light it before the fireworks.", "Leave the decision to her, when the time comes."]}
+  },
+  "route_maya_day12": {
+    "start": {"text": "The sun is almost down. Maya waits at the foot of the roof stairs, in uniform, holding the unlit white lantern in both hands."},
+    "n1": {"text": "When we go up, I'll tell you the last thing. Before that, I wanted to thank you, here, where no one's looking."},
+    "n2": {"text": "You showed up on the first day as if it were the first time, and it was the first time anyone looked at me without wanting me to be okay."},
+    "b1": {"text": "No. Going up first is what I've always done. This time we go up together. One step at a time."},
+    "b2": {"text": "...As long as I need. You know I might need one minute or a hundred loops?"},
+    "b3": {"text": "Then it's one minute. Just one. I already know what to do with it."},
+    "n3": {"text": "I'm scared. I'm very scared. But I'm scared the right way: like someone about to do something that matters.", "choices": ["\"I'll go up first. Come when you're ready.\"", "\"I'll stay here with you as long as you need.\""]}
+  },
+  "route_yuna_day9": {
+    "start": {"text": "Yuna is in an apron, alone in the club kitchen, flour even in her hair. There are three cookie trays on the table, each with one extra star cut out."},
+    "n1": {"text": "I know, I know! I make too much. But today it's on purpose. Today I know who it's for."},
+    "n2": {"text": "It's for the neighbor who laughed before saying something silly. I don't remember his name. I remember how he broke the cookie in half and gave me the bigger piece."},
+    "b1": {"text": "...It is? Really? I make them from memory, no recipe. Can you taste him in it?"},
+    "b2": {"text": "I can. It tastes like summer. Like his house. Like an afternoon that never ended."},
+    "b3": {"text": "Oh, stop! You'll make me cry into the dough. Have another. There's always one left over."},
+    "n3": {"text": "I thought if I made the right recipe, he'd show up. Like a spell. Silly, right?", "choices": ["Taste the cookie and say it's just like the ones he made.", "Say it isn't silly and eat the cookie with her."]}
+  },
+  "route_yuna_day10": {
+    "start": {"text": "The classroom is empty. Yuna sits at a desk in the back with a recipe book open, lightly drawing faces over each recipe."},
+    "n1": {"text": "The lunch lady disappeared. Mei disappeared. Mr. Takeda, who stood at the entrance. I'm drawing them so I won't forget."},
+    "n2": {"text": "I draw badly. But a crooked face is better than no face. I'm good at making what's left look pretty."},
+    "b1": {"text": "Okay. Hold still. I'll draw your weird nose and your hair that never stays down. I'll draw it just right."},
+    "b2": {"text": "You'd do that? Come after me? Every loop? ...Then I won't disappear. I'll leave a trail of cookie crumbs, like Hansel and Gretel."},
+    "n3": {"text": "I'm afraid I'll be next. That I'll wake up and no one will remember I existed. Like the... the boy with the bike.", "choices": ["Ask her to draw you too, so she remembers.", "Say that if she disappears, he'll look for her in every loop."]}
+  },
+  "route_yuna_day11": {
+    "start": {"text": "The festival stage is set up, with a microphone, cables and cellophane spotlights. Yuna rehearses alone, her back to the empty audience, singing softly."},
+    "n1": {"text": "I sang this song at my elementary school graduation. There was a boy in the audience, in the back row, who kept clapping alone after everyone stopped."},
+    "n2": {"text": "I thought it was embarrassing and beautiful. I want to sing for that boy tomorrow. Even if he isn't there."},
+    "b1": {"text": "Deal! And if you cry, I'll pretend I didn't see. If I cry, you pretend too, okay? That's the deal."},
+    "b2": {"text": "Yuna's voice fills the empty stage, small and steady. At the end of the verse, somewhere behind the curtain, someone claps once, slowly."},
+    "b3": {"text": "...Did you hear that? I did. It wasn't you. You were in front. Oh my God."},
+    "n3": {"text": "Will you clap when I finish? Just you, in the back, after everyone stops?", "choices": ["Promise to clap alone, after everyone else.", "Ask her to sing it for him now, just one verse."]}
+  },
+  "route_yuna_day12": {
+    "start": {"text": "The courtyard is packed, but Yuna pulls him by the sleeve behind the stage, where no one can see. She's holding two lunchboxes. Her hand is ice cold."},
+    "n1": {"text": "I made yours, and his. I know I shouldn't, but I wanted to leave one on the desk on day 13, just to be sure there is a day 13."},
+    "b1": {"text": "Okay. I'll keep your lunch warm. I'm good at that. I know how to keep food and hopes wrapped in a dish towel."},
+    "b2": {"text": "...Thank you for not lying. Everyone lies to me so I won't cry. You're the first who respects me enough to let me cry."},
+    "n2": {"text": "Promise you'll come back? It's not for me. It's so I have someone coming back. I take care of everyone, but I've never had someone who came back.", "choices": ["\"I'll come back. I promise, and I keep my promises.\"", "\"I don't know if I'll come back. But I'll try.\""]}
+  },
+  "route_alice_day9": {
+    "start": {"text": "Alice has spread the notebook, the watch, the cut yearbook and the enrollment list across the desk, forming a kind of map. She stands with her arms crossed, looking down at it all."},
+    "n1": {"text": "I built the timeline. Three apparent weeks. Twelve real days. Fifty-seven previous loops, by my calculations, with a margin of error of forty."},
+    "n2": {"text": "The only constant in every loop is you. The second constant is me, writing things down without remembering I wrote them."},
+    "b1": {"text": "Here. Page fourteen: \"He always arrives with the same expression of someone who forgot something important.\" I wrote that forty times."},
+    "b2": {"text": "...If I'm okay. No one ever asked, in any of the fifty-seven. I am. Almost. Thank you for asking."},
+    "n3": {"text": "That means that, even forgetting, I always trusted you. It's the only thing that needs no proof.", "choices": ["Thank her, and ask to see the whole notebook.", "Ask if she's okay being the mind of the loop."]}
+  },
+  "route_alice_day10": {
+    "start": {"text": "Alice sits on the hallway floor, her notebook open upright against her knees. She writes something, erases it, and writes again."},
+    "n1": {"text": "Probability that the next loop preserves my memory: two percent. Probability that I keep being me: ninety-one."},
+    "n2": {"text": "It's curious. I accept losing my memory. What scares me is no longer wanting to know."},
+    "b1": {"text": "Noted: he promised. Also noted: I believed him. Both, in the same handwriting."},
+    "b2": {"text": "...Deserve. I've never used that word with my curiosity. I'll test it. One hour. Timed."},
+    "n3": {"text": "If I forget, tell me the truth again. Again and again. Even if I say I already know. Especially if I say I already know.", "choices": ["Promise to tell her as many times as it takes.", "Say she deserves to stop wanting to know, just a little."]}
+  },
+  "route_alice_day11": {
+    "start": {"text": "The courtyard is full of too much light. Alice sits alone under the tree, her wristwatch open in her hand, taking off the back cover with a tiny screwdriver."},
+    "n1": {"text": "I want to give you something. Not the watch. What's inside it. A gear I put back myself on day 3, without ever knowing what for."},
+    "n2": {"text": "I found out today. It makes the hand move when someone nearby really wants time to move."},
+    "b1": {"text": "Keep it in your inside pocket. If tomorrow the hand moves when you hold it, I'll know the gear has always been yours."},
+    "b2": {"text": "I wish time wouldn't pass today. For a few hours. Can it? Just until the sun leaves the tree."},
+    "n3": {"text": "It never worked with me. It worked every time you were in the room. It's not science. I know. I wrote that in the margin with an enormous question mark.", "choices": ["Accept the gear and keep it carefully.", "Ask what she wants time to do."]}
+  },
+  "route_alice_day12": {
+    "start": {"text": "The classroom has a single lantern, on Alice's desk, lit, made of white paper. She stands beside it, her uniform immaculate, the notebook closed."},
+    "n1": {"text": "I wrote the last line. I won't say what it is. I'll give it to you closed, for you to open after the roof, or never."},
+    "n2": {"text": "I hate open endings. But I learned, this month, that logic doesn't solve everything. That sometimes only the gesture counts."},
+    "b1": {"text": "...Promise. No bargaining. No statistics. Thank you. For the record: it was a good promise."},
+    "b2": {"text": "Then I'll have someone to read it with. For the first time, I'll have an audience. I'll be nervous. That's new."},
+    "n3": {"text": "So, the gesture: here. Closed. If you come back, I'll have confirmation. And if you don't, I'll know for sure that I trusted you.", "choices": ["Accept the notebook and promise not to open it early.", "Say you'll open it as soon as you come down, to read it with her."]}
+  },
+  "route_hikari_day9": {
+    "start": {"text": "The running track is empty and damp. Hikari runs alone, lap after lap, her steps pounding like a count. When she sees {player_name} in the bleachers, she stops, hands on her knees, breathing hard."},
+    "n1": {"text": "I ran forty laps and didn't beat my time. I never need forty laps for that. Something is holding me back."},
+    "n2": {"text": "I think it's me. I'm the one holding on. A piece of me is waiting for someone to cross the line beside me and that someone never comes."},
+    "b1": {"text": "You're terrible! You're terrible and I loved it. One more. Just one more. I've lost count of the last time I laughed while running."},
+    "b2": {"text": "You're staying there? ...Fine. But shout when I pass. Loud. I've been myself in silence for too long."},
+    "n3": {"text": "Run with me. One lap. I won't let you win, but I want to know what it's like to run beside someone.", "choices": ["Run a lap with her.", "Stay in the bleachers and time her."]}
+  },
+  "route_hikari_day10": {
+    "start": {"text": "The gym is dark. Hikari is hitting a punching bag hanging from the ceiling, slowly, without force, like someone hitting just to have something to do with her hands."},
+    "n1": {"text": "I know I said I'd run until the school was full again. So I ran. And it didn't fill up. My legs are jelly and my head is worse."},
+    "n2": {"text": "I hate it when the enemy has no face. I can hit a person. I can't hit a gap."},
+    "b1": {"text": "...Letting someone help. That's all? I thought it was staying on the ground and waiting for it to stop hurting."},
+    "b2": {"text": "Okay. Help me up off the ground, then. Pretend I fell."},
+    "b3": {"text": "She hits. Once, twice, ten times, harder and harder, until the sound becomes a hoarse breath. At the end, she rests her forehead against the bag and stays there."},
+    "b4": {"text": "...Thanks. I needed to shout at something that wasn't me."},
+    "n3": {"text": "Teach me how to lose. I know how to win, I know how to tie, I've never lost properly. I think he knew how to lose and I never asked him how.", "choices": ["Say losing means letting someone help.", "Hold the punching bag so she can really hit it."]}
+  },
+  "route_hikari_day11": {
+    "start": {"text": "At the festival entrance, Hikari waits with her arms crossed, in a hoodie, next to a table where a relay baton rests on a paper towel."},
+    "n1": {"text": "It was his. The baton. We never used it in the final. He said I should hold it until he came back from the bathroom. He never came back."},
+    "n2": {"text": "I want you to hold it tomorrow. Not for him. For me. Because I want to trust someone with the thing that weighs the most."},
+    "b1": {"text": "...Two hands. You held it like it was glass. No one ever has. It was just a baton."},
+    "b2": {"text": "It wasn't just a baton. I know. You can keep it."},
+    "b3": {"text": "Run together. We have one baton and two people. That's a math problem. Alice can solve it. I just know I want to."},
+    "n3": {"text": "If you drop it, I'll kill you. I mean it. Lovingly, but I mean it.", "choices": ["Hold the baton with both hands.", "Say you'd rather run with her than just keep it."]}
+  },
+  "route_hikari_day12": {
+    "start": {"text": "The lanterns are lighting up one by one. At the bend of the stairs, Hikari stands with one arm against the wall, the other outstretched, like someone holding a door that hasn't opened yet."},
+    "n1": {"text": "I'll stay here. At the door. I'll hold it. I said I'd hold it, and I'm good at carrying weight."},
+    "n2": {"text": "But if you come back and I'm not here, it's because I ran up after you. Then you wait for me. I'm faster than you, but today I accept losing."},
+    "b1": {"text": "Team. That's it. I never had a real one. Just a lane. Go, captain."},
+    "b2": {"text": "...Alice is in the hallway. Yuna, on the stairs. Maya, at the top. I'm holding the door. Everyone is holding something."},
+    "b3": {"text": "Okay. Then I'll hold it with everyone. Go."},
+    "n3": {"text": "Go. Go before I change my mind and come with you, and the door falls.", "choices": ["Bump your fist against hers, like a team greeting.", "Tell her she doesn't have to hold it alone."]}
+  }
+}

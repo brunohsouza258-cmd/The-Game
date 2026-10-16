@@ -1,0 +1,110 @@
+{
+  "alice_day1": {
+    "start": {"text": "{player_name}, right? Did you notice the hallway clock was showing a different time yesterday?", "choices": ["I didn't notice anything strange.", "Now that you mention it... yes."]},
+    "notice": {"text": "I knew you'd notice, {player_name}. You pay attention to things.", "choices": ["Have you noticed anything else?", "It was probably just a coincidence."]},
+    "more_notes": {"text": "A few small things. A student I'm sure was in my class last year, but no one else seems to remember. Maybe I'm just remembering wrong. Or maybe not."}
+  },
+  "alice_day2": {
+    "start": {"text": "{player_name}, I've been writing down the times when strange things happen. There's a pattern: whenever someone talks too much about the past.", "choices": ["That's just coincidence.", "Show me those notes."]},
+    "notes": {"text": "Here. I don't know what it means yet, but I'll keep watching."},
+    "poem_echo": {"text": "Alice jots something down and remarks, without looking up: \"The word '{poem_word}' shows up with a strange frequency in your writing. I liked it.\""},
+    "closing": {"text": "Alice snaps her notebook shut and pushes her glasses up her nose."},
+    "closing__2": {"text": "\"Noted,\" she says, as if that settled something, and walks off counting her steps: twenty-two to the door, not one more."}
+  },
+  "alice_day3": {
+    "start": {"text": "{player_name}. I went to the library yesterday and borrowed last year's yearbook. Look at this."},
+    "yearbook": {"text": "She opens the yearbook. The page for class 2-B has been removed. Not torn — cut flush along the binding, carefully.", "choices": ["Someone wanted to hide something.", "Could have just been vandalism."]},
+    "hide": {"text": "Or someone wanted to erase it. Hiding is keeping something somewhere else. This is different. This is making it never have existed."},
+    "vandal": {"text": "No vandal cuts a page with a ruler. But that's fine. I understand if you don't want to get involved."},
+    "help": {"text": "I'm going to keep looking. Do you... want to help?", "choices": ["I do. Tell me everything you find.", "I think you should let it go."]},
+    "partner": {"text": "Great. First joint note, then.", "choices": ["There's a desk in my class with the letters K.M.", "Where do we start?"]},
+    "initials": {"text": "K.M.? ...I wrote those same letters in my notebook last week. And I don't remember why."},
+    "start_where": {"text": "With the office records. Paper lies less than people."},
+    "alone": {"text": "Maybe. But I'm terrible at letting things go."},
+    "poem_echo": {"text": "\"{poem_word},\" she reads aloud from the notebook where she copied the whole poem. \"I keep what impresses me.\""},
+    "closing": {"text": "Before leaving, she pulls a paper from her pocket and smooths it out on the desk. It's a list of crossed-out names, and one, in the middle, only underlined. \"Think about it,\" she asks, and leaves without saying which."}
+  },
+  "alice_day4": {
+    "start": {"text": "Found it. At the office. I'd made a copy of the enrollment list last month, for an assignment. Compare the two."},
+    "lists": {"text": "In the copy from a month ago, class 2-B, line 14: \"Kaito Mori\". In today's official list, line 14 doesn't exist. The numbering jumps from 13 to 15.", "choices": ["I've seen that name. In my notebook.", "Kaito Mori... K.M."]},
+    "notebook": {"text": "In your notebook. Written by you. Before you ever saw this list. ...{player_name}, this isn't a school forgetting a student. This is the school erasing a student, and you remembering him."},
+    "initials": {"text": "The initials on the desk. And in my notebook. He was in my class. I know he was. But I can't remember his voice. Or his face."},
+    "theory": {"text": "From now on I'm writing everything down with the time. If the school is changing, I want to know when.", "choices": ["Write down what I tell you too.", "Careful. This could hurt you."]},
+    "deal": {"text": "Deal. Two witnesses are better than one. Even if neither of us can prove anything."},
+    "careful": {"text": "Knowing has never hurt me. Not knowing does. ...But thanks for worrying."},
+    "poem_echo": {"text": "Alice jots something down and remarks, without looking up: \"The word '{poem_word}' shows up with a strange frequency in your writing. I liked it.\""},
+    "closing": {"text": "Alice takes off her glasses, rubs her eyes with the back of her hand and, for a second, looks much younger than her manner lets you forget."},
+    "closing__2": {"text": "Then she puts them back on, and is Alice again."}
+  },
+  "alice_day5": {
+    "start": {"text": "The loudspeaker called him by name. Then it said he doesn't exist. I wrote it down: 7:52. It's the first time the school has slipped backward."},
+    "theory": {"text": "My theory: it's not the school that forgets. It's time that goes back. And every time it goes back, something doesn't come back with it. He was the first to disappear. He won't be the last.", "choices": ["Show her the notebook in my handwriting.", "That sounds impossible."]},
+    "notebook": {"text": "Alice reads every page twice, comparing dates with her notes. Her lips move as she counts."},
+    "match": {"text": "Day 6: \"hands hurt\". That's tomorrow. {player_name}... if that happens tomorrow, the notebook isn't a diary. It's a warning. You're writing to yourself, from one loop to the next."},
+    "impossible": {"text": "Impossible is a word for things that haven't happened to you yet. I'll keep taking notes. You'll end up needing them."},
+    "poem_echo": {"text": "\"{poem_word},\" she reads aloud from the notebook where she copied the whole poem. \"I keep what impresses me.\""},
+    "closing": {"text": "\"Day twelve, twenty-one forty-seven,\" she writes at the top of the first blank page, in a very firm hand. \"So I don't forget,\" she explains. \"Or so I have someone to blame later.\""}
+  },
+  "alice_day6": {
+    "start": {"text": "I photographed the \"DON'T GO UP\" before the janitors painted over it. I compared it with the handwriting in your notebook. It's identical. And you showed up with a hurt hand, exactly as it was written."},
+    "question": {"text": "So I'm going to ask you a direct question, and you don't have to answer. Were you on the roof when he fell?", "choices": ["I don't know.", "I think so. I think I held his hand.", "Leave without answering."]},
+    "dont_know": {"text": "\"I don't know\" is data too. I'll write it down. Someone who doesn't know can still find out. Someone who lies stays stuck."},
+    "yes": {"text": "You held on. And couldn't. ...Thank you for telling me. I won't write that down. Some things aren't data, they're wounds."},
+    "leave": {"text": "He leaves the room. When he looks back, Alice is writing, fast, without looking up."},
+    "poem_echo": {"text": "Alice jots something down and remarks, without looking up: \"The word '{poem_word}' shows up with a strange frequency in your writing. I liked it.\""},
+    "closing": {"text": "She leaves a small box of bandages on his desk, with a note taped to it: \"Change it morning and night."},
+    "closing__2": {"text": "If you don't, I'll know.\" It's the closest thing to a hug she knows how to give."}
+  },
+  "alice_day7": {
+    "start": {"text": "Alice is flipping through her own notebook, faster and faster. The pages about Kaito are blank. Not erased — blank, as if they'd never been written. Only the dates are left."},
+    "blank": {"text": "I wrote here. I know I did. I recognize where the pen pressed into the paper. But there's nothing. {player_name}, am I going crazy?", "choices": ["No. I remember what you wrote.", "Maybe it's better to stop investigating."]},
+    "remember": {"text": "Then tell me. I'll write it again. If the school erases, we rewrite. Until it gets tired."},
+    "quit": {"text": "Stopping doesn't make the thing stop. It just makes me not see it coming."},
+    "truth_line": {"text": "You know what scares me most? I used to think knowing the truth would solve things. I'm closer and closer to it, and nothing is solved. It's just heavier."},
+    "poem_echo": {"text": "\"{poem_word},\" she reads aloud from the notebook where she copied the whole poem. \"I keep what impresses me.\""},
+    "closing": {"text": "Alice's wristwatch trembles on the desk, tries to move, and goes back. She stares at it without blinking until it stops trembling."},
+    "closing__2": {"text": "\"You won't beat me,\" she murmurs, to the watch, to the day, to no one."}
+  },
+  "alice_day8": {
+    "start": {"text": "I cross-referenced everything: the stopped clock, the loudspeaker, the dates in your notebook. It all points to one time. 21:47, on the night of the festival."},
+    "plan": {"text": "Proposal: on day 12, we go up to the roof at 21:40. Seven minutes early. Just to observe. Touching nothing. Like an experiment.", "choices": ["Deal. We'll go together.", "It's too dangerous for you."]},
+    "agree": {"text": "I'll sync our watches. If time goes back, at least it'll go back for both of us at once."},
+    "danger": {"text": "Dangerous is being the only one who knows and doing nothing. But I respect it. If you change your mind, I'll have the watch ready."},
+    "poem_echo": {"text": "Alice jots something down and remarks, without looking up: \"The word '{poem_word}' shows up with a strange frequency in your writing. I liked it.\""},
+    "closing": {"text": "\"When someone says they don't want to know,\" she remarks, without looking, \"I always write down the time. It's always the same time of day: right before they want to.\" Then she leaves, without waiting for an answer."}
+  },
+  "alice_day9": {
+    "start": {"text": "I finished the theory. Want to hear it? It's short. The loop starts on the first day and ends at 21:47 on day 12. What restarts it isn't time."},
+    "start__2": {"text": "It's someone refusing to accept what happens at 21:47."},
+    "proof": {"text": "I know the mechanism. I know the time. I know the place. And I can't do anything with it. Knowing isn't the same as being able to.", "choices": ["But without you I wouldn't even know what I'm facing.", "Maybe the answer isn't doing, but accepting."]},
+    "worth": {"text": "...That's a nice thing to hear when you're losing. Thank you, {player_name}."},
+    "accept": {"text": "Accepting. It's the only variable I don't know how to measure. I guess that's why I never thought of it."},
+    "poem_echo": {"text": "\"{poem_word},\" she reads aloud from the notebook where she copied the whole poem. \"I keep what impresses me.\""},
+    "closing": {"text": "She writes a new line in the blank notebook and turns the page for him to see, just for a second: \"Remembering hurts less than pretending.\""},
+    "closing__2": {"text": "Then she closes the notebook and puts it in her bag, quickly, before she changes her mind."}
+  },
+  "alice_day10": {
+    "start": {"text": "Alice's notebook is almost entirely blank now. She holds it with both hands, like something that might fly away."},
+    "last": {"text": "There's one line left. Just one. I can't read it — the letters keep moving when I look. Will you read it for me, {player_name}?", "choices": ["Read the line out loud.", "Say it's blank too."]},
+    "read": {"text": "In Alice's neat handwriting, the last line says: \"Trust {player_name}.\" Below it, a date. From a loop neither of them remembers."},
+    "trust": {"text": "I wrote that for myself. In a loop I forgot. So... I trust you. Even without proof. That's very hard for me, you know."},
+    "lie": {"text": "It's blank. Then I've lost everything. ...You hesitated before answering. I'd write that down, if I still had anywhere to write it."},
+    "poem_echo": {"text": "Alice jots something down and remarks, without looking up: \"The word '{poem_word}' shows up with a strange frequency in your writing. I liked it.\""},
+    "closing": {"text": "Alice counts her steps to the door. She reaches twenty-two, as always."},
+    "closing__2": {"text": "But this time, instead of going on, she stops and looks back: \"I'm scared,\" she says, and it's the first time she's said it without writing it down first."}
+  },
+  "alice_day11": {
+    "start": {"text": "Here. It's my watch. Synced with the stopped classroom clock: 21:47 will strike exactly the same. I'll use my mother's."},
+    "watch": {"text": "Everything is perfect today. Too perfect. I measured: no students missing, no blank pages, no stopped clocks. Statistically, that never happens. It's a well-made trap.", "choices": ["Accept the watch.", "Keep it. You'll need it more than I will."]},
+    "accept": {"text": "When it shows 21:48, for the first time, I want you to look at it and remember that someone trusted you without any proof."},
+    "refuse": {"text": "Okay. Then tomorrow I'll stand next to you and we'll look at the same watch. Same thing. Maybe even better."},
+    "poem_echo": {"text": "\"{poem_word},\" she reads aloud from the notebook where she copied the whole poem. \"I keep what impresses me.\""},
+    "closing": {"text": "\"Tomorrow,\" she says, putting the watch back in her pocket. \"I'll be in the courtyard at seven. If I don't show up,\" and the sentence hangs there, unfinished, because she knows he's already understood."}
+  },
+  "alice_day12": {
+    "start": {"text": "20:58. Forty-nine minutes. I made a list of what could happen up there. Twelve scenarios. In eleven of them, I don't know what you should do."},
+    "twelfth": {"text": "The twelfth is you doing something no other loop did. I don't know what. I only know it can't be calculated. It's the only variable that's yours.", "choices": ["Come up with me at 21:40, like we agreed.", "Thank you for everything you wrote down, Alice."]},
+    "plan": {"text": "As agreed. I'll stay at the door, timing it. If the clock passes 21:47, I'll shout. It'll be the happiest shout of my life."},
+    "thanks": {"text": "I've forgotten almost everything I wrote down. But I remember it was worth writing. I think that's what matters in the end: not the answer, but having looked for it together."}
+  }
+}

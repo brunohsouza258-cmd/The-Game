@@ -39,13 +39,13 @@ func _build_slots() -> void:
 
 func _slot_description(slot: int) -> String:
 	var data := SaveManager.peek(slot)
-	var label := "Autosave" if slot == SaveManager.AUTOSAVE_SLOT else "Slot %d" % slot
+	var label := tr("Autosave") if slot == SaveManager.AUTOSAVE_SLOT else tr("Slot %d") % slot
 	if data.is_empty():
-		return "%s — vazio" % label
+		return tr("%s — vazio") % label
 	var player_name: String = data.get("player_name", "Jogador")
 	var day: int = data.get("day", 1)
 	var stamp: String = data.get("saved_at", "")
-	var base := "%s — %s, dia %d" % [label, player_name, day]
+	var base := tr("%s — %s, dia %d") % [label, player_name, day]
 	return base if stamp == "" else "%s (%s)" % [base, stamp]
 
 func _on_save_pressed(slot: int) -> void:

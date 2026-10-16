@@ -1,0 +1,279 @@
+{
+  "words": [
+    {
+      "text": "stars",
+      "weights": {
+        "maya": 2,
+        "alice": 1
+      }
+    },
+    {
+      "text": "silence",
+      "weights": {
+        "maya": 2,
+        "hikari": -1
+      }
+    },
+    {
+      "text": "mystery",
+      "weights": {
+        "maya": 3,
+        "alice": 2
+      }
+    },
+    {
+      "text": "memory",
+      "weights": {
+        "maya": 3
+      }
+    },
+    {
+      "text": "secret",
+      "weights": {
+        "maya": 2,
+        "alice": 1
+      }
+    },
+    {
+      "text": "shadow",
+      "weights": {
+        "maya": 1,
+        "alice": 1,
+        "yuna": -1
+      }
+    },
+    {
+      "text": "moon",
+      "weights": {
+        "maya": 3,
+        "yuna": -1
+      }
+    },
+    {
+      "text": "books",
+      "weights": {
+        "maya": 2,
+        "alice": 1
+      }
+    },
+    {
+      "text": "longing",
+      "weights": {
+        "maya": 3,
+        "hikari": -1
+      }
+    },
+    {
+      "text": "laughter",
+      "weights": {
+        "yuna": 3,
+        "alice": -1
+      }
+    },
+    {
+      "text": "friendship",
+      "weights": {
+        "yuna": 2,
+        "hikari": 1
+      }
+    },
+    {
+      "text": "sun",
+      "weights": {
+        "yuna": 2
+      }
+    },
+    {
+      "text": "warmth",
+      "weights": {
+        "yuna": 3
+      }
+    },
+    {
+      "text": "team",
+      "weights": {
+        "yuna": 2,
+        "hikari": 2
+      }
+    },
+    {
+      "text": "hug",
+      "weights": {
+        "yuna": 3,
+        "maya": 1
+      }
+    },
+    {
+      "text": "party",
+      "weights": {
+        "yuna": 3,
+        "alice": -1
+      }
+    },
+    {
+      "text": "flowers",
+      "weights": {
+        "yuna": 2,
+        "maya": 1
+      }
+    },
+    {
+      "text": "sweet",
+      "weights": {
+        "yuna": 3
+      }
+    },
+    {
+      "text": "details",
+      "weights": {
+        "alice": 3
+      }
+    },
+    {
+      "text": "patterns",
+      "weights": {
+        "alice": 2,
+        "maya": 1
+      }
+    },
+    {
+      "text": "logic",
+      "weights": {
+        "alice": 3
+      }
+    },
+    {
+      "text": "clock",
+      "weights": {
+        "alice": 3,
+        "hikari": 1
+      }
+    },
+    {
+      "text": "notebook",
+      "weights": {
+        "alice": 3,
+        "maya": 1
+      }
+    },
+    {
+      "text": "clue",
+      "weights": {
+        "alice": 2,
+        "maya": 1
+      }
+    },
+    {
+      "text": "order",
+      "weights": {
+        "alice": 3,
+        "yuna": -1
+      }
+    },
+    {
+      "text": "numbers",
+      "weights": {
+        "alice": 2,
+        "hikari": 1
+      }
+    },
+    {
+      "text": "victory",
+      "weights": {
+        "hikari": 3
+      }
+    },
+    {
+      "text": "courage",
+      "weights": {
+        "hikari": 2,
+        "yuna": 1
+      }
+    },
+    {
+      "text": "challenge",
+      "weights": {
+        "hikari": 2,
+        "yuna": 1
+      }
+    },
+    {
+      "text": "speed",
+      "weights": {
+        "hikari": 2
+      }
+    },
+    {
+      "text": "race",
+      "weights": {
+        "hikari": 3
+      }
+    },
+    {
+      "text": "sweat",
+      "weights": {
+        "hikari": 3,
+        "maya": -1
+      }
+    },
+    {
+      "text": "strength",
+      "weights": {
+        "hikari": 3
+      }
+    },
+    {
+      "text": "goal",
+      "weights": {
+        "hikari": 2,
+        "alice": 1
+      }
+    },
+    {
+      "text": "rain",
+      "weights": {
+        "maya": 1,
+        "yuna": -1
+      }
+    },
+    {
+      "text": "boredom",
+      "weights": {
+        "maya": -1,
+        "yuna": -2,
+        "alice": -1,
+        "hikari": -2
+      }
+    },
+    {
+      "text": "emptiness",
+      "weights": {
+        "maya": 1,
+        "yuna": -2,
+        "hikari": -1
+      }
+    }
+  ],
+  "reactions": {
+    "maya": {
+      "great": "She reads slowly, almost whispering. \"It's as if you wrote what I was thinking before I thought it.\"",
+      "good": "\"Interesting,\" she says, with half a smile. \"You pay more attention to me than you let on.\"",
+      "meh": "She folds the paper without much reaction. \"Hm. Pretty words. They don't come close, but they're pretty.\""
+    },
+    "yuna": {
+      "great": "She reads it aloud to herself and laughs, eyes shining. \"That's the cutest thing anyone has ever written for me!\"",
+      "good": "She smiles for real. \"I really liked it! You know how to cheer me up.\"",
+      "meh": "\"Oh, that's nice!\" she says, politely, but without her usual sparkle."
+    },
+    "alice": {
+      "great": "She analyzes every word like a clue. \"The structure of this isn't accidental. You chose well.\"",
+      "good": "\"Hm. Good word choice,\" she notes something in a notebook, satisfied.",
+      "meh": "\"It lacked cohesion,\" she remarks, without malice, just stating it."
+    },
+    "hikari": {
+      "great": "She reads it twice before admitting: \"Okay... that was good. I won't pretend it wasn't.\"",
+      "good": "\"Not bad,\" she says, competitive even when praising. \"But I'd still write it better.\"",
+      "meh": "She shrugs. \"Weak. Try again when you're ready to really lose.\""
+    }
+  }
+}

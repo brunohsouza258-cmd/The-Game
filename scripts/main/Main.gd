@@ -104,6 +104,15 @@ func _build_content_warning() -> void:
 	var spacer := Control.new()
 	spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	box.add_child(spacer)
+	var lang := Button.new()
+	lang.auto_translate_mode = Node.AUTO_TRANSLATE_MODE_DISABLED
+	lang.text = "English" if not GameSettings.is_english() else "Português"
+	lang.position = Vector2(1130, 20)
+	lang.custom_minimum_size = Vector2(130, 36)
+	lang.pressed.connect(func():
+		GameSettings.set_language("pt" if GameSettings.is_english() else "en")
+		lang.text = "English" if not GameSettings.is_english() else "Português")
+	_warning_panel.add_child(lang)
 	_warning_ok = Button.new()
 	_warning_ok.custom_minimum_size = Vector2(0, 42)
 	_warning_ok.disabled = true
@@ -124,7 +133,7 @@ func _build_content_warning() -> void:
 # O botão de continuar libera depois de alguns segundos, para dar tempo de ler.
 func _boot_countdown() -> void:
 	for remaining in range(4, 0, -1):
-		_warning_ok.text = "Li e quero continuar (%d)" % remaining
+		_warning_ok.text = tr("Li e quero continuar (%d)") % remaining
 		await get_tree().create_timer(1.0).timeout
 	_warning_ok.text = "Li e quero continuar"
 	_warning_ok.disabled = false
@@ -451,7 +460,7 @@ func _open_name_prompt() -> void:
 func _on_name_confirm_pressed() -> void:
 	SfxPlayer.play_click()
 	var typed := name_input.text.strip_edges()
-	GameState.reset_for_new_game(typed if typed != "" else "Jogador")
+	GameState.reset_for_new_game(typed if typed != "" else tr("Jogador"))
 	GameSettings.register_new_loop()
 	History.clear()
 	enter_game()

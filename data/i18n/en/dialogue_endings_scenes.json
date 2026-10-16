@@ -1,0 +1,82 @@
+{
+  "ending_truth": {
+    "start": {"text": "21:46. A fine rain falls on the roof. The railing is the same as in every loop. On the other side, Kaito stands on the edge, laughing, his shirt clinging to him."},
+    "n1": {"text": "I'm still braver than you. Come on, try to catch me."},
+    "n2": {"text": "{player_name} doesn't run. For the first time in many loops, he doesn't reach out. Behind him, at the stairway door, Maya holds her breath."},
+    "b1": {"text": "...I know. I always knew. I just wanted someone to say it out loud."},
+    "b2": {"text": "You came back. Twenty times, a hundred times, you always came back. That wasn't what mattered. What mattered was that you were here when I fell. And you were."},
+    "n3": {"text": "Aren't you going to hold on to me? You always hold on. The more you hold on, the more I slip.", "choices": ["\"I'm sorry. It wasn't my fault. And it wasn't yours either.\"", "\"I took too long to come back. That's what I never said.\""]},
+    "n4": {"text": "I was on the stairs. I saw everything. I never said I was there."},
+    "n4__2": {"text": "I never said what I felt, and I kept holding on to this day because I didn't have the courage to say it: I liked you too, Kaito."},
+    "n5": {"text": "I know, Maya. I read your poems in my locker. It wasn't a secret. It was just... us being shy."},
+    "n6": {"text": "The hand of the courtyard clock reaches 21:47. For the first time, the rain doesn't repeat. It falls, and stays on the ground, and runs off. Like real rain."},
+    "echo1": {"text": "Next to the flower, a white lantern is lit. Inside, in {player_name}'s firm handwriting, five letters: Kaito."},
+    "echo2": {"text": "Maya holds his hand a moment longer than necessary. She was with him on the night of day 12, and she won't apologize for it."}
+  },
+  "ending_secret": {
+    "start": {"text": "On the roof, the rain stops in midair. Every drop hangs still, glowing like a string of lanterns. Kaito looks at {player_name}, then up. Not at the sky. Beyond it."},
+    "n1": {"text": "It's not you who makes this come back. Not Maya either. It's whoever is on the other side, pressing \"New Game\" again."},
+    "n2": {"text": "Behind him, Maya on the stairs understands at the same moment. Alice had written it in her notebook without knowing what it meant: someone from outside.", "crash_lines": ["> checking player...", "> user detected: {user}", "> player '{player_name}' is not the same as '{user}'", "> you there. yes, you.", "> I know you're watching.", "> YOU HELD HIS HAND SO MANY TIMES YOU MEMORIZED THE ENDING", "> you can close the game, {user}."]},
+    "b1": {"text": "Thank you. I'm not angry. I just wanted someone, at some point, to stop pressing the button."},
+    "b2": {"text": "You can keep going. I'll wait. But remember: every loop erases a little. Next time we meet, I might not know your name anymore."},
+    "n3": {"text": "You there. Yes, you. I know you're watching. You held his hand so many times you memorized the ending.", "choices": ["Close the game.", "Keep watching."]},
+    "n4": {"text": "{player_name} lets go of the railing without fear, because this time there's no one to hold. The last thing he says isn't for Kaito."},
+    "n4__2": {"text": "It's for you: \"You can close the game now. He's gone. Let him go.\""}
+  },
+  "ending_restart": {
+    "start": {"text": "On the roof, {player_name} reaches out — and realizes he no longer knows why he's doing it. He can't quite remember Kaito's face. Only the feeling of having lost someone."},
+    "n1": {"text": "You don't have to remember. I'll remember for both of us. I remember, and that's enough."},
+    "b1": {"text": "The next day the loop doesn't come back. There's a hole where a name used to be. {player_name} doesn't understand everything. But he decides to go on slowly, in no hurry to have every answer."},
+    "b2": {"text": "The desk with the initials K.M. is back at the back of the classroom, and no one knows who brought it. He doesn't know why he looks at it."},
+    "b2__2": {"text": "But he looks every day, until one day he notices the desk is gone and the window is just a window."},
+    "n2": {"text": "He goes down the stairs slowly. He can't save anyone this time, and he can no longer remember enough to keep trying.", "choices": ["Accept the little that's left and move on.", "Stand still in the courtyard, looking at the empty desk through the window."]}
+  },
+  "ending_illusion": {
+    "start": {"text": "{player_name} climbs the stairs, looks at the roof door and turns back. It's easier this way. Down below, the festival is beautiful, Yuna is laughing, the day is perfect."},
+    "b1": {"text": "Yes! Come eat. Come laugh with me. There's school tomorrow, but tonight is just a party."},
+    "b2": {"text": "Strange? What's strange? Everything's perfect. Stop thinking so much. Come on."},
+    "n1": {"text": "There you are! I was looking for you! The festival is beautiful, isn't it? Not a single lantern burned out. Today is a perfect day!", "choices": ["Smile back and accept the perfect day.", "Hesitate. Ask if she doesn't find it strange."]},
+    "n2": {"text": "When the clock strikes 21:47, everything goes white for an instant. The sound of a classroom, of rain and of laughter all at once."},
+    "n3": {"text": "First day. {player_name} walks through the school gate carrying more hope than he'd care to admit. Someone in the hallway at dusk smiles like someone who has seen this scene many times."}
+  },
+  "ending_route_maya": {
+    "start": {"text": "The sun rises after the longest night of the year. On the roof, no one else. The railing is damp with dew, and Maya sits next to {player_name}, knees pulled to her chest."},
+    "n1": {"text": "I let go. I really let go. I didn't feel the world end. I just felt a space where something heavy used to be."},
+    "b1": {"text": "I want to. I really want to. Start over. Hi. I'm Maya. Nice to meet you. I hardly know you."},
+    "b2": {"text": "...Warm. Your hand is warm. The last time someone touched me like this, I still thought time would go back."},
+    "n2": {"text": "I don't know what you're going to say before you say it anymore. It's strange. It's much scarier than I imagined.", "choices": ["\"Then get to know me again.\"", "Stay silent and hold her hand."]},
+    "n3": {"text": "Below, the school bell rings for the first time on day 13. Neither of them moves. This time, it's not a repetition."},
+    "echo1": {"text": "Maya repeats softly, like a prayer, what he told her in the dark hallway: letting go is not the same as forgetting."},
+    "echo2": {"text": "She doesn't forget that he stayed with her on the last night. That, she decides to keep."}
+  },
+  "ending_route_yuna": {
+    "start": {"text": "Day 13. Yuna arrives at school carrying two lunchboxes, one in each hand, her face red like someone who cried on the way. {player_name} waits at the gate."},
+    "n1": {"text": "I cried on the bus. I cried in line at the bakery. I cried in the elevator last night. I think I went a thousand days without crying and today I paid it all at once."},
+    "b1": {"text": "The empty desk, with the initials K.M., is back at the back of the classroom, without anyone knowing who brought it. Yuna puts the lunchbox there and arranges the chopsticks carefully."},
+    "b2": {"text": "There. He always complained that I made too much food. This time I did it on purpose."},
+    "b3": {"text": "...I don't have to? Everyone always says \"be okay\", \"smile\". You're the first person to tell me I don't have to."},
+    "b4": {"text": "I don't have to be okay. But I don't want to be alone either. And I'm not."},
+    "n2": {"text": "I made two lunches. One is yours. The other is... I'm going to leave it on the desk with the initials. Okay?", "choices": ["Go with her to the desk.", "Tell her she doesn't have to be okay."]},
+    "echo1": {"text": "She asked for help once, on day 7, with shaking hands. It was the first time she asked, and now she knows she can ask again."},
+    "echo2": {"text": "In her apron pocket, folded in four, the note he left her on day 10. She rereads it when the kitchen gets too quiet."}
+  },
+  "ending_route_alice": {
+    "start": {"text": "Alice's wristwatch shows 21:47 and stops. She watches the hand for a whole minute, then unbuckles it and sets it on the desk."},
+    "n1": {"text": "I read the last note in the notebook out loud yesterday. It said: \"Trust {player_name}.\" It wasn't a clue. It was a message I sent to myself."},
+    "b1": {"text": "Now we check together. Waking up before dawn, looking at the clock, seeing that the day moved on. Only now with someone on the other end of the line."},
+    "b2": {"text": "It's blank. But if you ask, I'll make something up. It's a new notebook. I'll write the first line now: \"Today the day moved forward.\""},
+    "n2": {"text": "The day moved forward. I checked three times. The hand moves. The classroom is alive. Our classmates came back. I'm here.", "choices": ["Offer to check the day together with her.", "Ask her to read the blank notebook."]},
+    "echo1": {"text": "On the desk, the watch the two of them guarded together on day 11 is still stopped at 21:47. She decides to let it stay stopped."},
+    "echo2": {"text": "The notebook he gave her stays in the top drawer. She writes in it sometimes, just to know she has someone to share it with."}
+  },
+  "ending_route_hikari": {
+    "start": {"text": "The running track is wet from the night's rain. Hikari went up to the roof before dawn and comes down with her knuckles still bruised. {player_name} waits for her at the bend."},
+    "n1": {"text": "I went up to fight gravity. I lost. I always lose to it. But this time I went up there and came back. Does that count?"},
+    "b1": {"text": "...Okay. Fine. I won't pretend I didn't want this. Stay here. Stay a whole lap. I'll time you."},
+    "b2": {"text": "I'll leave it empty. No one's going to fill it. We'll run with three and an empty lane. I learned to lose without disappearing."},
+    "n2": {"text": "Some things can't be beaten, right? You told me that. I got angry. Then less angry. Today I think it's just... true.", "choices": ["Hold her hand, not the empty lane's.", "Ask what she'll do with the fourth lane."]},
+    "n3": {"text": "The sun rises over the school building. For the first time, the fourth lane shines with no one in it."},
+    "echo1": {"text": "Her knuckles still bear the mark of the fight on day 6. She rubs them, and no longer hides them."},
+    "echo2": {"text": "She remembers that on day 8 she didn't go up alone. Now, at the bend of the track, she doesn't run alone either."}
+  }
+}

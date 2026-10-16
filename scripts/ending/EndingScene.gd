@@ -61,7 +61,7 @@ func _determine_ending() -> String:
 	return "restart"
 
 func _load_ending(ending_id: String) -> Dictionary:
-	var file := FileAccess.open(ENDINGS_PATH, FileAccess.READ)
+	var file := FileAccess.open(GameSettings.localized_path(ENDINGS_PATH), FileAccess.READ)
 	var parsed = JSON.parse_string(file.get_as_text())
 	file.close()
 	return parsed.get("endings", {}).get(ending_id, {})

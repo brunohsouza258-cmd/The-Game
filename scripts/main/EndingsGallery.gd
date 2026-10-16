@@ -25,11 +25,11 @@ func _ready() -> void:
 		button.text = data.get("title", id) if open else "???"
 		button.pressed.connect(_on_ending_pressed.bind(data, open))
 		list.add_child(button)
-	counter.text = "Finais descobertos: %d / %d" % [unlocked, ORDER.size()]
+	counter.text = tr("Finais descobertos: %d / %d") % [unlocked, ORDER.size()]
 	detail.text = "Escolha um final."
 
 func _load_endings() -> Dictionary:
-	var file := FileAccess.open(ENDINGS_PATH, FileAccess.READ)
+	var file := FileAccess.open(GameSettings.localized_path(ENDINGS_PATH), FileAccess.READ)
 	if file == null:
 		return {}
 	var parsed = JSON.parse_string(file.get_as_text())
@@ -44,7 +44,7 @@ func _on_ending_pressed(data: Dictionary, open: bool) -> void:
 		var hint: String = data.get("hint", "")
 		if data.has("hint_full") and GameSettings.unlocked_endings.size() >= ORDER.size() - 1:
 			hint = data["hint_full"]
-		detail.text = "Dica: %s" % hint
+		detail.text = tr("Dica: %s") % hint
 
 func _on_back_pressed() -> void:
 	SfxPlayer.play_click()

@@ -117,12 +117,12 @@ func play(kind: String, data: Dictionary = {}) -> void:
 	match kind:
 		"delete":
 			var lines := [
-				"> excluindo kaito.chr ... ok",
-				"> excluindo kaito_memoria.dat ... ok",
-				"> excluindo kaito_voz.ogg ... ok",
-				"> excluindo maya.chr ... ACESSO NEGADO",
-				"> maya.chr está em uso por outro processo",
-				"> tentando de novo ... ACESSO NEGADO",
+				tr("> excluindo kaito.chr ... ok"),
+				tr("> excluindo kaito_memoria.dat ... ok"),
+				tr("> excluindo kaito_voz.ogg ... ok"),
+				tr("> excluindo maya.chr ... ACESSO NEGADO"),
+				tr("> maya.chr está em uso por outro processo"),
+				tr("> tentando de novo ... ACESSO NEGADO"),
 			]
 			_run_crash({"crash_lines": lines, "show_window": false})
 			return
@@ -243,20 +243,20 @@ func _run_crash(data: Dictionary) -> void:
 	var lines: Array = data.get("crash_lines", [])
 	if lines.is_empty():
 		lines = [
-			"> iniciando verificação de memória... falhou",
-			"> carregando %s.sav ... CORROMPIDO" % GameState.player_name,
-			"> volta nº %d" % (100 + GameSettings.loop_count),
-			"> ERRO: personagem 'Kaito Mori' não encontrado",
-			"> ERRO: personagem 'Kaito Mori' não encontrado",
-			"> ERRO: personagem 'Kaito Mori' não encontrado",
-			"> VOCÊ SÓ NÃO CONSEGUIU SEGURAR",
+			tr("> iniciando verificação de memória... falhou"),
+			tr("> carregando %s.sav ... CORROMPIDO") % GameState.player_name,
+			tr("> volta nº %d") % (100 + GameSettings.loop_count),
+			tr("> ERRO: personagem 'Kaito Mori' não encontrado"),
+			tr("> ERRO: personagem 'Kaito Mori' não encontrado"),
+			tr("> ERRO: personagem 'Kaito Mori' não encontrado"),
+			tr("> VOCÊ SÓ NÃO CONSEGUIU SEGURAR"),
 		]
 	for i in lines.size():
 		var line: String = str(lines[i]).format({
 			"player_name": GameState.player_name,
-			"user": user if user != "" else "você",
+			"user": user if user != "" else tr("você"),
 		})
-		var danger := line.begins_with("> ERRO") or line.contains("SEGURAR")
+		var danger := line.begins_with("> ERRO") or line.begins_with("> ERROR") or line.contains("SEGURAR") or line.contains("HOLD ON") or line.contains("ACESSO NEGADO") or line.contains("ACCESS DENIED")
 		_crash_label.add_theme_color_override("font_color", Color(1.0, 0.25, 0.25) if danger else Color(0.75, 1.0, 0.75))
 		await _type(_crash_label, line + "\n", 0.018 if i > 3 else 0.03)
 		await get_tree().create_timer(0.15 if i < lines.size() - 2 else 0.7, true).timeout

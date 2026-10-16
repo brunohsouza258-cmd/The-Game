@@ -35,14 +35,14 @@ func _ready() -> void:
 		var gap := Control.new()
 		gap.custom_minimum_size = Vector2(0, 10)
 		list.add_child(gap)
-	counter.text = "%d de %d lembranças" % [shown, entries.size()]
+	counter.text = tr("%d de %d lembranças") % [shown, entries.size()]
 	if shown == 0:
 		var empty := Label.new()
 		empty.text = "Ainda não há nada escrito."
 		list.add_child(empty)
 
 func _load_entries() -> Array:
-	var file := FileAccess.open(DIARY_PATH, FileAccess.READ)
+	var file := FileAccess.open(GameSettings.localized_path(DIARY_PATH), FileAccess.READ)
 	if file == null:
 		return []
 	var parsed = JSON.parse_string(file.get_as_text())

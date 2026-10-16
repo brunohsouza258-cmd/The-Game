@@ -16,6 +16,12 @@ var auto_advance: bool = true
 var reduce_flashing: bool = false
 var font_scale: float = 1.0
 var content_warning_seen: bool = false
+# Idioma: "pt" (original) ou "en". Diálogos em inglês ficam em data/i18n/en/ como sobreposição.
+var language: String = "pt"
+const I18N_DIR := "res://data/i18n/en/"
+const DIALOGUE_GROUPS := ["main", "maya", "yuna", "alice", "hikari", "extras", "routes", "endings_scenes"]
+var _en_dialogue: Dictionary = {}
+var _en_loaded: bool = false
 # Aviso de saúde: reaparece quando passam WARNING_DAYS desde a última confirmação.
 const WARNING_DAYS := 7
 var warning_ack_time: int = 0
@@ -29,6 +35,8 @@ func _ready() -> void:
 	_ensure_bus(BUS_MUSIC)
 	_ensure_bus(BUS_SFX)
 	load_settings()
+	_setup_translation()
+	TranslationServer.set_locale(language)
 
 func _unhandled_input(event: InputEvent) -> void:
 	var key_event := event as InputEventKey
@@ -60,6 +68,7 @@ func load_settings() -> void:
 		reduce_flashing = config.get_value("access", "reduce_flashing", reduce_flashing)
 		font_scale = config.get_value("access", "font_scale", font_scale)
 		content_warning_seen = config.get_value("access", "content_warning_seen", content_warning_seen)
+		language = config.get_value("access", "language", language)
 		warning_ack_time = int(config.get_value("access", "warning_ack_time", warning_ack_time))
 		loop_count = config.get_value("meta", "loop_count", loop_count)
 		unlocked_endings = config.get_value("meta", "unlocked_endings", unlocked_endings)
@@ -76,6 +85,7 @@ func save_settings() -> void:
 	config.set_value("access", "reduce_flashing", reduce_flashing)
 	config.set_value("access", "font_scale", font_scale)
 	config.set_value("access", "content_warning_seen", content_warning_seen)
+	config.set_value("access", "language", language)
 	config.set_value("access", "warning_ack_time", warning_ack_time)
 	config.set_value("display", "fullscreen", fullscreen)
 	config.set_value("meta", "loop_count", loop_count)
@@ -112,6 +122,66 @@ func set_reduce_flashing(value: bool) -> void:
 func set_font_scale(value: float) -> void:
 	font_scale = value
 	save_settings()
+
+func _setup_translation() -> void:
+	var file := FileAccess.open(I18N_DIR + "ui.json", FileAccess.READ)
+	if file == null:
+		return
+	var table = JSON.parse_string(file.get_as_text())
+	file.close()
+	if typeof(table) != TYPE_DICTIONARY:
+		return
+	var translation := Translation.new()
+	translation.locale = "en"
+	for key in table.keys():
+		translation.add_message(key, table[key])
+	TranslationServer.add_translation(translation)
+
+func set_language(value: String) -> void:
+	language = value
+	TranslationServer.set_locale(value)
+	save_settings()
+
+func is_english() -> bool:
+	return language == "en"
+
+# Arquivos de dados inteiros traduzidos (finais, diário, créditos, poema): mesmo nome em data/i18n/en/.
+func localized_path(path: String) -> String:
+	if is_english():
+		var en_path := I18N_DIR + path.get_file()
+		if FileAccess.file_exists(en_path):
+			return en_path
+	return path
+
+# Diálogos: aplica o texto em inglês por cima do original, nó por nó (texto, quem fala, opções).
+func localize_dialogue(data: Dictionary) -> Dictionary:
+	if not is_english():
+		return data
+	if not _en_loaded:
+		_en_loaded = true
+		for group in DIALOGUE_GROUPS:
+			var file := FileAccess.open(I18N_DIR + "dialogue_%s.json" % group, FileAccess.READ)
+			if file == null:
+				continue
+			var parsed = JSON.parse_string(file.get_as_text())
+			file.close()
+			if typeof(parsed) == TYPE_DICTIONARY:
+				_en_dialogue.merge(parsed, true)
+	var overlay: Dictionary = _en_dialogue.get(str(data.get("id", "")), {})
+	var nodes: Dictionary = data.get("nodes", {})
+	for node_id in overlay.keys():
+		if not nodes.has(node_id):
+			continue
+		var target: Dictionary = nodes[node_id]
+		var tr_node: Dictionary = overlay[node_id]
+		for key in ["text", "speaker", "crash_lines"]:
+			if tr_node.has(key):
+				target[key] = tr_node[key]
+		var choices: Array = target.get("choices", [])
+		var tr_choices: Array = tr_node.get("choices", [])
+		for i in mini(choices.size(), tr_choices.size()):
+			choices[i]["text"] = tr_choices[i]
+	return data
 
 func health_warning_due() -> bool:
 	if warning_ack_time <= 0:

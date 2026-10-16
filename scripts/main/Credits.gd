@@ -16,7 +16,7 @@ func _ready() -> void:
 	MusicPlayer.play_mood("ending")
 
 func _build() -> void:
-	var file := FileAccess.open(CREDITS_PATH, FileAccess.READ)
+	var file := FileAccess.open(GameSettings.localized_path(CREDITS_PATH), FileAccess.READ)
 	var parsed = JSON.parse_string(file.get_as_text())
 	file.close()
 	for section in parsed.get("sections", []):

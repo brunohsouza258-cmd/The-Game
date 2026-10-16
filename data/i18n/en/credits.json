@@ -1,0 +1,137 @@
+{
+  "sections": [
+    {
+      "title": "Paper Lanterns",
+      "lines": [
+        "a game by Bruno"
+      ]
+    },
+    {
+      "title": "Creation, writing and direction",
+      "lines": [
+        "Bruno"
+      ]
+    },
+    {
+      "title": "Character design and art direction",
+      "lines": [
+        "Bruno"
+      ]
+    },
+    {
+      "title": "Programming",
+      "lines": [
+        "Bruno",
+        "with assistance from Claude (Anthropic)"
+      ]
+    },
+    {
+      "title": "Horror and effects direction",
+      "lines": [
+        "Bruno",
+        "concept of the fake game crash, the glitch, the heartbeat",
+        "and the breaking face, inspired by Doki Doki Literature Club"
+      ]
+    },
+    {
+      "title": "Direction of the new scenes and endings",
+      "lines": [
+        "Bruno",
+        "extra scenes, \"stay late\", route moments (days 9 to 12),",
+        "interactive endings, loop and poem echoes, and the Diary"
+      ]
+    },
+    {
+      "title": "Poem system and the little dolls",
+      "lines": [
+        "Bruno",
+        "affinity scoring, Doki Doki style"
+      ]
+    },
+    {
+      "title": "Audio and ambience direction",
+      "lines": [
+        "Bruno",
+        "track selection, rain, doors, bell and silences"
+      ]
+    },
+    {
+      "title": "Accessibility and wellbeing",
+      "lines": [
+        "Bruno",
+        "health notice before the game, reduced flashing and shaking,",
+        "text size, pause and auto-advance"
+      ]
+    },
+    {
+      "title": "Production, testing and review",
+      "lines": [
+        "Bruno"
+      ]
+    },
+    {
+      "title": "English translation",
+      "lines": [
+        "Claude (Anthropic), under Bruno's direction"
+      ]
+    },
+    {
+      "title": "Characters",
+      "lines": [
+        "Maya",
+        "Yuna",
+        "Alice",
+        "Hikari",
+        "and Kaito Mori, whom no one remembers"
+      ]
+    },
+    {
+      "title": "Backgrounds and character art",
+      "lines": [
+        "AI-generated (Krea 2 and Nano Banana 2) under Bruno's direction",
+        "Extra backgrounds derived by script (festival, night, decayed, rooftop)",
+        "School backgrounds (cafeteria, infirmary, gym, rooftop, hallway, music room and more): Gutari Nyanko",
+        "Bedroom and kitchen: Kyuririn"
+      ]
+    },
+    {
+      "title": "Soundtrack (CC0, OpenGameArt)",
+      "lines": [
+        "Yoiyami Core Theme, Starfield Romance and First Light Particles — Yoiyami",
+        "Calm Relax 1 — cynicmusic",
+        "Happy Clappy Loop — OwlishMedia",
+        "Insistent — yd",
+        "Contemplation — Joth",
+        "Emerald Tower — Kistol",
+        "Menu Music Loop — wipics",
+        "Sadness — Kistol",
+        "Emotional piano loop — extenz",
+        "Effects and ambience: Ylmir, w.forster.1, laleksic, Wolfgang_, Spring Spring, bart and mikeask",
+        "Abandoned Passages — congusbongus"
+      ]
+    },
+    {
+      "title": "Made with",
+      "lines": [
+        "Godot Engine"
+      ]
+    },
+    {
+      "title": "Special thanks",
+      "lines": [
+        "to you, {player_name}, for climbing up to the roof"
+      ]
+    },
+    {
+      "title": "",
+      "lines": [
+        "Thank you for playing.",
+        "",
+        "If this game weighed on you, talk to someone.",
+        "Find a free crisis line in your country at findahelpline.com",
+        "",
+        "© 2026 Bruno"
+      ]
+    }
+  ]
+}

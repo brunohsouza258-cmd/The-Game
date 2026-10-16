@@ -40,7 +40,7 @@ var _cells: Dictionary = {}
 var _pop_count: int = 0
 
 func _ready() -> void:
-	var file := FileAccess.open(WORD_BANK_PATH, FileAccess.READ)
+	var file := FileAccess.open(GameSettings.localized_path(WORD_BANK_PATH), FileAccess.READ)
 	var parsed = JSON.parse_string(file.get_as_text())
 	file.close()
 	_words = parsed.get("words", [])
@@ -202,7 +202,7 @@ func _totals() -> Dictionary:
 	return totals
 
 func _update_counter() -> void:
-	counter_label.text = "%d/%d palavras escolhidas" % [_selected.size(), WORDS_TO_PICK]
+	counter_label.text = tr("%d/%d palavras escolhidas") % [_selected.size(), WORDS_TO_PICK]
 	finish_button.disabled = _selected.size() != WORDS_TO_PICK
 	var totals := _totals()
 	var leader := _leader(totals)
@@ -276,13 +276,13 @@ func _on_finish_pressed() -> void:
 	for word_data in _selected:
 		texts.append(String(word_data.get("text", "")))
 	poem_label.text = "“%s”" % " · ".join(texts)
-	result_label.text = "%s leu o seu poema.\n%s" % [CHARACTER_NAMES[winner], _reaction_text(winner, tier)]
+	result_label.text = tr("%s leu o seu poema.\n%s") % [CHARACTER_NAMES[winner], _reaction_text(winner, tier)]
 	var lines: PackedStringArray = []
 	for char_id in GameState.CHARACTERS:
 		lines.append("%s %d" % [CHARACTER_NAMES[char_id], totals[char_id]])
-	var summary := "Pontos: " + " · ".join(lines)
+	var summary := tr("Pontos: ") + " · ".join(lines)
 	if not bystanders.is_empty():
-		summary += "\nO poema também tocou: %s." % ", ".join(bystanders)
+		summary += "\n" + tr("O poema também tocou: %s.") % ", ".join(bystanders)
 	summary_label.text = summary
 	winner_doll.texture = load("res://assets/characters/%s.png" % winner)
 	word_select.visible = false
@@ -290,7 +290,7 @@ func _on_finish_pressed() -> void:
 
 func _reaction_text(char_id: String, tier: String) -> String:
 	var character_reactions: Dictionary = _reactions.get(char_id, {})
-	return character_reactions.get(tier, "Ela lê em silêncio.")
+	return character_reactions.get(tier, tr("Ela lê em silêncio."))
 
 func _on_back_pressed() -> void:
 	SfxPlayer.play_click()

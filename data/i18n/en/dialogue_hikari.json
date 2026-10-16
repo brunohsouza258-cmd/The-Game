@@ -1,0 +1,102 @@
+{
+  "hikari_day1": {
+    "start": {"text": "So you're the {player_name} everyone's talking about. Let's see if you can keep up around here.", "choices": ["Challenge accepted.", "It's not about competing."]},
+    "accept": {"text": "I like you, {player_name}. Most people give up before I finish my sentence.", "choices": ["Most people? Like who?", "Deal, then."]},
+    "roster": {"text": "Like... hm. There was a guy on the team last year. I can't remember his name right now, funny. Never mind, it's not important."}
+  },
+  "hikari_day2": {
+    "start": {"text": "{player_name}! Bet you can't run one lap of the court with me.", "choices": ["You're on.", "I'd rather just watch."]},
+    "race": {"text": "Let's see what you're made of, then!"},
+    "watch": {"text": "Coward. But fine, stay there in the shade."},
+    "poem_echo": {"text": "Hikari punches his shoulder. \"{poem_word}.\" She stops, scratches the back of her neck. \"Good word. I won't say it again.\""},
+    "closing": {"text": "Hikari slaps his shoulder, hard, in a greeting that nearly knocks them both over. \"Practice tomorrow,\" she announces, as if it were an invitation. And maybe it is, in her own way."}
+  },
+  "hikari_day3": {
+    "start": {"text": "{player_name}, help me with a count. The relay has four lanes. Me, Sato, Kimura... and who else?", "choices": ["I don't know the team.", "Did you forget a name?"]},
+    "count": {"text": "On the coach's sheet there are four lanes. The fourth has no name. Just a time: the team's best time. Better than mine."},
+    "angry": {"text": "And I don't lose. To anyone. So who the hell ran that?", "choices": ["I'll run the fourth lane, if you need.", "Maybe someone who left the school.", "You really can't stand losing, huh?"]},
+    "volunteer": {"text": "You? Hah. You can't even pass the baton. ...But thanks. No one ever volunteers."},
+    "left": {"text": "Left and took his own name with him? Makes no sense. But some days I walk into the locker room expecting to hear someone laughing. One specific laugh."},
+    "lose": {"text": "Losing is falling behind. And whoever falls behind disappears. At least that's what I learned."},
+    "poem_echo": {"text": "\"That word, {poem_word},\" she says, looking away. \"I kept thinking about it while I ran.\""},
+    "closing": {"text": "She turns around at the gate and calls him back, awkwardly. \"If anyone asks, I ran today,\" she says. \"I don't want to explain that I stood staring at the empty lane.\" And she jogs off before he can answer."}
+  },
+  "hikari_day4": {
+    "start": {"text": "{player_name}. Look at this stopwatch. I ran alone on the track this morning. Alone."},
+    "timer": {"text": "The digital stopwatch shows two times. Hers, 13.2 seconds. And another, just above: 12.8 seconds. Someone got there before her."},
+    "heard": {"text": "And I heard footsteps next to me. I swear. I heard someone laughing, the way... the way someone used to laugh when he passed me on the final stretch.", "choices": ["I believe you.", "The stopwatch must be broken.", "Then run again. With me."]},
+    "believe": {"text": "...Really? No one ever believes me when I say something that isn't about winning. Thanks, {player_name}. Seriously."},
+    "broken": {"text": "Broken. Sure. And I'm broken too, right? Forget it."},
+    "race": {"text": "You run. She wins easily. The stopwatch shows three times. No one says anything about the third."},
+    "poem_echo": {"text": "Hikari punches his shoulder. \"{poem_word}.\" She stops, scratches the back of her neck. \"Good word. I won't say it again.\""},
+    "closing": {"text": "Hikari stretches her arm over her head and cracks her neck."},
+    "closing__2": {"text": "\"That was good,\" she sums up, the closest thing to \"thank you\" she ever says, and turns, and leaves with her sneakers squeaking down the hallway."}
+  },
+  "hikari_day5": {
+    "start": {"text": "I quit the festival relay. Before you ask: no, it's not because I'm afraid of losing."},
+    "why": {"text": "It's that in a relay someone always falls behind. Always. And then his name disappears from the sheet. Kaito Mori. He was the fourth lane. He was the guy who passed me on the final stretch, laughing.", "choices": ["You remember him.", "Then run for him.", "You don't have to run if you don't want to."]},
+    "remember": {"text": "I remember his time. 12.8 seconds. I never beat it. Now there's no one to even compare to. That's worse than losing."},
+    "for_him": {"text": "Run for someone who doesn't even exist? ...Maybe. Maybe it's the only way for him to exist a little."},
+    "no_need": {"text": "Everyone says I have to. That I'm the best, that the team depends on me. You're the first to say I don't. That's... strange to hear."},
+    "poem_echo": {"text": "\"That word, {poem_word},\" she says, looking away. \"I kept thinking about it while I ran.\""},
+    "closing": {"text": "\"I'm going to make the fastest lantern in the festival,\" she announces, rolling the tissue paper with clumsy fingers. When she's done, the lantern is crooked, crumpled and adorable. She hangs it up without comment."}
+  },
+  "hikari_day6": {
+    "start": {"text": "Hikari is sitting in the bleachers, her right hand wrapped in a stained handkerchief. She sees {player_name}'s bandage and laughs, without any humor."},
+    "mirror": {"text": "Matching, look. I punched the locker room locker. I dreamed I was on a roof pulling someone by the hand and the hand slipped. I woke up angry at myself."},
+    "gravity": {"text": "I don't lose, {player_name}. Not even to gravity. If I'd been there, I wouldn't have let go.", "choices": ["No one could have held on. It's not your fault.", "Then we don't let go this time."]},
+    "not_fault": {"text": "Say that to yourself first. It's written all over your face that you think it was your fault."},
+    "fight": {"text": "\"We.\" I like that. No one ever joins a fight on my side."},
+    "poem_echo": {"text": "Hikari punches his shoulder. \"{poem_word}.\" She stops, scratches the back of her neck. \"Good word. I won't say it again.\""},
+    "closing": {"text": "She hides her bandaged hand behind her back whenever someone passes, and only relaxes when the hallway empties. \"It's not weakness,\" she grumbles, \"it's strategy.\" He doesn't laugh. She thanks him with a nod."}
+  },
+  "hikari_day7": {
+    "start": {"text": "Don't tell anyone. I've been coming to school at night. Trying to break open the roof door with an iron bar from the storage room."},
+    "why": {"text": "If there's something up there, I want to see it before day 12. I want to get there first. That's what I do: I get there first.", "choices": ["Stop it. You're going to get hurt.", "Tonight I'm going with you."]},
+    "stop": {"text": "Getting hurt is the least of it. ...But fine. You're the second person to ask me to stop. The first one used to pass me on the final stretch laughing, saying I tried too hard."},
+    "join": {"text": "That night, the iron bar doesn't move the door a millimeter. But from the other side, very softly, someone knocks back. Three knocks. The two of them run without saying a word."},
+    "poem_echo": {"text": "\"That word, {poem_word},\" she says, looking away. \"I kept thinking about it while I ran.\""},
+    "closing": {"text": "Hikari crushes a plastic bottle with one hand and tosses it neatly into the trash. \"Point,\" she says."},
+    "closing__2": {"text": "But the smile fades quickly: next to the trash can, the spot where someone always used to stand, waiting."}
+  },
+  "hikari_day8": {
+    "start": {"text": "I've decided. On the night of the festival, I'll be on the roof. With or without you. If someone has to fall again, let it be me. At least I can take it.", "choices": ["You won't. I won't let you.", "Then we go up together.", "No one has to fall. Not even you."]},
+    "forbid": {"text": "No one tells me what to do. ...But it's nice to know someone would try."},
+    "together": {"text": "Together. Fine. But I get to the stairs first. That's non-negotiable."},
+    "nobody": {"text": "Hikari opens her mouth to answer and doesn't. She looks at her hurt hands for a long time. \"No one's ever told me I didn't have to hold it all,\" she finally says."},
+    "poem_echo": {"text": "Hikari punches his shoulder. \"{poem_word}.\" She stops, scratches the back of her neck. \"Good word. I won't say it again.\""},
+    "closing": {"text": "\"If you go up there again,\" she says, serious, \"call me."},
+    "closing__2": {"text": "I won't let you set foot alone in a place I already know I hate.\" She punches his shoulder lightly, like a seal."}
+  },
+  "hikari_day9": {
+    "start": {"text": "Hikari is doing push-ups on the track, counting out loud. One hundred twelve. One hundred thirteen. Her still-bandaged hands are bleeding again on the asphalt."},
+    "train": {"text": "Training my grip. If I have to hold someone hanging off a roof, I need strong arms. Simple as that.", "choices": ["Hikari, stop. You're hurting yourself.", "I'll train with you."]},
+    "stop": {"text": "If I stop, I think. And if I think, I understand there are things you can't beat with strength. And I don't know how to be anything but strong."},
+    "train_together": {"text": "Hah. You won't last twenty. ...But stay. It's less lonely counting with someone beside you."},
+    "poem_echo": {"text": "\"That word, {poem_word},\" she says, looking away. \"I kept thinking about it while I ran.\""},
+    "closing": {"text": "She stays quiet for a while, arms crossed. \"I hate it when the answer is yes,\" she finally mutters."},
+    "closing__2": {"text": "\"Because then I can't fight it.\" She turns her face away, and the turned face is all he sees."}
+  },
+  "hikari_day10": {
+    "start": {"text": "Last race before the festival. You against me, a hundred meters. If I win, you let me go up to the roof first on day 12."},
+    "race": {"text": "You both take off. Halfway down the track, Hikari stumbles — her hurt hands can't break the fall and she hits the ground hard. She tries to get up and keep running.", "choices": ["Keep running and win.", "Stop mid-track and go back to her."]},
+    "win": {"text": "You won. Congratulations. ...See? That's what happens. Whoever falls gets left behind. Always."},
+    "stop": {"text": "You... stopped? You were going to win. Why did you stop? ...Kaito would have stopped too. He pretended he wouldn't, but he would have. Damn it. Nobody wins this one, huh?"},
+    "poem_echo": {"text": "Hikari punches his shoulder. \"{poem_word}.\" She stops, scratches the back of her neck. \"Good word. I won't say it again.\""},
+    "closing": {"text": "Hikari reties her shoelace, too tight. \"I'm going to run until the school is full again,\" she announces. \"However many laps it takes.\" She sprints off, and the echo of her steps goes on long after she's gone."}
+  },
+  "hikari_day11": {
+    "start": {"text": "Hikari is sitting alone in the bleachers, away from the festival bustle. For the first time, she isn't training."},
+    "scared": {"text": "I'm going to say something and if you laugh I'll knock you down. I'm scared. Of tomorrow. Of going up and not managing. Of going up and managing and everything going wrong anyway.", "choices": ["Being scared doesn't make you weak.", "Sit next to her in silence."]},
+    "not_weak": {"text": "It makes me feel weak. But maybe... maybe feeling weak and keeping going is a kind of strength I haven't trained yet."},
+    "silence": {"text": "They stay like that until the sun goes down. Hikari, without noticing, leans her shoulder against his. She doesn't apologize. She doesn't pull away."},
+    "poem_echo": {"text": "\"That word, {poem_word},\" she says, looking away. \"I kept thinking about it while I ran.\""},
+    "closing": {"text": "She stops at the starting line and looks at the horizon of lanterns. \"Tomorrow,\" she says, \"I'll be the first one there.\" She doesn't say where. He knows. So does she."}
+  },
+  "hikari_day12": {
+    "start": {"text": "Foot of the stairs. I got here first, as always. ...But I've been thinking about everything we talked about these weeks. About who falls and who stays.", "choices": ["Come up with me, but don't try to save anyone alone.", "Stay down here, Hikari. For me.", "Planning to punch gravity again?"]},
+    "together": {"text": "No saving alone. Okay. It'll be the first race of my life where I don't try to win."},
+    "stay": {"text": "Standing still is the hardest thing you could ask of me. ...Fine. But if you're not down by 10 p.m., I'm coming up. That's non-negotiable."},
+    "joke": {"text": "Hah. Maybe. Gravity won last time. But it's never faced me with someone at my side."}
+  }
+}
