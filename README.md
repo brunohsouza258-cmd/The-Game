@@ -18,6 +18,7 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 - Ctrl (segurar): pula o texto rapidamente, parando nas escolhas.
 - Esc: menu de pausa (salvar/carregar, configurações, voltar ao hub ou ao título).
 - H ou botão direito: esconde a caixa de texto para ver o cenário.
+- F12: salva uma captura e anota onde você estava (para testes). Veja `docs/PLAYTEST.md`.
 - **Avanço automático:** depois de um tempo o texto passa sozinho (botão "Auto" na caixa de diálogo; tempo ajustável em Configurações). Nunca avança sobre escolhas.
 
 ## Fluxo

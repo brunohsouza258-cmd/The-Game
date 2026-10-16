@@ -73,6 +73,9 @@ func _ready() -> void:
 	_insert.modulate.a = 0.0
 	_insert.visible = false
 	add_child(_insert)
+	var grade := ShaderMaterial.new()
+	grade.shader = load("res://assets/shaders/bg_grade.gdshader")
+	background.material = grade
 	var shader: Shader = load("res://assets/shaders/sprite_glitch.gdshader")
 	_sprite_material = ShaderMaterial.new()
 	_sprite_material.shader = shader

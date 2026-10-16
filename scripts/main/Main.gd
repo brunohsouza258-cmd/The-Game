@@ -22,6 +22,8 @@ var _pause_layer: CanvasLayer
 var _pause_menu: Control
 var _overlay: Node = null
 var _hub_button: Button
+var _toast: Label
+const CAPTURE_DIR := "user://capturas"
 var _warning_panel: Control
 var _warning_ok: Button
 var _boot_layer: CanvasLayer
@@ -36,6 +38,7 @@ func _ready() -> void:
 		if node:
 			node.process_mode = Node.PROCESS_MODE_PAUSABLE
 	_build_pause_menu()
+	_build_toast()
 	_build_content_warning()
 	# O aviso reaparece a cada 7 dias (ou quando o jogador pede em Configurações).
 	if not GameSettings.health_warning_due():
@@ -276,6 +279,7 @@ func _build_pause_menu() -> void:
 		["Salvar / Carregar", _open_overlay.bind(SAVE_SLOTS_SCENE)],
 		["Configurações", _open_overlay.bind(SETTINGS_SCENE)],
 		["Voltar ao hub", func(): _resume(); show_screen(HUB_SCENE)],
+		["Abrir pasta de capturas (F12)", _open_capture_folder],
 		["Voltar ao título", func(): _resume(); show_title()],
 	]
 	for entry in entries:
@@ -287,6 +291,49 @@ func _build_pause_menu() -> void:
 		if entry[0] == "Voltar ao hub":
 			_hub_button = button
 		box.add_child(button)
+
+func _build_toast() -> void:
+	var layer := CanvasLayer.new()
+	layer.layer = 110
+	add_child(layer)
+	_toast = Label.new()
+	_toast.position = Vector2(20, 20)
+	_toast.add_theme_font_size_override("font_size", 18)
+	_toast.add_theme_color_override("font_outline_color", Color.BLACK)
+	_toast.add_theme_constant_override("outline_size", 6)
+	_toast.modulate.a = 0.0
+	layer.add_child(_toast)
+
+func _show_toast(text: String) -> void:
+	_toast.text = text
+	_toast.modulate.a = 1.0
+	var tween := create_tween()
+	tween.tween_interval(1.6)
+	tween.tween_property(_toast, "modulate:a", 0.0, 0.6)
+
+# Para testes com outras pessoas: F12 salva uma captura e anota onde a pessoa estava
+# (dia, cena, fala, pavor) em user://capturas/registro.txt.
+func capture_feedback() -> void:
+	DirAccess.make_dir_recursive_absolute(CAPTURE_DIR)
+	var stamp := Time.get_datetime_string_from_system(false, true).replace(":", "-").replace(" ", "_")
+	var dialogue_id := str(DialogueManager._dialogue_data.get("id", "")) if DialogueManager._active else "-"
+	var node_id: String = DialogueManager._current_node_id if DialogueManager._active else "-"
+	var file_name := "%s_dia%d_%s_%s.png" % [stamp, GameState.day, dialogue_id, node_id]
+	var image := get_viewport().get_texture().get_image()
+	if image != null:
+		image.save_png("%s/%s" % [CAPTURE_DIR, file_name])
+	var log_path := CAPTURE_DIR + "/registro.txt"
+	var log := FileAccess.open(log_path, FileAccess.READ_WRITE) if FileAccess.file_exists(log_path) else FileAccess.open(log_path, FileAccess.WRITE)
+	if log:
+		log.seek_end()
+		log.store_line("%s | dia %d | cena %s | fala %s | pavor %d | loop %d | %s" % [
+			stamp, GameState.day, dialogue_id, node_id, GameState.dread, GameSettings.loop_count, file_name])
+		log.close()
+	_show_toast("Captura salva (F12). Pasta: menu de pausa > Abrir pasta de capturas")
+
+func _open_capture_folder() -> void:
+	DirAccess.make_dir_recursive_absolute(CAPTURE_DIR)
+	OS.shell_open(ProjectSettings.globalize_path(CAPTURE_DIR))
 
 func _toggle_pause() -> void:
 	if _overlay != null:
@@ -320,6 +367,11 @@ func _resume() -> void:
 		_overlay = null
 
 func _unhandled_input(event: InputEvent) -> void:
+	var f12 := event as InputEventKey
+	if f12 != null and f12.pressed and not f12.echo and f12.keycode == KEY_F12:
+		capture_feedback()
+		get_viewport().set_input_as_handled()
+		return
 	var joy := event as InputEventJoypadButton
 	if joy != null and joy.pressed and joy.button_index == JOY_BUTTON_START and _in_game:
 		_toggle_pause()
