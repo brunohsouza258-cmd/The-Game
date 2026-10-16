@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "O alvorecer parece pintado. Nenhuma nuvem, nenhum vento, as cores todas um pouco saturadas demais. {player_name} abre a janela e escuta pássaros cantando uma melodia que se repete a cada trinta segundos, idêntica.",
       "next": "intro2",
-      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "background": "res://assets/backgrounds/kyuririn/bedroom_morning.png",
       "tint": "#ffffff"
     },
     "intro2": {

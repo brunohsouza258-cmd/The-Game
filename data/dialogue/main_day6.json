@@ -18,7 +18,7 @@
       "speaker": "",
       "text": "No celular, três chamadas não atendidas de um número sem nome, todas entre 2h12 e 2h15 da madrugada. Ele liga de volta. Do outro lado, só o som de chuva, e depois de alguém respirando.",
       "next": "loop_echo",
-      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "background": "res://assets/backgrounds/kyuririn/bedroom_morning.png",
       "tint": "#ffffff"
     },
     "memory": {

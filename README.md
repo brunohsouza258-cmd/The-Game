@@ -48,6 +48,7 @@ Visual novel de romance escolar e terror psicológico em Godot 4.3, no estilo de
 ## Arte e áudio
 
 - **Cenários pintados de terceiros:** 14 cenários do pacote [Japanese High School Backgrounds](https://neeka.itch.io/japanese-high-school-backgrounds), de **Gutari Nyanko** (crédito obrigatório; uso gratuito e comercial). Eles **não estão neste repositório**: baixe o zip e rode `python tools/import_gutari.py GutariSchool.zip`. Sem eles o jogo usa cenários alternativos.
+- **Quarto e cozinha:** pacote [Visual Novel Backgrounds](https://kyuririn.itch.io/visual-novel-backgrounds), de **Kyuririn**, também fora do repositório: `python tools/import_kyuririn.py <pasta ou zip>`.
 - **Cenários** (`assets/backgrounds/`): 4 ilustrações geradas por IA e 5 derivadas delas por `tools/make_backgrounds.py` (festival à noite, escola à noite, escola decadente, telhado ao entardecer e telhado na chuva).
 - **Personagens** (`assets/characters/`): PNGs com transparência real, todos recortados no mesmo enquadramento de busto. Maya e Hikari estão no estilo Classroom of the Elite. Yuna e Alice continuam no estilo anterior até haver créditos para gerar as duas no estilo novo.
 - **Poses**: cada fala das garotas tem uma pose (`"pose"` no JSON): `neutral`, `happy`, `sad`, `surprised`, `scared`, `angry`, `thinking`, `close` ou `corrupted`. Hoje a pose é animada sobre o sprite base (pulo, tremor, aproximação, inclinação, cor e glitch). Se existir `assets/characters/<nome>_<pose>.png` (ex.: `yuna_sad.png`), o jogo usa essa imagem automaticamente naquela pose.

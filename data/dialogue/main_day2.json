@@ -10,7 +10,7 @@
       "speaker": "",
       "text": "A noite foi curta. Ele sonhou com uma sala sem janelas e um relógio que só tinha o ponteiro das horas.",
       "next": "start__2",
-      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "background": "res://assets/backgrounds/kyuririn/bedroom_morning.png",
       "tint": "#ffffff"
     },
     "start__2": {

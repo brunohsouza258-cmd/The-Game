@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "Não houve sonho nenhum. Pela primeira vez em muitos dias, {player_name} dormiu sem imagem, sem voz, sem relógio.",
       "next": "start__2",
-      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "background": "res://assets/backgrounds/kyuririn/bedroom_morning.png",
       "tint": "#b8aec4"
     },
     "start__2": {
@@ -107,7 +107,7 @@
       "speaker": "",
       "text": "De noite, sozinho no quarto, ele repete as duas letras que viu no caderno: K.M.\n\nNão faz sentido. Ele tenta esquecer, como prometeu a Maya, e a mão fecha de novo, sozinha, em volta de ninguém.",
       "next": "outro2",
-      "background": "res://assets/backgrounds/bedroom_night.png",
+      "background": "res://assets/backgrounds/kyuririn/bedroom_night.png",
       "tint": "#ffffff"
     },
     "end": {
@@ -149,7 +149,7 @@
       "speaker": "",
       "text": "De noite, sozinho no quarto, ele repete o nome em voz baixa, testando o peso dele na boca. Kaito. Não ecoa. Não faz a casa tremer.",
       "next": "outro1__2",
-      "background": "res://assets/backgrounds/bedroom_night.png",
+      "background": "res://assets/backgrounds/kyuririn/bedroom_night.png",
       "tint": "#ffffff"
     },
     "outro1__2": {

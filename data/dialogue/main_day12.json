@@ -11,7 +11,9 @@
       "speaker": "",
       "text": "Ninguém dormiu direito. O café da manhã foi engolido sem gosto, os livros ficaram na mochila sem abrir.",
       "next": "start__2",
-      "amb": "rain"
+      "amb": "rain",
+      "background": "res://assets/backgrounds/kyuririn/kitchen_dawn.png",
+      "tint": "#d8d0e0"
     },
     "start__2": {
       "speaker": "",
@@ -21,7 +23,9 @@
     "intro2": {
       "speaker": "",
       "text": "O dia passou devagar e rápido ao mesmo tempo, como acontece nos últimos dias de qualquer coisa. Nas aulas, ninguém tirou nota nenhuma. Os professores só falaram, falaram, e olharam o relógio.",
-      "next": "loop_echo"
+      "next": "loop_echo",
+      "background": "res://assets/backgrounds/classroom.png",
+      "tint": "#cfc6dc"
     },
     "clock": {
       "speaker": "",

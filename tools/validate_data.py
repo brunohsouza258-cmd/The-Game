@@ -13,7 +13,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def res_exists(path):
-    if "/gutari/" in path:
+    if "/gutari/" in path or "/kyuririn/" in path:
         return True  # opcional: o pacote do Gutari não está no repositório (há plano B no jogo)
     return os.path.exists(os.path.join(ROOT, path.replace("res://", "")))
 

@@ -47,6 +47,8 @@ const FALLBACK_BACKGROUNDS := {
 	"rooftop_door": "school_night", "corridor_night": "school_night", "toilet": "bedroom_morning",
 	"school_gate": "courtyard", "staff_room": "hallway_dusk", "music_room": "clubroom",
 	"festival_stalls": "festival_night", "track": "courtyard", "classroom_night": "classroom",
+	"kitchen_morning": "bedroom_morning", "kitchen_dawn": "bedroom_morning", "kitchen_night": "bedroom_night",
+	"bedroom_afternoon": "bedroom_morning",
 }
 var _insert_dim: ColorRect
 var _insert: Sprite2D
@@ -127,7 +129,7 @@ func _on_node_shown(node_data: Dictionary) -> void:
 func _load_background(path: String) -> Texture2D:
 	if ResourceLoader.exists(path):
 		return load(path)
-	if path.contains("/gutari/"):
+	if path.get_base_dir() != "res://assets/backgrounds":
 		var base := path.get_file().get_basename()
 		var alt := "res://assets/backgrounds/%s.png" % base
 		if ResourceLoader.exists(alt):

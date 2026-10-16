@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "Acordou cedo e sem alarme. A casa está quieta demais, como uma sala depois de uma aula que terminou antes da hora.",
       "next": "start__2",
-      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "background": "res://assets/backgrounds/kyuririn/kitchen_morning.png",
       "tint": "#ffffff"
     },
     "start__2": {

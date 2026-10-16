@@ -169,7 +169,7 @@
       "speaker": "",
       "text": "A cena se desfaz. Quando ele pisca, está na cama de casa, vestido, os sapatos sujos de reboco. O despertador marca seis da manhã.",
       "next": "outro1__2",
-      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "background": "res://assets/backgrounds/kyuririn/bedroom_morning.png",
       "tint": "#d8d0e0"
     },
     "outro1__2": {

@@ -11,14 +11,14 @@
       "speaker": "",
       "text": "O dia começa errado por detalhes pequenos. A água da torneira tem gosto de metal.",
       "next": "start__2",
-      "background": "res://assets/backgrounds/bedroom_morning.png",
-      "tint": "#ffffff",
-      "image": "res://assets/inserts/clock_2147.png"
+      "background": "res://assets/backgrounds/kyuririn/kitchen_morning.png",
+      "tint": "#e8dcd8"
     },
     "start__2": {
       "speaker": "",
       "text": "O relógio do forno marca 21:47 mesmo ao meio-dia, e a mãe, que nunca atrasa, nem comenta. {player_name} sai de casa sem tomar café.",
-      "next": "intro2"
+      "next": "intro2",
+      "image": "res://assets/inserts/clock_2147.png"
     },
     "intro2": {
       "speaker": "",
