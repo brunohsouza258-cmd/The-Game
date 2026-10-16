@@ -42,7 +42,9 @@
           },
           "next": "doubt"
         }
-      ]
+      ],
+      "background": "res://assets/backgrounds/gutari/music_room.png",
+      "tint": "#ffffff"
     },
     "piano": {
       "speaker": "Maya",

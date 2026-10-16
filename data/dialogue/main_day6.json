@@ -11,13 +11,15 @@
       "speaker": "",
       "text": "O espelho do banheiro mostra um rosto cansado demais para a idade. {player_name} lava as mãos devagar, mais pela dor do que pela sujeira. A água do ralo roda rosada por alguns segundos.",
       "next": "intro2",
-      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "background": "res://assets/backgrounds/gutari/toilet.png",
       "tint": "#ffffff"
     },
     "intro2": {
       "speaker": "",
       "text": "No celular, três chamadas não atendidas de um número sem nome, todas entre 2h12 e 2h15 da madrugada. Ele liga de volta. Do outro lado, só o som de chuva, e depois de alguém respirando.",
-      "next": "loop_echo"
+      "next": "loop_echo",
+      "background": "res://assets/backgrounds/bedroom_morning.png",
+      "tint": "#ffffff"
     },
     "memory": {
       "speaker": "",
@@ -58,7 +60,7 @@
       "text": "Na escola, no fim do corredor, a escada que leva ao telhado está isolada com uma corrente. Na parede ao lado, riscado fundo no reboco, como se tivesse sido feito com as unhas:",
       "next": "wall",
       "sfx": "steps",
-      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "background": "res://assets/backgrounds/gutari/rooftop_door.png",
       "tint": "#c9bfd2"
     },
     "wall": {

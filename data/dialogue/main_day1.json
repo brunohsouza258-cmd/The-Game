@@ -10,7 +10,9 @@
       "speaker": "",
       "text": "A manhã tem cheiro de grama cortada e de uniforme novo. {player_name} confere pela terceira vez o bolso do casaco: o bilhete ainda está lá, dobrado em quatro, a tinta tão borrada que só dá para ler uma frase.",
       "next": "start__2",
-      "image": "res://assets/inserts/bilhete.png"
+      "image": "res://assets/inserts/bilhete.png",
+      "background": "res://assets/backgrounds/gutari/school_gate.png",
+      "tint": "#ffffff"
     },
     "start__2": {
       "speaker": "",
@@ -26,7 +28,9 @@
       "speaker": "",
       "text": "O corredor principal está cheio do barulho normal de um primeiro dia: risadas, passos apressados, alguém gritando o nome de outra pessoa do outro lado do pátio. Nada fora do comum. Ainda.",
       "next": "outro1",
-      "sfx": "bell"
+      "sfx": "bell",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "tint": "#ffffff"
     },
     "end": {
       "end": true
@@ -49,7 +53,9 @@
     "outro1": {
       "speaker": "",
       "text": "Na secretaria, uma moça lhe entrega o horário das aulas e a chave de um armário.",
-      "next": "outro1__2"
+      "next": "outro1__2",
+      "background": "res://assets/backgrounds/gutari/staff_room.png",
+      "tint": "#ffffff"
     },
     "outro1__2": {
       "speaker": "",
@@ -64,7 +70,9 @@
     "outro2": {
       "speaker": "",
       "text": "No fim do corredor, as quatro portas do clube de literatura estão abertas. De dentro vem o som de risadas e de papel sendo dobrado. {player_name} segue o barulho sem decidir, como quem acompanha um fio.",
-      "next": "end"
+      "next": "end",
+      "background": "res://assets/backgrounds/hallway_dusk.png",
+      "tint": "#ffffff"
     }
   }
 }

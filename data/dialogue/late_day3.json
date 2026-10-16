@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "O pátio está vazio e a pista de atletismo parece maior no escuro. A Hikari, sozinha, alonga na linha de largada com um cronômetro na mão. Ela não finge surpresa quando vê {player_name}.",
       "next": "n1",
-      "background": "res://assets/backgrounds/courtyard.png",
+      "background": "res://assets/backgrounds/gutari/track.png",
       "tint": "#6a6a9a",
       "image": "res://assets/inserts/stopwatch.png"
     },

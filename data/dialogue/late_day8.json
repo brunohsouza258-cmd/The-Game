@@ -2,7 +2,7 @@
   "id": "late_day8",
   "display_name": "",
   "character_color": "#CCCCCC",
-  "background": "res://assets/backgrounds/rooftop_dusk.png",
+  "background": "res://assets/backgrounds/gutari/rooftop_dusk.png",
   "tint": "#ffffff",
   "sprite": "",
   "music": "hallway",
@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "A porta do telhado está entreaberta, e a Alice está parada exatamente no ponto onde a luz entra. Ela tem uma trena na mão e o caderno aberto no chão.",
       "next": "n1",
-      "background": "res://assets/backgrounds/rooftop_dusk.png",
+      "background": "res://assets/backgrounds/gutari/rooftop_dusk.png",
       "tint": "#ffffff"
     },
     "n1": {

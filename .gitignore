@@ -15,3 +15,6 @@ desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# Cenarios de terceiros (Gutari Nyanko): rode tools/import_gutari.py com o zip baixado
+assets/backgrounds/gutari/

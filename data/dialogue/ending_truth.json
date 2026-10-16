@@ -2,7 +2,7 @@
   "id": "ending_truth",
   "display_name": "",
   "character_color": "#CCCCCC",
-  "background": "res://assets/backgrounds/rooftop_rain.png",
+  "background": "res://assets/backgrounds/gutari/rooftop_rain.png",
   "tint": "#ffffff",
   "sprite": "",
   "music": "piano",
@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "21:46. A chuva cai fina sobre o telhado. A grade é a mesma de todas as voltas. Do outro lado, Kaito está de pé na beirada, rindo, com a camisa colada no corpo.",
       "next": "n1",
-      "background": "res://assets/backgrounds/rooftop_rain.png",
+      "background": "res://assets/backgrounds/gutari/rooftop_rain.png",
       "tint": "#ffffff"
     },
     "n1": {

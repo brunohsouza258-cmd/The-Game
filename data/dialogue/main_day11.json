@@ -65,7 +65,9 @@
       "next": "outro1",
       "fx": "static",
       "pace": "slow",
-      "noauto": true
+      "noauto": true,
+      "background": "res://assets/backgrounds/gutari/rooftop_door.png",
+      "tint": "#fff2e0"
     },
     "stay": {
       "speaker": "",

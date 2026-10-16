@@ -34,7 +34,9 @@
     "girls": {
       "speaker": "",
       "text": "Ele vê as quatro no meio da multidão: Yuna no palco, segurando o microfone com as duas mãos. Alice olhando o relógio de pulso a cada minuto.",
-      "next": "girls__2"
+      "next": "girls__2",
+      "background": "res://assets/backgrounds/gutari/festival_stalls.png",
+      "tint": "#c8c0e0"
     },
     "girls__2": {
       "speaker": "",
@@ -71,7 +73,9 @@
     "outro1": {
       "speaker": "",
       "text": "Quando o sol baixa, as lanternas se acendem sozinhas, uma a uma, de uma ponta à outra do pátio. Não tem ninguém no interruptor.",
-      "next": "outro1__2"
+      "next": "outro1__2",
+      "background": "res://assets/backgrounds/courtyard.png",
+      "tint": "#7d72a8"
     },
     "outro1__2": {
       "speaker": "",

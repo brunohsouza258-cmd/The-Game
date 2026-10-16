@@ -22,7 +22,7 @@
       "speaker": "",
       "text": "Na entrada, a poça diante do portão tem o reflexo de um prédio mais alto do que o da escola. Ele pisa dentro dela de propósito, e o reflexo some.",
       "next": "loop_echo",
-      "background": "res://assets/backgrounds/courtyard.png",
+      "background": "res://assets/backgrounds/gutari/school_gate.png",
       "tint": "#9aa0b8"
     },
     "desk": {

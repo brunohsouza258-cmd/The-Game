@@ -2,7 +2,7 @@
   "id": "extra_day8",
   "display_name": "",
   "character_color": "#CCCCCC",
-  "background": "res://assets/backgrounds/rooftop_dusk.png",
+  "background": "res://assets/backgrounds/gutari/rooftop_dusk.png",
   "tint": "#ffffff",
   "sprite": "",
   "music": "hallway",
@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "A porta do telhado, que sempre esteve trancada, está encostada. Do lado de lá, o vento levanta poeira da laje. A Hikari está parada no limiar, de punhos fechados, sem atravessar.",
       "next": "n1",
-      "background": "res://assets/backgrounds/rooftop_dusk.png",
+      "background": "res://assets/backgrounds/gutari/rooftop_door.png",
       "tint": "#ffffff"
     },
     "n1": {
@@ -93,7 +93,9 @@
             "dread": -4
           }
         }
-      ]
+      ],
+      "background": "res://assets/backgrounds/gutari/rooftop_dusk.png",
+      "tint": "#ffffff"
     },
     "end": {
       "end": true

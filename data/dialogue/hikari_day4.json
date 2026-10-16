@@ -11,7 +11,9 @@
       "speaker": "Hikari",
       "pose": "surprised",
       "text": "{player_name}. Olha esse cronômetro. Eu corri sozinha na pista hoje cedo. Sozinha.",
-      "next": "timer"
+      "next": "timer",
+      "background": "res://assets/backgrounds/gutari/track.png",
+      "tint": "#ffffff"
     },
     "timer": {
       "speaker": "",

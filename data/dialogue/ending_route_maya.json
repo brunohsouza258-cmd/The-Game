@@ -2,7 +2,7 @@
   "id": "ending_route_maya",
   "display_name": "",
   "character_color": "#CCCCCC",
-  "background": "res://assets/backgrounds/rooftop_dusk.png",
+  "background": "res://assets/backgrounds/gutari/rooftop_dusk.png",
   "tint": "#ffeedd",
   "sprite": "",
   "music": "piano",
@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "O sol nasce depois da noite mais longa do ano. No telhado, ninguém mais. A grade está úmida de orvalho, e a Maya está sentada ao lado de {player_name}, com os joelhos junto ao peito.",
       "next": "n1",
-      "background": "res://assets/backgrounds/rooftop_dusk.png",
+      "background": "res://assets/backgrounds/gutari/rooftop_dusk.png",
       "tint": "#ffeedd"
     },
     "n1": {

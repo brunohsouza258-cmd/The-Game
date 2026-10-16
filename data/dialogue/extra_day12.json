@@ -2,7 +2,7 @@
   "id": "extra_day12",
   "display_name": "",
   "character_color": "#CCCCCC",
-  "background": "res://assets/backgrounds/rooftop_rain.png",
+  "background": "res://assets/backgrounds/gutari/rooftop_rain.png",
   "tint": "#ffffff",
   "sprite": "",
   "music": "night",
@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "A chuva fina engrossou. A porta do telhado está aberta, e do outro lado só há céu escuro e as luzes do festival lá embaixo. Ainda são nove horas. Ainda dá tempo.",
       "next": "n1",
-      "background": "res://assets/backgrounds/rooftop_rain.png",
+      "background": "res://assets/backgrounds/gutari/rooftop_rain.png",
       "tint": "#ffffff"
     },
     "n1": {

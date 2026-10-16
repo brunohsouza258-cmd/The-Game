@@ -35,7 +35,9 @@
       "speaker": "Maya",
       "pose": "happy",
       "text": "De mim... Eu gostava de piano. Parei porque nunca dava tempo de terminar uma música antes de tudo voltar. Faz tanto tempo que alguém me pergunta de mim que eu precisei pensar.",
-      "next": "poem_echo"
+      "next": "poem_echo",
+      "background": "res://assets/backgrounds/gutari/music_room.png",
+      "tint": "#ffffff"
     },
     "place": {
       "speaker": "Maya",

@@ -12,7 +12,9 @@
       "speaker": "Hikari",
       "pose": "happy",
       "text": "Última corrida antes do festival. Eu contra você, cem metros. Se eu ganhar, você me deixa subir no telhado primeiro no dia 12.",
-      "next": "race"
+      "next": "race",
+      "background": "res://assets/backgrounds/gutari/track.png",
+      "tint": "#ffffff"
     },
     "race": {
       "speaker": "",

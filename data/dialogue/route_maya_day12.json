@@ -2,7 +2,7 @@
   "id": "route_maya_day12",
   "display_name": "",
   "character_color": "#CCCCCC",
-  "background": "res://assets/backgrounds/rooftop_dusk.png",
+  "background": "res://assets/backgrounds/gutari/rooftop_dusk.png",
   "tint": "#ffe8d8",
   "sprite": "",
   "music": "piano",
@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "O sol está quase se pondo. A Maya espera no pé da escada do telhado, de uniforme, com a lanterna branca nas duas mãos, apagada.",
       "next": "n1",
-      "background": "res://assets/backgrounds/rooftop_dusk.png",
+      "background": "res://assets/backgrounds/gutari/rooftop_dusk.png",
       "tint": "#ffe8d8"
     },
     "n1": {

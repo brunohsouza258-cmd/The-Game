@@ -42,6 +42,12 @@ var _next_screen: String = "res://scenes/main/Hub.tscn"
 var _glitch_pulse: float = 0.0
 const INSERT_CENTER := Vector2(640, 218)
 const INSERT_MAX := Vector2(640, 350)
+# Cenários do pacote do Gutari Nyanko (não vêm no repositório). Se faltarem, usa o plano B.
+const FALLBACK_BACKGROUNDS := {
+	"rooftop_door": "school_night", "corridor_night": "school_night", "toilet": "bedroom_morning",
+	"school_gate": "courtyard", "staff_room": "hallway_dusk", "music_room": "clubroom",
+	"festival_stalls": "festival_night", "track": "courtyard", "classroom_night": "classroom",
+}
 var _insert_dim: ColorRect
 var _insert: Sprite2D
 var _insert_tween: Tween
@@ -94,7 +100,7 @@ func _ambience_for(background_path: String) -> String:
 func _on_dialogue_started(meta: Dictionary) -> void:
 	SfxPlayer.set_ambience(_ambience_for(meta.get("background", DEFAULT_BACKGROUND)))
 	_next_screen = meta.get("next_screen", "res://scenes/main/Hub.tscn")
-	background.texture = load(meta.get("background", DEFAULT_BACKGROUND))
+	background.texture = _load_background(meta.get("background", DEFAULT_BACKGROUND))
 	# The scene's own tint (night, decay...) combined with a drift toward red as dread rises.
 	var dread_tint := Color(1, 1, 1).lerp(DREAD_TINT, GameState.dread / 100.0)
 	background.modulate = Color(meta.get("tint", "#ffffff")) * dread_tint
@@ -115,6 +121,18 @@ func _on_node_shown(node_data: Dictionary) -> void:
 
 # Cenas com várias personagens trocam sprite, cenário e tom por fala:
 # "sprite": "res://...png" (ou "" para esconder), "background", "tint".
+func _load_background(path: String) -> Texture2D:
+	if ResourceLoader.exists(path):
+		return load(path)
+	if path.contains("/gutari/"):
+		var base := path.get_file().get_basename()
+		var alt := "res://assets/backgrounds/%s.png" % base
+		if ResourceLoader.exists(alt):
+			return load(alt)
+		var mapped: String = FALLBACK_BACKGROUNDS.get(base, "hallway_dusk")
+		return load("res://assets/backgrounds/%s.png" % mapped)
+	return load(DEFAULT_BACKGROUND)
+
 func _show_insert(path: String) -> void:
 	if _insert_tween:
 		_insert_tween.kill()
@@ -145,7 +163,7 @@ func _apply_node_scene(node_data: Dictionary) -> void:
 		_show_insert(str(node_data["image"]))
 	if node_data.has("background"):
 		SfxPlayer.set_ambience(_ambience_for(node_data["background"]))
-		background.texture = load(node_data["background"])
+		background.texture = _load_background(node_data["background"])
 		var tint := Color(node_data.get("tint", "#ffffff"))
 		background.modulate = tint * Color(1, 1, 1).lerp(DREAD_TINT, GameState.dread / 100.0)
 	if node_data.has("sprite"):

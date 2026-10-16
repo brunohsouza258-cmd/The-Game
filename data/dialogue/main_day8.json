@@ -11,7 +11,7 @@
       "speaker": "",
       "text": "O corredor tem um cheiro que ele reconhece de algum lugar muito antigo: poeira, ferrugem, chuva em concreto.",
       "next": "start__2",
-      "background": "res://assets/backgrounds/school_night.png",
+      "background": "res://assets/backgrounds/gutari/corridor_night.png",
       "tint": "#ffffff",
       "sfx": "steps"
     },
@@ -46,7 +46,9 @@
           "next": "cant_leave"
         }
       ],
-      "sfx": "door_open"
+      "sfx": "door_open",
+      "background": "res://assets/backgrounds/gutari/rooftop_door.png",
+      "tint": "#b8b0d0"
     },
     "cant_leave": {
       "speaker": "",
@@ -58,7 +60,9 @@
       "next": "climb",
       "fx": "thud",
       "pace": "slow",
-      "sfx": "steps"
+      "sfx": "steps",
+      "background": "res://assets/backgrounds/gutari/corridor_night.png",
+      "tint": "#ffffff"
     },
     "climb": {
       "speaker": "",

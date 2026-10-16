@@ -12,7 +12,9 @@
       "speaker": "",
       "pose": "angry",
       "text": "Hikari está fazendo flexões na pista, contando em voz alta. Cento e doze. Cento e treze. As mãos ainda enfaixadas sangram de novo no asfalto.",
-      "next": "train"
+      "next": "train",
+      "background": "res://assets/backgrounds/gutari/track.png",
+      "tint": "#d8c8d8"
     },
     "train": {
       "speaker": "Hikari",
