@@ -98,7 +98,10 @@
       "speaker": "",
       "text": "Na hora do almoço, a Hikari passa por ele no corredor com as duas mãos escondidas nos bolsos do agasalho. Os olhos se cruzam.",
       "next": "outro1__2",
-      "image": ""
+      "image": "",
+      "sprite": "res://assets/characters/hikari.png",
+      "partner": "",
+      "pose": "sad"
     },
     "outro1__2": {
       "speaker": "",

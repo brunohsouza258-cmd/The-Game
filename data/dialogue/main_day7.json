@@ -117,7 +117,10 @@
     "outro1": {
       "speaker": "",
       "text": "No fim da tarde, a Alice o intercepta perto da secretaria. Sem preâmbulo, estende o relógio de pulso: o ponteiro dos segundos treme, tenta andar, e volta.",
-      "next": "outro1__2"
+      "next": "outro1__2",
+      "sprite": "res://assets/characters/alice.png",
+      "partner": "",
+      "pose": "thinking"
     },
     "outro1__2": {
       "speaker": "",
@@ -127,7 +130,8 @@
     "outro2": {
       "speaker": "",
       "text": "Ela guarda o relógio no bolso e olha para o corredor onde a carteira costumava ficar. \"Se alguém apagou uma pessoa\", ela murmura, \"esqueceu de apagar os rastros.\" Depois vai embora sem esperar resposta.",
-      "next": "end"
+      "next": "end",
+      "pose": "sad"
     }
   }
 }

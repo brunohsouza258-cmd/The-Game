@@ -49,6 +49,9 @@ const FALLBACK_BACKGROUNDS := {
 	"festival_stalls": "festival_night", "track": "courtyard", "classroom_night": "classroom",
 	"kitchen_morning": "bedroom_morning", "kitchen_dawn": "bedroom_morning", "kitchen_night": "bedroom_night",
 	"bedroom_afternoon": "bedroom_morning",
+	"classroom_b": "classroom", "corridor_day": "hallway_dusk", "science_room": "classroom",
+	"entrance": "hallway_dusk", "gym_stage": "gym", "music_room_night": "clubroom",
+	"festival_day": "courtyard", "school_store": "hallway_dusk",
 }
 var _insert_dim: ColorRect
 var _insert: Sprite2D

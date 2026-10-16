@@ -3,7 +3,7 @@
   "character_id": "yuna",
   "display_name": "Yuna",
   "character_color": "#FFB347",
-  "background": "res://assets/backgrounds/clubroom.png",
+  "background": "res://assets/backgrounds/classroom.png",
   "tint": "#a99fb4",
   "sprite": "res://assets/characters/yuna.png",
   "music": "sad",

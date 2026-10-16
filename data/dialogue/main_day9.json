@@ -33,12 +33,16 @@
     "truth": {
       "speaker": "Maya",
       "text": "O nome dele era Kaito Mori. Vocês eram amigos desde pequenos, antes de você se mudar. Foi uma carta dele que te trouxe de volta pra cá. \"Volta. A escola é chata sem você.\"",
-      "next": "truth2"
+      "next": "truth2",
+      "sprite": "res://assets/characters/maya.png",
+      "partner": "",
+      "pose": "sad"
     },
     "truth2": {
       "speaker": "Maya",
       "text": "Na noite do festival, vocês subiram no telhado pra ver os fogos. Brigaram — besteira, sobre você ter demorado tanto pra voltar. Ele subiu na grade pra te provocar. Rindo. \"Ainda sou mais corajoso que você.\"",
-      "next": "truth3"
+      "next": "truth3",
+      "pose": "sad"
     },
     "truth3": {
       "speaker": "Maya",
@@ -48,7 +52,8 @@
         "dread": 4,
         "trust.maya": 2
       },
-      "next": "truth4"
+      "next": "truth4",
+      "pose": "scared"
     },
     "truth4": {
       "speaker": "Maya",
@@ -56,7 +61,8 @@
       "next": "truth4__2",
       "fx": "thud",
       "pace": "slow",
-      "noauto": true
+      "noauto": true,
+      "pose": "close"
     },
     "truth4__2": {
       "speaker": "Maya",
@@ -75,7 +81,10 @@
     "normal": {
       "speaker": "",
       "text": "A Maya cumpre a promessa. Ela cumprimenta {player_name} com um sorriso comum e fala do clima, do festival, do dever de casa. Nada fora do lugar. Um dia normal, perfeito.",
-      "next": "normal2"
+      "next": "normal2",
+      "sprite": "res://assets/characters/maya.png",
+      "partner": "",
+      "pose": "happy"
     },
     "normal2": {
       "speaker": "",
@@ -87,7 +96,9 @@
       "next": "normal2__2",
       "fx": "glitch",
       "pace": "slow",
-      "noauto": true
+      "noauto": true,
+      "sprite": "",
+      "partner": ""
     },
     "normal2__2": {
       "speaker": "",
@@ -150,7 +161,9 @@
       "text": "De noite, sozinho no quarto, ele repete o nome em voz baixa, testando o peso dele na boca. Kaito. Não ecoa. Não faz a casa tremer.",
       "next": "outro1__2",
       "background": "res://assets/backgrounds/kyuririn/bedroom_night.png",
-      "tint": "#ffffff"
+      "tint": "#ffffff",
+      "sprite": "",
+      "partner": ""
     },
     "outro1__2": {
       "speaker": "",

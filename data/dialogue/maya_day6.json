@@ -3,7 +3,7 @@
   "character_id": "maya",
   "display_name": "Maya",
   "character_color": "#9966CC",
-  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "background": "res://assets/backgrounds/gutari/infirmary.png",
   "tint": "#c9bfd2",
   "sprite": "res://assets/characters/maya.png",
   "music": "piano",

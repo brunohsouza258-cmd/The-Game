@@ -111,7 +111,10 @@
       "next": "question",
       "pause": 0.8,
       "pace": "slow",
-      "noauto": true
+      "noauto": true,
+      "sprite": "res://assets/characters/maya.png",
+      "partner": "",
+      "pose": "sad"
     },
     "question": {
       "speaker": "Maya",
@@ -135,18 +138,21 @@
           },
           "next": "forget"
         }
-      ]
+      ],
+      "pose": "close"
     },
     "know": {
       "speaker": "Maya",
       "text": "Então amanhã eu conto tudo. Hoje, só uma coisa: ele era seu melhor amigo. E você foi a última pessoa que ele viu.",
       "effect": "glitch",
-      "next": "outro1"
+      "next": "outro1",
+      "pose": "sad"
     },
     "forget": {
       "speaker": "Maya",
       "text": "Tudo bem. Fecha os olhos. Quando abrir, vai ser só uma escada, só uma porta trancada, só um dia normal.",
-      "next": "outro1"
+      "next": "outro1",
+      "pose": "sad"
     },
     "end": {
       "end": true
@@ -170,7 +176,9 @@
       "text": "A cena se desfaz. Quando ele pisca, está na cama de casa, vestido, os sapatos sujos de reboco. O despertador marca seis da manhã.",
       "next": "outro1__2",
       "background": "res://assets/backgrounds/kyuririn/bedroom_morning.png",
-      "tint": "#d8d0e0"
+      "tint": "#d8d0e0",
+      "sprite": "",
+      "partner": ""
     },
     "outro1__2": {
       "speaker": "",

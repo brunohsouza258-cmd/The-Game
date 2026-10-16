@@ -3,7 +3,7 @@
   "character_id": "alice",
   "display_name": "Alice",
   "character_color": "#4DB6AC",
-  "background": "res://assets/backgrounds/classroom.png",
+  "background": "res://assets/backgrounds/gutari/classroom_night.png",
   "tint": "#bdb2c4",
   "sprite": "res://assets/characters/alice.png",
   "music": "classroom",

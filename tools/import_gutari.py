@@ -37,6 +37,14 @@ MAP = {
     "festival_stalls": "yomise02-studio.jpg",
     "track": "undoujyou00-studio.jpg",
     "classroom_night": "kyousitu_night_0-studio.jpg",
+    "classroom_b": "kyousitsu_000_camera2-studio.jpg",
+    "corridor_day": "rouka00a-studio.jpg",
+    "science_room": "rika000-studio.jpg",
+    "entrance": "raihinnyou_genkan00-studio.jpg",
+    "gym_stage": "taiikukan_butai000-studio.jpg",
+    "music_room_night": "ongakusitu000a_night0-studio.jpg",
+    "festival_day": "takoyaki_tento000-studio.jpg",
+    "school_store": "koubaibu00-studio.jpg",
 }
 
 

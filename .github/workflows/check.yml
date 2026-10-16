@@ -1,0 +1,32 @@
+name: Verificação
+
+# Roda a cada push: valida os dados dos diálogos e toca todos eles no Godot sem janela.
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validar diálogos e finais
+        run: python tools/validate_data.py
+
+      - name: Baixar Godot 4.7.2
+        run: |
+          wget -q https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          unzip -q Godot_v4.7.2-stable_linux.x86_64.zip
+          mv Godot_v4.7.2-stable_linux.x86_64 godot
+          chmod +x godot
+
+      - name: Importar o projeto
+        run: ./godot --headless --path . --import || true
+
+      - name: Teste de fumaça (todos os diálogos e telas)
+        run: ./godot --headless --path . --script tools/smoke_test.gd

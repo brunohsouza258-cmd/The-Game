@@ -3,7 +3,7 @@
   "character_id": "maya",
   "display_name": "Maya",
   "character_color": "#9966CC",
-  "background": "res://assets/backgrounds/hallway_dusk.png",
+  "background": "res://assets/backgrounds/clubroom.png",
   "sprite": "res://assets/characters/maya.png",
   "music": "hallway",
   "nodes": {
@@ -118,5 +118,6 @@
     "end": {
       "end": true
     }
-  }
+  },
+  "tint": "#d0d8f0"
 }

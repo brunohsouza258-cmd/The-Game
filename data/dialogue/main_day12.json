@@ -40,7 +40,11 @@
       "text": "Ele vê as quatro no meio da multidão: Yuna no palco, segurando o microfone com as duas mãos. Alice olhando o relógio de pulso a cada minuto.",
       "next": "girls__2",
       "background": "res://assets/backgrounds/gutari/festival_stalls.png",
-      "tint": "#c8c0e0"
+      "tint": "#c8c0e0",
+      "sprite": "res://assets/characters/maya.png",
+      "partner": "res://assets/characters/yuna.png",
+      "pose": "neutral",
+      "side": "left"
     },
     "girls__2": {
       "speaker": "",
@@ -55,7 +59,9 @@
           "text": "Respirar fundo e começar a noite.",
           "next": "outro1"
         }
-      ]
+      ],
+      "sprite": "",
+      "partner": ""
     },
     "end": {
       "end": true

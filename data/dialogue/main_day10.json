@@ -148,7 +148,11 @@
     "outro1": {
       "speaker": "",
       "text": "Pela primeira vez, as quatro estão juntas no mesmo corredor, sem combinar, sem conversar, só presentes.",
-      "next": "outro1__2"
+      "next": "outro1__2",
+      "sprite": "res://assets/characters/yuna.png",
+      "partner": "res://assets/characters/hikari.png",
+      "pose": "sad",
+      "side": "left"
     },
     "outro1__2": {
       "speaker": "",

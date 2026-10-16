@@ -60,7 +60,11 @@
           },
           "next": "rain"
         }
-      ]
+      ],
+      "sprite": "res://assets/characters/maya.png",
+      "partner": "res://assets/characters/hikari.png",
+      "pose": "neutral",
+      "side": "left"
     },
     "rain": {
       "speaker": "",
@@ -74,7 +78,9 @@
       "pause": 0.7,
       "pace": "slow",
       "noauto": true,
-      "amb": "rain"
+      "amb": "rain",
+      "sprite": "",
+      "partner": ""
     },
     "end": {
       "end": true

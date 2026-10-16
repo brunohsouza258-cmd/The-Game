@@ -3,7 +3,7 @@
   "character_id": "hikari",
   "display_name": "Hikari",
   "character_color": "#E05A5A",
-  "background": "res://assets/backgrounds/courtyard.png",
+  "background": "res://assets/backgrounds/gutari/rooftop_door.png",
   "tint": "#7d72a8",
   "sprite": "res://assets/characters/hikari.png",
   "music": "night",
