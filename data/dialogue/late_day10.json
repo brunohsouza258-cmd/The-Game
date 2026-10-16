@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/school_decayed.png",
   "tint": "#ffffff",
   "sprite": "",
-  "music": "corrupted",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "",

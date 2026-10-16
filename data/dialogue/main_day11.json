@@ -92,7 +92,12 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "No fim do dia, depois que as lanternas estão todas penduradas, o diretor passa por cada sala apagando as luzes. Quando chega à última, para na porta, olha para {player_name} e sussurra: \"Tudo vai estar no lugar amanhã. Eu garanto.\"",
+      "text": "No fim do dia, depois que as lanternas estão todas penduradas, o diretor passa por cada sala apagando as luzes.",
+      "next": "outro1__2"
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "Quando chega à última, para na porta, olha para {player_name} e sussurra: \"Tudo vai estar no lugar amanhã. Eu garanto.\"",
       "next": "outro2"
     },
     "outro2": {

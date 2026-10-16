@@ -9,9 +9,14 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Ninguém dormiu direito. O café da manhã foi engolido sem gosto, os livros ficaram na mochila sem abrir. Em algum momento, entre uma xícara e outra, {player_name} percebeu que escreveu seu nome na embalagem do pão, repetidamente, para ter certeza de que ainda era ele.",
-      "next": "intro2",
+      "text": "Ninguém dormiu direito. O café da manhã foi engolido sem gosto, os livros ficaram na mochila sem abrir.",
+      "next": "start__2",
       "amb": "rain"
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "Em algum momento, entre uma xícara e outra, {player_name} percebeu que escreveu seu nome na embalagem do pão, repetidamente, para ter certeza de que ainda era ele.",
+      "next": "intro2"
     },
     "intro2": {
       "speaker": "",
@@ -23,11 +28,17 @@
       "text": "O relógio do pátio marca 19:30.\n\nÀs 21:47, tudo termina. De um jeito ou de outro.\n\n{player_name} tem duas horas.",
       "next": "girls",
       "fx": "thud",
-      "pace": "slow"
+      "pace": "slow",
+      "amb": "rain"
     },
     "girls": {
       "speaker": "",
-      "text": "Ele vê as quatro no meio da multidão: Yuna no palco, segurando o microfone com as duas mãos. Alice olhando o relógio de pulso a cada minuto. Hikari perto da escada, de braços cruzados. E Maya, debaixo da única lanterna apagada, olhando para o telhado.",
+      "text": "Ele vê as quatro no meio da multidão: Yuna no palco, segurando o microfone com as duas mãos. Alice olhando o relógio de pulso a cada minuto.",
+      "next": "girls__2"
+    },
+    "girls__2": {
+      "speaker": "",
+      "text": "Hikari perto da escada, de braços cruzados. E Maya, debaixo da única lanterna apagada, olhando para o telhado.",
       "next": "choice"
     },
     "choice": {
@@ -59,7 +70,12 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "Quando o sol baixa, as lanternas se acendem sozinhas, uma a uma, de uma ponta à outra do pátio. Não tem ninguém no interruptor. Os alunos aplaudem como se fosse parte do show. {player_name} é o único que não sorri.",
+      "text": "Quando o sol baixa, as lanternas se acendem sozinhas, uma a uma, de uma ponta à outra do pátio. Não tem ninguém no interruptor.",
+      "next": "outro1__2"
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "Os alunos aplaudem como se fosse parte do show. {player_name} é o único que não sorri.",
       "next": "outro2"
     },
     "outro2": {

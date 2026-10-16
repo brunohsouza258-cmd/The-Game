@@ -6,7 +6,7 @@
   "background": "res://assets/backgrounds/clubroom.png",
   "tint": "#bdb2c4",
   "sprite": "res://assets/characters/yuna.png",
-  "music": "menu",
+  "music": "sad",
   "nodes": {
     "start": {
       "speaker": "",

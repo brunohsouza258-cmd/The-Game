@@ -6,7 +6,7 @@
   "background": "res://assets/backgrounds/courtyard.png",
   "tint": "#7d72a8",
   "sprite": "res://assets/characters/maya.png",
-  "music": "night",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "Maya",

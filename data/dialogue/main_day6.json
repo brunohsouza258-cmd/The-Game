@@ -41,18 +41,23 @@
     },
     "notebook": {
       "speaker": "Caderno",
-      "text": "\"Dia 6: acordei com as mãos machucadas de novo.\" Embaixo, numa letra mais nova, mais tremida, que não estava ali ontem: \"Você bateu na porta até sangrar. Ela não abriu. Ela nunca abre antes do dia 8.\"",
+      "text": "\"Dia 6: acordei com as mãos machucadas de novo.\" Embaixo, numa letra mais nova, mais tremida, que não estava ali ontem: \"Você bateu na porta até sangrar. Ela não abriu.",
       "effect": "glitch",
       "effects": {
         "dread": 2
       },
+      "next": "notebook__2"
+    },
+    "notebook__2": {
+      "speaker": "Caderno",
+      "text": "Ela nunca abre antes do dia 8.\"",
       "next": "school"
     },
     "school": {
       "speaker": "",
       "text": "Na escola, no fim do corredor, a escada que leva ao telhado está isolada com uma corrente. Na parede ao lado, riscado fundo no reboco, como se tivesse sido feito com as unhas:",
       "next": "wall",
-      "sfx": "lock",
+      "sfx": "steps",
       "background": "res://assets/backgrounds/hallway_dusk.png",
       "tint": "#c9bfd2"
     },
@@ -89,13 +94,23 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "Na hora do almoço, a Hikari passa por ele no corredor com as duas mãos escondidas nos bolsos do agasalho. Os olhos se cruzam. Ela vira a cara rápido demais, e ele percebe que ela também não consegue fechar bem os dedos.",
-      "next": "outro2",
+      "text": "Na hora do almoço, a Hikari passa por ele no corredor com as duas mãos escondidas nos bolsos do agasalho. Os olhos se cruzam.",
+      "next": "outro1__2",
       "image": ""
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "Ela vira a cara rápido demais, e ele percebe que ela também não consegue fechar bem os dedos.",
+      "next": "outro2"
     },
     "outro2": {
       "speaker": "",
-      "text": "Ninguém falou nada. Mas, durante o resto do dia, os dois se reconhecem sem se olhar: o mesmo jeito de esconder a palma, o mesmo cansaço de quem passou a noite fazendo uma coisa que não consegue lembrar.",
+      "text": "Ninguém falou nada.",
+      "next": "outro2__2"
+    },
+    "outro2__2": {
+      "speaker": "",
+      "text": "Mas, durante o resto do dia, os dois se reconhecem sem se olhar: o mesmo jeito de esconder a palma, o mesmo cansaço de quem passou a noite fazendo uma coisa que não consegue lembrar.",
       "next": "end"
     }
   }

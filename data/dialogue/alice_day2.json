@@ -46,7 +46,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "A Alice fecha o caderno com um estalo seco e empurra os óculos no nariz. \"Anotado\", diz, como se isso resolvesse alguma coisa, e sai com os passos contados: vinte e dois até a porta, nem um a mais.",
+      "text": "A Alice fecha o caderno com um estalo seco e empurra os óculos no nariz.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "\"Anotado\", diz, como se isso resolvesse alguma coisa, e sai com os passos contados: vinte e dois até a porta, nem um a mais.",
       "next": "end"
     },
     "end": {

@@ -33,11 +33,18 @@
     },
     "understand": {
       "speaker": "",
-      "text": "{player_name} entende de uma vez.\n\nSe tudo voltar de novo, a próxima volta não vai ter a Alice anotando. Nem a Hikari correndo. Nem a Yuna rindo.\n\nVai ter só um corredor. Uma porta. E ele, sozinho, sem saber por quê.",
-      "next": "decision",
+      "text": "{player_name} entende de uma vez. Se tudo voltar de novo, a próxima volta não vai ter a Alice anotando. Nem a Hikari correndo. Nem a Yuna rindo.",
+      "next": "understand__2",
       "fx": "static",
       "pace": "slow",
       "noauto": true
+    },
+    "understand__2": {
+      "speaker": "",
+      "text": "Vai ter só um corredor. Uma porta. E ele, sozinho, sem saber por quê.",
+      "pace": "slow",
+      "noauto": true,
+      "next": "decision"
     },
     "decision": {
       "speaker": "",
@@ -97,7 +104,8 @@
       ],
       "fx": "blackout",
       "pace": "crawl",
-      "noauto": true
+      "noauto": true,
+      "amb": "clock"
     },
     "save": {
       "speaker": "",
@@ -139,7 +147,12 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "Pela primeira vez, as quatro estão juntas no mesmo corredor, sem combinar, sem conversar, só presentes. A Maya olha para as janelas, a Alice conta passos, a Yuna segura a mão da Hikari sem perceber que segura, e a Hikari deixa.",
+      "text": "Pela primeira vez, as quatro estão juntas no mesmo corredor, sem combinar, sem conversar, só presentes.",
+      "next": "outro1__2"
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "A Maya olha para as janelas, a Alice conta passos, a Yuna segura a mão da Hikari sem perceber que segura, e a Hikari deixa.",
       "next": "outro2"
     },
     "outro2": {

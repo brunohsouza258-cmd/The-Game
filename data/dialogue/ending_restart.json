@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/courtyard.png",
   "tint": "#d8d8e8",
   "sprite": "",
-  "music": "ending",
+  "music": "sad",
   "nodes": {
     "start": {
       "speaker": "",
@@ -29,7 +29,12 @@
     },
     "b2": {
       "speaker": "",
-      "text": "A carteira com as iniciais K.M. voltou ao fundo da sala, e ninguém sabe quem a trouxe. Ele não sabe por que olha. Mas olha todos os dias, até um dia notar que a carteira sumiu e a janela ficou só uma janela.",
+      "text": "A carteira com as iniciais K.M. voltou ao fundo da sala, e ninguém sabe quem a trouxe. Ele não sabe por que olha.",
+      "next": "b2__2"
+    },
+    "b2__2": {
+      "speaker": "",
+      "text": "Mas olha todos os dias, até um dia notar que a carteira sumiu e a janela ficou só uma janela.",
       "next": "end"
     },
     "n2": {

@@ -98,7 +98,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "A Alice tira os óculos, esfrega os olhos com o dorso da mão e, por um segundo, parece muito mais nova do que o jeito dela deixa a gente esquecer. Depois os recoloca, e volta a ser a Alice.",
+      "text": "A Alice tira os óculos, esfrega os olhos com o dorso da mão e, por um segundo, parece muito mais nova do que o jeito dela deixa a gente esquecer.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "Depois os recoloca, e volta a ser a Alice.",
       "next": "end"
     },
     "end": {

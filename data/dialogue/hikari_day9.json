@@ -59,7 +59,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "Ela fica um tempo calada, os braços cruzados. \"Eu odeio quando a resposta é sim\", resmunga, por fim. \"Porque aí eu não tenho como lutar contra.\" Vira o rosto, e é só o rosto virado que ele vê.",
+      "text": "Ela fica um tempo calada, os braços cruzados. \"Eu odeio quando a resposta é sim\", resmunga, por fim.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "\"Porque aí eu não tenho como lutar contra.\" Vira o rosto, e é só o rosto virado que ele vê.",
       "next": "end"
     },
     "end": {

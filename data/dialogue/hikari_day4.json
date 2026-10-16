@@ -85,7 +85,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "A Hikari alonga o braço por cima da cabeça e estala o pescoço. \"Foi bom\", resume, a coisa mais próxima de \"obrigada\" que ela diz, e vira, e vai embora com os tênis fazendo barulho no corredor.",
+      "text": "A Hikari alonga o braço por cima da cabeça e estala o pescoço.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "\"Foi bom\", resume, a coisa mais próxima de \"obrigada\" que ela diz, e vira, e vai embora com os tênis fazendo barulho no corredor.",
       "next": "end"
     },
     "end": {

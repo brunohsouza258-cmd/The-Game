@@ -6,7 +6,7 @@
   "background": "res://assets/backgrounds/hallway_dusk.png",
   "tint": "#c9bfd2",
   "sprite": "res://assets/characters/maya.png",
-  "music": "night",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "",

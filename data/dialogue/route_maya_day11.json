@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/festival_night.png",
   "tint": "#ffffff",
   "sprite": "",
-  "music": "festival",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "",

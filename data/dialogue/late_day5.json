@@ -5,14 +5,19 @@
   "background": "res://assets/backgrounds/clubroom.png",
   "tint": "#c9b8d8",
   "sprite": "",
-  "music": "clubroom",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Já passou do horário. A sala do clube cheira a papel e tinta. A Maya está sozinha na mesa do fundo, com um caderno aberto e uma caneta que ela não para de girar entre os dedos.",
-      "next": "n1",
+      "text": "Já passou do horário. A sala do clube cheira a papel e tinta.",
+      "next": "start__2",
       "background": "res://assets/backgrounds/clubroom.png",
       "tint": "#c9b8d8"
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "A Maya está sozinha na mesa do fundo, com um caderno aberto e uma caneta que ela não para de girar entre os dedos.",
+      "next": "n1"
     },
     "n1": {
       "speaker": "Maya",

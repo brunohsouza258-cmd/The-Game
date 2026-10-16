@@ -65,7 +65,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "A Maya se afasta pelo corredor sem pressa, passando a ponta dos dedos pela parede, como quem confere se ela ainda está ali. Na curva, ela olha para trás por um segundo, sorri de leve e some.",
+      "text": "A Maya se afasta pelo corredor sem pressa, passando a ponta dos dedos pela parede, como quem confere se ela ainda está ali.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "Na curva, ela olha para trás por um segundo, sorri de leve e some.",
       "next": "end"
     },
     "end": {

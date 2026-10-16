@@ -125,7 +125,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "Antes de ir, a Maya arruma a gola do casaco dele sem pensar, com a naturalidade de um gesto muito repetido. Percebe o que fez e recolhe a mão, vermelha. \"Hábito\", ela murmura, e vai embora rápido.",
+      "text": "Antes de ir, a Maya arruma a gola do casaco dele sem pensar, com a naturalidade de um gesto muito repetido. Percebe o que fez e recolhe a mão, vermelha.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "\"Hábito\", ela murmura, e vai embora rápido.",
       "next": "end"
     },
     "end": {

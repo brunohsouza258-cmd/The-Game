@@ -9,14 +9,25 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "O corredor tem um cheiro que ele reconhece de algum lugar muito antigo: poeira, ferrugem, chuva em concreto. Cada passo ecoa um segundo depois do que deveria, como se alguém caminhasse logo atrás, no mesmo ritmo, parando quando ele para.",
-      "next": "intro2",
+      "text": "O corredor tem um cheiro que ele reconhece de algum lugar muito antigo: poeira, ferrugem, chuva em concreto.",
+      "next": "start__2",
       "background": "res://assets/backgrounds/school_night.png",
-      "tint": "#ffffff"
+      "tint": "#ffffff",
+      "sfx": "steps"
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "Cada passo ecoa um segundo depois do que deveria, como se alguém caminhasse logo atrás, no mesmo ritmo, parando quando ele para.",
+      "next": "intro2"
     },
     "intro2": {
       "speaker": "",
-      "text": "A escola está às escuras. Nenhuma luz de emergência, nenhum zumbido de geladeira. Só a luz azul de uma lua que não deveria estar ali, já que lá fora, pela janela, o céu está nublado e sem estrelas.",
+      "text": "A escola está às escuras. Nenhuma luz de emergência, nenhum zumbido de geladeira.",
+      "next": "intro2__2"
+    },
+    "intro2__2": {
+      "speaker": "",
+      "text": "Só a luz azul de uma lua que não deveria estar ali, já que lá fora, pela janela, o céu está nublado e sem estrelas.",
       "next": "loop_echo"
     },
     "chain": {
@@ -46,12 +57,13 @@
       },
       "next": "climb",
       "fx": "thud",
-      "pace": "slow"
+      "pace": "slow",
+      "sfx": "steps"
     },
     "climb": {
       "speaker": "",
-      "text": "Do outro lado da porta não tem telhado.\n\nTem a escola. Outra escola. Janelas quebradas. Carteiras empilhadas, podres. Água preta cobrindo o pátio, como se este lugar tivesse sido esquecido por muito mais tempo do que existe.",
-      "next": "wall",
+      "text": "Do outro lado da porta não tem telhado. Tem a escola. Outra escola. Janelas quebradas. Carteiras empilhadas, podres.",
+      "next": "climb__2",
       "fx": "crash",
       "noauto": true,
       "pause": 0.3,
@@ -69,6 +81,12 @@
       "sfx": "door_hinge",
       "background": "res://assets/backgrounds/school_decayed.png",
       "tint": "#ffffff"
+    },
+    "climb__2": {
+      "speaker": "",
+      "text": "Água preta cobrindo o pátio, como se este lugar tivesse sido esquecido por muito mais tempo do que existe.",
+      "noauto": true,
+      "next": "wall"
     },
     "wall": {
       "speaker": "",
@@ -145,10 +163,15 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "A cena se desfaz. Quando ele pisca, está na cama de casa, vestido, os sapatos sujos de reboco. O despertador marca seis da manhã. O sol nasce pela janela como em qualquer outro dia. Mas a mão está enfaixada com uma atadura que ele não lembra de ter colocado.",
-      "next": "outro2",
+      "text": "A cena se desfaz. Quando ele pisca, está na cama de casa, vestido, os sapatos sujos de reboco. O despertador marca seis da manhã.",
+      "next": "outro1__2",
       "background": "res://assets/backgrounds/bedroom_morning.png",
       "tint": "#d8d0e0"
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "O sol nasce pela janela como em qualquer outro dia. Mas a mão está enfaixada com uma atadura que ele não lembra de ter colocado.",
+      "next": "outro2"
     },
     "outro2": {
       "speaker": "",

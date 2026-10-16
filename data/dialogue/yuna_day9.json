@@ -6,7 +6,7 @@
   "background": "res://assets/backgrounds/clubroom.png",
   "tint": "#b8aec4",
   "sprite": "res://assets/characters/yuna.png",
-  "music": "hallway",
+  "music": "sad",
   "nodes": {
     "start": {
       "speaker": "Yuna",
@@ -41,9 +41,15 @@
     "erase": {
       "speaker": "Yuna",
       "pose": "angry",
-      "text": "Então daqui a pouco eu esqueço de você de novo. E da Maya. E de mim. ...Não. Eu não quero. Pela primeira vez na vida eu quero ficar triste e lembrar, em vez de sorrir e esquecer.",
-      "next": "poem_echo",
+      "text": "Então daqui a pouco eu esqueço de você de novo. E da Maya. E de mim. ...Não. Eu não quero.",
+      "next": "erase__2",
       "image": ""
+    },
+    "erase__2": {
+      "speaker": "Yuna",
+      "text": "Pela primeira vez na vida eu quero ficar triste e lembrar, em vez de sorrir e esquecer.",
+      "pose": "angry",
+      "next": "poem_echo"
     },
     "together": {
       "speaker": "Yuna",
@@ -62,7 +68,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "\"Eu me lembrei de uma coisa\", ela sussurra. \"Eu tinha um vizinho. Ele me ensinou a andar de bicicleta e eu caí três vezes.\" Para, com a boca aberta. \"Eu não sei o nome dele. Por quê?\"",
+      "text": "\"Eu me lembrei de uma coisa\", ela sussurra. \"Eu tinha um vizinho. Ele me ensinou a andar de bicicleta e eu caí três vezes.\" Para, com a boca aberta.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "\"Eu não sei o nome dele. Por quê?\"",
       "next": "end"
     },
     "end": {

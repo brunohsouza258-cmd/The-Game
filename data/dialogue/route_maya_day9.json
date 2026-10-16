@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/clubroom.png",
   "tint": "#8a7aa8",
   "sprite": "",
-  "music": "clubroom",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "",

@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/courtyard.png",
   "tint": "#c8b8e0",
   "sprite": "",
-  "music": "festival",
+  "music": "sad",
   "nodes": {
     "start": {
       "speaker": "",

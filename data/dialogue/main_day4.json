@@ -9,10 +9,15 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Acordou cedo e sem alarme. A casa está quieta demais, como uma sala depois de uma aula que terminou antes da hora. Na mesa da cozinha tem um prato de torrada já fria e um bilhete da mãe: \"Volto tarde\".",
-      "next": "intro2",
+      "text": "Acordou cedo e sem alarme. A casa está quieta demais, como uma sala depois de uma aula que terminou antes da hora.",
+      "next": "start__2",
       "background": "res://assets/backgrounds/bedroom_morning.png",
       "tint": "#ffffff"
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "Na mesa da cozinha tem um prato de torrada já fria e um bilhete da mãe: \"Volto tarde\".",
+      "next": "intro2"
     },
     "intro2": {
       "speaker": "",
@@ -21,7 +26,14 @@
     },
     "open": {
       "speaker": "",
-      "text": "A letra é dele. Não parecida com a dele — é a dele, com o mesmo jeito torto de fazer o \"a\". As entradas têm datas. Dia 5. Dia 6. Dia 7. Dias que ainda não aconteceram.",
+      "text": "A letra é dele. Não parecida com a dele — é a dele, com o mesmo jeito torto de fazer o \"a\". As entradas têm datas. Dia 5. Dia 6.",
+      "sfx": "page",
+      "image": "res://assets/inserts/notebook.png",
+      "next": "open__2"
+    },
+    "open__2": {
+      "speaker": "",
+      "text": "Dia 7. Dias que ainda não aconteceram.",
       "choices": [
         {
           "text": "Ler as entradas.",
@@ -37,9 +49,7 @@
           },
           "next": "trash"
         }
-      ],
-      "sfx": "page",
-      "image": "res://assets/inserts/notebook.png"
+      ]
     },
     "read": {
       "speaker": "Caderno",
@@ -89,11 +99,16 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "À tarde, na biblioteca, a bibliotecária lhe entrega uma lista de empréstimos antigos que ele nunca pediu. Seu nome aparece em todas as linhas, com datas que ele não lembra de ter vivido, sempre o mesmo livro: um volume de contos sem autor.",
-      "next": "outro2",
+      "text": "À tarde, na biblioteca, a bibliotecária lhe entrega uma lista de empréstimos antigos que ele nunca pediu.",
+      "next": "outro1__2",
       "image": "",
       "background": "res://assets/backgrounds/clubroom.png",
       "tint": "#d0d8f0"
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "Seu nome aparece em todas as linhas, com datas que ele não lembra de ter vivido, sempre o mesmo livro: um volume de contos sem autor.",
+      "next": "outro2"
     },
     "outro2": {
       "speaker": "",

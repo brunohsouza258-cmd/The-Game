@@ -9,16 +9,26 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Não houve sonho nenhum. Pela primeira vez em muitos dias, {player_name} dormiu sem imagem, sem voz, sem relógio. Acordou com a sensação de que algo foi tirado de dentro dele durante a noite, algo pesado, e que o espaço vazio ainda não aprendeu a ser vazio.",
-      "next": "intro2",
+      "text": "Não houve sonho nenhum. Pela primeira vez em muitos dias, {player_name} dormiu sem imagem, sem voz, sem relógio.",
+      "next": "start__2",
       "background": "res://assets/backgrounds/bedroom_morning.png",
       "tint": "#b8aec4"
     },
+    "start__2": {
+      "speaker": "",
+      "text": "Acordou com a sensação de que algo foi tirado de dentro dele durante a noite, algo pesado, e que o espaço vazio ainda não aprendeu a ser vazio.",
+      "next": "intro2"
+    },
     "intro2": {
       "speaker": "",
-      "text": "A mochila está ao lado da cama, já pronta. Dentro, o caderno preto. As páginas depois do dia 12 continuam arrancadas, mas ele agora percebe uma marca de pressão no papel de trás: alguém escreveu e apagou várias vezes, tentando acertar uma única palavra.",
-      "next": "loop_echo",
+      "text": "A mochila está ao lado da cama, já pronta. Dentro, o caderno preto.",
+      "next": "intro2__2",
       "image": "res://assets/inserts/notebook.png"
+    },
+    "intro2__2": {
+      "speaker": "",
+      "text": "As páginas depois do dia 12 continuam arrancadas, mas ele agora percebe uma marca de pressão no papel de trás: alguém escreveu e apagou várias vezes, tentando acertar uma única palavra.",
+      "next": "loop_echo"
     },
     "truth": {
       "speaker": "Maya",
@@ -42,11 +52,25 @@
     },
     "truth4": {
       "speaker": "Maya",
-      "text": "Desde então, toda vez que chega aquela noite, tudo volta ao primeiro dia.\n\nEu não sei se é você que não deixa ele ir. Ou se somos nós que não deixamos você ir.\n\nSó sei que cada volta apaga um pouco dele. E depois, um pouco da gente.",
-      "next": "outro1",
+      "text": "Desde então, toda vez que chega aquela noite, tudo volta ao primeiro dia.",
+      "next": "truth4__2",
       "fx": "thud",
       "pace": "slow",
       "noauto": true
+    },
+    "truth4__2": {
+      "speaker": "Maya",
+      "text": "Eu não sei se é você que não deixa ele ir. Ou se somos nós que não deixamos você ir.",
+      "pace": "slow",
+      "noauto": true,
+      "next": "truth4__3"
+    },
+    "truth4__3": {
+      "speaker": "Maya",
+      "text": "Só sei que cada volta apaga um pouco dele. E depois, um pouco da gente.",
+      "pace": "slow",
+      "noauto": true,
+      "next": "outro1"
     },
     "normal": {
       "speaker": "",
@@ -55,15 +79,29 @@
     },
     "normal2": {
       "speaker": "",
-      "text": "Mas na hora do almoço, a mão direita de {player_name} se fecha sozinha. Com força. Como se segurasse outra mão.\n\nPor um segundo ele sente a chuva. A grade cortando a palma.\n\nDepois a mão abre. E ele não lembra o que estava fazendo.",
+      "text": "Mas na hora do almoço, a mão direita de {player_name} se fecha sozinha. Com força. Como se segurasse outra mão.",
       "effect": "glitch",
       "effects": {
         "dread": 3
       },
-      "next": "outro1f",
+      "next": "normal2__2",
       "fx": "glitch",
       "pace": "slow",
       "noauto": true
+    },
+    "normal2__2": {
+      "speaker": "",
+      "text": "Por um segundo ele sente a chuva. A grade cortando a palma.",
+      "pace": "slow",
+      "noauto": true,
+      "next": "normal2__3"
+    },
+    "normal2__3": {
+      "speaker": "",
+      "text": "Depois a mão abre. E ele não lembra o que estava fazendo.",
+      "pace": "slow",
+      "noauto": true,
+      "next": "outro1f"
     },
     "outro1f": {
       "speaker": "",
@@ -109,10 +147,15 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "De noite, sozinho no quarto, ele repete o nome em voz baixa, testando o peso dele na boca. Kaito. Não ecoa. Não faz a casa tremer. É só um nome, comum, como o de um vizinho. Mas a garganta aperta do mesmo jeito.",
-      "next": "outro2",
+      "text": "De noite, sozinho no quarto, ele repete o nome em voz baixa, testando o peso dele na boca. Kaito. Não ecoa. Não faz a casa tremer.",
+      "next": "outro1__2",
       "background": "res://assets/backgrounds/bedroom_night.png",
       "tint": "#ffffff"
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "É só um nome, comum, como o de um vizinho. Mas a garganta aperta do mesmo jeito.",
+      "next": "outro2"
     },
     "outro2": {
       "speaker": "",

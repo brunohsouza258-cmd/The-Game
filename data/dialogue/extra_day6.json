@@ -9,10 +9,15 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Já passa das sete. O corredor do segundo andar está às escuras, só a luz azul da janela. A Hikari está sentada no chão, de costas na parede, com as mãos enfaixadas sobre os joelhos. A Alice está agachada na frente dela com uma caixinha de curativos.",
-      "next": "n1",
+      "text": "Já passa das sete. O corredor do segundo andar está às escuras, só a luz azul da janela.",
+      "next": "start__2",
       "background": "res://assets/backgrounds/school_night.png",
       "tint": "#ffffff"
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "A Hikari está sentada no chão, de costas na parede, com as mãos enfaixadas sobre os joelhos. A Alice está agachada na frente dela com uma caixinha de curativos.",
+      "next": "n1"
     },
     "n1": {
       "speaker": "Alice",

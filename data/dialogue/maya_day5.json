@@ -6,7 +6,7 @@
   "background": "res://assets/backgrounds/hallway_dusk.png",
   "tint": "#e6dde6",
   "sprite": "res://assets/characters/maya.png",
-  "music": "hallway",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "Maya",
@@ -96,7 +96,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "\"Amanhã eu trago o poema\", ela diz, com a voz de quem promete e teme cumprir. Atravessa o pátio sem olhar as lanternas que a Yuna pendura, e para só embaixo da árvore, parada, olhando o telhado.",
+      "text": "\"Amanhã eu trago o poema\", ela diz, com a voz de quem promete e teme cumprir.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "Atravessa o pátio sem olhar as lanternas que a Yuna pendura, e para só embaixo da árvore, parada, olhando o telhado.",
       "next": "end"
     },
     "end": {

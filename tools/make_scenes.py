@@ -77,10 +77,14 @@ def vignette(img, strength=0.55):
 
 
 def painterly(img, blur=1.0):
-    """Suaviza e dá um grão leve, para os cenários não parecerem vetor chapado."""
-    img = img.filter(ImageFilter.GaussianBlur(blur))
-    img = img.filter(ImageFilter.UnsharpMask(radius=3, percent=60, threshold=2))
-    return noise(img, 6)
+    """Efeito de pintura: achata as cores com filtro de mediana, suaviza e dá grão de pincel."""
+    base = img.convert("RGB")
+    flat = base.filter(ImageFilter.MedianFilter(7)).filter(ImageFilter.GaussianBlur(blur))
+    soft = Image.blend(flat, base.filter(ImageFilter.GaussianBlur(blur * 1.6)), 0.35)
+    edges = soft.filter(ImageFilter.UnsharpMask(radius=4, percent=90, threshold=3))
+    brush = Image.effect_noise(base.size, 24).convert("RGB").filter(ImageFilter.GaussianBlur(1.4))
+    out = ImageChops.add(edges, brush, scale=1.0, offset=-128)
+    return noise(out, 5)
 
 
 def quad(d, pts, fill, outline=None):

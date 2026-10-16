@@ -65,7 +65,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "A Alice conta os passos até a porta. Chega em vinte e dois, como sempre. Mas desta vez, em vez de seguir, para e olha para trás: \"Eu estou com medo\", diz, e é a primeira vez que ela fala isso sem escrever antes.",
+      "text": "A Alice conta os passos até a porta. Chega em vinte e dois, como sempre.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "Mas desta vez, em vez de seguir, para e olha para trás: \"Eu estou com medo\", diz, e é a primeira vez que ela fala isso sem escrever antes.",
       "next": "end"
     },
     "end": {

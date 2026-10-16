@@ -74,7 +74,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "Ela deixa uma caixinha de curativos em cima da carteira dele, com um bilhete grudado: \"Troca de manhã e à noite. Se não trocar, eu fico sabendo.\" É a coisa mais parecida com um abraço que ela sabe fazer.",
+      "text": "Ela deixa uma caixinha de curativos em cima da carteira dele, com um bilhete grudado: \"Troca de manhã e à noite.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "Se não trocar, eu fico sabendo.\" É a coisa mais parecida com um abraço que ela sabe fazer.",
       "next": "end"
     },
     "end": {

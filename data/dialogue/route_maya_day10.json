@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/school_night.png",
   "tint": "#a99fb4",
   "sprite": "",
-  "music": "night",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "",

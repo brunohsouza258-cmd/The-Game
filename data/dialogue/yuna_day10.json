@@ -6,7 +6,7 @@
   "background": "res://assets/backgrounds/clubroom.png",
   "tint": "#a99fb4",
   "sprite": "res://assets/characters/yuna.png",
-  "music": "hallway",
+  "music": "sad",
   "nodes": {
     "start": {
       "speaker": "Yuna",
@@ -60,7 +60,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "Ela se levanta do degrau e limpa a saia com as duas mãos, devagar, como quem arruma a si mesma. \"Eu vou ficar bem\", diz, e é a primeira vez que o sorriso não chega aos olhos e ela deixa ficar assim.",
+      "text": "Ela se levanta do degrau e limpa a saia com as duas mãos, devagar, como quem arruma a si mesma.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "\"Eu vou ficar bem\", diz, e é a primeira vez que o sorriso não chega aos olhos e ela deixa ficar assim.",
       "next": "end"
     },
     "end": {

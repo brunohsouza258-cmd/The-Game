@@ -65,7 +65,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "O relógio de pulso da Alice treme na mesa, tenta andar, e volta. Ela o encara sem piscar até ele parar de tremer. \"Não vai ganhar de mim\", murmura, para o relógio, para o dia, para ninguém.",
+      "text": "O relógio de pulso da Alice treme na mesa, tenta andar, e volta. Ela o encara sem piscar até ele parar de tremer.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "\"Não vai ganhar de mim\", murmura, para o relógio, para o dia, para ninguém.",
       "next": "end"
     },
     "end": {

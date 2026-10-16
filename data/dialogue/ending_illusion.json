@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/hallway_dusk.png",
   "tint": "#ffffff",
   "sprite": "",
-  "music": "hallway",
+  "music": "sad",
   "nodes": {
     "start": {
       "speaker": "",

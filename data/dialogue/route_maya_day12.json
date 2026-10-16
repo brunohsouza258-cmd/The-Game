@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/rooftop_dusk.png",
   "tint": "#ffe8d8",
   "sprite": "",
-  "music": "hallway",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "",

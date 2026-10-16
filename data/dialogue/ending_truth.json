@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/rooftop_rain.png",
   "tint": "#ffffff",
   "sprite": "",
-  "music": "night",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "",
@@ -57,7 +57,14 @@
       "color": "#9966CC",
       "sprite": "res://assets/characters/maya.png",
       "pose": "sad",
-      "text": "Eu estava na escada. Eu vi tudo. Eu nunca disse que eu estava lá. Eu nunca disse o que eu sentia, e eu fiquei segurando esse dia porque não tinha coragem de dizer: eu também gostava de você, Kaito.",
+      "text": "Eu estava na escada. Eu vi tudo. Eu nunca disse que eu estava lá.",
+      "next": "n4__2"
+    },
+    "n4__2": {
+      "speaker": "Maya",
+      "text": "Eu nunca disse o que eu sentia, e eu fiquei segurando esse dia porque não tinha coragem de dizer: eu também gostava de você, Kaito.",
+      "color": "#9966CC",
+      "pose": "sad",
       "next": "n5"
     },
     "n5": {

@@ -8,9 +8,14 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "A manhã tem cheiro de grama cortada e de uniforme novo. {player_name} confere pela terceira vez o bolso do casaco: o bilhete ainda está lá, dobrado em quatro, a tinta tão borrada que só dá para ler uma frase. \"Volta. A escola é chata sem você.\"",
-      "next": "intro2",
+      "text": "A manhã tem cheiro de grama cortada e de uniforme novo. {player_name} confere pela terceira vez o bolso do casaco: o bilhete ainda está lá, dobrado em quatro, a tinta tão borrada que só dá para ler uma frase.",
+      "next": "start__2",
       "image": "res://assets/inserts/bilhete.png"
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "\"Volta. A escola é chata sem você.\"",
+      "next": "intro2"
     },
     "intro2": {
       "speaker": "",
@@ -43,7 +48,17 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "Na secretaria, uma moça lhe entrega o horário das aulas e a chave de um armário. Ela sorri com a simpatia de quem já repetiu essa frase muitas vezes: \"Bem-vindo de volta\". Ele corrige, educado: é a primeira vez dele ali. Ela pisca, confusa, e pede desculpas.",
+      "text": "Na secretaria, uma moça lhe entrega o horário das aulas e a chave de um armário.",
+      "next": "outro1__2"
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "Ela sorri com a simpatia de quem já repetiu essa frase muitas vezes: \"Bem-vindo de volta\". Ele corrige, educado: é a primeira vez dele ali.",
+      "next": "outro1__3"
+    },
+    "outro1__3": {
+      "speaker": "",
+      "text": "Ela pisca, confusa, e pede desculpas.",
       "next": "outro2"
     },
     "outro2": {

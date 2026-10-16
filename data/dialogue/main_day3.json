@@ -8,10 +8,15 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "A chuva começou na madrugada e não parou. As janelas do ônibus embaçam e o motorista muda de estação toda vez que a música fica boa. {player_name} desenha, com o dedo, as iniciais K.M. no vidro sem se dar conta, e as apaga com a manga quando percebe.",
-      "next": "intro2",
+      "text": "A chuva começou na madrugada e não parou.",
+      "next": "start__2",
       "background": "res://assets/backgrounds/bus_rain.png",
       "tint": "#ffffff"
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "As janelas do ônibus embaçam e o motorista muda de estação toda vez que a música fica boa. {player_name} desenha, com o dedo, as iniciais K.M. no vidro sem se dar conta, e as apaga com a manga quando percebe.",
+      "next": "intro2"
     },
     "intro2": {
       "speaker": "",
@@ -86,7 +91,12 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "Na hora da saída, a professora o chama de lado e pergunta, em voz baixa, se ele está dormindo bem. Parece que ela quer perguntar outra coisa, e que a pergunta verdadeira está dentro de outra, como bonecas russas.",
+      "text": "Na hora da saída, a professora o chama de lado e pergunta, em voz baixa, se ele está dormindo bem.",
+      "next": "outro1__2"
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "Parece que ela quer perguntar outra coisa, e que a pergunta verdadeira está dentro de outra, como bonecas russas.",
       "next": "outro2"
     },
     "outro2": {

@@ -8,10 +8,15 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "A noite foi curta. Ele sonhou com uma sala sem janelas e um relógio que só tinha o ponteiro das horas. Acordou antes do despertador, com a sensação de ter esquecido de fazer alguma coisa importante às nove da noite do dia anterior.",
-      "next": "intro2",
+      "text": "A noite foi curta. Ele sonhou com uma sala sem janelas e um relógio que só tinha o ponteiro das horas.",
+      "next": "start__2",
       "background": "res://assets/backgrounds/bedroom_morning.png",
       "tint": "#ffffff"
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "Acordou antes do despertador, com a sensação de ter esquecido de fazer alguma coisa importante às nove da noite do dia anterior.",
+      "next": "intro2"
     },
     "intro2": {
       "speaker": "",
@@ -35,9 +40,15 @@
     },
     "aftermath": {
       "speaker": "",
-      "text": "A voz normal volta. Termina o aviso sobre o horário das aulas.\n\nNinguém levantou a cabeça. Ninguém ouviu.\n\n{player_name} olha em volta e conta: trinta alunos, trinta rostos tranquilos. Ele é o único que parou de respirar.",
-      "next": "outro1",
+      "text": "A voz normal volta. Termina o aviso sobre o horário das aulas.",
+      "next": "aftermath__2",
       "pace": "slow"
+    },
+    "aftermath__2": {
+      "speaker": "",
+      "text": "Ninguém levantou a cabeça. Ninguém ouviu. {player_name} olha em volta e conta: trinta alunos, trinta rostos tranquilos. Ele é o único que parou de respirar.",
+      "pace": "slow",
+      "next": "outro1"
     },
     "end": {
       "end": true

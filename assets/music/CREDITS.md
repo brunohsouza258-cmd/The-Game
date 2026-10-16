@@ -14,3 +14,5 @@ Todas as faixas abaixo são **CC0 1.0 (domínio público)**, baixadas do OpenGam
 | `contemplation.mp3` | Contemplation | Joth | https://opengameart.org/content/contemplation-0 |
 | `emerald_tower.ogg` | Emerald Tower | Kistol | https://opengameart.org/content/emerald-tower |
 | `menu_loop.mp3` | Menu Music Loop | wipics | https://opengameart.org/content/menu-music-2 |
+| `sadness.ogg` | Sadness | Kistol | https://opengameart.org/content/sadness |
+| `piano_loop.wav` | Emotional piano loop | extenz | https://opengameart.org/content/emotional-piano-loop |

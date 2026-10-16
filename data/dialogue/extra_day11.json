@@ -9,10 +9,15 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "As lanternas já estão penduradas em fios, de uma ponta à outra do pátio. Quando alguém acende a primeira, as outras acendem em cascata. É lindo demais. O tipo de lindo que deixa um nó na garganta.",
-      "next": "n1",
+      "text": "As lanternas já estão penduradas em fios, de uma ponta à outra do pátio. Quando alguém acende a primeira, as outras acendem em cascata. É lindo demais.",
+      "next": "start__2",
       "background": "res://assets/backgrounds/festival_night.png",
       "tint": "#ffffff"
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "O tipo de lindo que deixa um nó na garganta.",
+      "next": "n1"
     },
     "n1": {
       "speaker": "Yuna",

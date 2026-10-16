@@ -83,7 +83,13 @@ func start(dialogue_path: String) -> void:
 	DialogueManager.start_dialogue(dialogue_path)
 
 func _ambience_for(background_path: String) -> String:
-	return "rain" if background_path.contains("rooftop_rain") else ""
+	if background_path.contains("rooftop_rain"):
+		return "rain"
+	if background_path.contains("school_night") or background_path.contains("bedroom_night") or background_path.contains("festival_night"):
+		return "night"
+	if background_path.contains("courtyard") or background_path.contains("rooftop_dusk"):
+		return "wind"
+	return ""
 
 func _on_dialogue_started(meta: Dictionary) -> void:
 	SfxPlayer.set_ambience(_ambience_for(meta.get("background", DEFAULT_BACKGROUND)))

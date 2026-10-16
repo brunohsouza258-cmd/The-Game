@@ -17,7 +17,13 @@ var _beat_left: float = 0.0  # segundos restantes de batimento depois de uma cen
 var _in_dialogue: bool = false
 const THUD_SECONDS := 0.5
 const SAMPLE_DIR := "res://assets/sfx/"
-const AMBIENCE := {"rain": "rain.ogg"}
+const AMBIENCE := {
+	"rain": "rain.ogg",
+	"night": "night_crickets.mp3",
+	"wind": "birds_wind.ogg",
+	"clock": "clock_tick.wav",
+}
+const AMBIENCE_DB := {"rain": -6.0, "night": -9.0, "wind": -13.0, "clock": -8.0}
 
 var _amb_player: AudioStreamPlayer
 var _amb_name: String = ""
@@ -48,7 +54,7 @@ func play_glitch() -> void:
 
 func _sample_stream(file: String) -> AudioStream:
 	var stream = load(SAMPLE_DIR + file)
-	if stream is AudioStreamOggVorbis:
+	if stream is AudioStreamOggVorbis or stream is AudioStreamMP3:
 		stream.loop = true
 	return stream
 
@@ -78,12 +84,14 @@ func set_ambience(amb_name: String) -> void:
 	if _amb_player == null:
 		_amb_player = AudioStreamPlayer.new()
 		_amb_player.bus = GameSettings.BUS_SFX
-		_amb_player.volume_db = -6.0
 		add_child(_amb_player)
+		# WAV não tem loop embutido: recomeça quando termina.
+		_amb_player.finished.connect(func(): if _amb_name != "": _amb_player.play())
 	if amb_name == "" or not AMBIENCE.has(amb_name):
 		_amb_player.stop()
 		return
 	_amb_player.stream = _sample_stream(AMBIENCE[amb_name])
+	_amb_player.volume_db = float(AMBIENCE_DB.get(amb_name, -8.0))
 	_amb_player.play()
 
 func play_static(seconds: float = 0.6) -> void:

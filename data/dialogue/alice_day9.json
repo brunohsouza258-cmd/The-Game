@@ -11,7 +11,13 @@
     "start": {
       "speaker": "Alice",
       "pose": "thinking",
-      "text": "Eu terminei a teoria. Quer ouvir? É curta. O loop começa no primeiro dia e termina às 21:47 do dia 12. O que reinicia ele não é o tempo. É alguém se recusando a aceitar o que acontece às 21:47.",
+      "text": "Eu terminei a teoria. Quer ouvir? É curta. O loop começa no primeiro dia e termina às 21:47 do dia 12. O que reinicia ele não é o tempo.",
+      "next": "start__2"
+    },
+    "start__2": {
+      "speaker": "Alice",
+      "text": "É alguém se recusando a aceitar o que acontece às 21:47.",
+      "pose": "thinking",
       "next": "proof"
     },
     "proof": {
@@ -59,7 +65,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "Ela escreve uma linha nova no caderno em branco e vira a página para ele ver, só um segundo: \"Lembrar dói menos do que fingir\". Depois fecha o caderno e o guarda na bolsa, rápido, antes de mudar de ideia.",
+      "text": "Ela escreve uma linha nova no caderno em branco e vira a página para ele ver, só um segundo: \"Lembrar dói menos do que fingir\".",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "Depois fecha o caderno e o guarda na bolsa, rápido, antes de mudar de ideia.",
       "next": "end"
     },
     "end": {

@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/courtyard.png",
   "tint": "#fff2e0",
   "sprite": "",
-  "music": "ending",
+  "music": "sad",
   "nodes": {
     "start": {
       "speaker": "",

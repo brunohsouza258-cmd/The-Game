@@ -6,7 +6,7 @@
   "background": "res://assets/backgrounds/hallway_dusk.png",
   "tint": "#b8aec4",
   "sprite": "res://assets/characters/maya.png",
-  "music": "night",
+  "music": "piano",
   "nodes": {
     "start": {
       "speaker": "",
@@ -83,11 +83,17 @@
     "why": {
       "speaker": "Maya",
       "pose": "corrupted",
-      "text": "Porque eu também não aceitei. Eu gostava dele. Do Kaito. Nunca disse. Quando ele caiu, eu pensei: só mais uma chance. Só mais uma volta. Acho que o loop é feito de duas pessoas que não conseguem soltar.",
+      "text": "Porque eu também não aceitei. Eu gostava dele. Do Kaito. Nunca disse. Quando ele caiu, eu pensei: só mais uma chance. Só mais uma volta.",
       "effect": "glitch",
       "effects": {
         "dread": 2
       },
+      "next": "why__2"
+    },
+    "why__2": {
+      "speaker": "Maya",
+      "text": "Acho que o loop é feito de duas pessoas que não conseguem soltar.",
+      "pose": "corrupted",
       "next": "intimacy"
     },
     "intimacy": {

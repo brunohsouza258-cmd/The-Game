@@ -9,14 +9,21 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "Por um instante, a sala de aula some. No lugar dela, a mesma sala, mas com o forro caído, as janelas estilhaçadas, riscos de contagem por toda a parede. A Alice e a Maya estão ali, sentadas lado a lado, como se nada tivesse mudado.",
-      "next": "n1",
+      "text": "Por um instante, a sala de aula some. No lugar dela, a mesma sala, mas com o forro caído, as janelas estilhaçadas, riscos de contagem por toda a parede.",
+      "next": "start__2",
       "effect": "glitch",
       "background": "res://assets/backgrounds/school_decayed.png",
       "tint": "#ffffff",
       "fx": "glitch",
       "pace": "slow",
       "noauto": true
+    },
+    "start__2": {
+      "speaker": "",
+      "text": "A Alice e a Maya estão ali, sentadas lado a lado, como se nada tivesse mudado.",
+      "pace": "slow",
+      "noauto": true,
+      "next": "n1"
     },
     "n1": {
       "speaker": "Alice",

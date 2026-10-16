@@ -67,7 +67,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "\"Se você for lá em cima de novo\", ela fala, séria, \"me chama. Eu não vou deixar você pisar sozinho num lugar que eu já sei que não gosto.\" Dá um soco leve no ombro dele, como selo.",
+      "text": "\"Se você for lá em cima de novo\", ela fala, séria, \"me chama.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "Eu não vou deixar você pisar sozinho num lugar que eu já sei que não gosto.\" Dá um soco leve no ombro dele, como selo.",
       "next": "end"
     },
     "end": {

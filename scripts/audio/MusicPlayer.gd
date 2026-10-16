@@ -14,6 +14,8 @@ const MOOD_TRACKS := {
 	"hallway": "res://assets/music/starfield_romance.wav",
 	"night": "res://assets/music/emerald_tower.ogg",
 	"tense": "res://assets/music/insistent.ogg",
+	"sad": "res://assets/music/sadness.ogg",
+	"piano": "res://assets/music/piano_loop.wav",
 	"corrupted": "res://assets/music/abandoned_passages.ogg",
 	"ending": "res://assets/music/first_light_particles.wav",
 }

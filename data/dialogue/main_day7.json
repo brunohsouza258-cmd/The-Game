@@ -9,19 +9,29 @@
   "nodes": {
     "start": {
       "speaker": "",
-      "text": "O dia começa errado por detalhes pequenos. A água da torneira tem gosto de metal. O relógio do forno marca 21:47 mesmo ao meio-dia, e a mãe, que nunca atrasa, nem comenta. {player_name} sai de casa sem tomar café.",
-      "next": "intro2",
+      "text": "O dia começa errado por detalhes pequenos. A água da torneira tem gosto de metal.",
+      "next": "start__2",
       "background": "res://assets/backgrounds/bedroom_morning.png",
       "tint": "#ffffff",
       "image": "res://assets/inserts/clock_2147.png"
     },
+    "start__2": {
+      "speaker": "",
+      "text": "O relógio do forno marca 21:47 mesmo ao meio-dia, e a mãe, que nunca atrasa, nem comenta. {player_name} sai de casa sem tomar café.",
+      "next": "intro2"
+    },
     "intro2": {
       "speaker": "",
-      "text": "No ônibus, ninguém fala. O motorista dirige com os olhos fixos no retrovisor, não na rua, e vai fazendo as curvas de memória. Quando ele passa pela escola, desacelera e murmura: \"Desce aqui, filho. Hoje é aqui.\"",
-      "next": "loop_echo",
+      "text": "No ônibus, ninguém fala. O motorista dirige com os olhos fixos no retrovisor, não na rua, e vai fazendo as curvas de memória.",
+      "next": "intro2__2",
       "background": "res://assets/backgrounds/bus_rain.png",
       "tint": "#ffffff",
       "image": ""
+    },
+    "intro2__2": {
+      "speaker": "",
+      "text": "Quando ele passa pela escola, desacelera e murmura: \"Desce aqui, filho. Hoje é aqui.\"",
+      "next": "loop_echo"
     },
     "clock": {
       "speaker": "",
@@ -33,11 +43,18 @@
       "next": "photo",
       "fx": "static",
       "pace": "slow",
-      "image": "res://assets/inserts/clock_2147.png"
+      "image": "res://assets/inserts/clock_2147.png",
+      "amb": "clock"
     },
     "photo": {
       "speaker": "",
-      "text": "No mural da sala, a foto da turma do ano passado. {player_name} nunca esteve nesta escola no ano passado. Mesmo assim está na foto, na fileira de trás. Ao lado dele, um garoto com o rosto borrado, como se tivesse se mexido no exato momento do flash.",
+      "text": "No mural da sala, a foto da turma do ano passado. {player_name} nunca esteve nesta escola no ano passado. Mesmo assim está na foto, na fileira de trás.",
+      "image": "res://assets/inserts/photo_class.png",
+      "next": "photo__2"
+    },
+    "photo__2": {
+      "speaker": "",
+      "text": "Ao lado dele, um garoto com o rosto borrado, como se tivesse se mexido no exato momento do flash.",
       "choices": [
         {
           "text": "Chegar perto da foto.",
@@ -53,8 +70,7 @@
           },
           "next": "hallway"
         }
-      ],
-      "image": "res://assets/inserts/photo_class.png"
+      ]
     },
     "closer": {
       "speaker": "",
@@ -100,7 +116,12 @@
     },
     "outro1": {
       "speaker": "",
-      "text": "No fim da tarde, a Alice o intercepta perto da secretaria. Sem preâmbulo, estende o relógio de pulso: o ponteiro dos segundos treme, tenta andar, e volta. \"Quatro vezes\", ela diz. \"Eu medi. Quatro vezes por minuto ele tenta. E volta.\"",
+      "text": "No fim da tarde, a Alice o intercepta perto da secretaria. Sem preâmbulo, estende o relógio de pulso: o ponteiro dos segundos treme, tenta andar, e volta.",
+      "next": "outro1__2"
+    },
+    "outro1__2": {
+      "speaker": "",
+      "text": "\"Quatro vezes\", ela diz. \"Eu medi. Quatro vezes por minuto ele tenta. E volta.\"",
       "next": "outro2"
     },
     "outro2": {

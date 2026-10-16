@@ -5,7 +5,7 @@
   "background": "res://assets/backgrounds/classroom.png",
   "tint": "#e8c8c0",
   "sprite": "",
-  "music": "classroom",
+  "music": "sad",
   "nodes": {
     "start": {
       "speaker": "",

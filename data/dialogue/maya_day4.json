@@ -107,7 +107,12 @@
     },
     "closing": {
       "speaker": "",
-      "text": "A Maya deixa um marcador de livro sobre a mesa, uma tira de papel com uma frase riscada. Ele só entende depois de ela sair: era um convite para ler a mesma página que ela, em horários diferentes.",
+      "text": "A Maya deixa um marcador de livro sobre a mesa, uma tira de papel com uma frase riscada.",
+      "next": "closing__2"
+    },
+    "closing__2": {
+      "speaker": "",
+      "text": "Ele só entende depois de ela sair: era um convite para ler a mesma página que ela, em horários diferentes.",
       "next": "end"
     },
     "end": {
